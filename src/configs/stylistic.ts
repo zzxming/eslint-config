@@ -1,9 +1,9 @@
 import { StylisticConfigDefaults } from '../contants';
-import type { StylisticOptions } from '../types';
+import type { StylisticOptions, TypedFlatConfigItem } from '../types';
 import pluginStylistic from '@stylistic/eslint-plugin';
 import pluginAntfu from 'eslint-plugin-antfu';
 
-export const stylistic = (options: StylisticOptions = {}) => {
+export const stylistic = (options: StylisticOptions = {}): TypedFlatConfigItem[] => {
   const {
     indent,
     jsx,

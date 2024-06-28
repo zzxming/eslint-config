@@ -1,10 +1,10 @@
-import type { VueOptions } from '../types';
+import type { TypedFlatConfigItem, VueOptions } from '../types';
 import { GLOB_VUE } from '../contants';
 import { pluginVue } from '../plugins';
 import parserVue from 'vue-eslint-parser';
 import parserTs from '@typescript-eslint/parser';
 
-export const vue = (options: VueOptions = {}) => {
+export const vue = (options: VueOptions = {}): TypedFlatConfigItem[] => {
   const {
     files = [GLOB_VUE],
     stylistic = true,

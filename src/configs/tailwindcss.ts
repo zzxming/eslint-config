@@ -1,6 +1,7 @@
+import type { TypedFlatConfigItem } from '../types';
 import { pluginTailwind } from '../plugins';
 
-export const tailwindcss = () => {
+export const tailwindcss = (): TypedFlatConfigItem[] => {
   return [
     {
       name: 'tailwindcss/setup',

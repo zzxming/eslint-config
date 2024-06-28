@@ -1,9 +1,9 @@
 import { GLOB_YAML } from '../contants';
-import type { YamlOptions } from '../types';
+import type { TypedFlatConfigItem, YamlOptions } from '../types';
 import pluginYaml from 'eslint-plugin-yml';
 import parserYaml from 'yaml-eslint-parser';
 
-export const yaml = (options: YamlOptions = {}) => {
+export const yaml = (options: YamlOptions = {}): TypedFlatConfigItem[] => {
   const {
     files = [GLOB_YAML],
     overrides = {},

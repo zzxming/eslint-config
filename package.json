@@ -1,9 +1,10 @@
 {
   "name": "@zzxming/eslint-config",
-  "description": "zzxming's eslint config",
+  "description": "Eslint config for zzxming",
   "version": "0.0.0",
   "type": "module",
   "packageManager": "pnpm@8.14.3",
+  "homepage": "https://github.com/zzxming/eslint-config",
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub",
@@ -45,7 +46,6 @@
     "eslint-plugin-vue": "^9.26.0",
     "eslint-plugin-yml": "^1.14.0",
     "jsonc-eslint-parser": "^2.4.0",
-    "typescript-eslint": "^7.14.1",
     "vue-eslint-parser": "^9.4.3",
     "yaml-eslint-parser": "^1.2.3"
   },
