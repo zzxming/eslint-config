@@ -7,7 +7,7 @@ export const jsonc = (options: JsoncOptions = {}): TypedFlatConfigItem[] => {
   const {
     files = [GLOB_JSON, GLOB_JSON5, GLOB_JSONC],
     stylistic = true,
-    overrides = { },
+    overrides = {},
   } = options;
 
   const {

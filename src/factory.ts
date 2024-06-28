@@ -1,7 +1,7 @@
 import { isPackageExists } from 'local-pkg';
 import type { OptionsConfig } from './types';
 import { StylisticConfigDefaults, VuePackages } from './contants';
-import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, stylistic, tailwindcss, typescript, vue, yaml } from './configs';
+import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, stylistic, tailwindcss, typescript, unicorn, vue, yaml } from './configs';
 import { getSubOptions } from './utils';
 
 export const factory = (options: OptionsConfig = {}) => {
@@ -28,6 +28,7 @@ export const factory = (options: OptionsConfig = {}) => {
     ...imports({
       stylistic: !!stylisticOptions,
     }),
+    ...unicorn(),
     ...formatters({
       ...getSubOptions(options, 'formatters'),
       stylistic: stylisticOptions,
