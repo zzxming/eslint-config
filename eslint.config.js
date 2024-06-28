@@ -1,4 +1,4 @@
-import { tsImport } from 'tsx/esm/api';
-const { default: lints } = await tsImport('./src/index.ts', import.meta.url);
+import { tsImport } from 'tsx/esm/api'
+const { factory } = await tsImport('./src/index.ts', import.meta.url)
 
-export default lints()
+export default factory()

@@ -8,6 +8,7 @@
     "source.organizeImports": "never"
   },
   "eslint.enable": true,
+  "eslint.runtime": "node",
   "eslint.format.enable": true,
   "eslint.useFlatConfig": true,
   "eslint.rules.customizations": [
@@ -22,31 +23,20 @@
     { "rule": "*quotes", "severity": "off" },
     { "rule": "*semi", "severity": "off" }
   ],
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "html", "markdown", "json", "jsonc", "yaml", "xml", "css", "less", "scss", "postcss"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml"
+  ],
   "prettier.enable": false,
   "prettier.printWidth": 200,
   "prettier.semi": true,
-  "prettier.singleQuote": true,
-  "search.exclude": {
-    "**/*.snap": true,
-    "**/*.svg": true,
-    "**/.git": true,
-    "**/.github": false,
-    "**/.nuxt": true,
-    "**/.output": true,
-    "**/.pnpm": true,
-    "**/.vscode": true,
-    "**/.yarn": true,
-    "**/dist/**": true,
-    "**/logs": true,
-    "**/node_modules": true,
-    "**/out/**": true,
-    "**/package-lock.json": true,
-    "**/pnpm-lock.yaml": true,
-    "**/public": true,
-    "**/temp": true,
-    "**/yarn.lock": true,
-    "**/CHANGELOG*": true,
-    "**/LICENSE*": true
-  }
+  "prettier.singleQuote": true
 }
