@@ -32,7 +32,6 @@ export const unicorn = () => {
         'unicorn/prefer-dom-node-remove': 'off',
         'unicorn/prefer-code-point': 'off',
         'unicorn/prefer-at': 'off',
-
       },
     },
   ];

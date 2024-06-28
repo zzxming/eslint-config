@@ -40,8 +40,8 @@ export const yaml = (options: YamlOptions = {}): TypedFlatConfigItem[] => {
 
         'yaml/vue-custom-block/no-parsing-error': 'error',
 
-        ...stylistic ?
-            {
+        ...stylistic
+          ? {
               'yaml/block-mapping-question-indicator-newline': 'error',
               'yaml/block-sequence-hyphen-indicator-newline': 'error',
               'yaml/flow-mapping-curly-newline': 'error',
@@ -53,8 +53,8 @@ export const yaml = (options: YamlOptions = {}): TypedFlatConfigItem[] => {
               'yaml/no-tab-indent': 'error',
               'yaml/quotes': ['error', { avoidEscape: false, prefer: quotes }],
               'yaml/spaced-comment': 'error',
-            } :
-            {},
+            }
+          : {},
 
         ...overrides,
       },

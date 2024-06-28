@@ -252,7 +252,6 @@ export const javascript = (options: JavascriptOptions = {}): TypedFlatConfigItem
             memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
           },
         ],
-
         'symbol-description': 'error',
         'unicode-bom': ['error', 'never'],
         'unused-imports/no-unused-imports': 'error',
@@ -283,7 +282,6 @@ export const javascript = (options: JavascriptOptions = {}): TypedFlatConfigItem
         'yoda': ['error', 'never'],
 
         ...overrides,
-
       },
     },
     {

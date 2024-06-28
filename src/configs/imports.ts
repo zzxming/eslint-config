@@ -1,13 +1,9 @@
 import pluginAntfu from 'eslint-plugin-antfu';
 import { pluginImport } from '../plugins';
 import { GLOB_SRC_EXT } from '../contants';
-import type { ImportsOptions, TypedFlatConfigItem } from '../types';
+import type { TypedFlatConfigItem } from '../types';
 
-export const imports = (options: ImportsOptions = {}): TypedFlatConfigItem[] => {
-  const {
-    stylistic = true,
-  } = options;
-
+export const imports = (): TypedFlatConfigItem[] => {
   return [
     {
       name: 'imports/rules',
@@ -19,7 +15,6 @@ export const imports = (options: ImportsOptions = {}): TypedFlatConfigItem[] => 
         'antfu/import-dedupe': 'error',
         'antfu/no-import-dist': 'error',
         'antfu/no-import-node-modules-by-path': 'error',
-
         'import/first': 'error',
         'import/no-duplicates': 'error',
         'import/no-mutable-exports': 'error',
@@ -27,12 +22,7 @@ export const imports = (options: ImportsOptions = {}): TypedFlatConfigItem[] => 
         'import/no-self-import': 'error',
         'import/no-webpack-loader-syntax': 'error',
         'import/order': 'error',
-
-        ...stylistic ?
-            {
-              'import/newline-after-import': ['error', { count: 1 }],
-            } :
-            {},
+        'import/newline-after-import': ['error', { count: 1 }],
       },
     },
     {

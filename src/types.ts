@@ -21,7 +21,7 @@ export interface StylisticOverrides {
 export interface OptionsOverrides {
   overrides?: Linter.FlatConfig;
 }
-export interface JavascriptOptions extends OptionsOverrides { }
+export interface JavascriptOptions extends OptionsOverrides {}
 export interface TypescriptOptions extends OptionsOverrides {
   parserOptions?: ESLint.Environment['parserOptions'];
 }
@@ -41,9 +41,6 @@ export interface FormmatterOptions extends StylisticOverrides {
   prettierOptions?: Record<string, any>;
 }
 export interface YamlOptions extends OptionsOverrides, FilesOverrides, StylisticOverrides {}
-export interface ImportsOptions {
-  stylistic?: boolean;
-}
 
 export interface OptionsConfig {
   stylistic?: boolean | StylisticOptions;

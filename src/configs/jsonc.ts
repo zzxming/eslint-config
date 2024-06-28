@@ -54,7 +54,6 @@ export const jsonc = (options: JsoncOptions = {}): TypedFlatConfigItem[] => {
         'jsonc/space-unary-ops': 'error',
         'jsonc/valid-json-number': 'error',
         'jsonc/vue-custom-block/no-parsing-error': 'error',
-
         'jsonc/array-bracket-spacing': ['error', 'never'],
         'jsonc/comma-dangle': ['error', 'never'],
         'jsonc/comma-style': ['error', 'last'],

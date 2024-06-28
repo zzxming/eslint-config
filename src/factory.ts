@@ -25,9 +25,7 @@ export const factory = (options: OptionsConfig = {}) => {
     ...ignore(enableGitignore),
     ...javascript(getSubOptions(options, 'javascript')),
     ...stylistic(stylisticOptions || {}),
-    ...imports({
-      stylistic: !!stylisticOptions,
-    }),
+    ...imports(),
     ...unicorn(),
     ...formatters({
       ...getSubOptions(options, 'formatters'),

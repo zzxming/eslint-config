@@ -9,6 +9,7 @@ export const markdown = (options: MarkdownOptions = {}): TypedFlatConfigItem[] =
     overrides = {},
     files = [GLOB_MARKDOWN],
   } = options;
+
   return [
     {
       name: 'markdown/setup',
@@ -48,7 +49,6 @@ export const markdown = (options: MarkdownOptions = {}): TypedFlatConfigItem[] =
         'no-unused-labels': 'off',
         'no-unused-vars': 'off',
         'unicode-bom': 'off',
-
         'node/prefer-global/process': 'off',
         'style/comma-dangle': 'off',
         'style/eol-last': 'off',

@@ -65,6 +65,7 @@ export const typescript = (options: TypescriptOptions = {}): TypedFlatConfigItem
         'ts/prefer-ts-expect-error': 'error',
         'ts/triple-slash-reference': 'off',
         'ts/unified-signatures': 'off',
+
         ...overrides,
       },
     },

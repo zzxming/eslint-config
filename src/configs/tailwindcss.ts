@@ -27,6 +27,5 @@ export const tailwindcss = (): TypedFlatConfigItem[] => {
         'tailwindcss/no-unnecessary-arbitrary-value': 'error',
       },
     },
-
   ];
 };
