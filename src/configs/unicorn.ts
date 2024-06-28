@@ -1,6 +1,8 @@
+import type { UnicornOptions } from '../types';
 import { pluginUnicorn } from '../plugins';
 
-export const unicorn = () => {
+export const unicorn = (options: UnicornOptions = {}) => {
+  const { overrides = {} } = options;
   return [
     {
       name: 'unicorn/rules',
@@ -32,6 +34,8 @@ export const unicorn = () => {
         'unicorn/prefer-dom-node-remove': 'off',
         'unicorn/prefer-code-point': 'off',
         'unicorn/prefer-at': 'off',
+
+        ...overrides,
       },
     },
   ];

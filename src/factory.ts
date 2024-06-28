@@ -1,8 +1,8 @@
 import { isPackageExists } from 'local-pkg';
-import type { OptionsConfig } from './types';
+import type { OptionsConfig, TailwindcssOptions } from './types';
 import { StylisticConfigDefaults, VuePackages } from './contants';
 import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, stylistic, tailwindcss, typescript, unicorn, vue, yaml } from './configs';
-import { getSubOptions } from './utils';
+import { getOptions, getSubOptions } from './utils';
 
 export const factory = (options: OptionsConfig = {}) => {
   const {
@@ -14,19 +14,20 @@ export const factory = (options: OptionsConfig = {}) => {
     jsonc: enableJsonc = true,
     markdown: enableMarkdown = true,
     yaml: enableYaml = true,
+    unicorn: unicornOptions = {},
     overrides = [],
   } = options;
 
   const componentExts = [];
   const configs = [];
-  const stylisticOptions = options.stylistic === false ? false : typeof options.stylistic === 'object' ? options.stylistic : StylisticConfigDefaults;
+  const stylisticOptions = getOptions(options.stylistic, StylisticConfigDefaults);
 
   configs.push(
     ...ignore(enableGitignore),
     ...javascript(getSubOptions(options, 'javascript')),
     ...stylistic(stylisticOptions || {}),
     ...imports(),
-    ...unicorn(),
+    ...unicorn(unicornOptions),
     ...formatters({
       ...getSubOptions(options, 'formatters'),
       stylistic: stylisticOptions,
@@ -43,7 +44,7 @@ export const factory = (options: OptionsConfig = {}) => {
     }));
   }
   if (enableTailwindcss) {
-    configs.push(...tailwindcss());
+    configs.push(...tailwindcss(getOptions(enableTailwindcss, {}) as TailwindcssOptions));
   }
   if (enableJsx) {
     configs.push(...jsx());

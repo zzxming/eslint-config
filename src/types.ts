@@ -41,6 +41,8 @@ export interface FormmatterOptions extends StylisticOverrides {
   prettierOptions?: Record<string, any>;
 }
 export interface YamlOptions extends OptionsOverrides, FilesOverrides, StylisticOverrides {}
+export interface UnicornOptions extends OptionsOverrides {}
+export interface TailwindcssOptions extends OptionsOverrides {}
 
 export interface OptionsConfig {
   stylistic?: boolean | StylisticOptions;
@@ -49,10 +51,11 @@ export interface OptionsConfig {
   jsx?: boolean;
   typescript?: boolean | TypescriptOptions;
   vue?: boolean | VueOptions;
-  tailwindcss?: boolean;
+  tailwindcss?: boolean | TailwindcssOptions;
   jsonc?: boolean | JsoncOptions;
   markdown?: boolean | JsoncOptions;
   formatters?: boolean | FormmatterOptions;
   yaml?: boolean | YamlOptions;
+  unicorn?: UnicornOptions;
   overrides?: Linter.FlatConfig[];
 }

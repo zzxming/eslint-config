@@ -1,7 +1,8 @@
-import type { TypedFlatConfigItem } from '../types';
+import type { TailwindcssOptions, TypedFlatConfigItem } from '../types';
 import { pluginTailwind } from '../plugins';
 
-export const tailwindcss = (): TypedFlatConfigItem[] => {
+export const tailwindcss = (options: TailwindcssOptions = {}): TypedFlatConfigItem[] => {
+  const { overrides = {} } = options;
   return [
     {
       name: 'tailwindcss/setup',
@@ -25,6 +26,8 @@ export const tailwindcss = (): TypedFlatConfigItem[] => {
         'tailwindcss/no-custom-classname': 'off',
         'tailwindcss/enforces-negative-arbitrary-values': 'off',
         'tailwindcss/no-unnecessary-arbitrary-value': 'error',
+
+        ...overrides,
       },
     },
   ];
