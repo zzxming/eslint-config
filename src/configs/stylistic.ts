@@ -33,7 +33,8 @@ export const stylistic = (options: StylisticOptions = {}): TypedFlatConfigItem[]
       },
       rules: {
         ...config.rules,
-        'style/operator-linebreak': ['error', 'after'],
+        // 'after' makes multiline ternary expressions more one indent
+        'style/operator-linebreak': ['error', 'before'],
         'style/array-bracket-newline': [
           'warn',
           {

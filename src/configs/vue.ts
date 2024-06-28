@@ -63,13 +63,13 @@ export const vue = (options: VueOptions = {}): TypedFlatConfigItem[] => {
       rules: {
         ...pluginVue.configs.base.rules,
 
-        ...vueVersion === 2 ?
-            {
+        ...vueVersion === 2
+          ? {
               ...pluginVue.configs.essential.rules,
               ...pluginVue.configs['strongly-recommended'].rules,
               ...pluginVue.configs.recommended.rules,
-            } :
-            {
+            }
+          : {
               ...pluginVue.configs['vue3-essential'].rules,
               ...pluginVue.configs['vue3-strongly-recommended'].rules,
               ...pluginVue.configs['vue3-recommended'].rules,
@@ -156,11 +156,10 @@ export const vue = (options: VueOptions = {}): TypedFlatConfigItem[] => {
         ],
         'vue/key-spacing': ['error', { afterColon: true, beforeColon: false }],
         'vue/keyword-spacing': ['error', { after: true, before: true }],
-        // 'vue/object-curly-newline': 'off',
         'vue/object-curly-newline': ['error', { consistent: true, multiline: true }],
         'vue/object-curly-spacing': ['error', 'always'],
         'vue/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
-        'vue/operator-linebreak': ['error', 'after'],
+        'vue/operator-linebreak': ['error', 'before'],
         'vue/padding-line-between-blocks': ['error', 'always'],
         'vue/quote-props': ['error', 'consistent-as-needed'],
         'vue/space-in-parens': ['error', 'never'],
