@@ -9,7 +9,6 @@ export const markdown = (options: MarkdownOptions = {}): TypedFlatConfigItem[] =
     overrides = {},
     files = [GLOB_MARKDOWN],
   } = options;
-
   return [
     {
       name: 'markdown/setup',
@@ -23,6 +22,7 @@ export const markdown = (options: MarkdownOptions = {}): TypedFlatConfigItem[] =
         parser: parserPlain,
       },
       name: 'markdown/parser',
+      processor: 'markdown/markdown',
     },
     {
       files: [
@@ -36,10 +36,8 @@ export const markdown = (options: MarkdownOptions = {}): TypedFlatConfigItem[] =
           },
         },
       },
-      name: 'markdown/disables',
+      name: 'markdown/rules',
       rules: {
-        'import/newline-after-import': 'off',
-
         'no-alert': 'off',
         'no-console': 'off',
         'no-labels': 'off',
@@ -49,10 +47,10 @@ export const markdown = (options: MarkdownOptions = {}): TypedFlatConfigItem[] =
         'no-unused-expressions': 'off',
         'no-unused-labels': 'off',
         'no-unused-vars': 'off',
+        'unicode-bom': 'off',
 
         'node/prefer-global/process': 'off',
         'style/comma-dangle': 'off',
-
         'style/eol-last': 'off',
         'ts/consistent-type-imports': 'off',
         'ts/no-namespace': 'off',
@@ -61,8 +59,6 @@ export const markdown = (options: MarkdownOptions = {}): TypedFlatConfigItem[] =
         'ts/no-unused-vars': 'off',
         'ts/no-use-before-define': 'off',
         'ts/no-var-requires': 'off',
-
-        'unicode-bom': 'off',
         'unused-imports/no-unused-imports': 'off',
         'unused-imports/no-unused-vars': 'off',
 

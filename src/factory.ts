@@ -1,8 +1,8 @@
+import { isPackageExists } from 'local-pkg';
 import type { OptionsConfig } from './types';
 import { StylisticConfigDefaults, VuePackages } from './contants';
-import { formatters, ignore, javascript, jsonc, jsx, markdown, stylistic, tailwindcss, typescript, vue, yaml } from './configs';
+import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, stylistic, tailwindcss, typescript, vue, yaml } from './configs';
 import { getSubOptions } from './utils';
-import { isPackageExists } from 'local-pkg';
 
 export const factory = (options: OptionsConfig = {}) => {
   const {
@@ -14,6 +14,7 @@ export const factory = (options: OptionsConfig = {}) => {
     jsonc: enableJsonc = true,
     markdown: enableMarkdown = true,
     yaml: enableYaml = true,
+    overrides = [],
   } = options;
 
   const componentExts = [];
@@ -24,6 +25,9 @@ export const factory = (options: OptionsConfig = {}) => {
     ...ignore(enableGitignore),
     ...javascript(getSubOptions(options, 'javascript')),
     ...stylistic(stylisticOptions || {}),
+    ...imports({
+      stylistic: !!stylisticOptions,
+    }),
     ...formatters({
       ...getSubOptions(options, 'formatters'),
       stylistic: stylisticOptions,
@@ -74,5 +78,6 @@ export const factory = (options: OptionsConfig = {}) => {
       }),
     );
   }
+  configs.push(...overrides);
   return configs;
 };

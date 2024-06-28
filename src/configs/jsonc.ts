@@ -1,7 +1,7 @@
-import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from '../contants';
-import type { JsoncOptions, TypedFlatConfigItem } from '../types';
 import pluginJsonc from 'eslint-plugin-jsonc';
 import parserJsonc from 'jsonc-eslint-parser';
+import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from '../contants';
+import type { JsoncOptions, TypedFlatConfigItem } from '../types';
 
 export const jsonc = (options: JsoncOptions = {}): TypedFlatConfigItem[] => {
   const {

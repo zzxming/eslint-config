@@ -6,3 +6,4 @@ export { default as pluginVue } from 'eslint-plugin-vue';
 export { default as pluginTailwind } from 'eslint-plugin-tailwindcss';
 export { default as pluginMarkdown } from 'eslint-plugin-markdown';
 export { default as configPrettier } from 'eslint-config-prettier';
+export { default as pluginImport } from 'eslint-plugin-import-x';

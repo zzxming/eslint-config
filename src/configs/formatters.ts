@@ -1,10 +1,10 @@
-import { GLOB_CSS, GLOB_HTML, GLOB_LESS, GLOB_MARKDOWN, GLOB_POSTCSS, GLOB_SCSS, GLOB_XML, StylisticConfigDefaults } from '../contants';
-import type { FormmatterOptions, TypedFlatConfigItem } from '../types';
 import { isPackageExists } from 'local-pkg';
-import { parserPlain } from '../utils';
-import { configPrettier } from '../plugins';
 import pluginFormat from 'eslint-plugin-format';
 import pluginPrettier from 'eslint-plugin-prettier';
+import { GLOB_CSS, GLOB_HTML, GLOB_LESS, GLOB_MARKDOWN, GLOB_POSTCSS, GLOB_SCSS, GLOB_XML, StylisticConfigDefaults } from '../contants';
+import type { FormmatterOptions, TypedFlatConfigItem } from '../types';
+import { parserPlain } from '../utils';
+import { configPrettier } from '../plugins';
 
 export const formatters = (options: FormmatterOptions = {}) => {
   const {

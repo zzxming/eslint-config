@@ -1,6 +1,6 @@
-import type { TypedFlatConfigItem } from '../types';
 import fs from 'node:fs';
 import ignoreGitignore from 'eslint-config-flat-gitignore';
+import type { TypedFlatConfigItem } from '../types';
 
 export const ignore = (enableGitignore = true): TypedFlatConfigItem[] => {
   const ignores = [

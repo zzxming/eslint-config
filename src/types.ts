@@ -29,8 +29,7 @@ export interface VueOptions extends OptionsOverrides, FilesOverrides, StylisticO
   vueVersion?: 2 | 3;
   typescript?: boolean;
 }
-export interface JsoncOptions extends OptionsOverrides, FilesOverrides, StylisticOverrides {
-}
+export interface JsoncOptions extends OptionsOverrides, FilesOverrides, StylisticOverrides {}
 export interface MarkdownOptions extends OptionsOverrides, FilesOverrides {
   componentExts?: string[];
 }
@@ -41,7 +40,9 @@ export interface FormmatterOptions extends StylisticOverrides {
   xml?: boolean;
   prettierOptions?: Record<string, any>;
 }
-export interface YamlOptions extends OptionsOverrides, FilesOverrides, StylisticOverrides {
+export interface YamlOptions extends OptionsOverrides, FilesOverrides, StylisticOverrides {}
+export interface ImportsOptions {
+  stylistic?: boolean;
 }
 
 export interface OptionsConfig {
@@ -56,4 +57,5 @@ export interface OptionsConfig {
   markdown?: boolean | JsoncOptions;
   formatters?: boolean | FormmatterOptions;
   yaml?: boolean | YamlOptions;
+  overrides?: Linter.FlatConfig[];
 }

@@ -1,8 +1,8 @@
+import parserTs from '@typescript-eslint/parser';
+import pluginTs from '@typescript-eslint/eslint-plugin';
 import { GLOB_DTS, GLOB_TS, GLOB_TSX } from '../contants';
 import { renameRules } from '../utils';
 import type { TypedFlatConfigItem, TypescriptOptions } from '../types';
-import parserTs from '@typescript-eslint/parser';
-import pluginTs from '@typescript-eslint/eslint-plugin';
 
 export const typescript = (options: TypescriptOptions = {}): TypedFlatConfigItem[] => {
   const {

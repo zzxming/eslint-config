@@ -1,7 +1,7 @@
-import { StylisticConfigDefaults } from '../contants';
-import type { StylisticOptions, TypedFlatConfigItem } from '../types';
 import pluginStylistic from '@stylistic/eslint-plugin';
 import pluginAntfu from 'eslint-plugin-antfu';
+import { StylisticConfigDefaults } from '../contants';
+import type { StylisticOptions, TypedFlatConfigItem } from '../types';
 
 export const stylistic = (options: StylisticOptions = {}): TypedFlatConfigItem[] => {
   const {
