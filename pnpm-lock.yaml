@@ -17,9 +17,9 @@ dependencies:
   eslint-config-flat-gitignore:
     specifier: ^0.1.5
     version: 0.1.5
-  eslint-config-prettier:
-    specifier: ^9.1.0
-    version: 9.1.0(eslint@9.0.0)
+  eslint-merge-processors:
+    specifier: ^0.1.0
+    version: 0.1.0(eslint@9.0.0)
   eslint-plugin-antfu:
     specifier: ^2.3.3
     version: 2.3.3(eslint@9.0.0)
@@ -37,7 +37,7 @@ dependencies:
     version: 5.0.0(eslint@9.0.0)
   eslint-plugin-prettier:
     specifier: ^5.1.3
-    version: 5.1.3(@types/eslint@8.56.10)(eslint-config-prettier@9.1.0)(eslint@9.0.0)(prettier@3.3.2)
+    version: 5.1.3(@types/eslint@8.56.10)(eslint@9.0.0)(prettier@3.3.2)
   eslint-plugin-tailwindcss:
     specifier: ^3.17.4
     version: 3.17.4(tailwindcss@3.4.4)
@@ -1821,15 +1821,6 @@ packages:
       parse-gitignore: 2.0.0
     dev: false
 
-  /eslint-config-prettier@9.1.0(eslint@9.0.0):
-    resolution: {integrity: sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw==}
-    hasBin: true
-    peerDependencies:
-      eslint: '>=7.0.0'
-    dependencies:
-      eslint: 9.0.0
-    dev: false
-
   /eslint-formatting-reporter@0.0.0(eslint@9.0.0):
     resolution: {integrity: sha512-k9RdyTqxqN/wNYVaTk/ds5B5rA8lgoAmvceYN7bcZMBwU7TuXx5ntewJv81eF3pIL/CiJE+pJZm36llG8yhyyw==}
     peerDependencies:
@@ -1847,6 +1838,14 @@ packages:
       resolve: 1.22.8
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /eslint-merge-processors@0.1.0(eslint@9.0.0):
+    resolution: {integrity: sha512-IvRXXtEajLeyssvW4wJcZ2etxkR9mUf4zpNwgI+m/Uac9RfXHskuJefkHUcawVzePnd6xp24enp5jfgdHzjRdQ==}
+    peerDependencies:
+      eslint: '*'
+    dependencies:
+      eslint: 9.0.0
     dev: false
 
   /eslint-parser-plain@0.1.0:
@@ -1926,7 +1925,7 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-prettier@5.1.3(@types/eslint@8.56.10)(eslint-config-prettier@9.1.0)(eslint@9.0.0)(prettier@3.3.2):
+  /eslint-plugin-prettier@5.1.3(@types/eslint@8.56.10)(eslint@9.0.0)(prettier@3.3.2):
     resolution: {integrity: sha512-C9GCVAs4Eq7ZC/XFQHITLiHJxQngdtraXaM+LoUFoFp/lHNl2Zn8f3WQbe9HvTBBQ9YnKFB0/2Ajdqwo5D1EAw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -1942,7 +1941,6 @@ packages:
     dependencies:
       '@types/eslint': 8.56.10
       eslint: 9.0.0
-      eslint-config-prettier: 9.1.0(eslint@9.0.0)
       prettier: 3.3.2
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.8

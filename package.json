@@ -9,7 +9,8 @@
     "build": "unbuild",
     "dev": "unbuild --stub",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "prepare": "simple-git-hooks"
   },
   "keywords": [
     "eslint-config"
@@ -35,7 +36,7 @@
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.14.1",
     "eslint-config-flat-gitignore": "^0.1.5",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint-merge-processors": "^0.1.0",
     "eslint-plugin-antfu": "^2.3.3",
     "eslint-plugin-format": "^0.1.2",
     "eslint-plugin-import-x": "^0.5.2",

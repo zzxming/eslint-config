@@ -1,7 +1,8 @@
+import { mergeProcessors, processorPassThrough } from 'eslint-merge-processors';
 import { GLOB_MARKDOWN, GLOB_MARKDOWN_CODE } from '../contants';
-import { parserPlain } from '../utils';
 import type { MarkdownOptions, TypedFlatConfigItem } from '../types';
 import { pluginMarkdown } from '../plugins';
+import { parserPlain } from '../utils';
 
 export const markdown = (options: MarkdownOptions = {}): TypedFlatConfigItem[] => {
   const {
@@ -9,7 +10,6 @@ export const markdown = (options: MarkdownOptions = {}): TypedFlatConfigItem[] =
     overrides = {},
     files = [GLOB_MARKDOWN],
   } = options;
-
   return [
     {
       name: 'markdown/setup',
@@ -23,7 +23,10 @@ export const markdown = (options: MarkdownOptions = {}): TypedFlatConfigItem[] =
         parser: parserPlain,
       },
       name: 'markdown/parser',
-      processor: 'markdown/markdown',
+      processor: mergeProcessors([
+        pluginMarkdown.processors.markdown,
+        processorPassThrough,
+      ]),
     },
     {
       files: [

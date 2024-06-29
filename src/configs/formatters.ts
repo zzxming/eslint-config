@@ -4,7 +4,6 @@ import pluginPrettier from 'eslint-plugin-prettier';
 import { GLOB_CSS, GLOB_HTML, GLOB_LESS, GLOB_MARKDOWN, GLOB_POSTCSS, GLOB_SCSS, GLOB_XML, StylisticConfigDefaults } from '../contants';
 import type { FormmatterOptions, TypedFlatConfigItem } from '../types';
 import { parserPlain } from '../utils';
-import { configPrettier } from '../plugins';
 
 export const formatters = (options: FormmatterOptions = {}) => {
   const {
@@ -111,8 +110,6 @@ export const formatters = (options: FormmatterOptions = {}) => {
       },
       name: `formatter/${type}`,
       rules: {
-        ...configPrettier.rules,
-        ...(pluginPrettier as any).configs.recommended.rules,
         'prettier/prettier': [
           'warn',
           {

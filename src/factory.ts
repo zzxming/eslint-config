@@ -50,8 +50,7 @@ export const factory = (options: OptionsConfig = {}) => {
     configs.push(...jsx());
   }
   if (enableTypeScript) {
-    configs.push(...typescript(getSubOptions(options, 'typescript'),
-    ));
+    configs.push(...typescript(getSubOptions(options, 'typescript')));
   }
   if (enableVue) {
     configs.push(
@@ -79,5 +78,6 @@ export const factory = (options: OptionsConfig = {}) => {
     );
   }
   configs.push(...overrides);
+
   return configs;
 };
