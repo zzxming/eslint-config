@@ -7,7 +7,8 @@
   "homepage": "https://github.com/zzxming/eslint-config",
   "scripts": {
     "build": "unbuild",
-    "dev": "unbuild --stub",
+    "dev": "npx @eslint/config-inspector --config eslint.config.js",
+    "build:inspector": "pnpm build && npx @eslint/config-inspector build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepare": "simple-git-hooks"
@@ -53,6 +54,7 @@
     "yaml-eslint-parser": "^1.2.3"
   },
   "devDependencies": {
+    "@eslint/config-inspector": "^0.5.1",
     "@types/eslint": "^8.56.10",
     "@types/node": "^20.14.9",
     "eslint": "^9.0.0",
