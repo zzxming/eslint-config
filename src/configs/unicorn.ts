@@ -42,5 +42,12 @@ export const unicorn = (options: UnicornOptions = {}) => {
         ...overrides,
       },
     },
+    {
+      files: ['**/*.{test,spec}.[jt]s?(x)'],
+      name: 'unicorn/disables/test',
+      rules: {
+        'unicorn/no-useless-undefined': 'off',
+      },
+    },
   ];
 };
