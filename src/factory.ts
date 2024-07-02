@@ -1,7 +1,7 @@
 import { isPackageExists } from 'local-pkg';
 import type { OptionsConfig, TailwindcssOptions } from './types';
 import { StylisticConfigDefaults, VuePackages } from './contants';
-import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, stylistic, tailwindcss, typescript, unicorn, vue, yaml } from './configs';
+import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, vue, yaml } from './configs';
 import { getOptions, getSubOptions } from './utils';
 
 export const factory = (options: OptionsConfig = {}) => {
@@ -38,10 +38,14 @@ export const factory = (options: OptionsConfig = {}) => {
     componentExts.push('vue');
   }
   if (enableJsonc) {
-    configs.push(...jsonc({
-      stylistic: stylisticOptions,
-      ...getSubOptions(options, 'jsonc'),
-    }));
+    configs.push(
+      ...jsonc({
+        stylistic: stylisticOptions,
+        ...getSubOptions(options, 'jsonc'),
+      }),
+      ...sortPackageJson(),
+      ...sortTsconfig(),
+    );
   }
   if (enableTailwindcss) {
     configs.push(...tailwindcss(getOptions(enableTailwindcss, {}) as TailwindcssOptions));
