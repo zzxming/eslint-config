@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "target": "esnext",
     "lib": ["es2022"],
+    "baseUrl": ".",
     "module": "esnext",
     "moduleResolution": "bundler",
     "types": ["node"],

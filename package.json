@@ -1,23 +1,14 @@
 {
   "name": "@zzxming/eslint-config",
-  "description": "Eslint config for zzxming",
-  "version": "0.0.4",
   "type": "module",
+  "version": "0.0.4",
   "packageManager": "pnpm@8.14.3",
+  "description": "Eslint config for zzxming",
+  "author": "zzxming",
+  "license": "MIT",
   "homepage": "https://github.com/zzxming/eslint-config",
-  "scripts": {
-    "build": "unbuild",
-    "dev": "npx @eslint/config-inspector --config eslint.config.js",
-    "build:inspector": "pnpm build && npx @eslint/config-inspector build",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "prepare": "simple-git-hooks"
-  },
   "keywords": [
     "eslint-config"
-  ],
-  "files": [
-    "dist"
   ],
   "exports": {
     ".": {
@@ -27,8 +18,17 @@
   },
   "main": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
-  "author": "zzxming",
-  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "npx @eslint/config-inspector --config eslint.config.js",
+    "build:inspector": "pnpm build && npx @eslint/config-inspector build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "simple-git-hooks"
+  },
   "peerDependencies": {
     "eslint": "^9.0.0"
   },
