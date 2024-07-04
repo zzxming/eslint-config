@@ -83,6 +83,7 @@ export const typescript = (options: TypescriptOptions = {}): TypedFlatConfigItem
       name: 'typescript/disables/test',
       rules: {
         'no-unused-expressions': 'off',
+        'ts/no-loss-of-precision': 'off',
       },
     },
     {

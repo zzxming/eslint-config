@@ -47,6 +47,7 @@ export const unicorn = (options: UnicornOptions = {}) => {
       name: 'unicorn/disables/test',
       rules: {
         'unicorn/no-useless-undefined': 'off',
+        'unicorn/consistent-function-scoping': ['error', { checkArrowFunctions: false }],
       },
     },
   ];

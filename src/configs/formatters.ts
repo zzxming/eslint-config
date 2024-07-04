@@ -111,14 +111,6 @@ export const formatters = (options: FormmatterOptions = {}) => {
       name: `formatter/${type}`,
       rules: {
         'prettier/prettier': [
-          'warn',
-          {
-            ...prettierOptions,
-            ...extraRules,
-            parser,
-          },
-        ],
-        'format/prettier': [
           'error',
           {
             ...prettierOptions,
