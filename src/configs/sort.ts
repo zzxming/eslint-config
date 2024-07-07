@@ -1,12 +1,10 @@
 import type { TypedFlatConfigItem } from '../types';
-/**
- * Requires `jsonc` config
- */
+
 export const sortPackageJson = (): TypedFlatConfigItem[] => {
   return [
     {
       files: ['**/package.json'],
-      name: 'antfu/sort/package-json',
+      name: 'sort/package-json',
       rules: {
         'jsonc/sort-array-values': [
           'error',
@@ -105,14 +103,11 @@ export const sortPackageJson = (): TypedFlatConfigItem[] => {
   ];
 };
 
-/**
- * Requires `jsonc` config
- */
 export const sortTsconfig = (): TypedFlatConfigItem[] => {
   return [
     {
       files: ['**/tsconfig.json', '**/tsconfig.*.json'],
-      name: 'antfu/sort/tsconfig-json',
+      name: 'sort/tsconfig-json',
       rules: {
         'jsonc/sort-keys': [
           'error',
