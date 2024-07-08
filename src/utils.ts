@@ -39,3 +39,8 @@ export const parserPlain = {
 export const getOptions = (options?: boolean | Record<string, any>, defaultValue: Record<string, any> = {}) => {
   return options === false ? false : typeof options === 'object' ? options : defaultValue;
 };
+
+export const importPackage = async (name: string) => {
+  const pkg = await import(name);
+  return pkg.default || pkg;
+};

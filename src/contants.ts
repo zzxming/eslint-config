@@ -21,6 +21,7 @@ export const GLOB_YAML = '**/*.y?(a)ml';
 export const GLOB_MARKDOWN = '**/*.md';
 export const GLOB_MARKDOWN_CODE = `${GLOB_MARKDOWN}/${GLOB_SRC}`;
 
+export const ReactPackages = ['react', 'next'];
 export const VuePackages = ['vue', 'nuxt', 'vitepress'];
 export const StylisticConfigDefaults: StylisticOptions = {
   indent: 2,
