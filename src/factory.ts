@@ -1,14 +1,15 @@
 import { isPackageExists } from 'local-pkg';
-import type { OptionsConfig, TailwindcssOptions } from './types';
-import { StylisticConfigDefaults, VuePackages } from './contants';
-import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, vue, yaml } from './configs';
+import type { OptionsConfig, TailwindcssOptions, TypedFlatConfigItem } from './types';
+import { ReactPackages, StylisticConfigDefaults, VuePackages } from './contants';
+import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, react, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, vue, yaml } from './configs';
 import { getOptions, getSubOptions } from './utils';
 
-export const factory = (options: OptionsConfig = {}) => {
+export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatConfigItem[]> => {
   const {
     gitignore: enableGitignore = true,
     jsx: enableJsx = true,
     typescript: enableTypeScript = isPackageExists('typescript'),
+    react: enableReact = ReactPackages.some(i => isPackageExists(i)),
     vue: enableVue = VuePackages.some(i => isPackageExists(i)),
     tailwindcss: enableTailwindcss = false,
     jsonc: enableJsonc = true,
@@ -78,6 +79,13 @@ export const factory = (options: OptionsConfig = {}) => {
       ...yaml({
         stylistic: stylisticOptions,
         ...getSubOptions(options, 'yaml'),
+      }),
+    );
+  }
+  if (enableReact) {
+    configs.push(
+      ...await react({
+        ...getSubOptions(options, 'react'),
       }),
     );
   }

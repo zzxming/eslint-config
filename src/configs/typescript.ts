@@ -90,8 +90,8 @@ export const typescript = (options: TypescriptOptions = {}): TypedFlatConfigItem
       files: ['**/*.js', '**/*.cjs'],
       name: 'typescript/disables/cjs',
       rules: {
-        '@typescript-eslint/no-require-imports': 'off',
-        '@typescript-eslint/no-var-requires': 'off',
+        'ts/no-require-imports': 'off',
+        'ts/no-var-requires': 'off',
       },
     },
   ];

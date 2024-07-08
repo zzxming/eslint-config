@@ -43,6 +43,9 @@ export interface FormmatterOptions extends StylisticOverrides {
 export interface YamlOptions extends OptionsOverrides, FilesOverrides, StylisticOverrides {}
 export interface UnicornOptions extends OptionsOverrides {}
 export interface TailwindcssOptions extends OptionsOverrides {}
+export interface ReactOptions extends OptionsOverrides {
+  files?: string[];
+}
 
 export interface OptionsConfig {
   stylistic?: boolean | StylisticOptions;
@@ -57,5 +60,7 @@ export interface OptionsConfig {
   formatters?: boolean | FormmatterOptions;
   yaml?: boolean | YamlOptions;
   unicorn?: UnicornOptions;
+  react?: boolean | ReactOptions;
+
   overrides?: Linter.FlatConfig[];
 }
