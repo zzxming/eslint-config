@@ -1,15 +1,20 @@
-import { mergeProcessors, processorPassThrough } from 'eslint-merge-processors';
 import { GLOB_MARKDOWN, GLOB_MARKDOWN_CODE } from '../contants';
 import type { MarkdownOptions, TypedFlatConfigItem } from '../types';
-import { pluginMarkdown } from '../plugins';
-import { parserPlain } from '../utils';
+import { ensureImportPackage, parserPlain } from '../utils';
 
-export const markdown = (options: MarkdownOptions = {}): TypedFlatConfigItem[] => {
+const requiredPkg = [
+  'eslint-plugin-markdown',
+  'eslint-merge-processors',
+];
+export const markdown = async (options: MarkdownOptions = {}): Promise<TypedFlatConfigItem[]> => {
   const {
     componentExts = [],
     overrides = {},
     files = [GLOB_MARKDOWN],
   } = options;
+
+  const [pluginMarkdown, { mergeProcessors, processorPassThrough }] = await ensureImportPackage(requiredPkg);
+
   return [
     {
       name: 'markdown/setup',

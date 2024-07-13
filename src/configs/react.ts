@@ -1,25 +1,26 @@
-import { importPackage } from '../utils';
 import type { ReactOptions } from '../types';
 import { GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX } from '../contants';
+import { ensureImportPackage } from '../utils';
+
+const requiredPkg = [
+  '@eslint-react/eslint-plugin',
+  'eslint-plugin-react-hooks',
+  'eslint-plugin-react-refresh',
+  '@typescript-eslint/parser',
+];
 
 export const react = async (options: ReactOptions = {}) => {
   const {
     files = [GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX],
     overrides = {},
   } = options;
+
   const [
     pluginReact,
     pluginReactHooks,
     pluginReactRefresh,
     parserTs,
-  ] = await Promise.all(
-    [
-      '@eslint-react/eslint-plugin',
-      'eslint-plugin-react-hooks',
-      'eslint-plugin-react-refresh',
-      '@typescript-eslint/parser',
-    ].map(importPackage),
-  );
+  ] = await ensureImportPackage(requiredPkg);
   const plugins = pluginReact.configs.all.plugins;
 
   return [

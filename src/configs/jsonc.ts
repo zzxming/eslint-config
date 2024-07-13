@@ -1,9 +1,13 @@
-import pluginJsonc from 'eslint-plugin-jsonc';
-import parserJsonc from 'jsonc-eslint-parser';
 import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from '../contants';
 import type { JsoncOptions, TypedFlatConfigItem } from '../types';
+import { ensureImportPackage } from '../utils';
 
-export const jsonc = (options: JsoncOptions = {}): TypedFlatConfigItem[] => {
+const requiredPkg = [
+  'eslint-plugin-jsonc',
+  'jsonc-eslint-parser',
+];
+
+export const jsonc = async (options: JsoncOptions = {}): Promise<TypedFlatConfigItem[]> => {
   const {
     files = [GLOB_JSON, GLOB_JSON5, GLOB_JSONC],
     stylistic = true,
@@ -13,6 +17,11 @@ export const jsonc = (options: JsoncOptions = {}): TypedFlatConfigItem[] => {
   const {
     indent = 2,
   } = typeof stylistic === 'boolean' ? {} : stylistic;
+
+  const [
+    pluginJsonc,
+    parserJsonc,
+  ] = await ensureImportPackage(requiredPkg);
 
   return [
     {

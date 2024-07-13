@@ -40,7 +40,7 @@ export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatCon
   }
   if (enableJsonc) {
     configs.push(
-      ...jsonc({
+      ...await jsonc({
         stylistic: stylisticOptions,
         ...getSubOptions(options, 'jsonc'),
       }),
@@ -49,17 +49,17 @@ export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatCon
     );
   }
   if (enableTailwindcss) {
-    configs.push(...tailwindcss(getOptions(enableTailwindcss, {}) as TailwindcssOptions));
+    configs.push(...await tailwindcss(getOptions(enableTailwindcss, {}) as TailwindcssOptions));
   }
   if (enableJsx) {
     configs.push(...jsx());
   }
   if (enableTypeScript) {
-    configs.push(...typescript(getSubOptions(options, 'typescript')));
+    configs.push(...await typescript(getSubOptions(options, 'typescript')));
   }
   if (enableVue) {
     configs.push(
-      ...vue({
+      ...await vue({
         typescript: !!enableTypeScript,
         stylistic: stylisticOptions,
         ...getSubOptions(options, 'vue'),
@@ -68,7 +68,7 @@ export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatCon
   }
   if (enableMarkdown) {
     configs.push(
-      ...markdown({
+      ...await markdown({
         ...getSubOptions(options, 'markdown'),
         componentExts,
       }),
@@ -76,7 +76,7 @@ export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatCon
   }
   if (enableYaml) {
     configs.push(
-      ...yaml({
+      ...await yaml({
         stylistic: stylisticOptions,
         ...getSubOptions(options, 'yaml'),
       }),
