@@ -18,7 +18,11 @@
   },
   "main": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
+  "bin": {
+    "uvs": "./bin/update-vscode-settings.js"
+  },
   "files": [
+    "bin",
     "dist"
   ],
   "scripts": {
@@ -35,6 +39,7 @@
   "dependencies": {
     "@antfu/install-pkg": "^0.3.3",
     "@stylistic/eslint-plugin": "^2.3.0",
+    "consola": "^3.2.3",
     "eslint-config-flat-gitignore": "^0.1.5",
     "eslint-plugin-antfu": "^2.3.3",
     "eslint-plugin-format": "^0.1.2",
