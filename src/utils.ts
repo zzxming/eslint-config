@@ -58,7 +58,7 @@ export const ensurePackageExists = async (packages: string[]) => {
       message: `${nonExistingPackages.length === 1 ? 'Package is' : 'Packages are'} required for this config: ${nonExistingPackages.join(', ')}. Do you want to install them?`,
       initial: true,
     });
-    if (result) {
+    if (result.install) {
       await installPackage(nonExistingPackages, { dev: true });
     }
   }
