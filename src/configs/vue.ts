@@ -4,7 +4,6 @@ import { ensureImportPackage } from '../utils';
 
 const requiredPkg = [
   'vue-eslint-parser',
-  '@typescript-eslint/parser',
   'eslint-plugin-vue',
 ];
 export const vue = async (options: VueOptions = {}): Promise<TypedFlatConfigItem[]> => {
@@ -12,16 +11,18 @@ export const vue = async (options: VueOptions = {}): Promise<TypedFlatConfigItem
     files = [GLOB_VUE],
     stylistic = true,
     vueVersion = 3,
+    typescript = true,
     overrides = {},
   } = options;
   const {
     indent = 2,
   } = typeof stylistic === 'boolean' ? {} : stylistic;
 
+  if (typescript) requiredPkg.push('@typescript-eslint/parser');
   const [
     parserVue,
-    parserTs,
     pluginVue,
+    parserTs,
   ] = await ensureImportPackage(requiredPkg);
 
   return [
@@ -60,7 +61,7 @@ export const vue = async (options: VueOptions = {}): Promise<TypedFlatConfigItem
             jsx: true,
           },
           extraFileExtensions: ['.vue'],
-          parser: options.typescript ? parserTs : null,
+          parser: typescript ? parserTs : null,
           sourceType: 'module',
         },
       },
