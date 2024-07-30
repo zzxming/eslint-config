@@ -2,7 +2,7 @@ import { isPackageExists } from 'local-pkg';
 import type { OptionsConfig, TailwindcssOptions, TypedFlatConfigItem } from './types';
 import { ReactPackages, StylisticConfigDefaults, VuePackages } from './contants';
 import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, react, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, vue, yaml } from './configs';
-import { getOptions, getSubOptions } from './utils';
+import { ensureImportPackage, getOptions, getSubOptions, isGenerator, isIteratorReturnResult } from './utils';
 
 export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatConfigItem[]> => {
   const {
@@ -19,17 +19,19 @@ export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatCon
     overrides = [],
   } = options;
 
+  const pkgEnsureGenerator = ensureImportPackage();
+  pkgEnsureGenerator.next();
   const componentExts = [];
-  const configs = [];
+  const rules = [];
   const stylisticOptions = getOptions(options.stylistic, StylisticConfigDefaults);
 
-  configs.push(
-    ...ignore(enableGitignore),
-    ...javascript(getSubOptions(options, 'javascript')),
-    ...stylistic(stylisticOptions || {}),
-    ...imports(),
-    ...unicorn(unicornOptions),
-    ...formatters({
+  rules.push(
+    ignore(enableGitignore),
+    javascript(getSubOptions(options, 'javascript')),
+    stylistic(stylisticOptions || {}),
+    imports(),
+    unicorn(unicornOptions),
+    formatters({
       ...getSubOptions(options, 'formatters'),
       stylistic: stylisticOptions,
     }),
@@ -39,27 +41,27 @@ export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatCon
     componentExts.push('vue');
   }
   if (enableJsonc) {
-    configs.push(
-      ...await jsonc({
+    rules.push(
+      jsonc(pkgEnsureGenerator, {
         stylistic: stylisticOptions,
         ...getSubOptions(options, 'jsonc'),
       }),
-      ...sortPackageJson(),
-      ...sortTsconfig(),
+      sortPackageJson(),
+      sortTsconfig(),
     );
   }
   if (enableTailwindcss) {
-    configs.push(...await tailwindcss(getOptions(enableTailwindcss, {}) as TailwindcssOptions));
+    rules.push(tailwindcss(pkgEnsureGenerator, getOptions(enableTailwindcss, {}) as TailwindcssOptions));
   }
   if (enableJsx) {
-    configs.push(...jsx());
+    rules.push(jsx());
   }
   if (enableTypeScript) {
-    configs.push(...await typescript(getSubOptions(options, 'typescript')));
+    rules.push(typescript(pkgEnsureGenerator, getSubOptions(options, 'typescript')));
   }
   if (enableVue) {
-    configs.push(
-      ...await vue({
+    rules.push(
+      vue(pkgEnsureGenerator, {
         typescript: !!enableTypeScript,
         stylistic: stylisticOptions,
         ...getSubOptions(options, 'vue'),
@@ -67,28 +69,43 @@ export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatCon
     );
   }
   if (enableMarkdown) {
-    configs.push(
-      ...await markdown({
+    rules.push(
+      markdown(pkgEnsureGenerator, {
         ...getSubOptions(options, 'markdown'),
         componentExts,
       }),
     );
   }
   if (enableYaml) {
-    configs.push(
-      ...await yaml({
+    rules.push(
+      yaml(pkgEnsureGenerator, {
         stylistic: stylisticOptions,
         ...getSubOptions(options, 'yaml'),
       }),
     );
   }
   if (enableReact) {
-    configs.push(
-      ...await react({
+    rules.push(
+      react(pkgEnsureGenerator, {
         ...getSubOptions(options, 'react'),
       }),
     );
   }
+
+  await Promise.all(rules.map(async item => isGenerator(item) ? item.next() : item));
+  await pkgEnsureGenerator.next();
+  const generatorConfigs = await Promise.all(rules.map(async (item) => {
+    while (isGenerator(item)) {
+      const data = await item.next();
+      if (isIteratorReturnResult(data)) return data;
+    }
+    return item;
+  }));
+  const configs = generatorConfigs.reduce(
+    (acc, cur) => (acc as TypedFlatConfigItem[]).concat(isIteratorReturnResult(cur) ? cur.value : cur),
+    [],
+  ) as TypedFlatConfigItem[];
+
   configs.push(...overrides);
 
   return configs;

@@ -1,5 +1,5 @@
 import { GLOB_DTS, GLOB_TS, GLOB_TSX } from '../contants';
-import { ensureImportPackage, renameRules } from '../utils';
+import { importPackage, renameRules } from '../utils';
 import type { TypedFlatConfigItem, TypescriptOptions } from '../types';
 
 const requiredPkg = [
@@ -7,14 +7,15 @@ const requiredPkg = [
   '@typescript-eslint/eslint-plugin',
 ];
 
-export const typescript = async (options: TypescriptOptions = {}): Promise<TypedFlatConfigItem[]> => {
+export async function* typescript(pkgInstallGenerator: AsyncGenerator, options: TypescriptOptions = {}): AsyncGenerator<any, TypedFlatConfigItem[]> {
   const {
     overrides = {},
     parserOptions = {},
   } = options;
   const files = [GLOB_TS, GLOB_TSX];
 
-  const [parserTs, pluginTs] = await ensureImportPackage(requiredPkg);
+  yield pkgInstallGenerator.next(requiredPkg);
+  const [parserTs, pluginTs] = await Promise.all(requiredPkg.map(importPackage));
 
   return [
     {

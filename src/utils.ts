@@ -63,8 +63,21 @@ export const ensurePackageExists = async (packages: string[]) => {
     }
   }
 };
+export const isFunction = (val: any): val is Function => typeof val === 'function';
+export const isGenerator = (val: any): val is AsyncGenerator => val.next && isFunction(val.next);
+export const isIteratorReturnResult = <T = any>(val: any): val is IteratorReturnResult<T> => val.done && Object.prototype.hasOwnProperty.call(val, 'value');
 
-export const ensureImportPackage = async (packages: string[]) => {
+export const isArray = Array.isArray;
+export const ensureArray = (value: any) => (isArray(value) ? value || [] : [value]);
+
+export async function* ensureImportPackage(): AsyncGenerator<any> {
+  const packages = [];
+  let appendPkg;
+  while (true) {
+    appendPkg = yield;
+    if (!appendPkg) break;
+    packages.push(...ensureArray(appendPkg));
+  }
   await ensurePackageExists(packages);
   return Promise.all(packages.map(importPackage));
-};
+}
