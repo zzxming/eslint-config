@@ -56,7 +56,7 @@ export const ensurePackageExists = async (packages: string[]) => {
     const result = await prompts({
       type: 'confirm',
       name: 'install',
-      message: `${nonExistingPackages.length === 1 ? 'Package is' : 'Packages are'} required for this config: ${nonExistingPackages.join(', ')}. Do you want to install them?`,
+      message: `${nonExistingPackages.length === 1 ? 'Package is' : 'Packages are'} required for this config. Do you want to install them? \n- ${nonExistingPackages.join('\n- ')}\n`,
       initial: true,
     });
     if (result.install) {
