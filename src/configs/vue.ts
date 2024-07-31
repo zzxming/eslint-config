@@ -1,4 +1,4 @@
-import type { TypedFlatConfigItem, VueOptions } from '../types';
+import type { PackageInstallGenerator, TypedFlatConfigItem, VueOptions } from '../types';
 import { GLOB_VUE } from '../contants';
 import { importPackage } from '../utils';
 
@@ -7,7 +7,10 @@ const requiredPkg = [
   'eslint-plugin-vue',
 ];
 
-export async function* vue(pkgInstallGenerator: AsyncGenerator, options: VueOptions = {}): AsyncGenerator<any, TypedFlatConfigItem[]> {
+export async function* vue(
+  pkgInstallGenerator: PackageInstallGenerator,
+  options: VueOptions = {},
+): AsyncGenerator<any, TypedFlatConfigItem[]> {
   const {
     files = [GLOB_VUE],
     stylistic = true,

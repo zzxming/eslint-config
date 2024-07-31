@@ -1,13 +1,16 @@
 import { GLOB_DTS, GLOB_TS, GLOB_TSX } from '../contants';
 import { importPackage, renameRules } from '../utils';
-import type { TypedFlatConfigItem, TypescriptOptions } from '../types';
+import type { PackageInstallGenerator, TypedFlatConfigItem, TypescriptOptions } from '../types';
 
 const requiredPkg = [
   '@typescript-eslint/parser',
   '@typescript-eslint/eslint-plugin',
 ];
 
-export async function* typescript(pkgInstallGenerator: AsyncGenerator, options: TypescriptOptions = {}): AsyncGenerator<any, TypedFlatConfigItem[]> {
+export async function* typescript(
+  pkgInstallGenerator: PackageInstallGenerator,
+  options: TypescriptOptions = {},
+): AsyncGenerator<any, TypedFlatConfigItem[]> {
   const {
     overrides = {},
     parserOptions = {},

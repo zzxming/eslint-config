@@ -64,3 +64,5 @@ export interface OptionsConfig {
 
   overrides?: Linter.FlatConfig[];
 }
+
+export type PackageInstallGenerator = AsyncGenerator<void, void, string[]>;

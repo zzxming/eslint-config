@@ -1,9 +1,12 @@
 import { importPackage } from '../utils';
-import type { TailwindcssOptions, TypedFlatConfigItem } from '../types';
+import type { PackageInstallGenerator, TailwindcssOptions, TypedFlatConfigItem } from '../types';
 
 const requiredPkg = ['eslint-plugin-tailwindcss'];
 
-export async function* tailwindcss(pkgInstallGenerator: AsyncGenerator, options: TailwindcssOptions = {}): AsyncGenerator<any, TypedFlatConfigItem[]> {
+export async function* tailwindcss(
+  pkgInstallGenerator: PackageInstallGenerator,
+  options: TailwindcssOptions = {},
+): AsyncGenerator<any, TypedFlatConfigItem[]> {
   const { overrides = {} } = options;
 
   yield pkgInstallGenerator.next(requiredPkg);

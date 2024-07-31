@@ -1,5 +1,5 @@
 import { GLOB_YAML } from '../contants';
-import type { TypedFlatConfigItem, YamlOptions } from '../types';
+import type { PackageInstallGenerator, TypedFlatConfigItem, YamlOptions } from '../types';
 import { importPackage } from '../utils';
 
 const requiredPkg = [
@@ -7,7 +7,10 @@ const requiredPkg = [
   'yaml-eslint-parser',
 ];
 
-export async function* yaml(pkgInstallGenerator: AsyncGenerator, options: YamlOptions = {}): AsyncGenerator<any, TypedFlatConfigItem[]> {
+export async function* yaml(
+  pkgInstallGenerator: PackageInstallGenerator,
+  options: YamlOptions = {},
+): AsyncGenerator<any, TypedFlatConfigItem[]> {
   const {
     files = [GLOB_YAML],
     overrides = {},

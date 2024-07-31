@@ -1,4 +1,4 @@
-import type { ReactOptions, TypedFlatConfigItem } from '../types';
+import type { PackageInstallGenerator, ReactOptions, TypedFlatConfigItem } from '../types';
 import { GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX } from '../contants';
 import { importPackage } from '../utils';
 
@@ -9,7 +9,10 @@ const requiredPkg = [
   '@typescript-eslint/parser',
 ];
 
-export async function* react(pkgInstallGenerator: AsyncGenerator, options: ReactOptions = {}): AsyncGenerator<any, TypedFlatConfigItem[]> {
+export async function* react(
+  pkgInstallGenerator: PackageInstallGenerator,
+  options: ReactOptions = {},
+): AsyncGenerator<any, TypedFlatConfigItem[]> {
   const {
     files = [GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX],
     overrides = {},

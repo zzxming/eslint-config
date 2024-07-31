@@ -1,6 +1,7 @@
 import { isPackageExists } from 'local-pkg';
 import { installPackage } from '@antfu/install-pkg';
 import prompts from 'prompts';
+import type { PackageInstallGenerator } from './types';
 
 export const getSubOptions = (options: Record<string, any>, key: string) => {
   return typeof options[key] === 'boolean' ? {} : options[key] || {};
@@ -70,7 +71,7 @@ export const isIteratorReturnResult = <T = any>(val: any): val is IteratorReturn
 export const isArray = Array.isArray;
 export const ensureArray = (value: any) => (isArray(value) ? value || [] : [value]);
 
-export async function* ensureImportPackage(): AsyncGenerator<any> {
+export async function* ensureImportPackage(): PackageInstallGenerator {
   const packages = [];
   let appendPkg;
   while (true) {
@@ -78,6 +79,5 @@ export async function* ensureImportPackage(): AsyncGenerator<any> {
     if (!appendPkg) break;
     packages.push(...ensureArray(appendPkg));
   }
-  await ensurePackageExists(packages);
-  return Promise.all(packages.map(importPackage));
+  return ensurePackageExists(packages);
 }
