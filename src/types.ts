@@ -5,22 +5,22 @@ export type TypedFlatConfigItem = Omit<Linter.Config<Linter.RulesRecord & Rules>
   plugins?: Record<string, any>;
 };
 
-export interface StylisticOptions {
+export interface StylisticConfigOptions {
   indent?: number | 'tab';
   jsx?: boolean;
   quotes?: 'double' | 'single';
   semi?: boolean;
-  overrides?: StylisticOptions;
 }
 export interface FilesOverrides {
   files?: string[];
 }
 export interface StylisticOverrides {
-  stylistic?: StylisticOptions;
+  stylistic?: StylisticConfigOptions;
 }
 export interface OptionsOverrides {
   overrides?: Linter.Config;
 }
+export interface StylisticOptions extends StylisticConfigOptions, OptionsOverrides {}
 export type JavascriptOptions = OptionsOverrides;
 export interface TypescriptOptions extends OptionsOverrides {
   parserOptions?: ESLint.Environment['parserOptions'];

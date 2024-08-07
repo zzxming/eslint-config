@@ -102,22 +102,22 @@ already use plugin [`eslint-plugin-yml`](https://www.npmjs.com/package/eslint-pl
   <summary>OptionsConfig</summary>
 
 ```ts
-export interface StylisticOptions {
+export interface StylisticConfigOptions {
   indent?: number | 'tab';
   jsx?: boolean;
   quotes?: 'double' | 'single';
   semi?: boolean;
-  overrides?: StylisticOptions;
 }
 export interface FilesOverrides {
   files?: string[];
 }
 export interface StylisticOverrides {
-  stylistic?: StylisticOptions;
+  stylistic?: StylisticConfigOptions;
 }
 export interface OptionsOverrides {
-  overrides?: Linter.FlatConfig;
+  overrides?: Linter.Config;
 }
+export interface StylisticOptions extends StylisticConfigOptions, OptionsOverrides {}
 export type JavascriptOptions = OptionsOverrides;
 export interface TypescriptOptions extends OptionsOverrides {
   parserOptions?: ESLint.Environment['parserOptions'];
@@ -158,7 +158,7 @@ export interface OptionsConfig {
   yaml?: boolean | YamlOptions;
   unicorn?: UnicornOptions;
   react?: boolean | ReactOptions;
-  overrides?: Linter.FlatConfig[];
+  overrides?: Linter.Config[];
 }
 ```
 
