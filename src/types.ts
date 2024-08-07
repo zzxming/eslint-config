@@ -1,7 +1,7 @@
 import type { ESLint, Linter } from 'eslint';
 
 export type Rules = Record<string, any>;
-export type TypedFlatConfigItem = Omit<Linter.FlatConfig<Linter.RulesRecord & Rules >, 'plugins'> & {
+export type TypedFlatConfigItem = Omit<Linter.Config<Linter.RulesRecord & Rules>, 'plugins'> & {
   plugins?: Record<string, any>;
 };
 
@@ -19,9 +19,9 @@ export interface StylisticOverrides {
   stylistic?: StylisticOptions;
 }
 export interface OptionsOverrides {
-  overrides?: Linter.FlatConfig;
+  overrides?: Linter.Config;
 }
-export interface JavascriptOptions extends OptionsOverrides {}
+export type JavascriptOptions = OptionsOverrides;
 export interface TypescriptOptions extends OptionsOverrides {
   parserOptions?: ESLint.Environment['parserOptions'];
 }
@@ -41,8 +41,8 @@ export interface FormmatterOptions extends StylisticOverrides {
   prettierOptions?: Record<string, any>;
 }
 export interface YamlOptions extends OptionsOverrides, FilesOverrides, StylisticOverrides {}
-export interface UnicornOptions extends OptionsOverrides {}
-export interface TailwindcssOptions extends OptionsOverrides {}
+export type UnicornOptions = OptionsOverrides;
+export type TailwindcssOptions = OptionsOverrides;
 export interface ReactOptions extends OptionsOverrides {
   files?: string[];
 }
@@ -61,8 +61,7 @@ export interface OptionsConfig {
   yaml?: boolean | YamlOptions;
   unicorn?: UnicornOptions;
   react?: boolean | ReactOptions;
-
-  overrides?: Linter.FlatConfig[];
+  overrides?: Linter.Config[];
 }
 
 export type PackageInstallGenerator = AsyncGenerator<void, void, string[]>;
