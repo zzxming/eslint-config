@@ -51,7 +51,7 @@ export const importPackage = async (name: string) => {
 };
 
 export const ensurePackageExists = async (packages: string[]) => {
-  const nonExistingPackages = packages.filter(i => i && !isPackageExists(i));
+  const nonExistingPackages = Array.from(new Set(packages)).filter(i => i && !isPackageExists(i));
   if (nonExistingPackages.length > 0) {
     const result = await prompts({
       type: 'confirm',
