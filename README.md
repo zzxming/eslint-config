@@ -1,6 +1,8 @@
 # @zzxming/eslint-config
 
-some eslint config
+some eslint config.
+
+> After install and config. Please run once `eslint .` to install required config rules.
 
 ## Javascript rules
 
