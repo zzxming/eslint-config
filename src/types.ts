@@ -24,6 +24,7 @@ export interface StylisticOptions extends StylisticConfigOptions, OptionsOverrid
 export type JavascriptOptions = OptionsOverrides;
 export interface TypescriptOptions extends OptionsOverrides {
   parserOptions?: ESLint.Environment['parserOptions'];
+  componentExts?: string[];
 }
 export interface VueOptions extends OptionsOverrides, FilesOverrides, StylisticOverrides {
   vueVersion?: 2 | 3;

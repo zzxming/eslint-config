@@ -14,8 +14,13 @@ export async function* typescript(
   const {
     overrides = {},
     parserOptions = {},
+    componentExts = [],
   } = options;
-  const files = [GLOB_TS, GLOB_TSX];
+  const files = [
+    GLOB_TS,
+    GLOB_TSX,
+    ...componentExts.map(ext => `**/*.${ext}`),
+  ];
 
   yield pkgInstallGenerator.next(requiredPkg);
   const [parserTs, pluginTs] = await Promise.all(requiredPkg.map(importPackage));

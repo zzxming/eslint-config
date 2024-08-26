@@ -57,7 +57,10 @@ export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatCon
     rules.push(jsx());
   }
   if (enableTypeScript) {
-    rules.push(typescript(pkgEnsureGenerator, getSubOptions(options, 'typescript')));
+    rules.push(typescript(pkgEnsureGenerator, {
+      ...getSubOptions(options, 'typescript'),
+      componentExts,
+    }));
   }
   if (enableVue) {
     rules.push(
