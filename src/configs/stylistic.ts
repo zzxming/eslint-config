@@ -47,6 +47,7 @@ export const stylistic = (options: StylisticOptions = {}): TypedFlatConfigItem[]
         'antfu/curly': 'error',
         'antfu/if-newline': 'off',
         'antfu/top-level-function': 'off',
+        'antfu/no-ts-export-equal': 'error',
         ...overrides,
       },
     },
