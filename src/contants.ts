@@ -20,6 +20,7 @@ export const GLOB_JSONC = '**/*.jsonc';
 export const GLOB_YAML = '**/*.y?(a)ml';
 export const GLOB_MARKDOWN = '**/*.md';
 export const GLOB_MARKDOWN_CODE = `${GLOB_MARKDOWN}/${GLOB_SRC}`;
+export const GLOB_TEST = `**/*.{spec,test}.${GLOB_SRC_EXT}`;
 
 export const ReactPackages = ['react', 'next'];
 export const VuePackages = ['vue', 'nuxt', 'vitepress'];

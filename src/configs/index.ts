@@ -13,3 +13,4 @@ export * from './imports';
 export * from './unicorn';
 export * from './sort';
 export * from './react';
+export * from './vitest';

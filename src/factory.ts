@@ -1,7 +1,7 @@
 import { isPackageExists } from 'local-pkg';
 import type { OptionsConfig, TailwindcssOptions, TypedFlatConfigItem } from './types';
 import { ReactPackages, StylisticConfigDefaults, VuePackages } from './contants';
-import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, react, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, vue, yaml } from './configs';
+import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, react, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, vitest, vue, yaml } from './configs';
 import { ensureImportPackage, getOptions, getSubOptions, isGenerator, isIteratorReturnResult } from './utils';
 
 export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatConfigItem[]> => {
@@ -15,6 +15,7 @@ export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatCon
     jsonc: enableJsonc = true,
     markdown: enableMarkdown = true,
     yaml: enableYaml = true,
+    vitest: enableVitest = false,
     unicorn: unicornOptions = {},
     overrides = [],
   } = options;
@@ -91,6 +92,13 @@ export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatCon
     rules.push(
       react(pkgEnsureGenerator, {
         ...getSubOptions(options, 'react'),
+      }),
+    );
+  }
+  if (enableVitest) {
+    rules.push(
+      vitest(pkgEnsureGenerator, {
+        ...getSubOptions(options, 'vitest'),
       }),
     );
   }

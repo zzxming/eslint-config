@@ -85,6 +85,14 @@ already use plugin [`eslint-plugin-yml`](https://www.npmjs.com/package/eslint-pl
 | ------------------- | ------ |
 | `eslint-plugin-yml` | `yaml` |
 
+## Vitest rules
+
+already use plugin [`@vitest/eslint-plugin`](https://github.com/vitest-dev/eslint-plugin-vitest). please see official docs to config rules.
+
+| plugin name             | rename   |
+| ----------------------- | -------- |
+| `@vitest/eslint-plugin` | `vitest` |
+
 ## Other rules
 
 | plugin name                | rename     |
@@ -145,6 +153,9 @@ export type TailwindcssOptions = OptionsOverrides;
 export interface ReactOptions extends OptionsOverrides {
   files?: string[];
 }
+export interface VitestOptions extends OptionsOverrides {
+  files?: string[];
+};
 
 export interface OptionsConfig {
   stylistic?: boolean | StylisticOptions;
@@ -160,6 +171,7 @@ export interface OptionsConfig {
   yaml?: boolean | YamlOptions;
   unicorn?: UnicornOptions;
   react?: boolean | ReactOptions;
+  vitest?: boolean | VitestOptions;
   overrides?: Linter.Config[];
 }
 ```

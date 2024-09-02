@@ -47,6 +47,9 @@ export type TailwindcssOptions = OptionsOverrides;
 export interface ReactOptions extends OptionsOverrides {
   files?: string[];
 }
+export interface VitestOptions extends OptionsOverrides {
+  files?: string[];
+};
 
 export interface OptionsConfig {
   stylistic?: boolean | StylisticOptions;
@@ -62,6 +65,7 @@ export interface OptionsConfig {
   yaml?: boolean | YamlOptions;
   unicorn?: UnicornOptions;
   react?: boolean | ReactOptions;
+  vitest?: boolean | VitestOptions;
   overrides?: Linter.Config[];
 }
 
