@@ -33,6 +33,33 @@ export const stylistic = (options: StylisticOptions = {}): TypedFlatConfigItem[]
       },
       rules: {
         ...config.rules,
+        'style/indent': [
+          'error',
+          2,
+          {
+            ArrayExpression: 1,
+            CallExpression: { arguments: 1 },
+            flatTernaryExpressions: false,
+            FunctionDeclaration: { body: 1, parameters: 1 },
+            FunctionExpression: { body: 1, parameters: 1 },
+            ignoreComments: false,
+            ignoredNodes: [
+              'TSUnionType',
+              'TSIntersectionType',
+              'TSTypeParameterInstantiation',
+              'FunctionExpression > .params[decorators.length > 0]',
+              'FunctionExpression > .params > :matches(Decorator, :not(:first-child))',
+            ],
+            ImportDeclaration: 1,
+            MemberExpression: 1,
+            ObjectExpression: 1,
+            offsetTernaryExpressions: true,
+            outerIIFEBody: 1,
+            SwitchCase: 1,
+            VariableDeclarator: 1,
+            tabLength: 2,
+          },
+        ],
         // 'after' makes multiline ternary expressions more one indent(in multiline object)
         'style/operator-linebreak': ['error', 'before'],
         'style/array-bracket-newline': [
