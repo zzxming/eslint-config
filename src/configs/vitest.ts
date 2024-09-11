@@ -32,10 +32,17 @@ export async function* vitest(
         'vitest/no-import-node-test': 'error',
         'vitest/prefer-hooks-in-order': 'error',
         'vitest/expect-expect': 'error',
-        'vitest/prefer-lowercase-title': 'error',
+        'vitest/prefer-lowercase-title': 'off',
         'vitest/valid-expect': ['error', { alwaysAwait: true }],
 
         ...overrides,
+      },
+    },
+    {
+      files: ['**/__tests__/*.{test,spec}-d.?([cm])[jt]s?(x)'],
+      rules: {
+        'ts/no-empty-object-type': 'off',
+        'vitest/expect-expect': 'off',
       },
     },
   ];
