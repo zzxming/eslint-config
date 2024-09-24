@@ -1,6 +1,6 @@
 # @zzxming/eslint-config
 
-some eslint config.
+[default config rules](https://zzxming.github.io/eslint-config/configs)
 
 > After install and config. Please run once `eslint .` to install required config rules.
 
