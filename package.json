@@ -28,7 +28,7 @@
   "scripts": {
     "build": "unbuild",
     "dev": "npx @eslint/config-inspector --config eslint.config.js",
-    "build:inspector": "pnpm build && npx @eslint/config-inspector build",
+    "build:inspector": "pnpm build && npx @eslint/config-inspector build --base /eslint-config",
     "lint": "eslint . --cache",
     "lint:fix": "eslint . --fix",
     "prepare": "simple-git-hooks"
