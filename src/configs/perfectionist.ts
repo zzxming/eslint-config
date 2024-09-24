@@ -4,7 +4,7 @@ import pluginPerfectionist from 'eslint-plugin-perfectionist';
 export const perfectionist = (): TypedFlatConfigItem[] => {
   return [
     {
-      name: 'perfectionist/setup',
+      name: 'perfectionist/rules',
       plugins: {
         perfectionist: pluginPerfectionist,
       },

@@ -39,6 +39,7 @@ export async function* vitest(
       },
     },
     {
+      name: 'vitest/dts-tests/rules',
       files: ['**/__tests__/*.{test,spec}-d.?([cm])[jt]s?(x)'],
       rules: {
         'ts/no-empty-object-type': 'off',

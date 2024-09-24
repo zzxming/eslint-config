@@ -32,8 +32,6 @@ export async function* vue(
       plugins: {
         vue: pluginVue,
       },
-    },
-    {
       languageOptions: {
         globals: {
           computed: 'readonly',
@@ -66,9 +64,6 @@ export async function* vue(
           sourceType: 'module',
         },
       },
-    },
-    ...pluginVue.configs['flat/recommended'],
-    {
       name: 'vue/rules',
       processor: pluginVue.processors['.vue'],
       rules: {
@@ -180,6 +175,7 @@ export async function* vue(
       },
     },
     {
+      name: 'vue/disables/test',
       files: ['**/__tests__/**'],
       rules: {
         'no-console': 'off',

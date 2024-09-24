@@ -29,6 +29,7 @@ export const ignore = (enableGitignore = true): TypedFlatConfigItem[] => {
   }
   return [
     {
+      name: 'ignores',
       ignores,
     },
   ];
