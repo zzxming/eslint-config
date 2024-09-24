@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import path from 'node:path';
 import fs from 'node:fs';
 import fsp from 'node:fs/promises';
+import path from 'node:path';
 import consola from 'consola';
 import { vscodeSettings } from './constants';
 

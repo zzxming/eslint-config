@@ -1,7 +1,7 @@
-import { isPackageExists } from 'local-pkg';
 import type { OptionsConfig, TailwindcssOptions, TypedFlatConfigItem } from './types';
+import { isPackageExists } from 'local-pkg';
+import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, perfectionist, react, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, vitest, vue, yaml } from './configs';
 import { ReactPackages, StylisticConfigDefaults, VuePackages } from './contants';
-import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, react, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, vitest, vue, yaml } from './configs';
 import { ensureImportPackage, getOptions, getSubOptions, isGenerator, isIteratorReturnResult } from './utils';
 
 export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatConfigItem[]> => {

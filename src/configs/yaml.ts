@@ -1,5 +1,5 @@
-import { GLOB_YAML } from '../contants';
 import type { PackageInstallGenerator, TypedFlatConfigItem, YamlOptions } from '../types';
+import { GLOB_YAML } from '../contants';
 import { importPackage } from '../utils';
 
 const requiredPkg = [

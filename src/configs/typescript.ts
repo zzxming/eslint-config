@@ -1,6 +1,6 @@
+import type { PackageInstallGenerator, TypedFlatConfigItem, TypescriptOptions } from '../types';
 import { GLOB_DTS, GLOB_TS, GLOB_TSX } from '../contants';
 import { importPackage, renameRules } from '../utils';
-import type { PackageInstallGenerator, TypedFlatConfigItem, TypescriptOptions } from '../types';
 
 const requiredPkg = [
   '@typescript-eslint/parser',

@@ -1,5 +1,5 @@
-import { GLOB_MARKDOWN, GLOB_MARKDOWN_CODE } from '../contants';
 import type { MarkdownOptions, PackageInstallGenerator, TypedFlatConfigItem } from '../types';
+import { GLOB_MARKDOWN, GLOB_MARKDOWN_CODE } from '../contants';
 import { importPackage, parserPlain } from '../utils';
 
 const requiredPkg = [

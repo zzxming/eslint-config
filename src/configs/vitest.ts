@@ -1,5 +1,5 @@
-import { GLOB_TEST } from '../contants';
 import type { PackageInstallGenerator, TypedFlatConfigItem, VitestOptions } from '../types';
+import { GLOB_TEST } from '../contants';
 import { importPackage } from '../utils';
 
 const requiredPkg = ['@vitest/eslint-plugin'];

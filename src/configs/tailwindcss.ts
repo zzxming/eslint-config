@@ -1,5 +1,5 @@
-import { importPackage } from '../utils';
 import type { PackageInstallGenerator, TailwindcssOptions, TypedFlatConfigItem } from '../types';
+import { importPackage } from '../utils';
 
 const requiredPkg = ['eslint-plugin-tailwindcss'];
 

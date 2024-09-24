@@ -1,7 +1,7 @@
-import { isPackageExists } from 'local-pkg';
-import { installPackage } from '@antfu/install-pkg';
-import prompts from 'prompts';
 import type { PackageInstallGenerator } from './types';
+import { installPackage } from '@antfu/install-pkg';
+import { isPackageExists } from 'local-pkg';
+import prompts from 'prompts';
 
 export const getSubOptions = (options: Record<string, any>, key: string) => {
   return typeof options[key] === 'boolean' ? {} : options[key] || {};

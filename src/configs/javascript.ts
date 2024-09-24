@@ -1,7 +1,7 @@
+import type { JavascriptOptions, TypedFlatConfigItem } from '../types';
 import globals from 'globals';
 import { GLOB_SRC, GLOB_SRC_EXT } from '../contants';
 import { pluginUnusedImports } from '../plugins';
-import type { JavascriptOptions, TypedFlatConfigItem } from '../types';
 
 export const javascript = (options: JavascriptOptions = {}): TypedFlatConfigItem[] => {
   const { overrides = {} } = options;

@@ -1,5 +1,5 @@
-import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from '../contants';
 import type { JsoncOptions, PackageInstallGenerator, TypedFlatConfigItem } from '../types';
+import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from '../contants';
 import { importPackage } from '../utils';
 
 const requiredPkg = [

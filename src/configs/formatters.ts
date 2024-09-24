@@ -1,8 +1,8 @@
-import { isPackageExists } from 'local-pkg';
+import type { FormmatterOptions, TypedFlatConfigItem } from '../types';
 import pluginFormat from 'eslint-plugin-format';
 import pluginPrettier from 'eslint-plugin-prettier';
+import { isPackageExists } from 'local-pkg';
 import { GLOB_CSS, GLOB_HTML, GLOB_LESS, GLOB_MARKDOWN, GLOB_POSTCSS, GLOB_SCSS, GLOB_XML, StylisticConfigDefaults } from '../contants';
-import type { FormmatterOptions, TypedFlatConfigItem } from '../types';
 import { parserPlain } from '../utils';
 
 export const formatters = (options: FormmatterOptions = {}) => {
