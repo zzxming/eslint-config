@@ -36,6 +36,7 @@ export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatCon
       ...getSubOptions(options, 'formatters'),
       stylistic: stylisticOptions,
     }),
+    perfectionist(),
   );
 
   if (enableVue) {
