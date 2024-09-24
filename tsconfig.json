@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "lib": ["es2022"],
+    "lib": ["esnext"],
     "baseUrl": ".",
     "module": "esnext",
     "moduleResolution": "bundler",
     "types": ["node"],
+    "allowJs": false,
     "strict": true,
+    "strictNullChecks": true,
+    "noEmit": true,
     "esModuleInterop": true,
     "skipLibCheck": true
   },
