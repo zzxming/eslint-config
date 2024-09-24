@@ -95,12 +95,14 @@ already use plugin [`@vitest/eslint-plugin`](https://github.com/vitest-dev/eslin
 
 ## Other rules
 
-| plugin name                | rename     |
-| -------------------------- | ---------- |
-| `eslint-plugin-antfu`      | `antfu`    |
-| `@stylistic/eslint-plugin` | `style`    |
-| `eslint-plugin-prettier`   | `prettier` |
-| `eslint-plugin-import-x`   | `import`   |
+| plugin name                   | rename          |
+| ----------------------------- | --------------- |
+| `eslint-plugin-antfu`         | `antfu`         |
+| `@stylistic/eslint-plugin`    | `style`         |
+| `eslint-plugin-prettier`      | `prettier`      |
+| `eslint-plugin-import-x`      | `import`        |
+| `eslint-plugin-format`        | `format`        |
+| `eslint-plugin-perfectionist` | `perfectionist` |
 
 ## factory Arguments
 
