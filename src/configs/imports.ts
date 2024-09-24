@@ -1,7 +1,7 @@
-import pluginAntfu from 'eslint-plugin-antfu';
-import { pluginImport } from '../plugins';
-import { GLOB_SRC_EXT } from '../contants';
 import type { TypedFlatConfigItem } from '../types';
+import pluginAntfu from 'eslint-plugin-antfu';
+import pluginImport from 'eslint-plugin-import-x';
+import { GLOB_SRC_EXT } from '../contants';
 
 export const imports = (): TypedFlatConfigItem[] => {
   return [
