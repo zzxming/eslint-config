@@ -44,7 +44,7 @@ export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatCon
   }
   if (enableJsonc) {
     rules.push(
-      jsonc(pkgEnsureGenerator, {
+      jsonc({
         stylistic: stylisticOptions,
         ...getSubOptions(options, 'jsonc'),
       }),
@@ -75,7 +75,7 @@ export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatCon
   }
   if (enableMarkdown) {
     rules.push(
-      markdown(pkgEnsureGenerator, {
+      markdown({
         ...getSubOptions(options, 'markdown'),
         componentExts,
       }),
@@ -83,7 +83,7 @@ export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatCon
   }
   if (enableYaml) {
     rules.push(
-      yaml(pkgEnsureGenerator, {
+      yaml({
         stylistic: stylisticOptions,
         ...getSubOptions(options, 'yaml'),
       }),

@@ -1,24 +1,15 @@
-import type { MarkdownOptions, PackageInstallGenerator, TypedFlatConfigItem } from '../types';
+import type { MarkdownOptions, TypedFlatConfigItem } from '../types';
+import { mergeProcessors, processorPassThrough } from 'eslint-merge-processors';
 import { GLOB_MARKDOWN, GLOB_MARKDOWN_CODE } from '../contants';
-import { importPackage, parserPlain } from '../utils';
+import { pluginMarkdown } from '../plugins';
+import { parserPlain } from '../utils';
 
-const requiredPkg = [
-  'eslint-plugin-markdown',
-  'eslint-merge-processors',
-];
-
-export async function* markdown(
-  pkgInstallGenerator: PackageInstallGenerator,
-  options: MarkdownOptions = {},
-): AsyncGenerator<any, TypedFlatConfigItem[]> {
+export function markdown(options: MarkdownOptions = {}): TypedFlatConfigItem[] {
   const {
     componentExts = [],
     overrides = {},
     files = [GLOB_MARKDOWN],
   } = options;
-
-  yield pkgInstallGenerator.next(requiredPkg);
-  const [pluginMarkdown, { mergeProcessors, processorPassThrough }] = await Promise.all(requiredPkg.map(importPackage));
 
   return [
     {
