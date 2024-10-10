@@ -17,7 +17,7 @@ export const factory = async (options: Partial<OptionsConfig> = {}): Promise<Typ
     yaml: enableYaml = true,
     vitest: enableVitest = false,
     unicorn: unicornOptions = {},
-    unocss: enableUnocss = {},
+    unocss: enableUnocss = false,
     overrides = [],
   } = options;
 

@@ -137,6 +137,7 @@ export async function* vue(
         'vue/space-infix-ops': 'error',
         'vue/space-unary-ops': ['error', { nonwords: false, words: true }],
         'vue/prefer-import-from-vue': 'off',
+        'vue/no-mutating-props': 'off',
 
         // stylitic
         'vue/array-bracket-spacing': ['error', 'never'],

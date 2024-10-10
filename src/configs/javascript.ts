@@ -270,6 +270,7 @@ export const javascript = (options: Partial<JavascriptOptions> = {}): TypedFlatC
         ],
         'vars-on-top': 'error',
         'yoda': ['error', 'never'],
+        'sort-imports': 'off',
 
         ...overrides,
       },
