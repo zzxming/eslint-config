@@ -2906,6 +2906,21 @@
         "yaml/spaced-comment": "error"
       },
       "index": 35
+    },
+    {
+      "name": "unocss/setup",
+      "plugins": {
+        "unocss": {}
+      },
+      "index": 36
+    },
+    {
+      "name": "unocss/rules",
+      "rules": {
+        "unocss/order": "warn",
+        "unocss/order-attributify": "warn"
+      },
+      "index": 37
     }
   ],
   "rules": {
@@ -12092,6 +12107,46 @@
       "type": "problem",
       "name": "yaml/vue-custom-block/no-parsing-error",
       "plugin": "yaml"
+    },
+    "unocss/order": {
+      "type": "layout",
+      "fixable": "code",
+      "docs": {
+        "description": "Order of UnoCSS utilities in class attribute",
+        "url": "https://unocss.dev/integrations/eslint#rules"
+      },
+      "name": "unocss/order",
+      "plugin": "unocss"
+    },
+    "unocss/order-attributify": {
+      "type": "layout",
+      "fixable": "code",
+      "docs": {
+        "description": "Order of UnoCSS attributes",
+        "url": "https://unocss.dev/integrations/eslint#rules"
+      },
+      "name": "unocss/order-attributify",
+      "plugin": "unocss"
+    },
+    "unocss/blocklist": {
+      "type": "problem",
+      "fixable": "code",
+      "docs": {
+        "description": "Utilities in UnoCSS blocklist",
+        "url": "https://unocss.dev/integrations/eslint#rules"
+      },
+      "name": "unocss/blocklist",
+      "plugin": "unocss"
+    },
+    "unocss/enforce-class-compile": {
+      "type": "problem",
+      "fixable": "code",
+      "docs": {
+        "description": "Enforce class compilation",
+        "url": "https://unocss.dev/integrations/eslint#rules"
+      },
+      "name": "unocss/enforce-class-compile",
+      "plugin": "unocss"
     }
   },
   "files": [
@@ -12412,6 +12467,19 @@
       ]
     },
     {
+      "filepath": "src/configs/unocss.ts",
+      "globs": [
+        "**/*.?([cm])ts",
+        "**/*.?([cm])ts",
+        "**/*.?([cm])ts"
+      ],
+      "configs": [
+        24,
+        26,
+        27
+      ]
+    },
+    {
       "filepath": "src/configs/vitest.ts",
       "globs": [
         "**/*.?([cm])ts",
@@ -12541,7 +12609,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1728470122581,
+    "lastUpdate": 1728522788180,
     "basePath": "",
     "configPath": ""
   }
