@@ -1,7 +1,7 @@
 {
   "name": "@zzxming/eslint-config",
   "type": "module",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "packageManager": "pnpm@9.9.0",
   "description": "Eslint config for zzxming",
   "author": "zzxming",
