@@ -1,6 +1,6 @@
 import type { OptionsConfig, TailwindcssOptions, TypedFlatConfigItem } from './types';
 import { isPackageExists } from 'local-pkg';
-import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, perfectionist, react, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, vitest, vue, yaml } from './configs';
+import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, perfectionist, react, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, unocss, vitest, vue, yaml } from './configs';
 import { ReactPackages, StylisticConfigDefaults, VuePackages } from './contants';
 import { ensureImportPackage, getOptions, getSubOptions, isGenerator, isIteratorReturnResult } from './utils';
 
@@ -17,6 +17,7 @@ export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatCon
     yaml: enableYaml = true,
     vitest: enableVitest = false,
     unicorn: unicornOptions = {},
+    unocss: enableUnocss = {},
     overrides = [],
   } = options;
 
@@ -100,6 +101,13 @@ export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatCon
     rules.push(
       vitest(pkgEnsureGenerator, {
         ...getSubOptions(options, 'vitest'),
+      }),
+    );
+  }
+  if (enableUnocss) {
+    rules.push(
+      unocss(pkgEnsureGenerator, {
+        ...getSubOptions(options, 'unocss'),
       }),
     );
   }

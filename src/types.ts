@@ -50,6 +50,10 @@ export interface ReactOptions extends OptionsOverrides {
 export interface VitestOptions extends OptionsOverrides {
   files?: string[];
 };
+export interface UnocssOptions {
+  attributify?: boolean;
+  strict?: boolean;
+}
 
 export interface OptionsConfig {
   stylistic?: boolean | StylisticOptions;
@@ -66,6 +70,7 @@ export interface OptionsConfig {
   unicorn?: UnicornOptions;
   react?: boolean | ReactOptions;
   vitest?: boolean | VitestOptions;
+  unocss?: boolean | UnocssOptions;
   overrides?: Linter.Config[];
 }
 

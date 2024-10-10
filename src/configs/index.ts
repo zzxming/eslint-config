@@ -12,6 +12,7 @@ export * from './stylistic';
 export * from './tailwindcss';
 export * from './typescript';
 export * from './unicorn';
+export * from './unocss';
 export * from './vitest';
 export * from './vue';
 export * from './yaml';
