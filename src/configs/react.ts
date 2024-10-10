@@ -11,7 +11,7 @@ const requiredPkg = [
 
 export async function* react(
   pkgInstallGenerator: PackageInstallGenerator,
-  options: ReactOptions = {},
+  options: Partial<ReactOptions> = {},
 ): AsyncGenerator<any, TypedFlatConfigItem[]> {
   const {
     files = [GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX],

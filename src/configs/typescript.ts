@@ -9,7 +9,7 @@ const requiredPkg = [
 
 export async function* typescript(
   pkgInstallGenerator: PackageInstallGenerator,
-  options: TypescriptOptions = {},
+  options: Partial<TypescriptOptions> = {},
 ): AsyncGenerator<any, TypedFlatConfigItem[]> {
   const {
     overrides = {},

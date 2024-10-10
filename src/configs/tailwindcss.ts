@@ -5,7 +5,7 @@ const requiredPkg = ['eslint-plugin-tailwindcss'];
 
 export async function* tailwindcss(
   pkgInstallGenerator: PackageInstallGenerator,
-  options: TailwindcssOptions = {},
+  options: Partial<TailwindcssOptions> = {},
 ): AsyncGenerator<any, TypedFlatConfigItem[]> {
   const { overrides = {} } = options;
 

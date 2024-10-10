@@ -4,7 +4,7 @@ import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, perfecti
 import { ReactPackages, StylisticConfigDefaults, VuePackages } from './contants';
 import { ensureImportPackage, getOptions, getSubOptions, isGenerator, isIteratorReturnResult } from './utils';
 
-export const factory = async (options: OptionsConfig = {}): Promise<TypedFlatConfigItem[]> => {
+export const factory = async (options: Partial<OptionsConfig> = {}): Promise<TypedFlatConfigItem[]> => {
   const {
     gitignore: enableGitignore = true,
     jsx: enableJsx = true,

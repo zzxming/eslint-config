@@ -3,7 +3,7 @@ import pluginStylistic from '@stylistic/eslint-plugin';
 import pluginAntfu from 'eslint-plugin-antfu';
 import { StylisticConfigDefaults } from '../contants';
 
-export const stylistic = (options: StylisticOptions = {}): TypedFlatConfigItem[] => {
+export const stylistic = (options: Partial<StylisticOptions> = {}): TypedFlatConfigItem[] => {
   const {
     indent,
     jsx,

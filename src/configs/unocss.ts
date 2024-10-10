@@ -5,11 +5,12 @@ const requiredPkg = ['@unocss/eslint-plugin'];
 
 export async function* unocss(
   pkgInstallGenerator: PackageInstallGenerator,
-  options: UnocssOptions = {},
+  options: Partial<UnocssOptions> = {},
 ): AsyncGenerator<any, TypedFlatConfigItem[]> {
   const {
     attributify = true,
     strict = false,
+    overrides = {},
   } = options;
 
   yield pkgInstallGenerator.next(requiredPkg);
@@ -36,6 +37,8 @@ export async function* unocss(
               'unocss/blocklist': 'error',
             }
           : {},
+
+        ...overrides,
       },
     },
   ];

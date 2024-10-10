@@ -6,7 +6,7 @@ const requiredPkg = ['@vitest/eslint-plugin'];
 
 export async function* vitest(
   pkgInstallGenerator: PackageInstallGenerator,
-  options: VitestOptions = {},
+  options: Partial<VitestOptions> = {},
 ): AsyncGenerator<any, TypedFlatConfigItem[]> {
   const {
     files = [GLOB_TEST],

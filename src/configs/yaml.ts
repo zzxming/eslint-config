@@ -3,7 +3,7 @@ import pluginYaml from 'eslint-plugin-yml';
 import parserYaml from 'yaml-eslint-parser';
 import { GLOB_YAML } from '../contants';
 
-export function yaml(options: YamlOptions = {}): TypedFlatConfigItem[] {
+export function yaml(options: Partial<YamlOptions> = {}): TypedFlatConfigItem[] {
   const {
     files = [GLOB_YAML],
     overrides = {},

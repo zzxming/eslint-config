@@ -5,7 +5,7 @@ import { isPackageExists } from 'local-pkg';
 import { GLOB_CSS, GLOB_HTML, GLOB_LESS, GLOB_MARKDOWN, GLOB_POSTCSS, GLOB_SCSS, GLOB_XML, StylisticConfigDefaults } from '../contants';
 import { parserPlain } from '../utils';
 
-export const formatters = (options: FormmatterOptions = {}) => {
+export const formatters = (options: Partial<FormmatterOptions> = {}) => {
   const {
     css = true,
     html = true,

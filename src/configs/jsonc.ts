@@ -3,7 +3,7 @@ import pluginJsonc from 'eslint-plugin-jsonc';
 import parserJsonc from 'jsonc-eslint-parser';
 import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from '../contants';
 
-export function jsonc(options: JsoncOptions = {}): TypedFlatConfigItem[] {
+export function jsonc(options: Partial<JsoncOptions> = {}): TypedFlatConfigItem[] {
   const {
     files = [GLOB_JSON, GLOB_JSON5, GLOB_JSONC],
     stylistic = true,

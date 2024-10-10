@@ -9,7 +9,7 @@ const requiredPkg = [
 
 export async function* vue(
   pkgInstallGenerator: PackageInstallGenerator,
-  options: VueOptions = {},
+  options: Partial<VueOptions> = {},
 ): AsyncGenerator<any, TypedFlatConfigItem[]> {
   const {
     files = [GLOB_VUE],

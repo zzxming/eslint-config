@@ -1,4 +1,4 @@
-import type { StylisticOptions } from './types';
+import type { StylisticConfigOptions } from './types';
 
 export const GLOB_JS = '**/*.?([cm])js';
 export const GLOB_JSX = '**/*.?([cm])jsx';
@@ -24,7 +24,7 @@ export const GLOB_TEST = `**/*.{spec,test}.${GLOB_SRC_EXT}`;
 
 export const ReactPackages = ['react', 'next'];
 export const VuePackages = ['vue', 'nuxt', 'vitepress'];
-export const StylisticConfigDefaults: StylisticOptions = {
+export const StylisticConfigDefaults: StylisticConfigOptions = {
   indent: 2,
   jsx: true,
   quotes: 'single',

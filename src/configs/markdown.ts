@@ -4,7 +4,7 @@ import { GLOB_MARKDOWN, GLOB_MARKDOWN_CODE } from '../contants';
 import { pluginMarkdown } from '../plugins';
 import { parserPlain } from '../utils';
 
-export function markdown(options: MarkdownOptions = {}): TypedFlatConfigItem[] {
+export function markdown(options: Partial<MarkdownOptions> = {}): TypedFlatConfigItem[] {
   const {
     componentExts = [],
     overrides = {},
