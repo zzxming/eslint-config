@@ -31,6 +31,7 @@ export const vscodeSettings = `
     "html",
     "markdown",
     "json",
+    "json5",
     "jsonc",
     "yaml",
     "xml",
