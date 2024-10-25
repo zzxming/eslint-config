@@ -1,4 +1,4 @@
-export const vscodeSettings = ` 
+export const vscodeSettings = `
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "editor.codeActionsOnSave": {
@@ -39,5 +39,5 @@ export const vscodeSettings = `
     "less",
     "scss",
     "postcss"
-  ],
+  ]
 `;
