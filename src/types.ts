@@ -1,4 +1,5 @@
 import type { ESLint, Linter } from 'eslint';
+import type { Options as VueBlocksOptions } from 'eslint-processor-vue-blocks';
 
 export type Rules = Record<string, any>;
 export type TypedFlatConfigItem = Omit<Linter.Config<Linter.RulesRecord & Rules>, 'plugins'> & {
@@ -29,6 +30,7 @@ export interface TypescriptOptions extends OptionsOverrides {
 export interface VueOptions extends OptionsOverrides, FilesOverrides, StylisticOverrides {
   vueVersion: 2 | 3;
   typescript: boolean;
+  sfcBlocks: boolean | VueBlocksOptions;
 }
 export interface JsoncOptions extends OptionsOverrides, FilesOverrides, StylisticOverrides {}
 export interface MarkdownOptions extends OptionsOverrides, FilesOverrides {
@@ -39,6 +41,7 @@ export interface FormmatterOptions extends StylisticOverrides {
   html: boolean;
   markdown: boolean;
   xml: boolean;
+  svg: boolean;
   prettierOptions: Record<string, any>;
 }
 export interface YamlOptions extends OptionsOverrides, FilesOverrides, StylisticOverrides {}

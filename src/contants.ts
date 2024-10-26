@@ -9,6 +9,7 @@ export const GLOB_SRC_EXT = '?([cm])[jt]s?(x)';
 export const GLOB_SRC = '**/*.?([cm])[jt]s?(x)';
 export const GLOB_VUE = '**/*.vue';
 export const GLOB_XML = '**/*.xml';
+export const GLOB_SVG = '**/*.svg';
 export const GLOB_HTML = '**/*.htm?(l)';
 export const GLOB_CSS = '**/*.css';
 export const GLOB_POSTCSS = '**/*.{p,post}css';

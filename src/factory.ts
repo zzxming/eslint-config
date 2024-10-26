@@ -6,17 +6,17 @@ import { ensureImportPackage, getOptions, getSubOptions, isGenerator, isIterator
 
 export const factory = async (options: Partial<OptionsConfig> = {}): Promise<TypedFlatConfigItem[]> => {
   const {
-    gitignore: enableGitignore = true,
+    unicorn: unicornOptions = {},
     jsx: enableJsx = true,
     typescript: enableTypeScript = isPackageExists('typescript'),
     react: enableReact = ReactPackages.some(i => isPackageExists(i)),
     vue: enableVue = VuePackages.some(i => isPackageExists(i)),
-    tailwindcss: enableTailwindcss = false,
+    vitest: enableVitest = false,
+    gitignore: enableGitignore = true,
     jsonc: enableJsonc = true,
     markdown: enableMarkdown = true,
     yaml: enableYaml = true,
-    vitest: enableVitest = false,
-    unicorn: unicornOptions = {},
+    tailwindcss: enableTailwindcss = false,
     unocss: enableUnocss = false,
     overrides = [],
   } = options;

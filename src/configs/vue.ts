@@ -1,4 +1,6 @@
 import type { PackageInstallGenerator, TypedFlatConfigItem, VueOptions } from '../types';
+import { mergeProcessors } from 'eslint-merge-processors';
+import processorVueBlocks from 'eslint-processor-vue-blocks';
 import { GLOB_VUE } from '../contants';
 import { importPackage } from '../utils';
 
@@ -18,13 +20,22 @@ export async function* vue(
     typescript = true,
     overrides = {},
   } = options;
+
+  const sfcBlocks = options.sfcBlocks === true
+    ? {}
+    : options.sfcBlocks ?? {};
+
   const {
     indent = 2,
   } = typeof stylistic === 'boolean' ? {} : stylistic;
 
   if (typescript) requiredPkg.push('@typescript-eslint/parser');
   yield pkgInstallGenerator.next(requiredPkg);
-  const [parserVue, pluginVue, parserTs] = await Promise.all(requiredPkg.map(importPackage));
+  const [
+    parserVue,
+    pluginVue,
+    parserTs,
+  ] = await Promise.all(requiredPkg.map(importPackage));
 
   return [
     {
@@ -65,7 +76,18 @@ export async function* vue(
         },
       },
       name: 'vue/rules',
-      processor: pluginVue.processors['.vue'],
+      processor: sfcBlocks === false
+        ? pluginVue.processors['.vue']
+        : mergeProcessors([
+          pluginVue.processors['.vue'],
+          processorVueBlocks({
+            ...sfcBlocks,
+            blocks: {
+              styles: true,
+              ...sfcBlocks.blocks,
+            },
+          }),
+        ]),
       rules: {
         ...pluginVue.configs.base.rules,
 

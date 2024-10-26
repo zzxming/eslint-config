@@ -99,7 +99,7 @@ already use plugin [`@vitest/eslint-plugin`](https://github.com/vitest-dev/eslin
 | ----------------------------- | --------------- |
 | `eslint-plugin-antfu`         | `antfu`         |
 | `@stylistic/eslint-plugin`    | `style`         |
-| `eslint-plugin-prettier`      | `prettier`      |
+| `eslint-plugin-format`        | `format`        |
 | `eslint-plugin-import-x`      | `import`        |
 | `eslint-plugin-format`        | `format`        |
 | `eslint-plugin-perfectionist` | `perfectionist` |

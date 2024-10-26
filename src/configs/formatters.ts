@@ -1,16 +1,17 @@
 import type { FormmatterOptions, TypedFlatConfigItem } from '../types';
 import pluginFormat from 'eslint-plugin-format';
-import pluginPrettier from 'eslint-plugin-prettier';
 import { isPackageExists } from 'local-pkg';
-import { GLOB_CSS, GLOB_HTML, GLOB_LESS, GLOB_MARKDOWN, GLOB_POSTCSS, GLOB_SCSS, GLOB_XML, StylisticConfigDefaults } from '../contants';
+import { GLOB_CSS, GLOB_HTML, GLOB_LESS, GLOB_MARKDOWN, GLOB_POSTCSS, GLOB_SCSS, GLOB_SVG, GLOB_XML, StylisticConfigDefaults } from '../contants';
 import { parserPlain } from '../utils';
 
 export const formatters = (options: Partial<FormmatterOptions> = {}) => {
+  const isPrettierPluginXml = isPackageExists('@prettier/plugin-xml');
   const {
     css = true,
     html = true,
     markdown = true,
-    xml = isPackageExists('@prettier/plugin-xml'),
+    xml = isPrettierPluginXml,
+    svg = isPrettierPluginXml,
     stylistic = {},
   } = options;
 
@@ -31,6 +32,7 @@ export const formatters = (options: Partial<FormmatterOptions> = {}) => {
       tabWidth: typeof indent === 'number' ? indent : 2,
       trailingComma: 'all',
       useTabs: indent === 'tab',
+      printWidth: 120,
     },
     options.prettierOptions,
   );
@@ -99,27 +101,39 @@ export const formatters = (options: Partial<FormmatterOptions> = {}) => {
       },
     });
   }
+  if (svg) {
+    Object.assign(formatters, {
+      svg: {
+        files: [GLOB_SVG],
+        parser: 'xml',
+        extraRules: {
+          ...prettierXmlOptions,
+          plugins: ['@prettier/plugin-xml'],
+        },
+      },
+    });
+  }
+
   configs.push(
     ...Object.entries(formatters).map(([type, { files, parser, extraRules = {} }]) => ({
       files,
       languageOptions: {
         parser: parserPlain,
       },
-      plugins: {
-        prettier: pluginPrettier,
-      },
       name: `formatter/${type}`,
       rules: {
-        'prettier/prettier': [
+        'format/prettier': [
           'error',
           {
             ...prettierOptions,
             ...extraRules,
             parser,
+            plugins: [...(extraRules.plugins || [])],
           },
         ],
       },
     })),
   );
+
   return configs;
 };
