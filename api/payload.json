@@ -2136,12 +2136,9 @@
       "languageOptions": {
         "parser": "parser-plain"
       },
-      "plugins": {
-        "prettier": {}
-      },
       "name": "formatter/css",
       "rules": {
-        "prettier/prettier": [
+        "format/prettier": [
           "error",
           {
             "endOfLine": "auto",
@@ -2150,7 +2147,9 @@
             "tabWidth": 2,
             "trailingComma": "all",
             "useTabs": false,
-            "parser": "css"
+            "printWidth": 120,
+            "parser": "css",
+            "plugins": []
           }
         ]
       },
@@ -2163,12 +2162,9 @@
       "languageOptions": {
         "parser": "parser-plain"
       },
-      "plugins": {
-        "prettier": {}
-      },
       "name": "formatter/less",
       "rules": {
-        "prettier/prettier": [
+        "format/prettier": [
           "error",
           {
             "endOfLine": "auto",
@@ -2177,7 +2173,9 @@
             "tabWidth": 2,
             "trailingComma": "all",
             "useTabs": false,
-            "parser": "less"
+            "printWidth": 120,
+            "parser": "less",
+            "plugins": []
           }
         ]
       },
@@ -2190,12 +2188,9 @@
       "languageOptions": {
         "parser": "parser-plain"
       },
-      "plugins": {
-        "prettier": {}
-      },
       "name": "formatter/scss",
       "rules": {
-        "prettier/prettier": [
+        "format/prettier": [
           "error",
           {
             "endOfLine": "auto",
@@ -2204,7 +2199,9 @@
             "tabWidth": 2,
             "trailingComma": "all",
             "useTabs": false,
-            "parser": "scss"
+            "printWidth": 120,
+            "parser": "scss",
+            "plugins": []
           }
         ]
       },
@@ -2217,12 +2214,9 @@
       "languageOptions": {
         "parser": "parser-plain"
       },
-      "plugins": {
-        "prettier": {}
-      },
       "name": "formatter/html",
       "rules": {
-        "prettier/prettier": [
+        "format/prettier": [
           "error",
           {
             "endOfLine": "auto",
@@ -2231,7 +2225,9 @@
             "tabWidth": 2,
             "trailingComma": "all",
             "useTabs": false,
-            "parser": "html"
+            "printWidth": 120,
+            "parser": "html",
+            "plugins": []
           }
         ]
       },
@@ -2244,12 +2240,9 @@
       "languageOptions": {
         "parser": "parser-plain"
       },
-      "plugins": {
-        "prettier": {}
-      },
       "name": "formatter/markdown",
       "rules": {
-        "prettier/prettier": [
+        "format/prettier": [
           "error",
           {
             "endOfLine": "auto",
@@ -2260,11 +2253,76 @@
             "useTabs": false,
             "printWidth": 200,
             "embeddedLanguageFormatting": "off",
-            "parser": "markdown"
+            "parser": "markdown",
+            "plugins": []
           }
         ]
       },
       "index": 18
+    },
+    {
+      "files": [
+        "**/*.xml"
+      ],
+      "languageOptions": {
+        "parser": "parser-plain"
+      },
+      "name": "formatter/xml",
+      "rules": {
+        "format/prettier": [
+          "error",
+          {
+            "endOfLine": "auto",
+            "semi": true,
+            "singleQuote": true,
+            "tabWidth": 2,
+            "trailingComma": "all",
+            "useTabs": false,
+            "printWidth": 120,
+            "xmlQuoteAttributes": "double",
+            "xmlSelfClosingSpace": true,
+            "xmlSortAttributesByKey": false,
+            "xmlWhitespaceSensitivity": "ignore",
+            "plugins": [
+              "@prettier/plugin-xml"
+            ],
+            "parser": "xml"
+          }
+        ]
+      },
+      "index": 19
+    },
+    {
+      "files": [
+        "**/*.svg"
+      ],
+      "languageOptions": {
+        "parser": "parser-plain"
+      },
+      "name": "formatter/svg",
+      "rules": {
+        "format/prettier": [
+          "error",
+          {
+            "endOfLine": "auto",
+            "semi": true,
+            "singleQuote": true,
+            "tabWidth": 2,
+            "trailingComma": "all",
+            "useTabs": false,
+            "printWidth": 120,
+            "xmlQuoteAttributes": "double",
+            "xmlSelfClosingSpace": true,
+            "xmlSortAttributesByKey": false,
+            "xmlWhitespaceSensitivity": "ignore",
+            "plugins": [
+              "@prettier/plugin-xml"
+            ],
+            "parser": "xml"
+          }
+        ]
+      },
+      "index": 20
     },
     {
       "name": "perfectionist/rules",
@@ -2324,14 +2382,14 @@
           }
         ]
       },
-      "index": 19
+      "index": 21
     },
     {
       "name": "jsonc/setup",
       "plugins": {
         "jsonc": {}
       },
-      "index": 20
+      "index": 22
     },
     {
       "files": [
@@ -2413,7 +2471,7 @@
         "jsonc/quote-props": "error",
         "jsonc/quotes": "error"
       },
-      "index": 21
+      "index": 23
     },
     {
       "files": [
@@ -2519,7 +2577,7 @@
           }
         ]
       },
-      "index": 22
+      "index": 24
     },
     {
       "files": [
@@ -2636,7 +2694,7 @@
           }
         ]
       },
-      "index": 23
+      "index": 25
     },
     {
       "files": [
@@ -2651,20 +2709,21 @@
           }
         }
       },
-      "index": 24
+      "index": 26
     },
     {
       "name": "typescript/setup",
       "plugins": {
         "ts": {}
       },
-      "index": 25
+      "index": 27
     },
     {
       "name": "typescript/parser",
       "files": [
         "**/*.?([cm])ts",
-        "**/*.?([cm])tsx"
+        "**/*.?([cm])tsx",
+        "**/*.vue"
       ],
       "languageOptions": {
         "parser": "typescript-eslint/parser",
@@ -2673,13 +2732,14 @@
           "sourceType": "module"
         }
       },
-      "index": 26
+      "index": 28
     },
     {
       "name": "typescript/rules",
       "files": [
         "**/*.?([cm])ts",
-        "**/*.?([cm])tsx"
+        "**/*.?([cm])tsx",
+        "**/*.vue"
       ],
       "rules": {
         "constructor-super": "off",
@@ -2768,7 +2828,7 @@
           }
         ]
       },
-      "index": 27
+      "index": 29
     },
     {
       "files": [
@@ -2781,7 +2841,7 @@
         "no-restricted-syntax": "off",
         "unused-imports/no-unused-vars": "off"
       },
-      "index": 28
+      "index": 30
     },
     {
       "files": [
@@ -2791,7 +2851,7 @@
       "rules": {
         "no-unused-expressions": "off"
       },
-      "index": 29
+      "index": 31
     },
     {
       "files": [
@@ -2803,14 +2863,392 @@
         "ts/no-require-imports": "off",
         "ts/no-var-requires": "off"
       },
-      "index": 30
+      "index": 32
+    },
+    {
+      "name": "vue/setup",
+      "plugins": {
+        "vue": {}
+      },
+      "languageOptions": {
+        "globals": {
+          "computed": "readonly",
+          "defineEmits": "readonly",
+          "defineExpose": "readonly",
+          "defineProps": "readonly",
+          "onMounted": "readonly",
+          "onUnmounted": "readonly",
+          "reactive": "readonly",
+          "ref": "readonly",
+          "shallowReactive": "readonly",
+          "shallowRef": "readonly",
+          "toRef": "readonly",
+          "toRefs": "readonly",
+          "watch": "readonly",
+          "watchEffect": "readonly"
+        }
+      },
+      "index": 33
+    },
+    {
+      "files": [
+        "**/*.vue"
+      ],
+      "languageOptions": {
+        "parser": "vue-eslint-parser",
+        "parserOptions": {
+          "ecmaFeatures": {
+            "jsx": true
+          },
+          "extraFileExtensions": [
+            ".vue"
+          ],
+          "parser": {
+            "version": "8.7.0",
+            "meta": {
+              "name": "typescript-eslint/parser",
+              "version": "8.7.0"
+            }
+          },
+          "sourceType": "module"
+        }
+      },
+      "name": "vue/rules",
+      "processor": "merged-processor:eslint-plugin-vue+eslint-processor-vue-blocks",
+      "rules": {
+        "vue/comment-directive": "error",
+        "vue/jsx-uses-vars": "error",
+        "vue/multi-word-component-names": "off",
+        "vue/no-arrow-functions-in-watch": "error",
+        "vue/no-async-in-computed-properties": "error",
+        "vue/no-child-content": "error",
+        "vue/no-computed-properties-in-data": "error",
+        "vue/no-deprecated-data-object-declaration": "error",
+        "vue/no-deprecated-destroyed-lifecycle": "error",
+        "vue/no-deprecated-dollar-listeners-api": "error",
+        "vue/no-deprecated-dollar-scopedslots-api": "error",
+        "vue/no-deprecated-events-api": "error",
+        "vue/no-deprecated-filter": "error",
+        "vue/no-deprecated-functional-template": "error",
+        "vue/no-deprecated-html-element-is": "error",
+        "vue/no-deprecated-inline-template": "error",
+        "vue/no-deprecated-props-default-this": "error",
+        "vue/no-deprecated-router-link-tag-prop": "error",
+        "vue/no-deprecated-scope-attribute": "error",
+        "vue/no-deprecated-slot-attribute": "error",
+        "vue/no-deprecated-slot-scope-attribute": "error",
+        "vue/no-deprecated-v-bind-sync": "error",
+        "vue/no-deprecated-v-is": "error",
+        "vue/no-deprecated-v-on-native-modifier": "error",
+        "vue/no-deprecated-v-on-number-modifiers": "error",
+        "vue/no-deprecated-vue-config-keycodes": "error",
+        "vue/no-dupe-keys": "off",
+        "vue/no-dupe-v-else-if": "error",
+        "vue/no-duplicate-attributes": "error",
+        "vue/no-export-in-script-setup": "error",
+        "vue/no-expose-after-await": "error",
+        "vue/no-lifecycle-after-await": "error",
+        "vue/no-mutating-props": "off",
+        "vue/no-parsing-error": "error",
+        "vue/no-ref-as-operand": "error",
+        "vue/no-reserved-component-names": "error",
+        "vue/no-reserved-keys": "error",
+        "vue/no-reserved-props": "error",
+        "vue/no-shared-component-data": "error",
+        "vue/no-side-effects-in-computed-properties": "error",
+        "vue/no-template-key": "error",
+        "vue/no-textarea-mustache": "error",
+        "vue/no-unused-components": "error",
+        "vue/no-unused-vars": "error",
+        "vue/no-use-computed-property-like-method": "error",
+        "vue/no-use-v-if-with-v-for": "error",
+        "vue/no-useless-template-attributes": "error",
+        "vue/no-v-for-template-key-on-child": "error",
+        "vue/no-v-text-v-html-on-component": "error",
+        "vue/no-watch-after-await": "error",
+        "vue/prefer-import-from-vue": "off",
+        "vue/require-component-is": "error",
+        "vue/require-prop-type-constructor": "error",
+        "vue/require-render-return": "error",
+        "vue/require-slots-as-functions": "error",
+        "vue/require-toggle-inside-transition": "error",
+        "vue/require-v-for-key": "error",
+        "vue/require-valid-default-prop": "error",
+        "vue/return-in-computed-property": "error",
+        "vue/return-in-emits-validator": "error",
+        "vue/use-v-on-exact": "error",
+        "vue/valid-attribute-name": "error",
+        "vue/valid-define-emits": "error",
+        "vue/valid-define-props": "error",
+        "vue/valid-next-tick": "error",
+        "vue/valid-template-root": "error",
+        "vue/valid-v-bind": "error",
+        "vue/valid-v-cloak": "error",
+        "vue/valid-v-else-if": "error",
+        "vue/valid-v-else": "error",
+        "vue/valid-v-for": "error",
+        "vue/valid-v-html": "error",
+        "vue/valid-v-if": "error",
+        "vue/valid-v-is": "error",
+        "vue/valid-v-memo": "error",
+        "vue/valid-v-model": "error",
+        "vue/valid-v-on": "error",
+        "vue/valid-v-once": "error",
+        "vue/valid-v-pre": "error",
+        "vue/valid-v-show": "error",
+        "vue/valid-v-slot": "error",
+        "vue/valid-v-text": "error",
+        "vue/attribute-hyphenation": "warn",
+        "vue/component-definition-name-casing": "warn",
+        "vue/first-attribute-linebreak": "warn",
+        "vue/html-closing-bracket-newline": "warn",
+        "vue/html-closing-bracket-spacing": "warn",
+        "vue/html-end-tags": "warn",
+        "vue/html-indent": [
+          "error",
+          2
+        ],
+        "vue/html-quotes": [
+          "error",
+          "double"
+        ],
+        "vue/html-self-closing": "warn",
+        "vue/max-attributes-per-line": "off",
+        "vue/multiline-html-element-content-newline": "warn",
+        "vue/mustache-interpolation-spacing": "warn",
+        "vue/no-multi-spaces": "warn",
+        "vue/no-spaces-around-equal-signs-in-attribute": "warn",
+        "vue/no-template-shadow": "warn",
+        "vue/one-component-per-file": "warn",
+        "vue/prop-name-casing": [
+          "error",
+          "camelCase"
+        ],
+        "vue/require-default-prop": "off",
+        "vue/require-explicit-emits": "warn",
+        "vue/require-prop-types": "off",
+        "vue/singleline-html-element-content-newline": "warn",
+        "vue/v-bind-style": "warn",
+        "vue/v-on-event-hyphenation": [
+          "warn",
+          "always",
+          {
+            "autofix": true
+          }
+        ],
+        "vue/v-on-style": "warn",
+        "vue/v-slot-style": "warn",
+        "vue/attributes-order": "warn",
+        "vue/component-tags-order": "warn",
+        "vue/no-lone-template": "warn",
+        "vue/no-multiple-slot-args": "warn",
+        "vue/no-v-html": "off",
+        "vue/order-in-components": "warn",
+        "vue/this-in-template": "warn",
+        "node/prefer-global/process": "off",
+        "vue/block-order": [
+          "error",
+          {
+            "order": [
+              "script",
+              "template",
+              "style"
+            ]
+          }
+        ],
+        "vue/component-name-in-template-casing": [
+          "error",
+          "PascalCase"
+        ],
+        "vue/component-options-name-casing": [
+          "error",
+          "PascalCase"
+        ],
+        "vue/custom-event-name-casing": [
+          "error",
+          "camelCase"
+        ],
+        "vue/define-macros-order": [
+          "error",
+          {
+            "order": [
+              "defineOptions",
+              "defineProps",
+              "defineEmits",
+              "defineSlots"
+            ]
+          }
+        ],
+        "vue/dot-location": [
+          "error",
+          "property"
+        ],
+        "vue/dot-notation": [
+          "error",
+          {
+            "allowKeywords": true
+          }
+        ],
+        "vue/eqeqeq": [
+          "error",
+          "smart"
+        ],
+        "vue/no-empty-pattern": "error",
+        "vue/no-irregular-whitespace": "error",
+        "vue/no-loss-of-precision": "error",
+        "vue/no-restricted-syntax": [
+          "error",
+          "DebuggerStatement",
+          "LabeledStatement",
+          "WithStatement"
+        ],
+        "vue/no-restricted-v-bind": [
+          "error",
+          "/^v-/"
+        ],
+        "vue/no-setup-props-reactivity-loss": "off",
+        "vue/no-sparse-arrays": "error",
+        "vue/no-unused-refs": "error",
+        "vue/no-useless-v-bind": "error",
+        "vue/object-shorthand": [
+          "error",
+          "always",
+          {
+            "avoidQuotes": true,
+            "ignoreConstructors": false
+          }
+        ],
+        "vue/prefer-separate-static-class": "error",
+        "vue/prefer-template": "error",
+        "vue/space-infix-ops": "error",
+        "vue/space-unary-ops": [
+          "error",
+          {
+            "nonwords": false,
+            "words": true
+          }
+        ],
+        "vue/array-bracket-spacing": [
+          "error",
+          "never"
+        ],
+        "vue/arrow-spacing": [
+          "error",
+          {
+            "after": true,
+            "before": true
+          }
+        ],
+        "vue/block-spacing": [
+          "error",
+          "always"
+        ],
+        "vue/block-tag-newline": [
+          "error",
+          {
+            "multiline": "always",
+            "singleline": "always"
+          }
+        ],
+        "vue/brace-style": [
+          "error",
+          "stroustrup",
+          {
+            "allowSingleLine": true
+          }
+        ],
+        "vue/comma-dangle": [
+          "error",
+          "always-multiline"
+        ],
+        "vue/comma-spacing": [
+          "error",
+          {
+            "after": true,
+            "before": false
+          }
+        ],
+        "vue/comma-style": [
+          "error",
+          "last"
+        ],
+        "vue/html-comment-content-spacing": [
+          "error",
+          "always",
+          {
+            "exceptions": [
+              "-"
+            ]
+          }
+        ],
+        "vue/key-spacing": [
+          "error",
+          {
+            "afterColon": true,
+            "beforeColon": false
+          }
+        ],
+        "vue/keyword-spacing": [
+          "error",
+          {
+            "after": true,
+            "before": true
+          }
+        ],
+        "vue/object-curly-newline": [
+          "error",
+          {
+            "consistent": true,
+            "multiline": true
+          }
+        ],
+        "vue/object-curly-spacing": [
+          "error",
+          "always"
+        ],
+        "vue/object-property-newline": [
+          "error",
+          {
+            "allowMultiplePropertiesPerLine": true
+          }
+        ],
+        "vue/operator-linebreak": [
+          "error",
+          "before"
+        ],
+        "vue/padding-line-between-blocks": [
+          "error",
+          "always"
+        ],
+        "vue/quote-props": [
+          "error",
+          "consistent-as-needed"
+        ],
+        "vue/space-in-parens": [
+          "error",
+          "never"
+        ],
+        "vue/template-curly-spacing": "error"
+      },
+      "index": 34
+    },
+    {
+      "name": "vue/disables/test",
+      "files": [
+        "**/__tests__/**"
+      ],
+      "rules": {
+        "no-console": "off",
+        "vue/one-component-per-file": "off"
+      },
+      "index": 35
     },
     {
       "name": "markdown/setup",
       "plugins": {
         "markdown": {}
       },
-      "index": 31
+      "index": 36
     },
     {
       "files": [
@@ -2821,11 +3259,12 @@
       },
       "name": "markdown/parser",
       "processor": "merged-processor:eslint-plugin-markdown/markdown+pass-through",
-      "index": 32
+      "index": 37
     },
     {
       "files": [
-        "**/*.md/**/*.?([cm])[jt]s?(x)"
+        "**/*.md/**/*.?([cm])[jt]s?(x)",
+        "**/*.md/**/*.vue"
       ],
       "languageOptions": {
         "parserOptions": {
@@ -2859,14 +3298,14 @@
         "unused-imports/no-unused-imports": "off",
         "unused-imports/no-unused-vars": "off"
       },
-      "index": 33
+      "index": 38
     },
     {
       "name": "yaml/setup",
       "plugins": {
         "yaml": {}
       },
-      "index": 34
+      "index": 39
     },
     {
       "files": [
@@ -2906,7 +3345,7 @@
         ],
         "yaml/spaced-comment": "error"
       },
-      "index": 35
+      "index": 40
     }
   ],
   "rules": {
@@ -9230,15 +9669,6 @@
       "name": "format/dprint",
       "plugin": "format"
     },
-    "prettier/prettier": {
-      "docs": {
-        "url": "https://github.com/prettier/eslint-plugin-prettier#options"
-      },
-      "type": "layout",
-      "fixable": "code",
-      "name": "prettier/prettier",
-      "plugin": "prettier"
-    },
     "perfectionist/sort-variable-declarations": {
       "type": "suggestion",
       "docs": {
@@ -11637,6 +12067,3141 @@
       "name": "ts/use-unknown-in-catch-callback-variable",
       "plugin": "ts"
     },
+    "vue/array-bracket-newline": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce linebreaks after opening and before closing array brackets in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/array-bracket-newline.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/js/array-bracket-newline",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "whitespace",
+      "name": "vue/array-bracket-newline",
+      "plugin": "vue"
+    },
+    "vue/array-bracket-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce consistent spacing inside array brackets in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/array-bracket-spacing.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/js/array-bracket-spacing",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "whitespace",
+      "name": "vue/array-bracket-spacing",
+      "plugin": "vue"
+    },
+    "vue/array-element-newline": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce line breaks after each array element in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/array-element-newline.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/js/array-element-newline",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "whitespace",
+      "name": "vue/array-element-newline",
+      "plugin": "vue"
+    },
+    "vue/arrow-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce consistent spacing before and after the arrow in arrow functions in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/arrow-spacing.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/js/arrow-spacing",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "whitespace",
+      "name": "vue/arrow-spacing",
+      "plugin": "vue"
+    },
+    "vue/attribute-hyphenation": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce attribute naming style on custom components in template",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/attribute-hyphenation.html"
+      },
+      "fixable": "code",
+      "name": "vue/attribute-hyphenation",
+      "plugin": "vue"
+    },
+    "vue/attributes-order": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce order of attributes",
+        "categories": [
+          "vue3-recommended",
+          "vue2-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/attributes-order.html"
+      },
+      "fixable": "code",
+      "name": "vue/attributes-order",
+      "plugin": "vue"
+    },
+    "vue/block-lang": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow use other than available `lang`",
+        "url": "https://eslint.vuejs.org/rules/block-lang.html"
+      },
+      "name": "vue/block-lang",
+      "plugin": "vue"
+    },
+    "vue/block-order": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce order of component top-level elements",
+        "url": "https://eslint.vuejs.org/rules/block-order.html"
+      },
+      "fixable": "code",
+      "name": "vue/block-order",
+      "plugin": "vue"
+    },
+    "vue/block-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/block-spacing.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/ts/block-spacing",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "whitespace",
+      "name": "vue/block-spacing",
+      "plugin": "vue"
+    },
+    "vue/block-tag-newline": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce line breaks after opening and before closing block-level tags",
+        "url": "https://eslint.vuejs.org/rules/block-tag-newline.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/block-tag-newline",
+      "plugin": "vue"
+    },
+    "vue/brace-style": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce consistent brace style for blocks in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/brace-style.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/ts/brace-style",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "whitespace",
+      "name": "vue/brace-style",
+      "plugin": "vue"
+    },
+    "vue/camelcase": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce camelcase naming convention in `<template>`",
+        "recommended": false,
+        "url": "https://eslint.vuejs.org/rules/camelcase.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.org/docs/latest/rules/camelcase",
+          "name": "ESLint core"
+        }
+      },
+      "name": "vue/camelcase",
+      "plugin": "vue"
+    },
+    "vue/comma-dangle": {
+      "type": "layout",
+      "docs": {
+        "description": "Require or disallow trailing commas in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/comma-dangle.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/ts/comma-dangle",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "code",
+      "name": "vue/comma-dangle",
+      "plugin": "vue"
+    },
+    "vue/comma-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce consistent spacing before and after commas in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/comma-spacing.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/ts/comma-spacing",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "whitespace",
+      "name": "vue/comma-spacing",
+      "plugin": "vue"
+    },
+    "vue/comma-style": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce consistent comma style in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/comma-style.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/js/comma-style",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "code",
+      "name": "vue/comma-style",
+      "plugin": "vue"
+    },
+    "vue/comment-directive": {
+      "type": "problem",
+      "docs": {
+        "description": "support comment-directives in `<template>`",
+        "categories": [
+          "base"
+        ],
+        "url": "https://eslint.vuejs.org/rules/comment-directive.html"
+      },
+      "name": "vue/comment-directive",
+      "plugin": "vue"
+    },
+    "vue/component-api-style": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce component API style",
+        "url": "https://eslint.vuejs.org/rules/component-api-style.html"
+      },
+      "fixable": null,
+      "name": "vue/component-api-style",
+      "plugin": "vue"
+    },
+    "vue/component-definition-name-casing": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce specific casing for component definition name",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/component-definition-name-casing.html"
+      },
+      "fixable": "code",
+      "name": "vue/component-definition-name-casing",
+      "plugin": "vue"
+    },
+    "vue/component-name-in-template-casing": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce specific casing for the component naming style in template",
+        "url": "https://eslint.vuejs.org/rules/component-name-in-template-casing.html"
+      },
+      "fixable": "code",
+      "name": "vue/component-name-in-template-casing",
+      "plugin": "vue"
+    },
+    "vue/component-options-name-casing": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce the casing of component name in `components` options",
+        "url": "https://eslint.vuejs.org/rules/component-options-name-casing.html"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "vue/component-options-name-casing",
+      "plugin": "vue"
+    },
+    "vue/component-tags-order": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce order of component top-level elements",
+        "categories": [
+          "vue3-recommended",
+          "vue2-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/component-tags-order.html"
+      },
+      "fixable": "code",
+      "deprecated": true,
+      "replacedBy": [
+        "block-order"
+      ],
+      "name": "vue/component-tags-order",
+      "plugin": "vue"
+    },
+    "vue/custom-event-name-casing": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce specific casing for custom event name",
+        "url": "https://eslint.vuejs.org/rules/custom-event-name-casing.html"
+      },
+      "fixable": null,
+      "name": "vue/custom-event-name-casing",
+      "plugin": "vue"
+    },
+    "vue/define-emits-declaration": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce declaration style of `defineEmits`",
+        "url": "https://eslint.vuejs.org/rules/define-emits-declaration.html"
+      },
+      "fixable": null,
+      "name": "vue/define-emits-declaration",
+      "plugin": "vue"
+    },
+    "vue/define-macros-order": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce order of compiler macros (`defineProps`, `defineEmits`, etc.)",
+        "url": "https://eslint.vuejs.org/rules/define-macros-order.html"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "vue/define-macros-order",
+      "plugin": "vue"
+    },
+    "vue/define-props-declaration": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce declaration style of `defineProps`",
+        "url": "https://eslint.vuejs.org/rules/define-props-declaration.html"
+      },
+      "fixable": null,
+      "name": "vue/define-props-declaration",
+      "plugin": "vue"
+    },
+    "vue/dot-location": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce consistent newlines before and after dots in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/dot-location.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/js/dot-location",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "code",
+      "name": "vue/dot-location",
+      "plugin": "vue"
+    },
+    "vue/dot-notation": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce dot notation whenever possible in `<template>`",
+        "recommended": false,
+        "url": "https://eslint.vuejs.org/rules/dot-notation.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.org/docs/latest/rules/dot-notation",
+          "name": "ESLint core"
+        }
+      },
+      "fixable": "code",
+      "name": "vue/dot-notation",
+      "plugin": "vue"
+    },
+    "vue/enforce-style-attribute": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce or forbid the use of the `scoped` and `module` attributes in SFC top level style tags",
+        "url": "https://eslint.vuejs.org/rules/enforce-style-attribute.html"
+      },
+      "fixable": null,
+      "name": "vue/enforce-style-attribute",
+      "plugin": "vue"
+    },
+    "vue/eqeqeq": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Require the use of `===` and `!==` in `<template>`",
+        "recommended": false,
+        "url": "https://eslint.vuejs.org/rules/eqeqeq.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.org/docs/latest/rules/eqeqeq",
+          "name": "ESLint core"
+        }
+      },
+      "fixable": "code",
+      "name": "vue/eqeqeq",
+      "plugin": "vue"
+    },
+    "vue/first-attribute-linebreak": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce the location of first attribute",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/first-attribute-linebreak.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/first-attribute-linebreak",
+      "plugin": "vue"
+    },
+    "vue/func-call-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "Require or disallow spacing between function identifiers and their invocations in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/func-call-spacing.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/ts/function-call-spacing",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "whitespace",
+      "name": "vue/func-call-spacing",
+      "plugin": "vue"
+    },
+    "vue/html-button-has-type": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow usage of button without an explicit type attribute",
+        "categories": null,
+        "url": "https://eslint.vuejs.org/rules/html-button-has-type.html"
+      },
+      "fixable": null,
+      "name": "vue/html-button-has-type",
+      "plugin": "vue"
+    },
+    "vue/html-closing-bracket-newline": {
+      "type": "layout",
+      "docs": {
+        "description": "require or disallow a line break before tag's closing brackets",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/html-closing-bracket-newline.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/html-closing-bracket-newline",
+      "plugin": "vue"
+    },
+    "vue/html-closing-bracket-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "require or disallow a space before tag's closing brackets",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/html-closing-bracket-spacing.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/html-closing-bracket-spacing",
+      "plugin": "vue"
+    },
+    "vue/html-comment-content-newline": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce unified line brake in HTML comments",
+        "url": "https://eslint.vuejs.org/rules/html-comment-content-newline.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/html-comment-content-newline",
+      "plugin": "vue"
+    },
+    "vue/html-comment-content-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce unified spacing in HTML comments",
+        "url": "https://eslint.vuejs.org/rules/html-comment-content-spacing.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/html-comment-content-spacing",
+      "plugin": "vue"
+    },
+    "vue/html-comment-indent": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce consistent indentation in HTML comments",
+        "url": "https://eslint.vuejs.org/rules/html-comment-indent.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/html-comment-indent",
+      "plugin": "vue"
+    },
+    "vue/html-end-tags": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce end tag style",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/html-end-tags.html"
+      },
+      "fixable": "code",
+      "name": "vue/html-end-tags",
+      "plugin": "vue"
+    },
+    "vue/html-indent": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce consistent indentation in `<template>`",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/html-indent.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/html-indent",
+      "plugin": "vue"
+    },
+    "vue/html-quotes": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce quotes style of HTML attributes",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/html-quotes.html"
+      },
+      "fixable": "code",
+      "name": "vue/html-quotes",
+      "plugin": "vue"
+    },
+    "vue/html-self-closing": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce self-closing style",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/html-self-closing.html"
+      },
+      "fixable": "code",
+      "name": "vue/html-self-closing",
+      "plugin": "vue"
+    },
+    "vue/jsx-uses-vars": {
+      "type": "problem",
+      "docs": {
+        "description": "prevent variables used in JSX to be marked as unused",
+        "categories": [
+          "base"
+        ],
+        "url": "https://eslint.vuejs.org/rules/jsx-uses-vars.html"
+      },
+      "name": "vue/jsx-uses-vars",
+      "plugin": "vue"
+    },
+    "vue/key-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce consistent spacing between property names and type annotations in types and interfaces in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/key-spacing.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/ts/key-spacing",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "whitespace",
+      "name": "vue/key-spacing",
+      "plugin": "vue"
+    },
+    "vue/keyword-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce consistent spacing before and after keywords in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/keyword-spacing.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/ts/keyword-spacing",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "whitespace",
+      "name": "vue/keyword-spacing",
+      "plugin": "vue"
+    },
+    "vue/match-component-file-name": {
+      "type": "suggestion",
+      "docs": {
+        "description": "require component name property to match its file name",
+        "url": "https://eslint.vuejs.org/rules/match-component-file-name.html"
+      },
+      "fixable": null,
+      "hasSuggestions": true,
+      "name": "vue/match-component-file-name",
+      "plugin": "vue"
+    },
+    "vue/match-component-import-name": {
+      "type": "problem",
+      "docs": {
+        "description": "require the registered component name to match the imported component name",
+        "url": "https://eslint.vuejs.org/rules/match-component-import-name.html"
+      },
+      "fixable": null,
+      "name": "vue/match-component-import-name",
+      "plugin": "vue"
+    },
+    "vue/max-attributes-per-line": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce the maximum number of attributes per line",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/max-attributes-per-line.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/max-attributes-per-line",
+      "plugin": "vue"
+    },
+    "vue/max-len": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce a maximum line length in `.vue` files",
+        "url": "https://eslint.vuejs.org/rules/max-len.html",
+        "extensionSource": {
+          "url": "https://eslint.org/docs/rules/max-len",
+          "name": "ESLint core"
+        }
+      },
+      "name": "vue/max-len",
+      "plugin": "vue"
+    },
+    "vue/max-lines-per-block": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce maximum number of lines in Vue SFC blocks",
+        "url": "https://eslint.vuejs.org/rules/max-lines-per-block.html"
+      },
+      "fixable": null,
+      "name": "vue/max-lines-per-block",
+      "plugin": "vue"
+    },
+    "vue/max-props": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce maximum number of props in Vue component",
+        "url": "https://eslint.vuejs.org/rules/max-props.html"
+      },
+      "fixable": null,
+      "name": "vue/max-props",
+      "plugin": "vue"
+    },
+    "vue/max-template-depth": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce maximum depth of template",
+        "url": "https://eslint.vuejs.org/rules/max-template-depth.html"
+      },
+      "fixable": null,
+      "name": "vue/max-template-depth",
+      "plugin": "vue"
+    },
+    "vue/multi-word-component-names": {
+      "type": "suggestion",
+      "docs": {
+        "description": "require component names to be always multi-word",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/multi-word-component-names.html"
+      },
+      "name": "vue/multi-word-component-names",
+      "plugin": "vue"
+    },
+    "vue/multiline-html-element-content-newline": {
+      "type": "layout",
+      "docs": {
+        "description": "require a line break before and after the contents of a multiline element",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/multiline-html-element-content-newline.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/multiline-html-element-content-newline",
+      "plugin": "vue"
+    },
+    "vue/multiline-ternary": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce newlines between operands of ternary expressions in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/multiline-ternary.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/js/multiline-ternary",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "whitespace",
+      "name": "vue/multiline-ternary",
+      "plugin": "vue"
+    },
+    "vue/mustache-interpolation-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce unified spacing in mustache interpolations",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/mustache-interpolation-spacing.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/mustache-interpolation-spacing",
+      "plugin": "vue"
+    },
+    "vue/new-line-between-multi-line-property": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce new lines between multi-line properties in Vue components",
+        "url": "https://eslint.vuejs.org/rules/new-line-between-multi-line-property.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/new-line-between-multi-line-property",
+      "plugin": "vue"
+    },
+    "vue/next-tick-style": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce Promise or callback style in `nextTick`",
+        "url": "https://eslint.vuejs.org/rules/next-tick-style.html"
+      },
+      "fixable": "code",
+      "name": "vue/next-tick-style",
+      "plugin": "vue"
+    },
+    "vue/no-arrow-functions-in-watch": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow using arrow functions to define watcher",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-arrow-functions-in-watch.html"
+      },
+      "fixable": null,
+      "name": "vue/no-arrow-functions-in-watch",
+      "plugin": "vue"
+    },
+    "vue/no-async-in-computed-properties": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow asynchronous actions in computed properties",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-async-in-computed-properties.html"
+      },
+      "fixable": null,
+      "name": "vue/no-async-in-computed-properties",
+      "plugin": "vue"
+    },
+    "vue/no-bare-strings-in-template": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow the use of bare strings in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/no-bare-strings-in-template.html"
+      },
+      "name": "vue/no-bare-strings-in-template",
+      "plugin": "vue"
+    },
+    "vue/no-boolean-default": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow boolean defaults",
+        "url": "https://eslint.vuejs.org/rules/no-boolean-default.html"
+      },
+      "fixable": null,
+      "name": "vue/no-boolean-default",
+      "plugin": "vue"
+    },
+    "vue/no-child-content": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow element's child contents which would be overwritten by a directive like `v-html` or `v-text`",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-child-content.html"
+      },
+      "fixable": null,
+      "hasSuggestions": true,
+      "name": "vue/no-child-content",
+      "plugin": "vue"
+    },
+    "vue/no-computed-properties-in-data": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow accessing computed properties in `data`",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-computed-properties-in-data.html"
+      },
+      "fixable": null,
+      "name": "vue/no-computed-properties-in-data",
+      "plugin": "vue"
+    },
+    "vue/no-console": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow the use of `console` in `<template>`",
+        "recommended": false,
+        "url": "https://eslint.vuejs.org/rules/no-console.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.org/docs/latest/rules/no-console",
+          "name": "ESLint core"
+        }
+      },
+      "hasSuggestions": true,
+      "name": "vue/no-console",
+      "plugin": "vue"
+    },
+    "vue/no-constant-condition": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow constant expressions in conditions in `<template>`",
+        "recommended": true,
+        "url": "https://eslint.vuejs.org/rules/no-constant-condition.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.org/docs/latest/rules/no-constant-condition",
+          "name": "ESLint core"
+        }
+      },
+      "name": "vue/no-constant-condition",
+      "plugin": "vue"
+    },
+    "vue/no-custom-modifiers-on-v-model": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow custom modifiers on v-model used on the component",
+        "categories": [
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-custom-modifiers-on-v-model.html"
+      },
+      "fixable": null,
+      "name": "vue/no-custom-modifiers-on-v-model",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-data-object-declaration": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow using deprecated object declaration on data (in Vue.js 3.0.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-data-object-declaration.html"
+      },
+      "fixable": "code",
+      "name": "vue/no-deprecated-data-object-declaration",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-destroyed-lifecycle": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow using deprecated `destroyed` and `beforeDestroy` lifecycle hooks (in Vue.js 3.0.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-destroyed-lifecycle.html"
+      },
+      "fixable": "code",
+      "name": "vue/no-deprecated-destroyed-lifecycle",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-dollar-listeners-api": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow using deprecated `$listeners` (in Vue.js 3.0.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-dollar-listeners-api.html"
+      },
+      "fixable": null,
+      "name": "vue/no-deprecated-dollar-listeners-api",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-dollar-scopedslots-api": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow using deprecated `$scopedSlots` (in Vue.js 3.0.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-dollar-scopedslots-api.html"
+      },
+      "fixable": "code",
+      "name": "vue/no-deprecated-dollar-scopedslots-api",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-events-api": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow using deprecated events api (in Vue.js 3.0.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-events-api.html"
+      },
+      "fixable": null,
+      "name": "vue/no-deprecated-events-api",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-filter": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow using deprecated filters syntax (in Vue.js 3.0.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-filter.html"
+      },
+      "fixable": null,
+      "name": "vue/no-deprecated-filter",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-functional-template": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow using deprecated the `functional` template (in Vue.js 3.0.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-functional-template.html"
+      },
+      "fixable": null,
+      "name": "vue/no-deprecated-functional-template",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-html-element-is": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow using deprecated the `is` attribute on HTML elements (in Vue.js 3.0.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-html-element-is.html"
+      },
+      "fixable": null,
+      "name": "vue/no-deprecated-html-element-is",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-inline-template": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow using deprecated `inline-template` attribute (in Vue.js 3.0.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-inline-template.html"
+      },
+      "fixable": null,
+      "name": "vue/no-deprecated-inline-template",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-model-definition": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow deprecated `model` definition (in Vue.js 3.0.0+)",
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-model-definition.html"
+      },
+      "fixable": null,
+      "hasSuggestions": true,
+      "name": "vue/no-deprecated-model-definition",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-props-default-this": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow deprecated `this` access in props default function (in Vue.js 3.0.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-props-default-this.html"
+      },
+      "fixable": null,
+      "name": "vue/no-deprecated-props-default-this",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-router-link-tag-prop": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow using deprecated `tag` property on `RouterLink` (in Vue.js 3.0.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-router-link-tag-prop.html"
+      },
+      "fixable": null,
+      "name": "vue/no-deprecated-router-link-tag-prop",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-scope-attribute": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow deprecated `scope` attribute (in Vue.js 2.5.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-scope-attribute.html"
+      },
+      "fixable": "code",
+      "name": "vue/no-deprecated-scope-attribute",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-slot-attribute": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow deprecated `slot` attribute (in Vue.js 2.6.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-slot-attribute.html"
+      },
+      "fixable": "code",
+      "name": "vue/no-deprecated-slot-attribute",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-slot-scope-attribute": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow deprecated `slot-scope` attribute (in Vue.js 2.6.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-slot-scope-attribute.html"
+      },
+      "fixable": "code",
+      "name": "vue/no-deprecated-slot-scope-attribute",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-v-bind-sync": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow use of deprecated `.sync` modifier on `v-bind` directive (in Vue.js 3.0.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-v-bind-sync.html"
+      },
+      "fixable": "code",
+      "name": "vue/no-deprecated-v-bind-sync",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-v-is": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow deprecated `v-is` directive (in Vue.js 3.1.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-v-is.html"
+      },
+      "fixable": null,
+      "name": "vue/no-deprecated-v-is",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-v-on-native-modifier": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow using deprecated `.native` modifiers (in Vue.js 3.0.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-v-on-native-modifier.html"
+      },
+      "fixable": null,
+      "name": "vue/no-deprecated-v-on-native-modifier",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-v-on-number-modifiers": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow using deprecated number (keycode) modifiers (in Vue.js 3.0.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-v-on-number-modifiers.html"
+      },
+      "fixable": "code",
+      "name": "vue/no-deprecated-v-on-number-modifiers",
+      "plugin": "vue"
+    },
+    "vue/no-deprecated-vue-config-keycodes": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow using deprecated `Vue.config.keyCodes` (in Vue.js 3.0.0+)",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-deprecated-vue-config-keycodes.html"
+      },
+      "fixable": null,
+      "name": "vue/no-deprecated-vue-config-keycodes",
+      "plugin": "vue"
+    },
+    "vue/no-dupe-keys": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow duplication of field names",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-dupe-keys.html"
+      },
+      "fixable": null,
+      "name": "vue/no-dupe-keys",
+      "plugin": "vue"
+    },
+    "vue/no-dupe-v-else-if": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow duplicate conditions in `v-if` / `v-else-if` chains",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-dupe-v-else-if.html"
+      },
+      "fixable": null,
+      "name": "vue/no-dupe-v-else-if",
+      "plugin": "vue"
+    },
+    "vue/no-duplicate-attr-inheritance": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce `inheritAttrs` to be set to `false` when using `v-bind=\"$attrs\"`",
+        "recommended": false,
+        "url": "https://eslint.vuejs.org/rules/no-duplicate-attr-inheritance.html"
+      },
+      "fixable": null,
+      "name": "vue/no-duplicate-attr-inheritance",
+      "plugin": "vue"
+    },
+    "vue/no-duplicate-attributes": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow duplication of attributes",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-duplicate-attributes.html"
+      },
+      "fixable": null,
+      "name": "vue/no-duplicate-attributes",
+      "plugin": "vue"
+    },
+    "vue/no-empty-component-block": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow the `<template>` `<script>` `<style>` block to be empty",
+        "url": "https://eslint.vuejs.org/rules/no-empty-component-block.html"
+      },
+      "fixable": null,
+      "name": "vue/no-empty-component-block",
+      "plugin": "vue"
+    },
+    "vue/no-empty-pattern": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow empty destructuring patterns in `<template>`",
+        "recommended": true,
+        "url": "https://eslint.vuejs.org/rules/no-empty-pattern.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.org/docs/latest/rules/no-empty-pattern",
+          "name": "ESLint core"
+        }
+      },
+      "name": "vue/no-empty-pattern",
+      "plugin": "vue"
+    },
+    "vue/no-export-in-script-setup": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow `export` in `<script setup>`",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-export-in-script-setup.html"
+      },
+      "fixable": null,
+      "name": "vue/no-export-in-script-setup",
+      "plugin": "vue"
+    },
+    "vue/no-expose-after-await": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow asynchronously registered `expose`",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-expose-after-await.html"
+      },
+      "fixable": null,
+      "name": "vue/no-expose-after-await",
+      "plugin": "vue"
+    },
+    "vue/no-extra-parens": {
+      "type": "layout",
+      "docs": {
+        "description": "Disallow unnecessary parentheses in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/no-extra-parens.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/ts/no-extra-parens",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "code",
+      "name": "vue/no-extra-parens",
+      "plugin": "vue"
+    },
+    "vue/no-invalid-model-keys": {
+      "type": "problem",
+      "docs": {
+        "description": "require valid keys in model option",
+        "url": "https://eslint.vuejs.org/rules/no-invalid-model-keys.html"
+      },
+      "fixable": null,
+      "deprecated": true,
+      "replacedBy": [
+        "valid-model-definition"
+      ],
+      "name": "vue/no-invalid-model-keys",
+      "plugin": "vue"
+    },
+    "vue/no-irregular-whitespace": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow irregular whitespace in `.vue` files",
+        "url": "https://eslint.vuejs.org/rules/no-irregular-whitespace.html",
+        "extensionSource": {
+          "url": "https://eslint.org/docs/rules/no-irregular-whitespace",
+          "name": "ESLint core"
+        }
+      },
+      "name": "vue/no-irregular-whitespace",
+      "plugin": "vue"
+    },
+    "vue/no-lifecycle-after-await": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow asynchronously registered lifecycle hooks",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-lifecycle-after-await.html"
+      },
+      "fixable": null,
+      "name": "vue/no-lifecycle-after-await",
+      "plugin": "vue"
+    },
+    "vue/no-lone-template": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow unnecessary `<template>`",
+        "categories": [
+          "vue3-recommended",
+          "vue2-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-lone-template.html"
+      },
+      "fixable": null,
+      "name": "vue/no-lone-template",
+      "plugin": "vue"
+    },
+    "vue/no-loss-of-precision": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow literal numbers that lose precision in `<template>`",
+        "recommended": true,
+        "url": "https://eslint.vuejs.org/rules/no-loss-of-precision.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.org/docs/latest/rules/no-loss-of-precision",
+          "name": "ESLint core"
+        }
+      },
+      "name": "vue/no-loss-of-precision",
+      "plugin": "vue"
+    },
+    "vue/no-multi-spaces": {
+      "type": "layout",
+      "docs": {
+        "description": "disallow multiple spaces",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-multi-spaces.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/no-multi-spaces",
+      "plugin": "vue"
+    },
+    "vue/no-multiple-objects-in-class": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow to pass multiple objects into array to class",
+        "url": "https://eslint.vuejs.org/rules/no-multiple-objects-in-class.html"
+      },
+      "fixable": null,
+      "name": "vue/no-multiple-objects-in-class",
+      "plugin": "vue"
+    },
+    "vue/no-multiple-slot-args": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow to pass multiple arguments to scoped slots",
+        "categories": [
+          "vue3-recommended",
+          "vue2-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-multiple-slot-args.html"
+      },
+      "fixable": null,
+      "name": "vue/no-multiple-slot-args",
+      "plugin": "vue"
+    },
+    "vue/no-multiple-template-root": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow adding multiple root nodes to the template",
+        "categories": [
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-multiple-template-root.html"
+      },
+      "fixable": null,
+      "name": "vue/no-multiple-template-root",
+      "plugin": "vue"
+    },
+    "vue/no-mutating-props": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow mutation of component props",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-mutating-props.html"
+      },
+      "fixable": null,
+      "name": "vue/no-mutating-props",
+      "plugin": "vue"
+    },
+    "vue/no-parsing-error": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow parsing errors in `<template>`",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-parsing-error.html"
+      },
+      "fixable": null,
+      "name": "vue/no-parsing-error",
+      "plugin": "vue"
+    },
+    "vue/no-potential-component-option-typo": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow a potential typo in your component property",
+        "recommended": false,
+        "url": "https://eslint.vuejs.org/rules/no-potential-component-option-typo.html"
+      },
+      "fixable": null,
+      "hasSuggestions": true,
+      "name": "vue/no-potential-component-option-typo",
+      "plugin": "vue"
+    },
+    "vue/no-ref-as-operand": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow use of value wrapped by `ref()` (Composition API) as an operand",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-ref-as-operand.html"
+      },
+      "fixable": "code",
+      "name": "vue/no-ref-as-operand",
+      "plugin": "vue"
+    },
+    "vue/no-ref-object-destructure": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow usages of ref objects that can lead to loss of reactivity",
+        "url": "https://eslint.vuejs.org/rules/no-ref-object-destructure.html"
+      },
+      "fixable": null,
+      "deprecated": true,
+      "replacedBy": [
+        "no-ref-object-reactivity-loss"
+      ],
+      "name": "vue/no-ref-object-destructure",
+      "plugin": "vue"
+    },
+    "vue/no-ref-object-reactivity-loss": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow usages of ref objects that can lead to loss of reactivity",
+        "url": "https://eslint.vuejs.org/rules/no-ref-object-reactivity-loss.html"
+      },
+      "fixable": null,
+      "name": "vue/no-ref-object-reactivity-loss",
+      "plugin": "vue"
+    },
+    "vue/no-required-prop-with-default": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce props with default values to be optional",
+        "url": "https://eslint.vuejs.org/rules/no-required-prop-with-default.html"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "vue/no-required-prop-with-default",
+      "plugin": "vue"
+    },
+    "vue/no-reserved-component-names": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow the use of reserved names in component definitions",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-reserved-component-names.html"
+      },
+      "fixable": null,
+      "name": "vue/no-reserved-component-names",
+      "plugin": "vue"
+    },
+    "vue/no-reserved-keys": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow overwriting reserved keys",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-reserved-keys.html"
+      },
+      "fixable": null,
+      "name": "vue/no-reserved-keys",
+      "plugin": "vue"
+    },
+    "vue/no-reserved-props": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow reserved names in props",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-reserved-props.html",
+        "defaultOptions": {
+          "vue2": [
+            {
+              "vueVersion": 2
+            }
+          ]
+        }
+      },
+      "fixable": null,
+      "name": "vue/no-reserved-props",
+      "plugin": "vue"
+    },
+    "vue/no-restricted-block": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow specific block",
+        "url": "https://eslint.vuejs.org/rules/no-restricted-block.html"
+      },
+      "fixable": null,
+      "name": "vue/no-restricted-block",
+      "plugin": "vue"
+    },
+    "vue/no-restricted-call-after-await": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow asynchronously called restricted methods",
+        "url": "https://eslint.vuejs.org/rules/no-restricted-call-after-await.html"
+      },
+      "fixable": null,
+      "name": "vue/no-restricted-call-after-await",
+      "plugin": "vue"
+    },
+    "vue/no-restricted-class": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow specific classes in Vue components",
+        "url": "https://eslint.vuejs.org/rules/no-restricted-class.html"
+      },
+      "fixable": null,
+      "name": "vue/no-restricted-class",
+      "plugin": "vue"
+    },
+    "vue/no-restricted-component-names": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow specific component names",
+        "url": "https://eslint.vuejs.org/rules/no-restricted-component-names.html"
+      },
+      "fixable": null,
+      "hasSuggestions": true,
+      "name": "vue/no-restricted-component-names",
+      "plugin": "vue"
+    },
+    "vue/no-restricted-component-options": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow specific component option",
+        "url": "https://eslint.vuejs.org/rules/no-restricted-component-options.html"
+      },
+      "fixable": null,
+      "name": "vue/no-restricted-component-options",
+      "plugin": "vue"
+    },
+    "vue/no-restricted-custom-event": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow specific custom event",
+        "url": "https://eslint.vuejs.org/rules/no-restricted-custom-event.html"
+      },
+      "fixable": null,
+      "hasSuggestions": true,
+      "name": "vue/no-restricted-custom-event",
+      "plugin": "vue"
+    },
+    "vue/no-restricted-html-elements": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow specific HTML elements",
+        "url": "https://eslint.vuejs.org/rules/no-restricted-html-elements.html"
+      },
+      "fixable": null,
+      "name": "vue/no-restricted-html-elements",
+      "plugin": "vue"
+    },
+    "vue/no-restricted-props": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow specific props",
+        "url": "https://eslint.vuejs.org/rules/no-restricted-props.html"
+      },
+      "fixable": null,
+      "hasSuggestions": true,
+      "name": "vue/no-restricted-props",
+      "plugin": "vue"
+    },
+    "vue/no-restricted-static-attribute": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow specific attribute",
+        "url": "https://eslint.vuejs.org/rules/no-restricted-static-attribute.html"
+      },
+      "fixable": null,
+      "name": "vue/no-restricted-static-attribute",
+      "plugin": "vue"
+    },
+    "vue/no-restricted-syntax": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow specified syntax in `<template>`",
+        "recommended": false,
+        "url": "https://eslint.vuejs.org/rules/no-restricted-syntax.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.org/docs/latest/rules/no-restricted-syntax",
+          "name": "ESLint core"
+        }
+      },
+      "name": "vue/no-restricted-syntax",
+      "plugin": "vue"
+    },
+    "vue/no-restricted-v-bind": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow specific argument in `v-bind`",
+        "url": "https://eslint.vuejs.org/rules/no-restricted-v-bind.html"
+      },
+      "fixable": null,
+      "name": "vue/no-restricted-v-bind",
+      "plugin": "vue"
+    },
+    "vue/no-restricted-v-on": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow specific argument in `v-on`",
+        "url": "https://eslint.vuejs.org/rules/no-restricted-v-on.html"
+      },
+      "fixable": null,
+      "name": "vue/no-restricted-v-on",
+      "plugin": "vue"
+    },
+    "vue/no-root-v-if": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow `v-if` directives on root element",
+        "url": "https://eslint.vuejs.org/rules/no-root-v-if.html"
+      },
+      "fixable": null,
+      "name": "vue/no-root-v-if",
+      "plugin": "vue"
+    },
+    "vue/no-setup-props-destructure": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow usages that lose the reactivity of `props` passed to `setup`",
+        "url": "https://eslint.vuejs.org/rules/no-setup-props-destructure.html"
+      },
+      "fixable": null,
+      "deprecated": true,
+      "replacedBy": [
+        "no-setup-props-reactivity-loss"
+      ],
+      "name": "vue/no-setup-props-destructure",
+      "plugin": "vue"
+    },
+    "vue/no-setup-props-reactivity-loss": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow usages that lose the reactivity of `props` passed to `setup`",
+        "url": "https://eslint.vuejs.org/rules/no-setup-props-reactivity-loss.html"
+      },
+      "fixable": null,
+      "name": "vue/no-setup-props-reactivity-loss",
+      "plugin": "vue"
+    },
+    "vue/no-shared-component-data": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce component's data property to be a function",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-shared-component-data.html"
+      },
+      "fixable": "code",
+      "name": "vue/no-shared-component-data",
+      "plugin": "vue"
+    },
+    "vue/no-side-effects-in-computed-properties": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow side effects in computed properties",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-side-effects-in-computed-properties.html"
+      },
+      "fixable": null,
+      "name": "vue/no-side-effects-in-computed-properties",
+      "plugin": "vue"
+    },
+    "vue/no-spaces-around-equal-signs-in-attribute": {
+      "type": "layout",
+      "docs": {
+        "description": "disallow spaces around equal signs in attribute",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-spaces-around-equal-signs-in-attribute.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/no-spaces-around-equal-signs-in-attribute",
+      "plugin": "vue"
+    },
+    "vue/no-sparse-arrays": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow sparse arrays in `<template>`",
+        "recommended": true,
+        "url": "https://eslint.vuejs.org/rules/no-sparse-arrays.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.org/docs/latest/rules/no-sparse-arrays",
+          "name": "ESLint core"
+        }
+      },
+      "name": "vue/no-sparse-arrays",
+      "plugin": "vue"
+    },
+    "vue/no-static-inline-styles": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow static inline `style` attributes",
+        "url": "https://eslint.vuejs.org/rules/no-static-inline-styles.html"
+      },
+      "fixable": null,
+      "name": "vue/no-static-inline-styles",
+      "plugin": "vue"
+    },
+    "vue/no-template-key": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow `key` attribute on `<template>`",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-template-key.html"
+      },
+      "fixable": null,
+      "name": "vue/no-template-key",
+      "plugin": "vue"
+    },
+    "vue/no-template-shadow": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow variable declarations from shadowing variables declared in the outer scope",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-template-shadow.html"
+      },
+      "fixable": null,
+      "name": "vue/no-template-shadow",
+      "plugin": "vue"
+    },
+    "vue/no-template-target-blank": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow target=\"_blank\" attribute without rel=\"noopener noreferrer\"",
+        "url": "https://eslint.vuejs.org/rules/no-template-target-blank.html"
+      },
+      "hasSuggestions": true,
+      "name": "vue/no-template-target-blank",
+      "plugin": "vue"
+    },
+    "vue/no-textarea-mustache": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow mustaches in `<textarea>`",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-textarea-mustache.html"
+      },
+      "fixable": null,
+      "name": "vue/no-textarea-mustache",
+      "plugin": "vue"
+    },
+    "vue/no-this-in-before-route-enter": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow `this` usage in a `beforeRouteEnter` method",
+        "categories": null,
+        "url": "https://eslint.vuejs.org/rules/no-this-in-before-route-enter.html"
+      },
+      "fixable": null,
+      "name": "vue/no-this-in-before-route-enter",
+      "plugin": "vue"
+    },
+    "vue/no-undef-components": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow use of undefined components in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/no-undef-components.html"
+      },
+      "fixable": null,
+      "name": "vue/no-undef-components",
+      "plugin": "vue"
+    },
+    "vue/no-undef-properties": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow undefined properties",
+        "url": "https://eslint.vuejs.org/rules/no-undef-properties.html"
+      },
+      "fixable": null,
+      "name": "vue/no-undef-properties",
+      "plugin": "vue"
+    },
+    "vue/no-unsupported-features": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow unsupported Vue.js syntax on the specified version",
+        "url": "https://eslint.vuejs.org/rules/no-unsupported-features.html"
+      },
+      "fixable": "code",
+      "name": "vue/no-unsupported-features",
+      "plugin": "vue"
+    },
+    "vue/no-unused-components": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow registering components that are not used inside templates",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-unused-components.html"
+      },
+      "fixable": null,
+      "name": "vue/no-unused-components",
+      "plugin": "vue"
+    },
+    "vue/no-unused-emit-declarations": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow unused emit declarations",
+        "url": "https://eslint.vuejs.org/rules/no-unused-emit-declarations.html"
+      },
+      "fixable": null,
+      "name": "vue/no-unused-emit-declarations",
+      "plugin": "vue"
+    },
+    "vue/no-unused-properties": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow unused properties",
+        "url": "https://eslint.vuejs.org/rules/no-unused-properties.html"
+      },
+      "fixable": null,
+      "name": "vue/no-unused-properties",
+      "plugin": "vue"
+    },
+    "vue/no-unused-refs": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow unused refs",
+        "url": "https://eslint.vuejs.org/rules/no-unused-refs.html"
+      },
+      "fixable": null,
+      "name": "vue/no-unused-refs",
+      "plugin": "vue"
+    },
+    "vue/no-unused-vars": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow unused variable definitions of v-for directives or scope attributes",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-unused-vars.html"
+      },
+      "fixable": null,
+      "hasSuggestions": true,
+      "name": "vue/no-unused-vars",
+      "plugin": "vue"
+    },
+    "vue/no-use-computed-property-like-method": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow use computed property like method",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-use-computed-property-like-method.html"
+      },
+      "fixable": null,
+      "name": "vue/no-use-computed-property-like-method",
+      "plugin": "vue"
+    },
+    "vue/no-use-v-else-with-v-for": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow using `v-else-if`/`v-else` on the same element as `v-for`",
+        "categories": null,
+        "url": "https://eslint.vuejs.org/rules/no-use-v-else-with-v-for.html"
+      },
+      "fixable": null,
+      "name": "vue/no-use-v-else-with-v-for",
+      "plugin": "vue"
+    },
+    "vue/no-use-v-if-with-v-for": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow using `v-if` on the same element as `v-for`",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-use-v-if-with-v-for.html"
+      },
+      "fixable": null,
+      "name": "vue/no-use-v-if-with-v-for",
+      "plugin": "vue"
+    },
+    "vue/no-useless-concat": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow unnecessary concatenation of literals or template literals in `<template>`",
+        "recommended": false,
+        "url": "https://eslint.vuejs.org/rules/no-useless-concat.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.org/docs/latest/rules/no-useless-concat",
+          "name": "ESLint core"
+        }
+      },
+      "name": "vue/no-useless-concat",
+      "plugin": "vue"
+    },
+    "vue/no-useless-mustaches": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow unnecessary mustache interpolations",
+        "url": "https://eslint.vuejs.org/rules/no-useless-mustaches.html"
+      },
+      "fixable": "code",
+      "name": "vue/no-useless-mustaches",
+      "plugin": "vue"
+    },
+    "vue/no-useless-template-attributes": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow useless attribute on `<template>`",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-useless-template-attributes.html"
+      },
+      "fixable": null,
+      "name": "vue/no-useless-template-attributes",
+      "plugin": "vue"
+    },
+    "vue/no-useless-v-bind": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow unnecessary `v-bind` directives",
+        "url": "https://eslint.vuejs.org/rules/no-useless-v-bind.html"
+      },
+      "fixable": "code",
+      "name": "vue/no-useless-v-bind",
+      "plugin": "vue"
+    },
+    "vue/no-v-for-template-key-on-child": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow key of `<template v-for>` placed on child elements",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-v-for-template-key-on-child.html"
+      },
+      "fixable": null,
+      "name": "vue/no-v-for-template-key-on-child",
+      "plugin": "vue"
+    },
+    "vue/no-v-for-template-key": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow `key` attribute on `<template v-for>`",
+        "categories": [
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-v-for-template-key.html"
+      },
+      "fixable": null,
+      "name": "vue/no-v-for-template-key",
+      "plugin": "vue"
+    },
+    "vue/no-v-html": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow use of v-html to prevent XSS attack",
+        "categories": [
+          "vue3-recommended",
+          "vue2-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-v-html.html"
+      },
+      "fixable": null,
+      "name": "vue/no-v-html",
+      "plugin": "vue"
+    },
+    "vue/no-v-model-argument": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow adding an argument to `v-model` used in custom component",
+        "categories": [
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-v-model-argument.html"
+      },
+      "fixable": null,
+      "name": "vue/no-v-model-argument",
+      "plugin": "vue"
+    },
+    "vue/no-v-text-v-html-on-component": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow v-text / v-html on component",
+        "categories": [
+          "vue2-essential",
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-v-text-v-html-on-component.html"
+      },
+      "fixable": null,
+      "name": "vue/no-v-text-v-html-on-component",
+      "plugin": "vue"
+    },
+    "vue/no-v-text": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow use of v-text",
+        "url": "https://eslint.vuejs.org/rules/no-v-text.html"
+      },
+      "fixable": null,
+      "name": "vue/no-v-text",
+      "plugin": "vue"
+    },
+    "vue/no-watch-after-await": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow asynchronously registered `watch`",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/no-watch-after-await.html"
+      },
+      "fixable": null,
+      "name": "vue/no-watch-after-await",
+      "plugin": "vue"
+    },
+    "vue/object-curly-newline": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce consistent line breaks after opening and before closing braces in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/object-curly-newline.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/ts/object-curly-newline",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "whitespace",
+      "name": "vue/object-curly-newline",
+      "plugin": "vue"
+    },
+    "vue/object-curly-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce consistent spacing inside braces in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/object-curly-spacing.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/ts/object-curly-spacing",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "whitespace",
+      "name": "vue/object-curly-spacing",
+      "plugin": "vue"
+    },
+    "vue/object-property-newline": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce placing object properties on separate lines in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/object-property-newline.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/ts/object-property-newline",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "whitespace",
+      "name": "vue/object-property-newline",
+      "plugin": "vue"
+    },
+    "vue/object-shorthand": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Require or disallow method and property shorthand syntax for object literals in `<template>`",
+        "recommended": false,
+        "url": "https://eslint.vuejs.org/rules/object-shorthand.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.org/docs/latest/rules/object-shorthand",
+          "name": "ESLint core"
+        }
+      },
+      "fixable": "code",
+      "name": "vue/object-shorthand",
+      "plugin": "vue"
+    },
+    "vue/one-component-per-file": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce that each component should be in its own file",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/one-component-per-file.html"
+      },
+      "fixable": null,
+      "name": "vue/one-component-per-file",
+      "plugin": "vue"
+    },
+    "vue/operator-linebreak": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce consistent linebreak style for operators in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/operator-linebreak.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/js/operator-linebreak",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "code",
+      "name": "vue/operator-linebreak",
+      "plugin": "vue"
+    },
+    "vue/order-in-components": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce order of properties in components",
+        "categories": [
+          "vue3-recommended",
+          "vue2-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/order-in-components.html"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "vue/order-in-components",
+      "plugin": "vue"
+    },
+    "vue/padding-line-between-blocks": {
+      "type": "layout",
+      "docs": {
+        "description": "require or disallow padding lines between blocks",
+        "url": "https://eslint.vuejs.org/rules/padding-line-between-blocks.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/padding-line-between-blocks",
+      "plugin": "vue"
+    },
+    "vue/padding-line-between-tags": {
+      "type": "layout",
+      "docs": {
+        "description": "require or disallow newlines between sibling tags in template",
+        "url": "https://eslint.vuejs.org/rules/padding-line-between-tags.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/padding-line-between-tags",
+      "plugin": "vue"
+    },
+    "vue/padding-lines-in-component-definition": {
+      "type": "layout",
+      "docs": {
+        "description": "require or disallow padding lines in component definition",
+        "url": "https://eslint.vuejs.org/rules/padding-lines-in-component-definition.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/padding-lines-in-component-definition",
+      "plugin": "vue"
+    },
+    "vue/prefer-define-options": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce use of `defineOptions` instead of default export",
+        "url": "https://eslint.vuejs.org/rules/prefer-define-options.html"
+      },
+      "fixable": "code",
+      "name": "vue/prefer-define-options",
+      "plugin": "vue"
+    },
+    "vue/prefer-import-from-vue": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce import from 'vue' instead of import from '@vue/*'",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/prefer-import-from-vue.html"
+      },
+      "fixable": "code",
+      "name": "vue/prefer-import-from-vue",
+      "plugin": "vue"
+    },
+    "vue/prefer-prop-type-boolean-first": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce `Boolean` comes first in component prop types",
+        "url": "https://eslint.vuejs.org/rules/prefer-prop-type-boolean-first.html"
+      },
+      "fixable": null,
+      "hasSuggestions": true,
+      "name": "vue/prefer-prop-type-boolean-first",
+      "plugin": "vue"
+    },
+    "vue/prefer-separate-static-class": {
+      "type": "suggestion",
+      "docs": {
+        "description": "require static class names in template to be in a separate `class` attribute",
+        "url": "https://eslint.vuejs.org/rules/prefer-separate-static-class.html"
+      },
+      "fixable": "code",
+      "name": "vue/prefer-separate-static-class",
+      "plugin": "vue"
+    },
+    "vue/prefer-template": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Require template literals instead of string concatenation in `<template>`",
+        "recommended": false,
+        "url": "https://eslint.vuejs.org/rules/prefer-template.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.org/docs/latest/rules/prefer-template",
+          "name": "ESLint core"
+        }
+      },
+      "fixable": "code",
+      "name": "vue/prefer-template",
+      "plugin": "vue"
+    },
+    "vue/prefer-true-attribute-shorthand": {
+      "type": "suggestion",
+      "docs": {
+        "description": "require shorthand form attribute when `v-bind` value is `true`",
+        "url": "https://eslint.vuejs.org/rules/prefer-true-attribute-shorthand.html"
+      },
+      "fixable": null,
+      "hasSuggestions": true,
+      "name": "vue/prefer-true-attribute-shorthand",
+      "plugin": "vue"
+    },
+    "vue/prop-name-casing": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce specific casing for the Prop name in Vue components",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/prop-name-casing.html"
+      },
+      "fixable": null,
+      "name": "vue/prop-name-casing",
+      "plugin": "vue"
+    },
+    "vue/quote-props": {
+      "type": "layout",
+      "docs": {
+        "description": "Require quotes around object literal, type literal, interfaces and enums property names in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/quote-props.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/ts/quote-props",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "code",
+      "name": "vue/quote-props",
+      "plugin": "vue"
+    },
+    "vue/require-component-is": {
+      "type": "problem",
+      "docs": {
+        "description": "require `v-bind:is` of `<component>` elements",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/require-component-is.html"
+      },
+      "fixable": null,
+      "name": "vue/require-component-is",
+      "plugin": "vue"
+    },
+    "vue/require-default-export": {
+      "type": "problem",
+      "docs": {
+        "description": "require components to be the default export",
+        "url": "https://eslint.vuejs.org/rules/require-default-export.html"
+      },
+      "fixable": null,
+      "name": "vue/require-default-export",
+      "plugin": "vue"
+    },
+    "vue/require-default-prop": {
+      "type": "suggestion",
+      "docs": {
+        "description": "require default value for props",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/require-default-prop.html"
+      },
+      "fixable": null,
+      "name": "vue/require-default-prop",
+      "plugin": "vue"
+    },
+    "vue/require-direct-export": {
+      "type": "suggestion",
+      "docs": {
+        "description": "require the component to be directly exported",
+        "url": "https://eslint.vuejs.org/rules/require-direct-export.html"
+      },
+      "fixable": null,
+      "name": "vue/require-direct-export",
+      "plugin": "vue"
+    },
+    "vue/require-emit-validator": {
+      "type": "suggestion",
+      "docs": {
+        "description": "require type definitions in emits",
+        "url": "https://eslint.vuejs.org/rules/require-emit-validator.html"
+      },
+      "fixable": null,
+      "hasSuggestions": true,
+      "name": "vue/require-emit-validator",
+      "plugin": "vue"
+    },
+    "vue/require-explicit-emits": {
+      "type": "suggestion",
+      "docs": {
+        "description": "require `emits` option with name triggered by `$emit()`",
+        "categories": [
+          "vue3-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/require-explicit-emits.html"
+      },
+      "fixable": null,
+      "hasSuggestions": true,
+      "name": "vue/require-explicit-emits",
+      "plugin": "vue"
+    },
+    "vue/require-explicit-slots": {
+      "type": "problem",
+      "docs": {
+        "description": "require slots to be explicitly defined",
+        "url": "https://eslint.vuejs.org/rules/require-explicit-slots.html"
+      },
+      "fixable": null,
+      "name": "vue/require-explicit-slots",
+      "plugin": "vue"
+    },
+    "vue/require-expose": {
+      "type": "suggestion",
+      "docs": {
+        "description": "require declare public properties using `expose`",
+        "url": "https://eslint.vuejs.org/rules/require-expose.html"
+      },
+      "fixable": null,
+      "hasSuggestions": true,
+      "name": "vue/require-expose",
+      "plugin": "vue"
+    },
+    "vue/require-macro-variable-name": {
+      "type": "suggestion",
+      "docs": {
+        "description": "require a certain macro variable name",
+        "url": "https://eslint.vuejs.org/rules/require-macro-variable-name.html"
+      },
+      "fixable": null,
+      "hasSuggestions": true,
+      "name": "vue/require-macro-variable-name",
+      "plugin": "vue"
+    },
+    "vue/require-name-property": {
+      "type": "suggestion",
+      "docs": {
+        "description": "require a name property in Vue components",
+        "url": "https://eslint.vuejs.org/rules/require-name-property.html"
+      },
+      "fixable": null,
+      "hasSuggestions": true,
+      "name": "vue/require-name-property",
+      "plugin": "vue"
+    },
+    "vue/require-prop-comment": {
+      "type": "suggestion",
+      "docs": {
+        "description": "require props to have a comment",
+        "url": "https://eslint.vuejs.org/rules/require-prop-comment.html"
+      },
+      "fixable": null,
+      "name": "vue/require-prop-comment",
+      "plugin": "vue"
+    },
+    "vue/require-prop-type-constructor": {
+      "type": "suggestion",
+      "docs": {
+        "description": "require prop type to be a constructor",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/require-prop-type-constructor.html"
+      },
+      "fixable": "code",
+      "name": "vue/require-prop-type-constructor",
+      "plugin": "vue"
+    },
+    "vue/require-prop-types": {
+      "type": "suggestion",
+      "docs": {
+        "description": "require type definitions in props",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/require-prop-types.html"
+      },
+      "fixable": null,
+      "name": "vue/require-prop-types",
+      "plugin": "vue"
+    },
+    "vue/require-render-return": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce render function to always return value",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/require-render-return.html"
+      },
+      "fixable": null,
+      "name": "vue/require-render-return",
+      "plugin": "vue"
+    },
+    "vue/require-slots-as-functions": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce properties of `$slots` to be used as a function",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/require-slots-as-functions.html"
+      },
+      "fixable": null,
+      "name": "vue/require-slots-as-functions",
+      "plugin": "vue"
+    },
+    "vue/require-toggle-inside-transition": {
+      "type": "problem",
+      "docs": {
+        "description": "require control the display of the content inside `<transition>`",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/require-toggle-inside-transition.html"
+      },
+      "fixable": null,
+      "name": "vue/require-toggle-inside-transition",
+      "plugin": "vue"
+    },
+    "vue/require-typed-object-prop": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce adding type declarations to object props",
+        "recommended": false,
+        "url": "https://eslint.vuejs.org/rules/require-typed-object-prop.html"
+      },
+      "fixable": null,
+      "hasSuggestions": true,
+      "name": "vue/require-typed-object-prop",
+      "plugin": "vue"
+    },
+    "vue/require-typed-ref": {
+      "type": "suggestion",
+      "docs": {
+        "description": "require `ref` and `shallowRef` functions to be strongly typed",
+        "url": "https://eslint.vuejs.org/rules/require-typed-ref.html"
+      },
+      "fixable": null,
+      "name": "vue/require-typed-ref",
+      "plugin": "vue"
+    },
+    "vue/require-v-for-key": {
+      "type": "problem",
+      "docs": {
+        "description": "require `v-bind:key` with `v-for` directives",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/require-v-for-key.html"
+      },
+      "fixable": null,
+      "name": "vue/require-v-for-key",
+      "plugin": "vue"
+    },
+    "vue/require-valid-default-prop": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce props default values to be valid",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/require-valid-default-prop.html"
+      },
+      "fixable": null,
+      "name": "vue/require-valid-default-prop",
+      "plugin": "vue"
+    },
+    "vue/return-in-computed-property": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce that a return statement is present in computed property",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/return-in-computed-property.html"
+      },
+      "fixable": null,
+      "name": "vue/return-in-computed-property",
+      "plugin": "vue"
+    },
+    "vue/return-in-emits-validator": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce that a return statement is present in emits validator",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/return-in-emits-validator.html"
+      },
+      "fixable": null,
+      "name": "vue/return-in-emits-validator",
+      "plugin": "vue"
+    },
+    "vue/script-indent": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce consistent indentation in `<script>`",
+        "url": "https://eslint.vuejs.org/rules/script-indent.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/script-indent",
+      "plugin": "vue"
+    },
+    "vue/script-setup-uses-vars": {
+      "type": "problem",
+      "docs": {
+        "description": "prevent `<script setup>` variables used in `<template>` to be marked as unused",
+        "url": "https://eslint.vuejs.org/rules/script-setup-uses-vars.html"
+      },
+      "deprecated": true,
+      "name": "vue/script-setup-uses-vars",
+      "plugin": "vue"
+    },
+    "vue/singleline-html-element-content-newline": {
+      "type": "layout",
+      "docs": {
+        "description": "require a line break before and after the contents of a singleline element",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/singleline-html-element-content-newline.html"
+      },
+      "fixable": "whitespace",
+      "name": "vue/singleline-html-element-content-newline",
+      "plugin": "vue"
+    },
+    "vue/sort-keys": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce sort-keys in a manner that is compatible with order-in-components",
+        "categories": null,
+        "recommended": false,
+        "url": "https://eslint.vuejs.org/rules/sort-keys.html"
+      },
+      "fixable": null,
+      "name": "vue/sort-keys",
+      "plugin": "vue"
+    },
+    "vue/space-in-parens": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce consistent spacing inside parentheses in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/space-in-parens.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/js/space-in-parens",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "whitespace",
+      "name": "vue/space-in-parens",
+      "plugin": "vue"
+    },
+    "vue/space-infix-ops": {
+      "type": "layout",
+      "docs": {
+        "description": "Require spacing around infix operators in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/space-infix-ops.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/ts/space-infix-ops",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "whitespace",
+      "name": "vue/space-infix-ops",
+      "plugin": "vue"
+    },
+    "vue/space-unary-ops": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce consistent spacing before or after unary operators in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/space-unary-ops.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/js/space-unary-ops",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "whitespace",
+      "name": "vue/space-unary-ops",
+      "plugin": "vue"
+    },
+    "vue/static-class-names-order": {
+      "type": "suggestion",
+      "docs": {
+        "url": "https://eslint.vuejs.org/rules/static-class-names-order.html",
+        "description": "enforce static class names order"
+      },
+      "fixable": "code",
+      "name": "vue/static-class-names-order",
+      "plugin": "vue"
+    },
+    "vue/template-curly-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "Require or disallow spacing around embedded expressions of template strings in `<template>`",
+        "url": "https://eslint.vuejs.org/rules/template-curly-spacing.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.style/rules/js/template-curly-spacing",
+          "name": "ESLint Stylistic"
+        }
+      },
+      "fixable": "whitespace",
+      "name": "vue/template-curly-spacing",
+      "plugin": "vue"
+    },
+    "vue/this-in-template": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow usage of `this` in template",
+        "categories": [
+          "vue3-recommended",
+          "vue2-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/this-in-template.html"
+      },
+      "fixable": "code",
+      "name": "vue/this-in-template",
+      "plugin": "vue"
+    },
+    "vue/use-v-on-exact": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce usage of `exact` modifier on `v-on`",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/use-v-on-exact.html"
+      },
+      "fixable": null,
+      "name": "vue/use-v-on-exact",
+      "plugin": "vue"
+    },
+    "vue/v-bind-style": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce `v-bind` directive style",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/v-bind-style.html"
+      },
+      "fixable": "code",
+      "name": "vue/v-bind-style",
+      "plugin": "vue"
+    },
+    "vue/v-for-delimiter-style": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce `v-for` directive's delimiter style",
+        "recommended": false,
+        "url": "https://eslint.vuejs.org/rules/v-for-delimiter-style.html"
+      },
+      "fixable": "code",
+      "name": "vue/v-for-delimiter-style",
+      "plugin": "vue"
+    },
+    "vue/v-if-else-key": {
+      "type": "problem",
+      "docs": {
+        "description": "require key attribute for conditionally rendered repeated components",
+        "categories": null,
+        "recommended": false,
+        "url": "https://eslint.vuejs.org/rules/v-if-else-key.html"
+      },
+      "fixable": "code",
+      "name": "vue/v-if-else-key",
+      "plugin": "vue"
+    },
+    "vue/v-on-event-hyphenation": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce v-on event naming style on custom components in template",
+        "categories": [
+          "vue3-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/v-on-event-hyphenation.html",
+        "defaultOptions": {
+          "vue3": [
+            "always",
+            {
+              "autofix": true
+            }
+          ]
+        }
+      },
+      "fixable": "code",
+      "name": "vue/v-on-event-hyphenation",
+      "plugin": "vue"
+    },
+    "vue/v-on-function-call": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce or forbid parentheses after method calls without arguments in `v-on` directives",
+        "url": "https://eslint.vuejs.org/rules/v-on-function-call.html"
+      },
+      "fixable": "code",
+      "deprecated": true,
+      "replacedBy": [
+        "v-on-handler-style"
+      ],
+      "name": "vue/v-on-function-call",
+      "plugin": "vue"
+    },
+    "vue/v-on-handler-style": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce writing style for handlers in `v-on` directives",
+        "url": "https://eslint.vuejs.org/rules/v-on-handler-style.html"
+      },
+      "fixable": "code",
+      "name": "vue/v-on-handler-style",
+      "plugin": "vue"
+    },
+    "vue/v-on-style": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce `v-on` directive style",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/v-on-style.html"
+      },
+      "fixable": "code",
+      "name": "vue/v-on-style",
+      "plugin": "vue"
+    },
+    "vue/v-slot-style": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce `v-slot` directive style",
+        "categories": [
+          "vue3-strongly-recommended",
+          "vue2-strongly-recommended"
+        ],
+        "url": "https://eslint.vuejs.org/rules/v-slot-style.html"
+      },
+      "fixable": "code",
+      "name": "vue/v-slot-style",
+      "plugin": "vue"
+    },
+    "vue/valid-attribute-name": {
+      "type": "problem",
+      "docs": {
+        "description": "require valid attribute names",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-attribute-name.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-attribute-name",
+      "plugin": "vue"
+    },
+    "vue/valid-define-emits": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `defineEmits` compiler macro",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-define-emits.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-define-emits",
+      "plugin": "vue"
+    },
+    "vue/valid-define-options": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `defineOptions` compiler macro",
+        "url": "https://eslint.vuejs.org/rules/valid-define-options.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-define-options",
+      "plugin": "vue"
+    },
+    "vue/valid-define-props": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `defineProps` compiler macro",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-define-props.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-define-props",
+      "plugin": "vue"
+    },
+    "vue/valid-model-definition": {
+      "type": "problem",
+      "docs": {
+        "description": "require valid keys in model option",
+        "categories": [
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-model-definition.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-model-definition",
+      "plugin": "vue"
+    },
+    "vue/valid-next-tick": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `nextTick` function calls",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-next-tick.html"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "vue/valid-next-tick",
+      "plugin": "vue"
+    },
+    "vue/valid-template-root": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid template root",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-template-root.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-template-root",
+      "plugin": "vue"
+    },
+    "vue/valid-v-bind-sync": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `.sync` modifier on `v-bind` directives",
+        "categories": [
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-v-bind-sync.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-v-bind-sync",
+      "plugin": "vue"
+    },
+    "vue/valid-v-bind": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `v-bind` directives",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-v-bind.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-v-bind",
+      "plugin": "vue"
+    },
+    "vue/valid-v-cloak": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `v-cloak` directives",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-v-cloak.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-v-cloak",
+      "plugin": "vue"
+    },
+    "vue/valid-v-else-if": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `v-else-if` directives",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-v-else-if.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-v-else-if",
+      "plugin": "vue"
+    },
+    "vue/valid-v-else": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `v-else` directives",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-v-else.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-v-else",
+      "plugin": "vue"
+    },
+    "vue/valid-v-for": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `v-for` directives",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-v-for.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-v-for",
+      "plugin": "vue"
+    },
+    "vue/valid-v-html": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `v-html` directives",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-v-html.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-v-html",
+      "plugin": "vue"
+    },
+    "vue/valid-v-if": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `v-if` directives",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-v-if.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-v-if",
+      "plugin": "vue"
+    },
+    "vue/valid-v-is": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `v-is` directives",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-v-is.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-v-is",
+      "plugin": "vue"
+    },
+    "vue/valid-v-memo": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `v-memo` directives",
+        "categories": [
+          "vue3-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-v-memo.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-v-memo",
+      "plugin": "vue"
+    },
+    "vue/valid-v-model": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `v-model` directives",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-v-model.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-v-model",
+      "plugin": "vue"
+    },
+    "vue/valid-v-on": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `v-on` directives",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-v-on.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-v-on",
+      "plugin": "vue"
+    },
+    "vue/valid-v-once": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `v-once` directives",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-v-once.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-v-once",
+      "plugin": "vue"
+    },
+    "vue/valid-v-pre": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `v-pre` directives",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-v-pre.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-v-pre",
+      "plugin": "vue"
+    },
+    "vue/valid-v-show": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `v-show` directives",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-v-show.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-v-show",
+      "plugin": "vue"
+    },
+    "vue/valid-v-slot": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `v-slot` directives",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-v-slot.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-v-slot",
+      "plugin": "vue"
+    },
+    "vue/valid-v-text": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce valid `v-text` directives",
+        "categories": [
+          "vue3-essential",
+          "vue2-essential"
+        ],
+        "url": "https://eslint.vuejs.org/rules/valid-v-text.html"
+      },
+      "fixable": null,
+      "name": "vue/valid-v-text",
+      "plugin": "vue"
+    },
     "yaml/block-mapping-colon-indicator-newline": {
       "docs": {
         "description": "enforce consistent line breaks after `:` indicator",
@@ -12102,7 +15667,7 @@
         "**/*.y?(a)ml"
       ],
       "configs": [
-        35
+        40
       ]
     },
     {
@@ -12111,7 +15676,7 @@
         "**/*.y?(a)ml"
       ],
       "configs": [
-        35
+        40
       ]
     },
     {
@@ -12120,7 +15685,7 @@
         "**/*.y?(a)ml"
       ],
       "configs": [
-        35
+        40
       ]
     },
     {
@@ -12129,7 +15694,7 @@
         "**/*.json"
       ],
       "configs": [
-        21
+        23
       ]
     },
     {
@@ -12140,7 +15705,7 @@
       ],
       "configs": [
         18,
-        32
+        37
       ]
     },
     {
@@ -12153,7 +15718,7 @@
       "configs": [
         2,
         10,
-        30
+        32
       ]
     },
     {
@@ -12164,9 +15729,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12177,7 +15742,7 @@
       ],
       "configs": [
         2,
-        30
+        32
       ]
     },
     {
@@ -12187,8 +15752,8 @@
         "**/package.json"
       ],
       "configs": [
-        21,
-        22
+        23,
+        24
       ]
     },
     {
@@ -12199,9 +15764,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12212,9 +15777,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12225,9 +15790,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12238,9 +15803,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12251,9 +15816,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12264,9 +15829,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12277,9 +15842,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12290,9 +15855,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12303,9 +15868,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12316,9 +15881,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12329,9 +15894,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12342,9 +15907,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12355,9 +15920,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12368,9 +15933,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12381,9 +15946,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12394,9 +15959,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12407,9 +15972,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12420,9 +15985,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12433,9 +15998,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12446,9 +16011,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12459,9 +16024,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12472,9 +16037,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12485,9 +16050,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12498,9 +16063,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12511,9 +16076,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12524,9 +16089,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12537,9 +16102,9 @@
         "**/*.?([cm])ts"
       ],
       "configs": [
-        24,
         26,
-        27
+        28,
+        29
       ]
     },
     {
@@ -12549,13 +16114,13 @@
         "**/tsconfig.json"
       ],
       "configs": [
-        21,
-        23
+        23,
+        25
       ]
     }
   ],
   "meta": {
-    "lastUpdate": 1729849034170,
+    "lastUpdate": 1729970549878,
     "basePath": "",
     "configPath": ""
   }
