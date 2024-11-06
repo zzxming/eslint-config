@@ -2028,7 +2028,7 @@
         "unicorn/no-single-promise-in-promise-methods": "error",
         "unicorn/no-static-only-class": "error",
         "unicorn/no-thenable": "error",
-        "unicorn/no-this-assignment": "error",
+        "unicorn/no-this-assignment": "off",
         "unicorn/no-typeof-undefined": "error",
         "unicorn/no-unnecessary-await": "error",
         "unicorn/no-unnecessary-polyfills": "error",
@@ -2784,7 +2784,7 @@
         "ts/no-non-null-asserted-optional-chain": "error",
         "ts/no-non-null-assertion": "off",
         "ts/no-require-imports": "error",
-        "ts/no-this-alias": "error",
+        "ts/no-this-alias": "off",
         "ts/no-unnecessary-type-constraint": "error",
         "ts/no-unsafe-declaration-merging": "error",
         "ts/no-unsafe-function-type": "off",
@@ -16120,7 +16120,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1730705864041,
+    "lastUpdate": 1730888160867,
     "basePath": "",
     "configPath": ""
   }
