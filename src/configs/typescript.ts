@@ -76,6 +76,7 @@ export async function* typescript(
         'ts/no-useless-constructor': 'off',
         'ts/triple-slash-reference': 'off',
         'ts/unified-signatures': 'off',
+        'ts/no-this-alias': 'off',
 
         ...overrides,
       },
