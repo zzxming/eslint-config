@@ -39,6 +39,7 @@ export const unicorn = (options: Partial<UnicornOptions> = {}): TypedFlatConfigI
         'unicorn/no-abusive-eslint-disable': 'off',
         'unicorn/empty-brace-spaces': 'off',
         'unicorn/no-this-assignment': 'off',
+        'unicorn/prefer-global-this': 'off',
 
         ...overrides,
       },
