@@ -77,6 +77,7 @@ export async function* typescript(
         'ts/triple-slash-reference': 'off',
         'ts/unified-signatures': 'off',
         'ts/no-this-alias': 'off',
+        'ts/no-unused-expressions': ['error', { allowShortCircuit: true }],
 
         ...overrides,
       },
