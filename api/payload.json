@@ -2061,7 +2061,7 @@
         "unicorn/prefer-dom-node-text-content": "error",
         "unicorn/prefer-event-target": "error",
         "unicorn/prefer-export-from": "off",
-        "unicorn/prefer-global-this": "error",
+        "unicorn/prefer-global-this": "off",
         "unicorn/prefer-includes": "error",
         "unicorn/prefer-json-parse-buffer": "off",
         "unicorn/prefer-keyboard-event-key": "off",
@@ -2792,7 +2792,12 @@
         "ts/no-unsafe-declaration-merging": "error",
         "ts/no-unsafe-function-type": "off",
         "no-unused-expressions": "off",
-        "ts/no-unused-expressions": "error",
+        "ts/no-unused-expressions": [
+          "error",
+          {
+            "allowShortCircuit": true
+          }
+        ],
         "no-unused-vars": "off",
         "ts/no-unused-vars": "off",
         "no-useless-constructor": "off",
@@ -16210,7 +16215,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1731747070362,
+    "lastUpdate": 1732269401627,
     "basePath": "",
     "configPath": ""
   }
