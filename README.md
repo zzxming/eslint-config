@@ -157,7 +157,7 @@ export interface ReactOptions extends OptionsOverrides {
 }
 export interface VitestOptions extends OptionsOverrides {
   files?: string[];
-};
+}
 
 export interface OptionsConfig {
   stylistic?: boolean | StylisticOptions;

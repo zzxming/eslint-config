@@ -60,4 +60,4 @@ export function yaml(options: Partial<YamlOptions> = {}): TypedFlatConfigItem[] 
       },
     },
   ];
-};
+}

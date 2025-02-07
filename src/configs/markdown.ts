@@ -70,4 +70,4 @@ export function markdown(options: Partial<MarkdownOptions> = {}): TypedFlatConfi
       },
     },
   ];
-};
+}

@@ -108,4 +108,4 @@ export async function* typescript(
       },
     },
   ];
-};
+}

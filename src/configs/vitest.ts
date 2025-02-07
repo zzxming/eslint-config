@@ -47,4 +47,4 @@ export async function* vitest(
       },
     },
   ];
-};
+}

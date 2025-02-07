@@ -69,4 +69,4 @@ export function jsonc(options: Partial<JsoncOptions> = {}): TypedFlatConfigItem[
       },
     },
   ];
-};
+}

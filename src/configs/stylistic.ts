@@ -68,6 +68,7 @@ export const stylistic = (options: Partial<StylisticOptions> = {}): TypedFlatCon
             multiline: true,
           },
         ],
+        'style/no-extra-semi': 'error',
 
         'antfu/indent-unindent': 'off',
         'antfu/consistent-list-newline': 'error',
@@ -75,6 +76,7 @@ export const stylistic = (options: Partial<StylisticOptions> = {}): TypedFlatCon
         'antfu/if-newline': 'off',
         'antfu/top-level-function': 'off',
         'antfu/no-ts-export-equal': 'error',
+        'antfu/consistent-chaining': 'error',
         ...overrides,
       },
     },

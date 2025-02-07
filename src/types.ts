@@ -52,7 +52,7 @@ export interface ReactOptions extends OptionsOverrides {
 }
 export interface VitestOptions extends OptionsOverrides {
   files: string[];
-};
+}
 export interface UnocssOptions extends OptionsOverrides {
   attributify: boolean;
   strict: boolean;
