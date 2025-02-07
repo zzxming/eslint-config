@@ -106,6 +106,7 @@
           "BackgroundFetchManager": false,
           "BackgroundFetchRecord": false,
           "BackgroundFetchRegistration": false,
+          "BarcodeDetector": false,
           "BarProp": false,
           "BaseAudioContext": false,
           "BatteryManager": false,
@@ -193,6 +194,7 @@
           "CSSKeywordValue": false,
           "CSSLayerBlockRule": false,
           "CSSLayerStatementRule": false,
+          "CSSMarginRule": false,
           "CSSMathClamp": false,
           "CSSMathInvert": false,
           "CSSMathMax": false,
@@ -204,6 +206,7 @@
           "CSSMatrixComponent": false,
           "CSSMediaRule": false,
           "CSSNamespaceRule": false,
+          "CSSNestedDeclarations": false,
           "CSSNumericArray": false,
           "CSSNumericValue": false,
           "CSSPageDescriptors": false,
@@ -504,7 +507,6 @@
           "IntersectionObserver": false,
           "IntersectionObserverEntry": false,
           "isSecureContext": false,
-          "Iterator": false,
           "Keyboard": false,
           "KeyboardEvent": false,
           "KeyboardLayoutMap": false,
@@ -709,6 +711,8 @@
           "onresize": true,
           "onscroll": true,
           "onscrollend": true,
+          "onscrollsnapchange": true,
+          "onscrollsnapchanging": true,
           "onsearch": true,
           "onsecuritypolicyviolation": true,
           "onseeked": true,
@@ -900,6 +904,7 @@
           "showDirectoryPicker": false,
           "showOpenFilePicker": false,
           "showSaveFilePicker": false,
+          "SnapEvent": false,
           "SourceBuffer": false,
           "SourceBufferList": false,
           "speechSynthesis": false,
@@ -1155,12 +1160,15 @@
           "XRDepthInformation": false,
           "XRDOMOverlayState": false,
           "XRFrame": false,
+          "XRHand": false,
           "XRHitTestResult": false,
           "XRHitTestSource": false,
           "XRInputSource": false,
           "XRInputSourceArray": false,
           "XRInputSourceEvent": false,
           "XRInputSourcesChangeEvent": false,
+          "XRJointPose": false,
+          "XRJointSpace": false,
           "XRLayer": false,
           "XRLightEstimate": false,
           "XRLightProbe": false,
@@ -1927,12 +1935,14 @@
             "multiline": true
           }
         ],
+        "style/no-extra-semi": "error",
         "antfu/indent-unindent": "off",
         "antfu/consistent-list-newline": "error",
         "antfu/curly": "error",
         "antfu/if-newline": "off",
         "antfu/top-level-function": "off",
-        "antfu/no-ts-export-equal": "error"
+        "antfu/no-ts-export-equal": "error",
+        "antfu/consistent-chaining": "error"
       },
       "index": 8
     },
@@ -2911,10 +2921,10 @@
             ".vue"
           ],
           "parser": {
-            "version": "8.18.2",
+            "version": "8.23.0",
             "meta": {
               "name": "typescript-eslint/parser",
-              "version": "8.18.2"
+              "version": "8.23.0"
             }
           },
           "sourceType": "module"
@@ -11785,6 +11795,17 @@
       "name": "ts/no-misused-promises",
       "plugin": "ts"
     },
+    "ts/no-misused-spread": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow using the spread operator when it might cause unexpected behavior",
+        "recommended": "strict",
+        "requiresTypeChecking": true,
+        "url": "https://typescript-eslint.io/rules/no-misused-spread"
+      },
+      "name": "ts/no-misused-spread",
+      "plugin": "ts"
+    },
     "ts/no-mixed-enums": {
       "type": "problem",
       "docs": {
@@ -12568,7 +12589,6 @@
       "type": "problem",
       "docs": {
         "description": "Enforce consistent awaiting of returned promises",
-        "extendsBaseRule": "no-return-await",
         "recommended": {
           "strict": [
             "error-handling-correctness-only"
@@ -12605,7 +12625,6 @@
         "requiresTypeChecking": true,
         "url": "https://typescript-eslint.io/rules/strict-boolean-expressions"
       },
-      "fixable": "code",
       "hasSuggestions": true,
       "name": "ts/strict-boolean-expressions",
       "plugin": "ts"
@@ -14966,7 +14985,7 @@
     "vue/prefer-use-template-ref": {
       "type": "suggestion",
       "docs": {
-        "description": "require using `useTemplateRef` instead of `ref` for template refs",
+        "description": "require using `useTemplateRef` instead of `ref`/`shallowRef` for template refs",
         "url": "https://eslint.vuejs.org/rules/prefer-use-template-ref.html"
       },
       "name": "vue/prefer-use-template-ref",
@@ -15245,6 +15264,16 @@
       "name": "vue/require-valid-default-prop",
       "plugin": "vue"
     },
+    "vue/restricted-component-names": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce using only specific component names",
+        "url": "https://eslint.vuejs.org/rules/restricted-component-names.html"
+      },
+      "fixable": null,
+      "name": "vue/restricted-component-names",
+      "plugin": "vue"
+    },
     "vue/return-in-computed-property": {
       "type": "problem",
       "docs": {
@@ -15305,6 +15334,16 @@
       },
       "fixable": "whitespace",
       "name": "vue/singleline-html-element-content-newline",
+      "plugin": "vue"
+    },
+    "vue/slot-name-casing": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce specific casing for slot names",
+        "url": "https://eslint.vuejs.org/rules/slot-name-casing.html"
+      },
+      "fixable": null,
+      "name": "vue/slot-name-casing",
       "plugin": "vue"
     },
     "vue/sort-keys": {
@@ -16354,7 +16393,6 @@
     {
       "filepath": "README.md",
       "globs": [
-        "**/*.md",
         "**/*.md"
       ],
       "configs": [
@@ -16366,8 +16404,7 @@
       "filepath": "bin/update-vscode-settings.js",
       "globs": [
         "**/*.js",
-        "**/bin/**/*",
-        "**/*.js"
+        "**/bin/**/*"
       ],
       "configs": [
         2,
@@ -16378,8 +16415,6 @@
     {
       "filepath": "build.config.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16391,7 +16426,6 @@
     {
       "filepath": "eslint.config.js",
       "globs": [
-        "**/*.js",
         "**/*.js"
       ],
       "configs": [
@@ -16413,8 +16447,6 @@
     {
       "filepath": "src/cli/constants.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16426,8 +16458,6 @@
     {
       "filepath": "src/cli/update-vscode-settings.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16439,8 +16469,6 @@
     {
       "filepath": "src/configs/formatters.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16452,8 +16480,6 @@
     {
       "filepath": "src/configs/ignore.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16465,8 +16491,6 @@
     {
       "filepath": "src/configs/imports.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16478,8 +16502,6 @@
     {
       "filepath": "src/configs/index.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16491,8 +16513,6 @@
     {
       "filepath": "src/configs/javascript.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16504,8 +16524,6 @@
     {
       "filepath": "src/configs/jsonc.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16517,8 +16535,6 @@
     {
       "filepath": "src/configs/jsx.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16530,8 +16546,6 @@
     {
       "filepath": "src/configs/markdown.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16543,8 +16557,6 @@
     {
       "filepath": "src/configs/perfectionist.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16556,8 +16568,6 @@
     {
       "filepath": "src/configs/react.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16569,8 +16579,6 @@
     {
       "filepath": "src/configs/sort.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16582,8 +16590,6 @@
     {
       "filepath": "src/configs/stylistic.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16595,8 +16601,6 @@
     {
       "filepath": "src/configs/tailwindcss.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16608,8 +16612,6 @@
     {
       "filepath": "src/configs/typescript.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16621,8 +16623,6 @@
     {
       "filepath": "src/configs/unicorn.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16634,8 +16634,6 @@
     {
       "filepath": "src/configs/unocss.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16647,8 +16645,6 @@
     {
       "filepath": "src/configs/vitest.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16660,8 +16656,6 @@
     {
       "filepath": "src/configs/vue.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16673,8 +16667,6 @@
     {
       "filepath": "src/configs/yaml.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16686,8 +16678,6 @@
     {
       "filepath": "src/contants.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16699,8 +16689,6 @@
     {
       "filepath": "src/factory.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16712,8 +16700,6 @@
     {
       "filepath": "src/index.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16725,8 +16711,6 @@
     {
       "filepath": "src/plugins.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16738,8 +16722,6 @@
     {
       "filepath": "src/types.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16751,8 +16733,6 @@
     {
       "filepath": "src/utils.ts",
       "globs": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -16774,7 +16754,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1735551879443,
+    "lastUpdate": 1738898609970,
     "basePath": "",
     "configPath": ""
   }
