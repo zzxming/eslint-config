@@ -16,7 +16,6 @@ export const stylistic = (options: Partial<StylisticOptions> = {}): TypedFlatCon
   };
 
   const config = pluginStylistic.configs.customize({
-    flat: true,
     indent,
     jsx,
     pluginName: 'style',
