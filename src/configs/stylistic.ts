@@ -60,8 +60,6 @@ export const stylistic = (options: Partial<StylisticOptions> = {}): TypedFlatCon
             tabLength: 2,
           },
         ],
-        // 'after' makes multiline ternary expressions more one indent(in multiline object)
-        'style/operator-linebreak': ['error', 'before'],
         'style/array-bracket-newline': [
           'warn',
           {
