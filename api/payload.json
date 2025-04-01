@@ -1923,11 +1923,17 @@
           }
         ],
         "style/no-extra-semi": "error",
+        "style/object-curly-newline": [
+          "error",
+          {
+            "consistent": true
+          }
+        ],
         "antfu/indent-unindent": "off",
         "antfu/consistent-list-newline": "error",
         "antfu/curly": "error",
         "antfu/if-newline": "off",
-        "antfu/top-level-function": "off",
+        "antfu/top-level-function": "error",
         "antfu/no-ts-export-equal": "error",
         "antfu/consistent-chaining": "error"
       },
@@ -12685,12 +12691,11 @@
       "type": "layout",
       "docs": {
         "description": "Enforce linebreaks after opening and before closing array brackets in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/array-bracket-newline.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/array-bracket-newline",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/js/array-bracket-newline",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "whitespace",
@@ -12701,12 +12706,11 @@
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing inside array brackets in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/array-bracket-spacing.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/array-bracket-spacing",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/js/array-bracket-spacing",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "whitespace",
@@ -12717,12 +12721,11 @@
       "type": "layout",
       "docs": {
         "description": "Enforce line breaks after each array element in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/array-element-newline.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/array-element-newline",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/js/array-element-newline",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "whitespace",
@@ -12733,12 +12736,11 @@
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing before and after the arrow in arrow functions in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/arrow-spacing.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/arrow-spacing",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/js/arrow-spacing",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "whitespace",
@@ -12796,12 +12798,11 @@
       "type": "layout",
       "docs": {
         "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/block-spacing.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/block-spacing",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/ts/block-spacing",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "whitespace",
@@ -12822,12 +12823,11 @@
       "type": "layout",
       "docs": {
         "description": "Enforce consistent brace style for blocks in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/brace-style.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/brace-style",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/ts/brace-style",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "whitespace",
@@ -12862,12 +12862,11 @@
       "type": "layout",
       "docs": {
         "description": "Require or disallow trailing commas in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/comma-dangle.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/comma-dangle",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/ts/comma-dangle",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "code",
@@ -12878,12 +12877,11 @@
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing before and after commas in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/comma-spacing.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/comma-spacing",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/ts/comma-spacing",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "whitespace",
@@ -12894,12 +12892,11 @@
       "type": "layout",
       "docs": {
         "description": "Enforce consistent comma style in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/comma-style.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/comma-style",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/js/comma-style",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "code",
@@ -13026,12 +13023,11 @@
       "type": "layout",
       "docs": {
         "description": "Enforce consistent newlines before and after dots in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/dot-location.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/dot-location",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/js/dot-location",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "code",
@@ -13104,12 +13100,11 @@
       "type": "layout",
       "docs": {
         "description": "Require or disallow spacing between function identifiers and their invocations in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/func-call-spacing.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/func-call-spacing",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/ts/function-call-spacing",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "whitespace",
@@ -13256,13 +13251,12 @@
     "vue/key-spacing": {
       "type": "layout",
       "docs": {
-        "description": "Enforce consistent spacing between keys and values in object literal properties in `<template>`",
-        "recommended": false,
+        "description": "Enforce consistent spacing between property names and type annotations in types and interfaces in `<template>`",
         "url": "https://eslint.vuejs.org/rules/key-spacing.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/key-spacing",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/ts/key-spacing",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "whitespace",
@@ -13273,12 +13267,11 @@
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing before and after keywords in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/keyword-spacing.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/keyword-spacing",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/ts/keyword-spacing",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "whitespace",
@@ -13394,12 +13387,11 @@
       "type": "layout",
       "docs": {
         "description": "Enforce newlines between operands of ternary expressions in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/multiline-ternary.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/multiline-ternary",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/js/multiline-ternary",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "whitespace",
@@ -13949,12 +13941,11 @@
       "type": "layout",
       "docs": {
         "description": "Disallow unnecessary parentheses in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/no-extra-parens.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/no-extra-parens",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/ts/no-extra-parens",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "code",
@@ -14807,12 +14798,11 @@
       "type": "layout",
       "docs": {
         "description": "Enforce consistent line breaks after opening and before closing braces in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/object-curly-newline.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/object-curly-newline",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/ts/object-curly-newline",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "whitespace",
@@ -14823,12 +14813,11 @@
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing inside braces in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/object-curly-spacing.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/object-curly-spacing",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/ts/object-curly-spacing",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "whitespace",
@@ -14839,12 +14828,11 @@
       "type": "layout",
       "docs": {
         "description": "Enforce placing object properties on separate lines in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/object-property-newline.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/object-property-newline",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/ts/object-property-newline",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "whitespace",
@@ -14885,12 +14873,11 @@
       "type": "layout",
       "docs": {
         "description": "Enforce consistent linebreak style for operators in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/operator-linebreak.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/operator-linebreak",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/js/operator-linebreak",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "code",
@@ -15037,15 +15024,14 @@
       "plugin": "vue"
     },
     "vue/quote-props": {
-      "type": "suggestion",
+      "type": "layout",
       "docs": {
-        "description": "Require quotes around object literal property names in `<template>`",
-        "recommended": false,
+        "description": "Require quotes around object literal, type literal, interfaces and enums property names in `<template>`",
         "url": "https://eslint.vuejs.org/rules/quote-props.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/quote-props",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/ts/quote-props",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "code",
@@ -15392,12 +15378,11 @@
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing inside parentheses in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/space-in-parens.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/space-in-parens",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/js/space-in-parens",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "whitespace",
@@ -15408,12 +15393,11 @@
       "type": "layout",
       "docs": {
         "description": "Require spacing around infix operators in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/space-infix-ops.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/space-infix-ops",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/ts/space-infix-ops",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "whitespace",
@@ -15424,12 +15408,11 @@
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing before or after unary operators in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/space-unary-ops.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/space-unary-ops",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/js/space-unary-ops",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "whitespace",
@@ -15450,12 +15433,11 @@
       "type": "layout",
       "docs": {
         "description": "Require or disallow spacing around embedded expressions of template strings in `<template>`",
-        "recommended": false,
         "url": "https://eslint.vuejs.org/rules/template-curly-spacing.html",
         "category": null,
         "extensionSource": {
-          "url": "https://eslint.org/docs/latest/rules/template-curly-spacing",
-          "name": "ESLint core"
+          "url": "https://eslint.style/rules/js/template-curly-spacing",
+          "name": "ESLint Stylistic"
         }
       },
       "fixable": "whitespace",
@@ -16786,7 +16768,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1741248463555,
+    "lastUpdate": 1743489959330,
     "basePath": "",
     "configPath": ""
   }
