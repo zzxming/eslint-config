@@ -5,7 +5,7 @@ import path from 'node:path';
 import consola from 'consola';
 import { vscodeSettings } from './constants';
 
-const updateVscodeSettings = async () => {
+async function updateVscodeSettings() {
   const cwd = process.cwd();
 
   const dotVscodePath: string = path.join(cwd, '.vscode');
@@ -30,7 +30,7 @@ const updateVscodeSettings = async () => {
     await fsp.writeFile(settingsPath, settingsContent, 'utf8');
     consola.success(`Updated .vscode/settings.json`);
   }
-};
+}
 
 updateVscodeSettings().catch((error) => {
   consola.error(error);

@@ -2,7 +2,7 @@ import type { TypedFlatConfigItem } from '../types';
 import fs from 'node:fs';
 import ignoreGitignore from 'eslint-config-flat-gitignore';
 
-export const ignore = (enableGitignore = true): TypedFlatConfigItem[] => {
+export function ignore(enableGitignore = true): TypedFlatConfigItem[] {
   const ignores = [
     '**/.nuxt',
     '**/.next',
@@ -33,4 +33,4 @@ export const ignore = (enableGitignore = true): TypedFlatConfigItem[] => {
       ignores,
     },
   ];
-};
+}

@@ -1,7 +1,7 @@
 import type { TypedFlatConfigItem, UnicornOptions } from '../types';
 import { pluginUnicorn } from '../plugins';
 
-export const unicorn = (options: Partial<UnicornOptions> = {}): TypedFlatConfigItem[] => {
+export function unicorn(options: Partial<UnicornOptions> = {}): TypedFlatConfigItem[] {
   const { overrides = {} } = options;
   return [
     {
@@ -53,4 +53,4 @@ export const unicorn = (options: Partial<UnicornOptions> = {}): TypedFlatConfigI
       },
     },
   ];
-};
+}
