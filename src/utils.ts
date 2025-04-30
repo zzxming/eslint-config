@@ -45,9 +45,9 @@ export function getOptions(options?: boolean | Record<string, any>, defaultValue
   return options === false ? false : typeof options === 'object' ? options : defaultValue;
 }
 
-export async function importPackage(name: string) {
-  const pkg = await import(name);
-  return pkg.default || pkg;
+export async function interopDefault<T>(m: Promise<T> | T): Promise<T extends { default: infer U } ? U : T> {
+  const resolved = await m;
+  return (resolved as any).default || resolved;
 }
 
 export async function ensurePackageExists(packages: string[]) {

@@ -1,6 +1,6 @@
 import type { PackageInstallGenerator, TypedFlatConfigItem, VitestOptions } from '../types';
 import { GLOB_TEST } from '../contants';
-import { importPackage } from '../utils';
+import { interopDefault } from '../utils';
 
 const requiredPkg = ['@vitest/eslint-plugin'];
 
@@ -14,7 +14,7 @@ export async function* vitest(
   } = options;
 
   yield pkgInstallGenerator.next(requiredPkg);
-  const [pluginVitest] = await Promise.all(requiredPkg.map(importPackage));
+  const pluginVitest = await interopDefault(import('@vitest/eslint-plugin'));
 
   return [
     {

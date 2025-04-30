@@ -1,6 +1,6 @@
 import type { PackageInstallGenerator, TypedFlatConfigItem, TypescriptOptions } from '../types';
 import { GLOB_DTS, GLOB_TS, GLOB_TSX } from '../contants';
-import { importPackage, renameRules } from '../utils';
+import { interopDefault, renameRules } from '../utils';
 
 const requiredPkg = [
   '@typescript-eslint/parser',
@@ -23,7 +23,10 @@ export async function* typescript(
   ];
 
   yield pkgInstallGenerator.next(requiredPkg);
-  const [parserTs, pluginTs] = await Promise.all(requiredPkg.map(importPackage));
+  const [parserTs, pluginTs] = await Promise.all([
+    interopDefault(import('@typescript-eslint/parser')),
+    interopDefault(import('@typescript-eslint/eslint-plugin')),
+  ]);
 
   return [
     {

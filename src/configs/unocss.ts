@@ -1,5 +1,5 @@
 import type { PackageInstallGenerator, TypedFlatConfigItem, UnocssOptions } from '../types';
-import { importPackage } from '../utils';
+import { interopDefault } from '../utils';
 
 const requiredPkg = ['@unocss/eslint-plugin'];
 
@@ -14,7 +14,7 @@ export async function* unocss(
   } = options;
 
   yield pkgInstallGenerator.next(requiredPkg);
-  const [pluginUnoCSS] = await Promise.all(requiredPkg.map(importPackage));
+  const pluginUnoCSS = await interopDefault(import('@unocss/eslint-plugin'));
 
   return [
     {

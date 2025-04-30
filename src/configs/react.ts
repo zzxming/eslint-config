@@ -1,6 +1,6 @@
 import type { PackageInstallGenerator, ReactOptions, TypedFlatConfigItem } from '../types';
 import { GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX } from '../contants';
-import { importPackage } from '../utils';
+import { interopDefault } from '../utils';
 
 const requiredPkg = [
   '@eslint-react/eslint-plugin',
@@ -24,7 +24,12 @@ export async function* react(
     pluginReactHooks,
     pluginReactRefresh,
     parserTs,
-  ] = await Promise.all(requiredPkg.map(importPackage));
+  ] = await Promise.all([
+    interopDefault(import('@eslint-react/eslint-plugin')),
+    interopDefault(import('eslint-plugin-react-hooks')),
+    interopDefault(import('eslint-plugin-react-refresh')),
+    interopDefault(import('@typescript-eslint/parser')),
+  ]);
   const plugins = pluginReact.configs.all.plugins;
 
   return [

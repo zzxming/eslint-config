@@ -1,12 +1,12 @@
 import type { PackageInstallGenerator, TypedFlatConfigItem, VueOptions } from '../types';
 import { mergeProcessors } from 'eslint-merge-processors';
-import processorVueBlocks from 'eslint-processor-vue-blocks';
 import { GLOB_VUE } from '../contants';
-import { importPackage } from '../utils';
+import { interopDefault } from '../utils';
 
 const requiredPkg = [
-  'vue-eslint-parser',
   'eslint-plugin-vue',
+  'eslint-processor-vue-blocks',
+  'vue-eslint-parser',
 ];
 
 export async function* vue(
@@ -34,8 +34,14 @@ export async function* vue(
   const [
     parserVue,
     pluginVue,
+    processorVueBlocks,
     parserTs,
-  ] = await Promise.all(requiredPkg.map(importPackage));
+  ] = await Promise.all([
+    interopDefault(import('vue-eslint-parser')),
+    interopDefault(import('eslint-plugin-vue')),
+    interopDefault(import('eslint-processor-vue-blocks')),
+    interopDefault(import('@typescript-eslint/parser')),
+  ] as const);
 
   return [
     {
@@ -93,14 +99,14 @@ export async function* vue(
 
         ...vueVersion === 2
           ? {
-              ...pluginVue.configs.essential.rules,
-              ...pluginVue.configs['strongly-recommended'].rules,
-              ...pluginVue.configs.recommended.rules,
+              ...pluginVue.configs['vue2-essential'].rules,
+              ...pluginVue.configs['vue2-strongly-recommended'].rules,
+              ...pluginVue.configs['vue2-recommended'].rules,
             }
           : {
-              ...pluginVue.configs['vue3-essential'].rules,
-              ...pluginVue.configs['vue3-strongly-recommended'].rules,
-              ...pluginVue.configs['vue3-recommended'].rules,
+              ...(pluginVue.configs['flat/essential'] as any[]).map(o => o.rules).reduce((rules, r) => ({ ...rules, ...r }), {}),
+              ...(pluginVue.configs['flat/strongly-recommended'] as any[]).map(o => o.rules).reduce((rules, r) => ({ ...rules, ...r }), {}),
+              ...(pluginVue.configs['flat/recommended'] as any[]).map(o => o.rules).reduce((rules, r) => ({ ...rules, ...r }), {}),
             },
 
         'node/prefer-global/process': 'off',
