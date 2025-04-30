@@ -1,7 +1,7 @@
 import type { TypedFlatConfigItem } from '../types';
 import pluginPerfectionist from 'eslint-plugin-perfectionist';
 
-export const perfectionist = (): TypedFlatConfigItem[] => {
+export function perfectionist(): TypedFlatConfigItem[] {
   return [
     {
       name: 'perfectionist/rules',
@@ -34,4 +34,4 @@ export const perfectionist = (): TypedFlatConfigItem[] => {
       },
     },
   ];
-};
+}

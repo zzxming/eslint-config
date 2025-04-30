@@ -3,7 +3,7 @@ import pluginStylistic from '@stylistic/eslint-plugin';
 import pluginAntfu from 'eslint-plugin-antfu';
 import { StylisticConfigDefaults } from '../contants';
 
-export const stylistic = (options: Partial<StylisticOptions> = {}): TypedFlatConfigItem[] => {
+export function stylistic(options: Partial<StylisticOptions> = {}): TypedFlatConfigItem[] {
   const {
     indent,
     jsx,
@@ -51,16 +51,17 @@ export const stylistic = (options: Partial<StylisticOptions> = {}): TypedFlatCon
           },
         ],
         'style/no-extra-semi': 'error',
+        'style/object-curly-newline': ['error', { consistent: true }],
 
         'antfu/indent-unindent': 'off',
         'antfu/consistent-list-newline': 'error',
         'antfu/curly': 'error',
         'antfu/if-newline': 'off',
-        'antfu/top-level-function': 'off',
+        'antfu/top-level-function': 'error',
         'antfu/no-ts-export-equal': 'error',
         'antfu/consistent-chaining': 'error',
         ...overrides,
       },
     },
   ];
-};
+}

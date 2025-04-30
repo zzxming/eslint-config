@@ -3,10 +3,10 @@ import { installPackage } from '@antfu/install-pkg';
 import { isPackageExists } from 'local-pkg';
 import prompts from 'prompts';
 
-export const getSubOptions = (options: Record<string, any>, key: string) => {
+export function getSubOptions(options: Record<string, any>, key: string) {
   return typeof options[key] === 'boolean' ? {} : options[key] || {};
-};
-export const renameRules = (rules: Record<string, any>, map: Record<string, any>) => {
+}
+export function renameRules(rules: Record<string, any>, map: Record<string, any>) {
   return Object.fromEntries(
     Object.entries(rules)
       .map(([key, value]) => {
@@ -18,7 +18,7 @@ export const renameRules = (rules: Record<string, any>, map: Record<string, any>
         return [key, value];
       }),
   );
-};
+}
 
 export const parserPlain = {
   meta: {
@@ -41,16 +41,16 @@ export const parserPlain = {
   }),
 };
 
-export const getOptions = (options?: boolean | Record<string, any>, defaultValue: Record<string, any> = {}) => {
+export function getOptions(options?: boolean | Record<string, any>, defaultValue: Record<string, any> = {}) {
   return options === false ? false : typeof options === 'object' ? options : defaultValue;
-};
+}
 
-export const importPackage = async (name: string) => {
+export async function importPackage(name: string) {
   const pkg = await import(name);
   return pkg.default || pkg;
-};
+}
 
-export const ensurePackageExists = async (packages: string[]) => {
+export async function ensurePackageExists(packages: string[]) {
   const nonExistingPackages = Array.from(new Set(packages)).filter(i => i && !isPackageExists(i));
   if (nonExistingPackages.length > 0) {
     const result = await prompts({
@@ -63,7 +63,8 @@ export const ensurePackageExists = async (packages: string[]) => {
       await installPackage(nonExistingPackages, { dev: true });
     }
   }
-};
+}
+
 export const isFunction = (val: any): val is Function => typeof val === 'function';
 export const isGenerator = (val: any): val is AsyncGenerator => val.next && isFunction(val.next);
 export const isIteratorReturnResult = <T = any>(val: any): val is IteratorReturnResult<T> => val.done && Object.prototype.hasOwnProperty.call(val, 'value');

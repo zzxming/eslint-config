@@ -3,7 +3,7 @@ import pluginAntfu from 'eslint-plugin-antfu';
 import pluginImport from 'eslint-plugin-import-x';
 import { GLOB_SRC_EXT } from '../contants';
 
-export const imports = (): TypedFlatConfigItem[] => {
+export function imports(): TypedFlatConfigItem[] {
   return [
     {
       name: 'imports/rules',
@@ -33,4 +33,4 @@ export const imports = (): TypedFlatConfigItem[] => {
       },
     },
   ];
-};
+}

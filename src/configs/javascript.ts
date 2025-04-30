@@ -3,7 +3,7 @@ import globals from 'globals';
 import { GLOB_SRC, GLOB_SRC_EXT } from '../contants';
 import { pluginUnusedImports } from '../plugins';
 
-export const javascript = (options: Partial<JavascriptOptions> = {}): TypedFlatConfigItem[] => {
+export function javascript(options: Partial<JavascriptOptions> = {}): TypedFlatConfigItem[] {
   const { overrides = {} } = options;
   return [
     {
@@ -281,4 +281,4 @@ export const javascript = (options: Partial<JavascriptOptions> = {}): TypedFlatC
       },
     },
   ];
-};
+}

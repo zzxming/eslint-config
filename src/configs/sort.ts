@@ -1,6 +1,6 @@
 import type { TypedFlatConfigItem } from '../types';
 
-export const sortPackageJson = (): TypedFlatConfigItem[] => {
+export function sortPackageJson(): TypedFlatConfigItem[] {
   return [
     {
       files: ['**/package.json'],
@@ -101,9 +101,9 @@ export const sortPackageJson = (): TypedFlatConfigItem[] => {
       },
     },
   ];
-};
+}
 
-export const sortTsconfig = (): TypedFlatConfigItem[] => {
+export function sortTsconfig(): TypedFlatConfigItem[] {
   return [
     {
       files: ['**/tsconfig.json', '**/tsconfig.*.json'],
@@ -227,4 +227,4 @@ export const sortTsconfig = (): TypedFlatConfigItem[] => {
       },
     },
   ];
-};
+}

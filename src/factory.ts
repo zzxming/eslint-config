@@ -4,7 +4,7 @@ import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, perfecti
 import { ReactPackages, StylisticConfigDefaults, VuePackages } from './contants';
 import { ensureImportPackage, getOptions, getSubOptions, isGenerator, isIteratorReturnResult } from './utils';
 
-export const factory = async (options: Partial<OptionsConfig> = {}): Promise<TypedFlatConfigItem[]> => {
+export async function factory(options: Partial<OptionsConfig> = {}): Promise<TypedFlatConfigItem[]> {
   const {
     unicorn: unicornOptions = {},
     jsx: enableJsx = true,
@@ -129,4 +129,4 @@ export const factory = async (options: Partial<OptionsConfig> = {}): Promise<Typ
   configs.push(...overrides);
 
   return configs;
-};
+}
