@@ -3388,8 +3388,26 @@
       "plugin": "eslint"
     },
     "array-bracket-newline": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "array-bracket-newline",
+              "url": "https://eslint.style/rules/js/array-bracket-newline"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce linebreaks after opening and before closing array brackets",
@@ -3401,8 +3419,26 @@
       "plugin": "eslint"
     },
     "array-bracket-spacing": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "array-bracket-spacing",
+              "url": "https://eslint.style/rules/js/array-bracket-spacing"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing inside array brackets",
@@ -3432,8 +3468,26 @@
       "plugin": "eslint"
     },
     "array-element-newline": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "array-element-newline",
+              "url": "https://eslint.style/rules/js/array-element-newline"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce line breaks after each array element",
@@ -3452,6 +3506,7 @@
       "docs": {
         "description": "Require braces around arrow function bodies",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/arrow-body-style"
       },
       "fixable": "code",
@@ -3459,8 +3514,26 @@
       "plugin": "eslint"
     },
     "arrow-parens": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "arrow-parens",
+              "url": "https://eslint.style/rules/js/arrow-parens"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Require parentheses around arrow function arguments",
@@ -3472,8 +3545,26 @@
       "plugin": "eslint"
     },
     "arrow-spacing": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "arrow-spacing",
+              "url": "https://eslint.style/rules/js/arrow-spacing"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing before and after the arrow in arrow functions",
@@ -3495,8 +3586,26 @@
       "plugin": "eslint"
     },
     "block-spacing": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "block-spacing",
+              "url": "https://eslint.style/rules/js/block-spacing"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block",
@@ -3508,8 +3617,26 @@
       "plugin": "eslint"
     },
     "brace-style": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "brace-style",
+              "url": "https://eslint.style/rules/js/brace-style"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent brace style for blocks",
@@ -3521,8 +3648,25 @@
       "plugin": "eslint"
     },
     "callback-return": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Node.js rules were moved out of ESLint core.",
+        "url": "https://eslint.org/docs/latest/use/migrating-to-7.0.0#deprecate-node-rules",
+        "deprecatedSince": "7.0.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "message": "eslint-plugin-n now maintains deprecated Node.js-related rules.",
+            "plugin": {
+              "name": "eslint-plugin-n",
+              "url": "https://github.com/eslint-community/eslint-plugin-n"
+            },
+            "rule": {
+              "name": "callback-return",
+              "url": "https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/rules/callback-return.md"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Require `return` statements after callbacks",
@@ -3546,6 +3690,7 @@
       "docs": {
         "description": "Enforce camelcase naming convention",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/camelcase"
       },
       "name": "camelcase",
@@ -3556,6 +3701,7 @@
       "docs": {
         "description": "Enforce or disallow capitalization of the first letter of a comment",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/capitalized-comments"
       },
       "fixable": "code",
@@ -3563,11 +3709,17 @@
       "plugin": "eslint"
     },
     "class-methods-use-this": {
+      "dialects": [
+        "javascript",
+        "typescript"
+      ],
+      "language": "javascript",
       "type": "suggestion",
       "defaultOptions": [
         {
           "enforceForClassFields": true,
-          "exceptMethods": []
+          "exceptMethods": [],
+          "ignoreOverrideMethods": false
         }
       ],
       "docs": {
@@ -3579,8 +3731,26 @@
       "plugin": "eslint"
     },
     "comma-dangle": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "comma-dangle",
+              "url": "https://eslint.style/rules/js/comma-dangle"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Require or disallow trailing commas",
@@ -3592,8 +3762,26 @@
       "plugin": "eslint"
     },
     "comma-spacing": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "comma-spacing",
+              "url": "https://eslint.style/rules/js/comma-spacing"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing before and after commas",
@@ -3605,8 +3793,26 @@
       "plugin": "eslint"
     },
     "comma-style": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "comma-style",
+              "url": "https://eslint.style/rules/js/comma-style"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent comma style",
@@ -3631,8 +3837,26 @@
       "plugin": "eslint"
     },
     "computed-property-spacing": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "computed-property-spacing",
+              "url": "https://eslint.style/rules/js/computed-property-spacing"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing inside computed property brackets",
@@ -3663,6 +3887,7 @@
       "docs": {
         "description": "Enforce consistent naming when capturing the current execution context",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/consistent-this"
       },
       "defaultOptions": [
@@ -3686,6 +3911,7 @@
       "docs": {
         "description": "Enforce consistent brace style for all control statements",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/curly"
       },
       "defaultOptions": [
@@ -3711,7 +3937,7 @@
     "default-case-last": {
       "type": "suggestion",
       "docs": {
-        "description": "Enforce `default` clauses in switch statements to be last",
+        "description": "Enforce `default` clauses in `switch` statements to be last",
         "recommended": false,
         "url": "https://eslint.org/docs/latest/rules/default-case-last"
       },
@@ -3719,18 +3945,42 @@
       "plugin": "eslint"
     },
     "default-param-last": {
+      "dialects": [
+        "javascript",
+        "typescript"
+      ],
+      "language": "javascript",
       "type": "suggestion",
       "docs": {
         "description": "Enforce default parameters to be last",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/default-param-last"
       },
       "name": "default-param-last",
       "plugin": "eslint"
     },
     "dot-location": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "dot-location",
+              "url": "https://eslint.style/rules/js/dot-location"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent newlines before and after dots",
@@ -3752,6 +4002,7 @@
       "docs": {
         "description": "Enforce dot notation whenever possible",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/dot-notation"
       },
       "fixable": "code",
@@ -3759,8 +4010,26 @@
       "plugin": "eslint"
     },
     "eol-last": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "eol-last",
+              "url": "https://eslint.style/rules/js/eol-last"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Require or disallow newline at the end of files",
@@ -3794,8 +4063,26 @@
       "plugin": "eslint"
     },
     "func-call-spacing": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "function-call-spacing",
+              "url": "https://eslint.style/rules/js/function-call-spacing"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Require or disallow spacing between function identifiers and their invocations",
@@ -3811,6 +4098,7 @@
       "docs": {
         "description": "Require function names to match the name of the variable or property to which they are assigned",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/func-name-matching"
       },
       "name": "func-name-matching",
@@ -3842,14 +4130,33 @@
       "docs": {
         "description": "Enforce the consistent use of either `function` declarations or expressions assigned to variables",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/func-style"
       },
       "name": "func-style",
       "plugin": "eslint"
     },
     "function-call-argument-newline": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "function-call-argument-newline",
+              "url": "https://eslint.style/rules/js/function-call-argument-newline"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce line breaks between arguments of a function call",
@@ -3861,8 +4168,26 @@
       "plugin": "eslint"
     },
     "function-paren-newline": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "function-paren-newline",
+              "url": "https://eslint.style/rules/js/function-paren-newline"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent line breaks inside function parentheses",
@@ -3874,8 +4199,26 @@
       "plugin": "eslint"
     },
     "generator-star-spacing": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "generator-star-spacing",
+              "url": "https://eslint.style/rules/js/generator-star-spacing"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing around `*` operators in generator functions",
@@ -3903,8 +4246,25 @@
       "plugin": "eslint"
     },
     "global-require": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Node.js rules were moved out of ESLint core.",
+        "url": "https://eslint.org/docs/latest/use/migrating-to-7.0.0#deprecate-node-rules",
+        "deprecatedSince": "7.0.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "message": "eslint-plugin-n now maintains deprecated Node.js-related rules.",
+            "plugin": {
+              "name": "eslint-plugin-n",
+              "url": "https://github.com/eslint-community/eslint-plugin-n"
+            },
+            "rule": {
+              "name": "global-require",
+              "url": "https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/rules/global-require.md"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Require `require()` calls to be placed at top-level module scope",
@@ -3938,8 +4298,25 @@
       "plugin": "eslint"
     },
     "handle-callback-err": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Node.js rules were moved out of ESLint core.",
+        "url": "https://eslint.org/docs/latest/use/migrating-to-7.0.0#deprecate-node-rules",
+        "deprecatedSince": "7.0.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "message": "eslint-plugin-n now maintains deprecated Node.js-related rules.",
+            "plugin": {
+              "name": "eslint-plugin-n",
+              "url": "https://github.com/eslint-community/eslint-plugin-n"
+            },
+            "rule": {
+              "name": "handle-callback-err",
+              "url": "https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/rules/handle-callback-err.md"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Require error handling in callbacks",
@@ -3950,10 +4327,20 @@
       "plugin": "eslint"
     },
     "id-blacklist": {
-      "deprecated": true,
-      "replacedBy": [
-        "id-denylist"
-      ],
+      "deprecated": {
+        "message": "The rule was renamed.",
+        "url": "https://eslint.org/blog/2020/07/eslint-v7.5.0-released/#deprecating-id-blacklist",
+        "deprecatedSince": "7.5.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "rule": {
+              "name": "id-denylist",
+              "url": "https://eslint.org/docs/rules/id-denylist"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Disallow specified identifiers",
@@ -3969,6 +4356,7 @@
       "docs": {
         "description": "Disallow specified identifiers",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/id-denylist"
       },
       "name": "id-denylist",
@@ -3987,6 +4375,7 @@
       "docs": {
         "description": "Enforce minimum and maximum identifier lengths",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/id-length"
       },
       "name": "id-length",
@@ -4006,14 +4395,33 @@
       "docs": {
         "description": "Require identifiers to match a specified regular expression",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/id-match"
       },
       "name": "id-match",
       "plugin": "eslint"
     },
     "implicit-arrow-linebreak": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "implicit-arrow-linebreak",
+              "url": "https://eslint.style/rules/js/implicit-arrow-linebreak"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce the location of arrow function bodies",
@@ -4025,8 +4433,26 @@
       "plugin": "eslint"
     },
     "indent": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "indent",
+              "url": "https://eslint.style/rules/js/indent"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent indentation",
@@ -4044,27 +4470,66 @@
         "recommended": false,
         "url": "https://eslint.org/docs/latest/rules/indent-legacy"
       },
-      "deprecated": true,
-      "replacedBy": [
-        "indent"
-      ],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "4.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "indent",
+              "url": "https://eslint.style/rules/js/indent"
+            }
+          }
+        ]
+      },
       "fixable": "whitespace",
       "name": "indent-legacy",
       "plugin": "eslint"
     },
     "init-declarations": {
       "type": "suggestion",
+      "dialects": [
+        "typescript",
+        "javascript"
+      ],
+      "language": "javascript",
       "docs": {
         "description": "Require or disallow initialization in variable declarations",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/init-declarations"
       },
       "name": "init-declarations",
       "plugin": "eslint"
     },
     "jsx-quotes": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "jsx-quotes",
+              "url": "https://eslint.style/rules/js/jsx-quotes"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce the consistent use of either double or single quotes in JSX attributes",
@@ -4076,8 +4541,26 @@
       "plugin": "eslint"
     },
     "key-spacing": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "key-spacing",
+              "url": "https://eslint.style/rules/js/key-spacing"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing between keys and values in object literal properties",
@@ -4089,8 +4572,26 @@
       "plugin": "eslint"
     },
     "keyword-spacing": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "keyword-spacing",
+              "url": "https://eslint.style/rules/js/keyword-spacing"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing before and after keywords",
@@ -4102,8 +4603,26 @@
       "plugin": "eslint"
     },
     "line-comment-position": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "9.3.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "line-comment-position",
+              "url": "https://eslint.style/rules/js/line-comment-position"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce position of line comments",
@@ -4114,8 +4633,26 @@
       "plugin": "eslint"
     },
     "linebreak-style": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "linebreak-style",
+              "url": "https://eslint.style/rules/js/linebreak-style"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent linebreak style",
@@ -4127,8 +4664,26 @@
       "plugin": "eslint"
     },
     "lines-around-comment": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "lines-around-comment",
+              "url": "https://eslint.style/rules/js/lines-around-comment"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Require empty lines around comments",
@@ -4147,16 +4702,50 @@
         "url": "https://eslint.org/docs/latest/rules/lines-around-directive"
       },
       "fixable": "whitespace",
-      "deprecated": true,
-      "replacedBy": [
-        "padding-line-between-statements"
-      ],
+      "deprecated": {
+        "message": "The rule was replaced with a more general rule.",
+        "url": "https://eslint.org/blog/2017/06/eslint-v4.0.0-released/",
+        "deprecatedSince": "4.0.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "message": "The new rule moved to a plugin.",
+            "url": "https://eslint.org/docs/latest/rules/padding-line-between-statements#examples",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "padding-line-between-statements",
+              "url": "https://eslint.style/rules/js/padding-line-between-statements"
+            }
+          }
+        ]
+      },
       "name": "lines-around-directive",
       "plugin": "eslint"
     },
     "lines-between-class-members": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "lines-between-class-members",
+              "url": "https://eslint.style/rules/js/lines-between-class-members"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Require or disallow an empty line between class members",
@@ -4172,6 +4761,7 @@
       "docs": {
         "description": "Require or disallow logical assignment operator shorthand",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/logical-assignment-operators"
       },
       "fixable": "code",
@@ -4200,8 +4790,26 @@
       "plugin": "eslint"
     },
     "max-len": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "max-len",
+              "url": "https://eslint.style/rules/js/max-len"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce a maximum line length",
@@ -4262,8 +4870,26 @@
       "plugin": "eslint"
     },
     "max-statements-per-line": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "max-statements-per-line",
+              "url": "https://eslint.style/rules/js/max-statements-per-line"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce a maximum number of statements allowed per line",
@@ -4274,8 +4900,26 @@
       "plugin": "eslint"
     },
     "multiline-comment-style": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "9.3.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "multiline-comment-style",
+              "url": "https://eslint.style/rules/js/multiline-comment-style"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Enforce a particular style for multiline comments",
@@ -4287,8 +4931,26 @@
       "plugin": "eslint"
     },
     "multiline-ternary": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "multiline-ternary",
+              "url": "https://eslint.style/rules/js/multiline-ternary"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce newlines between operands of ternary expressions",
@@ -4331,8 +4993,26 @@
       "plugin": "eslint"
     },
     "new-parens": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "new-parens",
+              "url": "https://eslint.style/rules/js/new-parens"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce or disallow parentheses when invoking a constructor with no arguments",
@@ -4351,10 +5031,26 @@
         "url": "https://eslint.org/docs/latest/rules/newline-after-var"
       },
       "fixable": "whitespace",
-      "deprecated": true,
-      "replacedBy": [
-        "padding-line-between-statements"
-      ],
+      "deprecated": {
+        "message": "The rule was replaced with a more general rule.",
+        "url": "https://eslint.org/blog/2017/06/eslint-v4.0.0-released/",
+        "deprecatedSince": "4.0.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "message": "The new rule moved to a plugin.",
+            "url": "https://eslint.org/docs/latest/rules/padding-line-between-statements#examples",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "padding-line-between-statements",
+              "url": "https://eslint.style/rules/js/padding-line-between-statements"
+            }
+          }
+        ]
+      },
       "name": "newline-after-var",
       "plugin": "eslint"
     },
@@ -4366,16 +5062,50 @@
         "url": "https://eslint.org/docs/latest/rules/newline-before-return"
       },
       "fixable": "whitespace",
-      "deprecated": true,
-      "replacedBy": [
-        "padding-line-between-statements"
-      ],
+      "deprecated": {
+        "message": "The rule was replaced with a more general rule.",
+        "url": "https://eslint.org/blog/2017/06/eslint-v4.0.0-released/",
+        "deprecatedSince": "4.0.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "message": "The new rule moved to a plugin.",
+            "url": "https://eslint.org/docs/latest/rules/padding-line-between-statements#examples",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "padding-line-between-statements",
+              "url": "https://eslint.style/rules/js/padding-line-between-statements"
+            }
+          }
+        ]
+      },
       "name": "newline-before-return",
       "plugin": "eslint"
     },
     "newline-per-chained-call": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "newline-per-chained-call",
+              "url": "https://eslint.style/rules/js/newline-per-chained-call"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Require a newline after each call in a method chain",
@@ -4397,6 +5127,11 @@
       "plugin": "eslint"
     },
     "no-array-constructor": {
+      "dialects": [
+        "javascript",
+        "typescript"
+      ],
+      "language": "javascript",
       "type": "suggestion",
       "docs": {
         "description": "Disallow `Array` constructors",
@@ -4445,8 +5180,25 @@
       "plugin": "eslint"
     },
     "no-buffer-constructor": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Node.js rules were moved out of ESLint core.",
+        "url": "https://eslint.org/docs/latest/use/migrating-to-7.0.0#deprecate-node-rules",
+        "deprecatedSince": "7.0.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "message": "eslint-plugin-n now maintains deprecated Node.js-related rules.",
+            "plugin": {
+              "name": "eslint-plugin-n",
+              "url": "https://github.com/eslint-community/eslint-plugin-n"
+            },
+            "rule": {
+              "name": "no-deprecated-api",
+              "url": "https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/rules/no-deprecated-api.md"
+            }
+          }
+        ]
+      },
       "type": "problem",
       "docs": {
         "description": "Disallow use of the `Buffer()` constructor",
@@ -4484,10 +5236,20 @@
         "recommended": false,
         "url": "https://eslint.org/docs/latest/rules/no-catch-shadow"
       },
-      "replacedBy": [
-        "no-shadow"
-      ],
-      "deprecated": true,
+      "deprecated": {
+        "message": "This rule was renamed.",
+        "url": "https://eslint.org/blog/2018/07/eslint-v5.1.0-released/",
+        "deprecatedSince": "5.1.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "rule": {
+              "name": "no-shadow",
+              "url": "https://eslint.org/docs/rules/no-shadow"
+            }
+          }
+        ]
+      },
       "name": "no-catch-shadow",
       "plugin": "eslint"
     },
@@ -4526,8 +5288,26 @@
       "plugin": "eslint"
     },
     "no-confusing-arrow": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "no-confusing-arrow",
+              "url": "https://eslint.style/rules/js/no-confusing-arrow"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Disallow arrow functions where they could be confused with comparisons",
@@ -4603,6 +5383,7 @@
       "docs": {
         "description": "Disallow `continue` statements",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-continue"
       },
       "name": "no-continue",
@@ -4644,6 +5425,7 @@
       "docs": {
         "description": "Disallow equal signs explicitly at the beginning of regular expressions",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-div-regex"
       },
       "fixable": "code",
@@ -4662,6 +5444,11 @@
     },
     "no-dupe-class-members": {
       "type": "problem",
+      "dialects": [
+        "javascript",
+        "typescript"
+      ],
+      "language": "javascript",
       "docs": {
         "description": "Disallow duplicate class members",
         "recommended": true,
@@ -4725,6 +5512,7 @@
       "docs": {
         "description": "Disallow `else` blocks after `return` statements in `if` statements",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-else-return"
       },
       "fixable": "code",
@@ -4758,6 +5546,11 @@
       "plugin": "eslint"
     },
     "no-empty-function": {
+      "dialects": [
+        "javascript",
+        "typescript"
+      ],
+      "language": "javascript",
       "type": "suggestion",
       "defaultOptions": [
         {
@@ -4866,6 +5659,7 @@
       "docs": {
         "description": "Disallow unnecessary boolean casts",
         "recommended": true,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-extra-boolean-cast"
       },
       "fixable": "code",
@@ -4877,6 +5671,7 @@
       "docs": {
         "description": "Disallow unnecessary labels",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-extra-label"
       },
       "fixable": "code",
@@ -4884,8 +5679,26 @@
       "plugin": "eslint"
     },
     "no-extra-parens": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "no-extra-parens",
+              "url": "https://eslint.style/rules/js/no-extra-parens"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Disallow unnecessary parentheses",
@@ -4897,8 +5710,26 @@
       "plugin": "eslint"
     },
     "no-extra-semi": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "no-extra-semi",
+              "url": "https://eslint.style/rules/js/no-extra-semi"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Disallow unnecessary semicolons",
@@ -4926,8 +5757,26 @@
       "plugin": "eslint"
     },
     "no-floating-decimal": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "no-floating-decimal",
+              "url": "https://eslint.style/rules/js/no-floating-decimal"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Disallow leading or trailing decimal points in numeric literals",
@@ -4969,6 +5818,7 @@
       "docs": {
         "description": "Disallow shorthand type conversions",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-implicit-coercion"
       },
       "fixable": "code",
@@ -5027,6 +5877,7 @@
       "docs": {
         "description": "Disallow inline comments after code",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-inline-comments"
       },
       "name": "no-inline-comments",
@@ -5062,6 +5913,11 @@
       "plugin": "eslint"
     },
     "no-invalid-this": {
+      "dialects": [
+        "javascript",
+        "typescript"
+      ],
+      "language": "javascript",
       "type": "suggestion",
       "defaultOptions": [
         {
@@ -5110,6 +5966,7 @@
       "docs": {
         "description": "Disallow labels that share a name with a variable",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-label-var"
       },
       "name": "no-label-var",
@@ -5126,6 +5983,7 @@
       "docs": {
         "description": "Disallow labeled statements",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-labels"
       },
       "name": "no-labels",
@@ -5146,6 +6004,7 @@
       "docs": {
         "description": "Disallow `if` statements as the only statement in `else` blocks",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-lonely-if"
       },
       "fixable": "code",
@@ -5154,6 +6013,11 @@
     },
     "no-loop-func": {
       "type": "suggestion",
+      "dialects": [
+        "typescript",
+        "javascript"
+      ],
+      "language": "javascript",
       "docs": {
         "description": "Disallow function declarations that contain unsafe references inside loop statements",
         "recommended": false,
@@ -5164,6 +6028,11 @@
     },
     "no-loss-of-precision": {
       "type": "problem",
+      "dialects": [
+        "typescript",
+        "javascript"
+      ],
+      "language": "javascript",
       "docs": {
         "description": "Disallow literal numbers that lose precision",
         "recommended": true,
@@ -5177,6 +6046,7 @@
       "docs": {
         "description": "Disallow magic numbers",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-magic-numbers"
       },
       "name": "no-magic-numbers",
@@ -5194,8 +6064,26 @@
       "plugin": "eslint"
     },
     "no-mixed-operators": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "no-mixed-operators",
+              "url": "https://eslint.style/rules/js/no-mixed-operators"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Disallow mixed binary operators",
@@ -5206,8 +6094,25 @@
       "plugin": "eslint"
     },
     "no-mixed-requires": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Node.js rules were moved out of ESLint core.",
+        "url": "https://eslint.org/docs/latest/use/migrating-to-7.0.0#deprecate-node-rules",
+        "deprecatedSince": "7.0.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "message": "eslint-plugin-n now maintains deprecated Node.js-related rules.",
+            "plugin": {
+              "name": "eslint-plugin-n",
+              "url": "https://github.com/eslint-community/eslint-plugin-n"
+            },
+            "rule": {
+              "name": "no-mixed-requires",
+              "url": "https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/rules/no-mixed-requires.md"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Disallow `require` calls to be mixed with regular variable declarations",
@@ -5218,8 +6123,26 @@
       "plugin": "eslint"
     },
     "no-mixed-spaces-and-tabs": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "no-mixed-spaces-and-tabs",
+              "url": "https://eslint.style/rules/js/no-mixed-spaces-and-tabs"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Disallow mixed spaces and tabs for indentation",
@@ -5245,8 +6168,26 @@
       "plugin": "eslint"
     },
     "no-multi-spaces": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "no-multi-spaces",
+              "url": "https://eslint.style/rules/js/no-multi-spaces"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Disallow multiple spaces",
@@ -5262,14 +6203,33 @@
       "docs": {
         "description": "Disallow multiline strings",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-multi-str"
       },
       "name": "no-multi-str",
       "plugin": "eslint"
     },
     "no-multiple-empty-lines": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "no-multiple-empty-lines",
+              "url": "https://eslint.style/rules/js/no-multiple-empty-lines"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Disallow multiple empty lines",
@@ -5287,10 +6247,20 @@
         "recommended": false,
         "url": "https://eslint.org/docs/latest/rules/no-native-reassign"
       },
-      "deprecated": true,
-      "replacedBy": [
-        "no-global-assign"
-      ],
+      "deprecated": {
+        "message": "Renamed rule.",
+        "url": "https://eslint.org/blog/2016/08/eslint-v3.3.0-released/#deprecated-rules",
+        "deprecatedSince": "3.3.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "rule": {
+              "name": "no-global-assign",
+              "url": "https://eslint.org/docs/rules/no-global-assign"
+            }
+          }
+        ]
+      },
       "name": "no-native-reassign",
       "plugin": "eslint"
     },
@@ -5299,6 +6269,7 @@
       "docs": {
         "description": "Disallow negated conditions",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-negated-condition"
       },
       "name": "no-negated-condition",
@@ -5311,10 +6282,20 @@
         "recommended": false,
         "url": "https://eslint.org/docs/latest/rules/no-negated-in-lhs"
       },
-      "replacedBy": [
-        "no-unsafe-negation"
-      ],
-      "deprecated": true,
+      "deprecated": {
+        "message": "Renamed rule.",
+        "url": "https://eslint.org/blog/2016/08/eslint-v3.3.0-released/#deprecated-rules",
+        "deprecatedSince": "3.3.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "rule": {
+              "name": "no-unsafe-negation",
+              "url": "https://eslint.org/docs/rules/no-unsafe-negation"
+            }
+          }
+        ]
+      },
       "name": "no-negated-in-lhs",
       "plugin": "eslint"
     },
@@ -5323,6 +6304,7 @@
       "docs": {
         "description": "Disallow nested ternary expressions",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-nested-ternary"
       },
       "name": "no-nested-ternary",
@@ -5365,16 +6347,43 @@
         "recommended": false,
         "url": "https://eslint.org/docs/latest/rules/no-new-object"
       },
-      "deprecated": true,
-      "replacedBy": [
-        "no-object-constructor"
-      ],
+      "deprecated": {
+        "message": "The new rule flags more situations where object literal syntax can be used, and it does not report a problem when the `Object` constructor is invoked with an argument.",
+        "url": "https://eslint.org/blog/2023/09/eslint-v8.50.0-released/",
+        "deprecatedSince": "8.50.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "rule": {
+              "name": "no-object-constructor",
+              "url": "https://eslint.org/docs/rules/no-object-constructor"
+            }
+          }
+        ]
+      },
       "name": "no-new-object",
       "plugin": "eslint"
     },
     "no-new-require": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Node.js rules were moved out of ESLint core.",
+        "url": "https://eslint.org/docs/latest/use/migrating-to-7.0.0#deprecate-node-rules",
+        "deprecatedSince": "7.0.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "message": "eslint-plugin-n now maintains deprecated Node.js-related rules.",
+            "plugin": {
+              "name": "eslint-plugin-n",
+              "url": "https://github.com/eslint-community/eslint-plugin-n"
+            },
+            "rule": {
+              "name": "no-new-require",
+              "url": "https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/rules/no-new-require.md"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Disallow `new` operators with calls to `require`",
@@ -5391,10 +6400,20 @@
         "recommended": false,
         "url": "https://eslint.org/docs/latest/rules/no-new-symbol"
       },
-      "deprecated": true,
-      "replacedBy": [
-        "no-new-native-nonconstructor"
-      ],
+      "deprecated": {
+        "message": "The rule was replaced with a more general rule.",
+        "url": "https://eslint.org/docs/latest/use/migrate-to-9.0.0#eslint-recommended",
+        "deprecatedSince": "9.0.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "rule": {
+              "name": "no-new-native-nonconstructor",
+              "url": "https://eslint.org/docs/latest/rules/no-new-native-nonconstructor"
+            }
+          }
+        ]
+      },
       "name": "no-new-symbol",
       "plugin": "eslint"
     },
@@ -5471,8 +6490,25 @@
       "plugin": "eslint"
     },
     "no-path-concat": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Node.js rules were moved out of ESLint core.",
+        "url": "https://eslint.org/docs/latest/use/migrating-to-7.0.0#deprecate-node-rules",
+        "deprecatedSince": "7.0.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "message": "eslint-plugin-n now maintains deprecated Node.js-related rules.",
+            "plugin": {
+              "name": "eslint-plugin-n",
+              "url": "https://github.com/eslint-community/eslint-plugin-n"
+            },
+            "rule": {
+              "name": "no-path-concat",
+              "url": "https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/rules/no-path-concat.md"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Disallow string concatenation with `__dirname` and `__filename`",
@@ -5492,14 +6528,32 @@
       "docs": {
         "description": "Disallow the unary operators `++` and `--`",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-plusplus"
       },
       "name": "no-plusplus",
       "plugin": "eslint"
     },
     "no-process-env": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Node.js rules were moved out of ESLint core.",
+        "url": "https://eslint.org/docs/latest/use/migrating-to-7.0.0#deprecate-node-rules",
+        "deprecatedSince": "7.0.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "message": "eslint-plugin-n now maintains deprecated Node.js-related rules.",
+            "plugin": {
+              "name": "eslint-plugin-n",
+              "url": "https://github.com/eslint-community/eslint-plugin-n"
+            },
+            "rule": {
+              "name": "no-process-env",
+              "url": "https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/rules/no-process-env.md"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Disallow the use of `process.env`",
@@ -5510,8 +6564,25 @@
       "plugin": "eslint"
     },
     "no-process-exit": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Node.js rules were moved out of ESLint core.",
+        "url": "https://eslint.org/docs/latest/use/migrating-to-7.0.0#deprecate-node-rules",
+        "deprecatedSince": "7.0.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "message": "eslint-plugin-n now maintains deprecated Node.js-related rules.",
+            "plugin": {
+              "name": "eslint-plugin-n",
+              "url": "https://github.com/eslint-community/eslint-plugin-n"
+            },
+            "rule": {
+              "name": "no-process-exit",
+              "url": "https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/rules/no-process-exit.md"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Disallow the use of `process.exit()`",
@@ -5615,8 +6686,25 @@
       "plugin": "eslint"
     },
     "no-restricted-modules": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Node.js rules were moved out of ESLint core.",
+        "url": "https://eslint.org/docs/latest/use/migrating-to-7.0.0#deprecate-node-rules",
+        "deprecatedSince": "7.0.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "message": "eslint-plugin-n now maintains deprecated Node.js-related rules.",
+            "plugin": {
+              "name": "eslint-plugin-n",
+              "url": "https://github.com/eslint-community/eslint-plugin-n"
+            },
+            "rule": {
+              "name": "no-restricted-require",
+              "url": "https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/rules/no-restricted-require.md"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Disallow specified modules when loaded by `require`",
@@ -5668,8 +6756,12 @@
         "url": "https://eslint.org/docs/latest/rules/no-return-await"
       },
       "fixable": null,
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "The original assumption of the rule no longer holds true because of engine optimization.",
+        "deprecatedSince": "8.46.0",
+        "availableUntil": null,
+        "replacedBy": []
+      },
       "name": "no-return-await",
       "plugin": "eslint"
     },
@@ -5768,10 +6860,26 @@
         "recommended": false,
         "url": "https://eslint.org/docs/latest/rules/no-spaced-func"
       },
-      "deprecated": true,
-      "replacedBy": [
-        "func-call-spacing"
-      ],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2016/08/eslint-v3.3.0-released/#deprecated-rules",
+        "deprecatedSince": "3.3.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "function-call-spacing",
+              "url": "https://eslint.style/rules/js/function-call-spacing"
+            }
+          }
+        ]
+      },
       "fixable": "whitespace",
       "name": "no-spaced-func",
       "plugin": "eslint"
@@ -5787,8 +6895,25 @@
       "plugin": "eslint"
     },
     "no-sync": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Node.js rules were moved out of ESLint core.",
+        "url": "https://eslint.org/docs/latest/use/migrating-to-7.0.0#deprecate-node-rules",
+        "deprecatedSince": "7.0.0",
+        "availableUntil": null,
+        "replacedBy": [
+          {
+            "message": "eslint-plugin-n now maintains deprecated Node.js-related rules.",
+            "plugin": {
+              "name": "eslint-plugin-n",
+              "url": "https://github.com/eslint-community/eslint-plugin-n"
+            },
+            "rule": {
+              "name": "no-sync",
+              "url": "https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/rules/no-sync.md"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Disallow synchronous methods",
@@ -5799,8 +6924,26 @@
       "plugin": "eslint"
     },
     "no-tabs": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "no-tabs",
+              "url": "https://eslint.style/rules/js/no-tabs"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Disallow all tabs",
@@ -5825,6 +6968,7 @@
       "docs": {
         "description": "Disallow ternary operators",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-ternary"
       },
       "name": "no-ternary",
@@ -5851,8 +6995,26 @@
       "plugin": "eslint"
     },
     "no-trailing-spaces": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "no-trailing-spaces",
+              "url": "https://eslint.style/rules/js/no-trailing-spaces"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Disallow trailing whitespace at the end of lines",
@@ -5883,6 +7045,7 @@
       "docs": {
         "description": "Disallow initializing variables to `undefined`",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-undef-init"
       },
       "fixable": "code",
@@ -5894,6 +7057,7 @@
       "docs": {
         "description": "Disallow the use of `undefined` as an identifier",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-undefined"
       },
       "name": "no-undefined",
@@ -5917,6 +7081,7 @@
       "docs": {
         "description": "Disallow dangling underscores in identifiers",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-underscore-dangle"
       },
       "name": "no-underscore-dangle",
@@ -5952,6 +7117,7 @@
       "docs": {
         "description": "Disallow ternary operators when simpler alternatives exist",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-unneeded-ternary"
       },
       "fixable": "code",
@@ -6027,6 +7193,11 @@
       "plugin": "eslint"
     },
     "no-unused-expressions": {
+      "dialects": [
+        "javascript",
+        "typescript"
+      ],
+      "language": "javascript",
       "type": "suggestion",
       "docs": {
         "description": "Disallow unused expressions",
@@ -6144,6 +7315,7 @@
       "docs": {
         "description": "Disallow unnecessary computed property keys in objects and classes",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-useless-computed-key"
       },
       "fixable": "code",
@@ -6155,12 +7327,18 @@
       "docs": {
         "description": "Disallow unnecessary concatenation of literals or template literals",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-useless-concat"
       },
       "name": "no-useless-concat",
       "plugin": "eslint"
     },
     "no-useless-constructor": {
+      "dialects": [
+        "javascript",
+        "typescript"
+      ],
+      "language": "javascript",
       "type": "suggestion",
       "docs": {
         "description": "Disallow unnecessary constructors",
@@ -6232,6 +7410,7 @@
       "docs": {
         "description": "Disallow `void` operators",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-void"
       },
       "name": "no-void",
@@ -6252,14 +7431,33 @@
       "docs": {
         "description": "Disallow specified warning terms in comments",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-warning-comments"
       },
       "name": "no-warning-comments",
       "plugin": "eslint"
     },
     "no-whitespace-before-property": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "no-whitespace-before-property",
+              "url": "https://eslint.style/rules/js/no-whitespace-before-property"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Disallow whitespace before properties",
@@ -6281,8 +7479,26 @@
       "plugin": "eslint"
     },
     "nonblock-statement-body-position": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "nonblock-statement-body-position",
+              "url": "https://eslint.style/rules/js/nonblock-statement-body-position"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce the location of single-line statements",
@@ -6294,8 +7510,26 @@
       "plugin": "eslint"
     },
     "object-curly-newline": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "object-curly-newline",
+              "url": "https://eslint.style/rules/js/object-curly-newline"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent line breaks after opening and before closing braces",
@@ -6307,8 +7541,26 @@
       "plugin": "eslint"
     },
     "object-curly-spacing": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "object-curly-spacing",
+              "url": "https://eslint.style/rules/js/object-curly-spacing"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing inside braces",
@@ -6320,8 +7572,26 @@
       "plugin": "eslint"
     },
     "object-property-newline": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "object-property-newline",
+              "url": "https://eslint.style/rules/js/object-property-newline"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce placing object properties on separate lines",
@@ -6337,6 +7607,7 @@
       "docs": {
         "description": "Require or disallow method and property shorthand syntax for object literals",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/object-shorthand"
       },
       "fixable": "code",
@@ -6348,6 +7619,7 @@
       "docs": {
         "description": "Enforce variables to be declared either together or separately in functions",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/one-var"
       },
       "fixable": "code",
@@ -6355,8 +7627,26 @@
       "plugin": "eslint"
     },
     "one-var-declaration-per-line": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "one-var-declaration-per-line",
+              "url": "https://eslint.style/rules/js/one-var-declaration-per-line"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Require or disallow newlines around variable declarations",
@@ -6375,6 +7665,7 @@
       "docs": {
         "description": "Require or disallow assignment operator shorthand where possible",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/operator-assignment"
       },
       "fixable": "code",
@@ -6382,8 +7673,26 @@
       "plugin": "eslint"
     },
     "operator-linebreak": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "operator-linebreak",
+              "url": "https://eslint.style/rules/js/operator-linebreak"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent linebreak style for operators",
@@ -6395,8 +7704,26 @@
       "plugin": "eslint"
     },
     "padded-blocks": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "padded-blocks",
+              "url": "https://eslint.style/rules/js/padded-blocks"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Require or disallow padding within blocks",
@@ -6408,8 +7735,26 @@
       "plugin": "eslint"
     },
     "padding-line-between-statements": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "padding-line-between-statements",
+              "url": "https://eslint.style/rules/js/padding-line-between-statements"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Require or disallow padding lines between statements",
@@ -6431,6 +7776,7 @@
       "docs": {
         "description": "Require using arrow functions for callbacks",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/prefer-arrow-callback"
       },
       "fixable": "code",
@@ -6459,6 +7805,7 @@
       "docs": {
         "description": "Require destructuring from arrays and/or objects",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/prefer-destructuring"
       },
       "fixable": "code",
@@ -6470,6 +7817,7 @@
       "docs": {
         "description": "Disallow the use of `Math.pow` in favor of the `**` operator",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/prefer-exponentiation-operator"
       },
       "fixable": "code",
@@ -6492,6 +7840,7 @@
       "docs": {
         "description": "Disallow `parseInt()` and `Number.parseInt()` in favor of binary, octal, and hexadecimal literals",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/prefer-numeric-literals"
       },
       "fixable": "code",
@@ -6514,6 +7863,7 @@
       "docs": {
         "description": "Disallow using `Object.assign` with an object literal as the first argument and prefer the use of object spread instead",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/prefer-object-spread"
       },
       "fixable": "code",
@@ -6543,8 +7893,12 @@
         "recommended": false,
         "url": "https://eslint.org/docs/latest/rules/prefer-reflect"
       },
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "The original intention of this rule was misguided.",
+        "deprecatedSince": "3.9.0",
+        "availableUntil": null,
+        "replacedBy": []
+      },
       "name": "prefer-reflect",
       "plugin": "eslint"
     },
@@ -6579,6 +7933,7 @@
       "docs": {
         "description": "Require spread operators instead of `.apply()`",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/prefer-spread"
       },
       "fixable": null,
@@ -6590,6 +7945,7 @@
       "docs": {
         "description": "Require template literals instead of string concatenation",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/prefer-template"
       },
       "fixable": "code",
@@ -6597,8 +7953,26 @@
       "plugin": "eslint"
     },
     "quote-props": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "quote-props",
+              "url": "https://eslint.style/rules/js/quote-props"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Require quotes around object literal property names",
@@ -6610,8 +7984,26 @@
       "plugin": "eslint"
     },
     "quotes": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "quotes",
+              "url": "https://eslint.style/rules/js/quotes"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce the consistent use of either backticks, double, or single quotes",
@@ -6685,8 +8077,26 @@
       "plugin": "eslint"
     },
     "rest-spread-spacing": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "rest-spread-spacing",
+              "url": "https://eslint.style/rules/js/rest-spread-spacing"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce spacing between rest and spread operators and their expressions",
@@ -6698,8 +8108,26 @@
       "plugin": "eslint"
     },
     "semi": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "semi",
+              "url": "https://eslint.style/rules/js/semi"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Require or disallow semicolons instead of ASI",
@@ -6711,8 +8139,26 @@
       "plugin": "eslint"
     },
     "semi-spacing": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "semi-spacing",
+              "url": "https://eslint.style/rules/js/semi-spacing"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing before and after semicolons",
@@ -6724,8 +8170,26 @@
       "plugin": "eslint"
     },
     "semi-style": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "semi-style",
+              "url": "https://eslint.style/rules/js/semi-style"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce location of semicolons",
@@ -6753,8 +8217,9 @@
         }
       ],
       "docs": {
-        "description": "Enforce sorted import declarations within modules",
+        "description": "Enforce sorted `import` declarations within modules",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/sort-imports"
       },
       "fixable": "code",
@@ -6776,6 +8241,7 @@
       "docs": {
         "description": "Require object keys to be sorted",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/sort-keys"
       },
       "name": "sort-keys",
@@ -6791,6 +8257,7 @@
       "docs": {
         "description": "Require variables within the same declaration block to be sorted",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/sort-vars"
       },
       "fixable": "code",
@@ -6798,8 +8265,26 @@
       "plugin": "eslint"
     },
     "space-before-blocks": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "space-before-blocks",
+              "url": "https://eslint.style/rules/js/space-before-blocks"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing before blocks",
@@ -6811,8 +8296,26 @@
       "plugin": "eslint"
     },
     "space-before-function-paren": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "space-before-function-paren",
+              "url": "https://eslint.style/rules/js/space-before-function-paren"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing before `function` definition opening parenthesis",
@@ -6824,8 +8327,26 @@
       "plugin": "eslint"
     },
     "space-in-parens": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "space-in-parens",
+              "url": "https://eslint.style/rules/js/space-in-parens"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing inside parentheses",
@@ -6837,8 +8358,26 @@
       "plugin": "eslint"
     },
     "space-infix-ops": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "space-infix-ops",
+              "url": "https://eslint.style/rules/js/space-infix-ops"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Require spacing around infix operators",
@@ -6850,8 +8389,26 @@
       "plugin": "eslint"
     },
     "space-unary-ops": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "space-unary-ops",
+              "url": "https://eslint.style/rules/js/space-unary-ops"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing before or after unary operators",
@@ -6863,8 +8420,26 @@
       "plugin": "eslint"
     },
     "spaced-comment": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "spaced-comment",
+              "url": "https://eslint.style/rules/js/spaced-comment"
+            }
+          }
+        ]
+      },
       "type": "suggestion",
       "docs": {
         "description": "Enforce consistent spacing after the `//` or `/*` in a comment",
@@ -6890,8 +8465,26 @@
       "plugin": "eslint"
     },
     "switch-colon-spacing": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "switch-colon-spacing",
+              "url": "https://eslint.style/rules/js/switch-colon-spacing"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Enforce spacing around colons of switch statements",
@@ -6914,8 +8507,26 @@
       "plugin": "eslint"
     },
     "template-curly-spacing": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "template-curly-spacing",
+              "url": "https://eslint.style/rules/js/template-curly-spacing"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Require or disallow spacing around embedded expressions of template strings",
@@ -6927,8 +8538,26 @@
       "plugin": "eslint"
     },
     "template-tag-spacing": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "template-tag-spacing",
+              "url": "https://eslint.style/rules/js/template-tag-spacing"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Require or disallow spacing between template tags and their literals",
@@ -6991,14 +8620,33 @@
       "docs": {
         "description": "Require `var` declarations be placed at the top of their containing scope",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/vars-on-top"
       },
       "name": "vars-on-top",
       "plugin": "eslint"
     },
     "wrap-iife": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "wrap-iife",
+              "url": "https://eslint.style/rules/js/wrap-iife"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Require parentheses around immediate `function` invocations",
@@ -7010,8 +8658,26 @@
       "plugin": "eslint"
     },
     "wrap-regex": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "wrap-regex",
+              "url": "https://eslint.style/rules/js/wrap-regex"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Require parenthesis around regex literals",
@@ -7023,8 +8689,26 @@
       "plugin": "eslint"
     },
     "yield-star-spacing": {
-      "deprecated": true,
-      "replacedBy": [],
+      "deprecated": {
+        "message": "Formatting rules are being moved out of ESLint core.",
+        "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+        "deprecatedSince": "8.53.0",
+        "availableUntil": "10.0.0",
+        "replacedBy": [
+          {
+            "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+            "url": "https://eslint.style/guide/migration",
+            "plugin": {
+              "name": "@stylistic/eslint-plugin-js",
+              "url": "https://eslint.style/packages/js"
+            },
+            "rule": {
+              "name": "yield-star-spacing",
+              "url": "https://eslint.style/rules/js/yield-star-spacing"
+            }
+          }
+        ]
+      },
       "type": "layout",
       "docs": {
         "description": "Require or disallow spacing around the `*` in `yield*` expressions",
@@ -7047,6 +8731,7 @@
       "docs": {
         "description": "Require or disallow \"Yoda\" conditions",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/yoda"
       },
       "fixable": "code",
@@ -10739,7 +12424,6 @@
     },
     "jsonc/no-floating-decimal": {
       "deprecated": false,
-      "replacedBy": [],
       "type": "suggestion",
       "docs": {
         "description": "disallow leading or trailing decimal points in numeric literals",
@@ -10754,6 +12438,7 @@
         "ruleName": "no-floating-decimal"
       },
       "fixable": "code",
+      "replacedBy": [],
       "name": "jsonc/no-floating-decimal",
       "plugin": "jsonc"
     },
@@ -13019,6 +14704,7 @@
       "docs": {
         "description": "Enforce camelcase naming convention in `<template>`",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.vuejs.org/rules/camelcase.html",
         "category": null,
         "extensionSource": {
@@ -13172,6 +14858,16 @@
       "name": "vue/define-props-declaration",
       "plugin": "vue"
     },
+    "vue/define-props-destructuring": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce consistent style for props destructuring",
+        "url": "https://eslint.vuejs.org/rules/define-props-destructuring.html"
+      },
+      "fixable": null,
+      "name": "vue/define-props-destructuring",
+      "plugin": "vue"
+    },
     "vue/dot-location": {
       "type": "layout",
       "docs": {
@@ -13198,6 +14894,7 @@
       "docs": {
         "description": "Enforce dot notation whenever possible in `<template>`",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.vuejs.org/rules/dot-notation.html",
         "category": null,
         "extensionSource": {
@@ -14117,6 +15814,7 @@
       "docs": {
         "description": "Disallow shorthand type conversions in `<template>`",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.vuejs.org/rules/no-implicit-coercion.html",
         "category": null,
         "extensionSource": {
@@ -14189,6 +15887,11 @@
     },
     "vue/no-loss-of-precision": {
       "type": "problem",
+      "dialects": [
+        "typescript",
+        "javascript"
+      ],
+      "language": "javascript",
       "docs": {
         "description": "Disallow literal numbers that lose precision in `<template>`",
         "recommended": true,
@@ -14791,6 +16494,7 @@
       "docs": {
         "description": "Disallow unnecessary concatenation of literals or template literals in `<template>`",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.vuejs.org/rules/no-useless-concat.html",
         "category": null,
         "extensionSource": {
@@ -14977,6 +16681,7 @@
       "docs": {
         "description": "Require or disallow method and property shorthand syntax for object literals in `<template>`",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.vuejs.org/rules/object-shorthand.html",
         "category": null,
         "extensionSource": {
@@ -15111,6 +16816,7 @@
       "docs": {
         "description": "Require template literals instead of string concatenation in `<template>`",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.vuejs.org/rules/prefer-template.html",
         "category": null,
         "extensionSource": {
@@ -16552,13 +18258,14 @@
       ]
     },
     {
-      "filepath": "eslint.config.js",
+      "filepath": "eslint.config.ts",
       "globs": [
-        "**/*.js"
+        "**/*.?([cm])ts"
       ],
       "configs": [
-        2,
-        32
+        26,
+        28,
+        29
       ]
     },
     {
@@ -16882,7 +18589,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1746000071529,
+    "lastUpdate": 1746028009468,
     "basePath": "",
     "configPath": ""
   }
