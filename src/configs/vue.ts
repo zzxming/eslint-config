@@ -1,18 +1,9 @@
-import type { PackageInstallGenerator, TypedFlatConfigItem, VueOptions } from '../types';
+import type { TypedFlatConfigItem, VueOptions } from '../types';
 import { mergeProcessors } from 'eslint-merge-processors';
 import { GLOB_VUE } from '../contants';
 import { interopDefault } from '../utils';
 
-const requiredPkg = [
-  'eslint-plugin-vue',
-  'eslint-processor-vue-blocks',
-  'vue-eslint-parser',
-];
-
-export async function* vue(
-  pkgInstallGenerator: PackageInstallGenerator,
-  options: Partial<VueOptions> = {},
-): AsyncGenerator<any, TypedFlatConfigItem[]> {
+export async function vue(options: Partial<VueOptions> = {}): Promise<TypedFlatConfigItem[]> {
   const {
     files = [GLOB_VUE],
     stylistic = true,
@@ -29,8 +20,6 @@ export async function* vue(
     indent = 2,
   } = typeof stylistic === 'boolean' ? {} : stylistic;
 
-  if (typescript) requiredPkg.push('@typescript-eslint/parser');
-  yield pkgInstallGenerator.next(requiredPkg);
   const [
     parserVue,
     pluginVue,
@@ -41,7 +30,7 @@ export async function* vue(
     interopDefault(import('eslint-plugin-vue')),
     interopDefault(import('eslint-processor-vue-blocks')),
     interopDefault(import('@typescript-eslint/parser')),
-  ] as const);
+  ]);
 
   return [
     {

@@ -2,7 +2,7 @@ import type { OptionsConfig, TailwindcssOptions, TypedFlatConfigItem } from './t
 import { isPackageExists } from 'local-pkg';
 import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, perfectionist, react, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, unocss, vitest, vue, yaml } from './configs';
 import { ReactPackages, StylisticConfigDefaults, VuePackages } from './contants';
-import { ensureImportPackage, getOptions, getSubOptions, isGenerator, isIteratorReturnResult } from './utils';
+import { ensurePackages, getOptions, getSubOptions } from './utils';
 
 export async function factory(options: Partial<OptionsConfig> = {}): Promise<TypedFlatConfigItem[]> {
   const {
@@ -21,11 +21,18 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
     overrides = [],
   } = options;
 
-  const pkgEnsureGenerator = ensureImportPackage();
-  pkgEnsureGenerator.next();
   const componentExts = [];
-  const rules = [];
+  const rules: any[] = [];
   const stylisticOptions = getOptions(options.stylistic, StylisticConfigDefaults);
+
+  await ensurePackages([
+    ...enableVue ? ['vue'] : [],
+    ...enableVitest ? ['vitest'] : [],
+    ...enableReact ? ['react'] : [],
+    ...enableTypeScript ? ['typescript'] : [],
+    ...enableUnocss ? ['unocss'] : [],
+    ...enableTailwindcss ? ['tailwindcss'] : [],
+  ]);
 
   rules.push(
     ignore(enableGitignore),
@@ -54,20 +61,20 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
     );
   }
   if (enableTailwindcss) {
-    rules.push(tailwindcss(pkgEnsureGenerator, getOptions(enableTailwindcss, {}) as TailwindcssOptions));
+    rules.push(tailwindcss(getOptions(enableTailwindcss, {}) as TailwindcssOptions));
   }
   if (enableJsx) {
     rules.push(jsx());
   }
   if (enableTypeScript) {
-    rules.push(typescript(pkgEnsureGenerator, {
+    rules.push(typescript({
       ...getSubOptions(options, 'typescript'),
       componentExts,
     }));
   }
   if (enableVue) {
     rules.push(
-      vue(pkgEnsureGenerator, {
+      vue({
         typescript: !!enableTypeScript,
         stylistic: stylisticOptions,
         ...getSubOptions(options, 'vue'),
@@ -92,41 +99,27 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
   }
   if (enableReact) {
     rules.push(
-      react(pkgEnsureGenerator, {
+      react({
         ...getSubOptions(options, 'react'),
       }),
     );
   }
   if (enableVitest) {
     rules.push(
-      vitest(pkgEnsureGenerator, {
+      vitest({
         ...getSubOptions(options, 'vitest'),
       }),
     );
   }
   if (enableUnocss) {
     rules.push(
-      unocss(pkgEnsureGenerator, {
+      unocss({
         ...getSubOptions(options, 'unocss'),
       }),
     );
   }
 
-  await Promise.all(rules.map(async item => isGenerator(item) ? item.next() : item));
-  await pkgEnsureGenerator.next();
-  const generatorConfigs = await Promise.all(rules.map(async (item) => {
-    while (isGenerator(item)) {
-      const data = await item.next();
-      if (isIteratorReturnResult(data)) return data;
-    }
-    return item;
-  }));
-  const configs = generatorConfigs.reduce(
-    (acc, cur) => (acc as TypedFlatConfigItem[]).concat(isIteratorReturnResult(cur) ? cur.value : cur),
-    [],
-  ) as TypedFlatConfigItem[];
-
-  configs.push(...overrides);
-
-  return configs;
+  rules.push(...overrides);
+  const configs = await Promise.all(rules);
+  return configs.flat();
 }

@@ -1,24 +1,13 @@
-import type { PackageInstallGenerator, ReactOptions, TypedFlatConfigItem } from '../types';
+import type { ReactOptions, TypedFlatConfigItem } from '../types';
 import { GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX } from '../contants';
 import { interopDefault } from '../utils';
 
-const requiredPkg = [
-  '@eslint-react/eslint-plugin',
-  'eslint-plugin-react-hooks',
-  'eslint-plugin-react-refresh',
-  '@typescript-eslint/parser',
-];
-
-export async function* react(
-  pkgInstallGenerator: PackageInstallGenerator,
-  options: Partial<ReactOptions> = {},
-): AsyncGenerator<any, TypedFlatConfigItem[]> {
+export async function react(options: Partial<ReactOptions> = {}): Promise<TypedFlatConfigItem[]> {
   const {
     files = [GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX],
     overrides = {},
   } = options;
 
-  yield pkgInstallGenerator.next(requiredPkg);
   const [
     pluginReact,
     pluginReactHooks,

@@ -1,6 +1,5 @@
-import { tsImport } from 'tsx/esm/api';
+import { factory } from './src/index.ts';
 
-const { factory } = await tsImport('./src/index.ts', import.meta.url);
 export default factory({
   vue: true,
 });

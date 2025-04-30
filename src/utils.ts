@@ -1,8 +1,32 @@
-import type { PackageInstallGenerator } from './types';
 import { installPackage } from '@antfu/install-pkg';
 import { isPackageExists } from 'local-pkg';
 import prompts from 'prompts';
 
+export async function ensurePackages(pkgs: string[]) {
+  const requiredPkgs: Record<string, string[]> = {
+    react: [
+      '@eslint-react/eslint-plugin',
+      'eslint-plugin-react-hooks',
+      'eslint-plugin-react-refresh',
+      '@typescript-eslint/parser',
+    ],
+    tailwindcss: ['eslint-plugin-tailwindcss'],
+    typescript: [
+      '@typescript-eslint/parser',
+      '@typescript-eslint/eslint-plugin',
+    ],
+    unocss: ['@unocss/eslint-plugin'],
+    vitest: ['@vitest/eslint-plugin'],
+    vue: [
+      'eslint-plugin-vue',
+      'eslint-processor-vue-blocks',
+      'vue-eslint-parser',
+      '@typescript-eslint/parser',
+    ],
+  };
+  const ensurePkgs = pkgs.flatMap(pkg => requiredPkgs[pkg] || []);
+  await ensurePackageExists(ensurePkgs);
+}
 export function getSubOptions(options: Record<string, any>, key: string) {
   return typeof options[key] === 'boolean' ? {} : options[key] || {};
 }
@@ -63,22 +87,4 @@ export async function ensurePackageExists(packages: string[]) {
       await installPackage(nonExistingPackages, { dev: true });
     }
   }
-}
-
-export const isFunction = (val: any): val is Function => typeof val === 'function';
-export const isGenerator = (val: any): val is AsyncGenerator => val.next && isFunction(val.next);
-export const isIteratorReturnResult = <T = any>(val: any): val is IteratorReturnResult<T> => val.done && Object.prototype.hasOwnProperty.call(val, 'value');
-
-export const isArray = Array.isArray;
-export const ensureArray = (value: any) => (isArray(value) ? value || [] : [value]);
-
-export async function* ensureImportPackage(): PackageInstallGenerator {
-  const packages = [];
-  let appendPkg;
-  while (true) {
-    appendPkg = yield;
-    if (!appendPkg) break;
-    packages.push(...ensureArray(appendPkg));
-  }
-  return ensurePackageExists(packages);
 }

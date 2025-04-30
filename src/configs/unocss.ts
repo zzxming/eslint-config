@@ -1,19 +1,13 @@
-import type { PackageInstallGenerator, TypedFlatConfigItem, UnocssOptions } from '../types';
+import type { TypedFlatConfigItem, UnocssOptions } from '../types';
 import { interopDefault } from '../utils';
 
-const requiredPkg = ['@unocss/eslint-plugin'];
-
-export async function* unocss(
-  pkgInstallGenerator: PackageInstallGenerator,
-  options: Partial<UnocssOptions> = {},
-): AsyncGenerator<any, TypedFlatConfigItem[]> {
+export async function unocss(options: Partial<UnocssOptions> = {}): Promise<TypedFlatConfigItem[]> {
   const {
     attributify = true,
     strict = false,
     overrides = {},
   } = options;
 
-  yield pkgInstallGenerator.next(requiredPkg);
   const pluginUnoCSS = await interopDefault(import('@unocss/eslint-plugin'));
 
   return [
