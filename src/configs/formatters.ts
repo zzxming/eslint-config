@@ -4,7 +4,7 @@ import { isPackageExists } from 'local-pkg';
 import { GLOB_CSS, GLOB_HTML, GLOB_LESS, GLOB_MARKDOWN, GLOB_POSTCSS, GLOB_SCSS, GLOB_SVG, GLOB_XML, StylisticConfigDefaults } from '../contants';
 import { parserPlain } from '../utils';
 
-export function formatters(options: Partial<FormmatterOptions> = {}) {
+export function formatters(options: Partial<FormmatterOptions> = {}): TypedFlatConfigItem[] {
   const isPrettierPluginXml = isPackageExists('@prettier/plugin-xml');
   const {
     css = true,
@@ -130,10 +130,9 @@ export function formatters(options: Partial<FormmatterOptions> = {}) {
             parser,
             plugins: [...(extraRules.plugins || [])],
           },
-        ],
+        ] as unknown as undefined,
       },
     })),
   );
-
   return configs;
 }

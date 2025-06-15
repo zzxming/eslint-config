@@ -1,4 +1,4 @@
-import { factory } from './src/index.ts';
+import { factory } from './src';
 
 export default factory({
   vue: true,

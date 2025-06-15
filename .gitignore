@@ -2,3 +2,4 @@
 **/dist
 
 .eslintcache
+src/typegen.d.ts

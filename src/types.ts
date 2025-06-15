@@ -1,7 +1,8 @@
 import type { ESLint, Linter } from 'eslint';
 import type { Options as VueBlocksOptions } from 'eslint-processor-vue-blocks';
+import type { RuleOptions } from './typegen';
 
-export type Rules = Record<string, any>;
+export interface Rules extends RuleOptions {}
 export type TypedFlatConfigItem = Omit<Linter.Config<Linter.RulesRecord & Rules>, 'plugins'> & {
   plugins?: Record<string, any>;
 };
@@ -72,5 +73,3 @@ export interface OptionsConfig {
   unocss: boolean | UnocssOptions;
   overrides: Linter.Config[];
 }
-
-export type PackageInstallGenerator = AsyncGenerator<void, void, string[]>;
