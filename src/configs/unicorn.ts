@@ -1,8 +1,7 @@
 import type { TypedFlatConfigItem, UnicornOptions } from '../types';
 import { pluginUnicorn } from '../plugins';
 
-export function unicorn(options: Partial<UnicornOptions> = {}): TypedFlatConfigItem[] {
-  const { overrides = {} } = options;
+export function unicorn(_options: Partial<UnicornOptions> = {}): TypedFlatConfigItem[] {
   return [
     {
       name: 'unicorn/rules',
@@ -40,8 +39,6 @@ export function unicorn(options: Partial<UnicornOptions> = {}): TypedFlatConfigI
         'unicorn/empty-brace-spaces': 'off',
         'unicorn/no-this-assignment': 'off',
         'unicorn/prefer-global-this': 'off',
-
-        ...overrides,
       },
     },
     {

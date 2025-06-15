@@ -3,8 +3,7 @@ import globals from 'globals';
 import { GLOB_SRC, GLOB_SRC_EXT } from '../contants';
 import { pluginUnusedImports } from '../plugins';
 
-export function javascript(options: Partial<JavascriptOptions> = {}): TypedFlatConfigItem[] {
-  const { overrides = {} } = options;
+export function javascript(_options: Partial<JavascriptOptions> = {}): TypedFlatConfigItem[] {
   return [
     {
       name: 'javascript/setup',
@@ -269,8 +268,6 @@ export function javascript(options: Partial<JavascriptOptions> = {}): TypedFlatC
         'vars-on-top': 'error',
         'yoda': ['error', 'never'],
         'sort-imports': 'off',
-
-        ...overrides,
       },
     },
     {

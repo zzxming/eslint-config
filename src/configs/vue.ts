@@ -9,7 +9,6 @@ export async function vue(options: Partial<VueOptions> = {}): Promise<TypedFlatC
     stylistic = true,
     vueVersion = 3,
     typescript = true,
-    overrides = {},
   } = options;
 
   const sfcBlocks = options.sfcBlocks === true
@@ -188,8 +187,6 @@ export async function vue(options: Partial<VueOptions> = {}): Promise<TypedFlatC
         'vue/quote-props': ['error', 'consistent-as-needed'],
         'vue/space-in-parens': ['error', 'never'],
         'vue/template-curly-spacing': 'error',
-
-        ...overrides,
       },
     },
     {

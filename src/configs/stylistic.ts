@@ -9,7 +9,6 @@ export function stylistic(options: Partial<StylisticOptions> = {}): TypedFlatCon
     jsx,
     quotes,
     semi,
-    overrides = {},
   } = {
     ...StylisticConfigDefaults,
     ...options,
@@ -72,7 +71,6 @@ export function stylistic(options: Partial<StylisticOptions> = {}): TypedFlatCon
         'antfu/top-level-function': 'error',
         'antfu/no-ts-export-equal': 'error',
         'antfu/consistent-chaining': 'error',
-        ...overrides,
       },
     },
   ];

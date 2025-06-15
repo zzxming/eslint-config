@@ -5,7 +5,6 @@ import { interopDefault } from '../utils';
 export async function vitest(options: Partial<VitestOptions> = {}): Promise<TypedFlatConfigItem[]> {
   const {
     files = [GLOB_TEST],
-    overrides = {},
   } = options;
 
   const pluginVitest = await interopDefault(import('@vitest/eslint-plugin'));
@@ -28,8 +27,6 @@ export async function vitest(options: Partial<VitestOptions> = {}): Promise<Type
         'vitest/expect-expect': 'error',
         'vitest/prefer-lowercase-title': 'off',
         'vitest/valid-expect': ['error', { alwaysAwait: true }],
-
-        ...overrides,
       },
     },
     {

@@ -1,9 +1,7 @@
 import type { TailwindcssOptions, TypedFlatConfigItem } from '../types';
 import { interopDefault } from '../utils';
 
-export async function tailwindcss(options: Partial<TailwindcssOptions> = {}): Promise<TypedFlatConfigItem[]> {
-  const { overrides = {} } = options;
-
+export async function tailwindcss(_options: Partial<TailwindcssOptions> = {}): Promise<TypedFlatConfigItem[]> {
   const pluginTailwind = await interopDefault(import('eslint-plugin-tailwindcss'));
 
   return [
@@ -29,8 +27,6 @@ export async function tailwindcss(options: Partial<TailwindcssOptions> = {}): Pr
         'tailwindcss/no-custom-classname': 'off',
         'tailwindcss/enforces-negative-arbitrary-values': 'off',
         'tailwindcss/no-unnecessary-arbitrary-value': 'error',
-
-        ...overrides,
       },
     },
   ];

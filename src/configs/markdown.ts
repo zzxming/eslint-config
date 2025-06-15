@@ -7,7 +7,6 @@ import { parserPlain } from '../utils';
 export function markdown(options: Partial<MarkdownOptions> = {}): TypedFlatConfigItem[] {
   const {
     componentExts = [],
-    overrides = {},
     files = [GLOB_MARKDOWN],
   } = options;
 
@@ -65,8 +64,6 @@ export function markdown(options: Partial<MarkdownOptions> = {}): TypedFlatConfi
         'ts/no-var-requires': 'off',
         'unused-imports/no-unused-imports': 'off',
         'unused-imports/no-unused-vars': 'off',
-
-        ...overrides,
       },
     },
   ];

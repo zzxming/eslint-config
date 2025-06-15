@@ -6,7 +6,6 @@ import { GLOB_YAML } from '../contants';
 export function yaml(options: Partial<YamlOptions> = {}): TypedFlatConfigItem[] {
   const {
     files = [GLOB_YAML],
-    overrides = {},
     stylistic = true,
   } = options;
 
@@ -55,8 +54,6 @@ export function yaml(options: Partial<YamlOptions> = {}): TypedFlatConfigItem[] 
               'yaml/spaced-comment': 'error',
             }
           : {},
-
-        ...overrides,
       },
     },
   ];

@@ -5,7 +5,6 @@ export async function unocss(options: Partial<UnocssOptions> = {}): Promise<Type
   const {
     attributify = true,
     strict = false,
-    overrides = {},
   } = options;
 
   const pluginUnoCSS = await interopDefault(import('@unocss/eslint-plugin'));
@@ -31,8 +30,6 @@ export async function unocss(options: Partial<UnocssOptions> = {}): Promise<Type
               'unocss/blocklist': 'error',
             }
           : {},
-
-        ...overrides,
       },
     },
   ];

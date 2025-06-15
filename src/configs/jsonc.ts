@@ -7,7 +7,6 @@ export function jsonc(options: Partial<JsoncOptions> = {}): TypedFlatConfigItem[
   const {
     files = [GLOB_JSON, GLOB_JSON5, GLOB_JSONC],
     stylistic = true,
-    overrides = {},
   } = options;
 
   const {
@@ -64,8 +63,6 @@ export function jsonc(options: Partial<JsoncOptions> = {}): TypedFlatConfigItem[
         'jsonc/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
         'jsonc/quote-props': 'error',
         'jsonc/quotes': 'error',
-
-        ...overrides,
       },
     },
   ];

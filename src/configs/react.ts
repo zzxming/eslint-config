@@ -5,7 +5,6 @@ import { interopDefault } from '../utils';
 export async function react(options: Partial<ReactOptions> = {}): Promise<TypedFlatConfigItem[]> {
   const {
     files = [GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX],
-    overrides = {},
   } = options;
 
   const [
@@ -98,8 +97,6 @@ export async function react(options: Partial<ReactOptions> = {}): Promise<TypedF
         'react-hooks/rules-of-hooks': 'error',
 
         'react-refresh/only-export-components': 'warn',
-
-        ...overrides,
       },
     },
   ];

@@ -4,7 +4,6 @@ import { interopDefault, renameRules } from '../utils';
 
 export async function typescript(options: Partial<TypescriptOptions> = {}): Promise<TypedFlatConfigItem[]> {
   const {
-    overrides = {},
     parserOptions = {},
     componentExts = [],
   } = options;
@@ -94,7 +93,6 @@ export async function typescript(options: Partial<TypescriptOptions> = {}): Prom
         'ts/no-wrapper-object-types': 'error',
         'ts/triple-slash-reference': 'off',
         'ts/unified-signatures': 'off',
-        ...overrides,
       },
     },
   ];
