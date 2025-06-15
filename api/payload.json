@@ -53,7 +53,8 @@
         "**/pnpm-lock.yaml",
         "**/node_modules",
         "**/dist",
-        "**/.eslintcache"
+        "**/.eslintcache",
+        "src/typegen.d.ts"
       ],
       "index": 4
     },
@@ -18177,6 +18178,19 @@
       ]
     },
     {
+      "filepath": "scripts/typegen.ts",
+      "globs": [
+        "scripts/**/*.?([cm])[jt]s?(x)",
+        "**/*.?([cm])ts"
+      ],
+      "configs": [
+        7,
+        26,
+        28,
+        29
+      ]
+    },
+    {
       "filepath": "src/cli/constants.ts",
       "globs": [
         "**/*.?([cm])ts"
@@ -18486,7 +18500,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1746044608554,
+    "lastUpdate": 1749996554531,
     "basePath": "",
     "configPath": ""
   }
