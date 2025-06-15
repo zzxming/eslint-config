@@ -23,7 +23,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
+    "build": "pnpm type && unbuild",
     "dev": "npx @eslint/config-inspector --config eslint.config.js",
     "build:inspector": "pnpm build && npx @eslint/config-inspector build --base /eslint-config",
     "lint": "eslint . --cache",
