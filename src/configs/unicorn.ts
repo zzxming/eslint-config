@@ -1,5 +1,5 @@
 import type { TypedFlatConfigItem, UnicornOptions } from '../types';
-import { pluginUnicorn } from '../plugins';
+import pluginUnicorn from 'eslint-plugin-unicorn';
 
 export function unicorn(_options: Partial<UnicornOptions> = {}): TypedFlatConfigItem[] {
   return [

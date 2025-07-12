@@ -1,7 +1,7 @@
 import type { JavascriptOptions, TypedFlatConfigItem } from '../types';
+import pluginUnusedImports from 'eslint-plugin-unused-imports';
 import globals from 'globals';
 import { GLOB_SRC, GLOB_SRC_EXT } from '../contants';
-import { pluginUnusedImports } from '../plugins';
 
 export function javascript(_options: Partial<JavascriptOptions> = {}): TypedFlatConfigItem[] {
   return [
