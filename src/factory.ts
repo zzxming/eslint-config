@@ -70,10 +70,12 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
     rules.push(jsx());
   }
   if (enableTypeScript) {
-    rules.push(typescript({
-      ...getSubOptions(options, 'typescript'),
-      componentExts,
-    }));
+    rules.push(
+      typescript({
+        ...getSubOptions(options, 'typescript'),
+        componentExts,
+      }),
+    );
   }
   if (enableVue) {
     rules.push(

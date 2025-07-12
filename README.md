@@ -6,103 +6,52 @@
 
 ## Javascript rules
 
-already use plugin [`eslint-plugin-unused-imports`](https://www.npmjs.com/package/eslint-plugin-unused-imports). please see official docs to config rules.
-
-| plugin name                    | rename           |
-| ------------------------------ | ---------------- |
-| `eslint-plugin-unused-imports` | `unused-imports` |
+| plugin name                    | rename           | link                                                              |
+| ------------------------------ | ---------------- | ----------------------------------------------------------------- |
+| `eslint-plugin-unused-imports` | `unused-imports` | [doc](https://www.npmjs.com/package/eslint-plugin-unused-imports) |
+| `eslint-plugin-import-x`       | `import`         | [doc](https://github.com/un-ts/eslint-plugin-import-x)            |
+| `eslint-plugin-perfectionist`  | `perfectionist`  | [doc](https://github.com/azat-io/eslint-plugin-perfectionist)     |
+| `eslint-plugin-unicorn`        | `unicorn`        | [doc](https://www.npmjs.com/package/eslint-plugin-unicorn)        |
 
 ## Typescript rules
 
-already use plugin [`@typescript-eslint/eslint-plugin`](https://typescript-eslint.io/). please see official docs to config rules.
-
-| plugin name                        | rename |
-| ---------------------------------- | ------ |
-| `@typescript-eslint/eslint-plugin` | `ts`   |
+| plugin name                        | rename | link                                 |
+| ---------------------------------- | ------ | ------------------------------------ |
+| `@typescript-eslint/eslint-plugin` | `ts`   | [doc](https://typescript-eslint.io/) |
 
 ## Vue rules
 
-already use plugin [`eslint-plugin-vue`](https://eslint.vuejs.org/). please see official docs to config rules.
-
-here is the rules plugin name:
-
-| plugin name         | rename |
-| ------------------- | ------ |
-| `eslint-plugin-vue` | `vue`  |
+| plugin name         | rename | link                             |
+| ------------------- | ------ | -------------------------------- |
+| `eslint-plugin-vue` | `vue`  | [doc](https://eslint.vuejs.org/) |
 
 ## React rules
 
-already use plugin [`@eslint-react/eslint-plugin`](https://eslint-react.xyz/)、[`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks)、[`eslint-plugin-react-refresh`](https://www.npmjs.com/package/eslint-plugin-react-refresh). please see official docs to config rules.
-
-here is the rules plugin name:
-
-| plugin name                       | rename                    |
-| --------------------------------- | ------------------------- |
-| `@eslint-react`                   | `react`                   |
+| plugin name                       | rename                    | link                                                              |
+| --------------------------------- | ------------------------- | ----------------------------------------------------------------- |
+| `@eslint-react`                   | `react`                   | [doc](https://eslint-react.xyz/docs/rules/overview)               |
 | `@eslint-react/dom`               | `react-dom`               |
 | `@eslint-react/hooks-extra`       | `react-hooks-extra`       |
 | `@eslint-react/naming-convention` | `react-naming-convention` |
-| `eslint-plugin-react-hooks`       | `react-hooks`             |
-| `eslint-plugin-react-refresh`     | `react-refresh`           |
-
-## Json rules
-
-already use plugin [`eslint-plugin-jsonc`](https://www.npmjs.com/package/eslint-plugin-jsonc). please see official docs to config rules.
-
-| plugin name           | rename  |
-| --------------------- | ------- |
-| `eslint-plugin-jsonc` | `jsonc` |
-
-## Markdown rules
-
-already use plugin [`eslint-plugin-markdown`](https://www.npmjs.com/package/eslint-plugin-markdown). please see official docs to config rules.
-
-| plugin name              | rename     |
-| ------------------------ | ---------- |
-| `eslint-plugin-markdown` | `markdown` |
-
-## Tailwindcss rules
-
-already use plugin [`eslint-plugin-tailwindcss`](https://www.npmjs.com/package/eslint-plugin-tailwindcss). please see official docs to config rules.
-
-| plugin name                 | rename        |
-| --------------------------- | ------------- |
-| `eslint-plugin-tailwindcss` | `tailwindcss` |
-
-## Unicorn rules
-
-already use plugin [`eslint-plugin-unicorn`](https://www.npmjs.com/package/eslint-plugin-unicorn). please see official docs to config rules.
-
-| plugin name             | rename    |
-| ----------------------- | --------- |
-| `eslint-plugin-unicorn` | `unicorn` |
-
-## Yaml rules
-
-already use plugin [`eslint-plugin-yml`](https://www.npmjs.com/package/eslint-plugin-yml). please see official docs to config rules.
-
-| plugin name         | rename |
-| ------------------- | ------ |
-| `eslint-plugin-yml` | `yaml` |
-
-## Vitest rules
-
-already use plugin [`@vitest/eslint-plugin`](https://github.com/vitest-dev/eslint-plugin-vitest). please see official docs to config rules.
-
-| plugin name             | rename   |
-| ----------------------- | -------- |
-| `@vitest/eslint-plugin` | `vitest` |
+| `eslint-plugin-react-hooks`       | `react-hooks`             | [doc](https://www.npmjs.com/package/eslint-plugin-react-hooks)    |
+| `eslint-plugin-react-refresh`     | `react-refresh`           | [doc](https://github.com/ArnaudBarre/eslint-plugin-react-refresh) |
 
 ## Other rules
 
-| plugin name                   | rename          |
-| ----------------------------- | --------------- |
-| `eslint-plugin-antfu`         | `antfu`         |
-| `@stylistic/eslint-plugin`    | `style`         |
-| `eslint-plugin-format`        | `format`        |
-| `eslint-plugin-import-x`      | `import`        |
-| `eslint-plugin-format`        | `format`        |
-| `eslint-plugin-perfectionist` | `perfectionist` |
+| plugin name                 | rename        | link                                                           |
+| --------------------------- | ------------- | -------------------------------------------------------------- |
+| `eslint-plugin-antfu`       | `antfu`       | [doc](https://github.com/antfu/eslint-plugin-antfu)            |
+| `@stylistic/eslint-plugin`  | `style`       | [doc](https://github.com/eslint-stylistic/eslint-stylistic)    |
+| `eslint-plugin-format`      | `format`      | [doc](https://github.com/antfu/eslint-plugin-format)           |
+| `eslint-plugin-jsonc`       | `jsonc`       | [doc](https://www.npmjs.com/package/eslint-plugin-jsonc)       |
+| `eslint-plugin-jsdoc`       | `jsdoc`       | [doc](https://github.com/gajus/eslint-plugin-jsdoc)            |
+| `eslint-plugin-de-morgan`   | `de-morgan`   | [doc](https://github.com/azat-io/eslint-plugin-de-morgan)      |
+| `eslint-plugin-n`           | `node`        | [doc](https://github.com/eslint-community/eslint-plugin-n)     |
+| `eslint-plugin-markdown`    | `markdown`    | [doc](https://www.npmjs.com/package/eslint-plugin-markdown)    |
+| `eslint-plugin-tailwindcss` | `tailwindcss` | [doc](https://www.npmjs.com/package/eslint-plugin-tailwindcss) |
+| `eslint-plugin-yml`         | `yaml`        | [doc](https://www.npmjs.com/package/eslint-plugin-yml)         |
+| `@vitest/eslint-plugin`     | `vitest`      | [doc](https://github.com/vitest-dev/eslint-plugin-vitest)      |
+| `@unocss/eslint-config`     | `unocss`      | [doc](https://unocss.dev/integrations/eslin)                   |
 
 ## factory Arguments
 
@@ -162,6 +111,7 @@ export interface UnocssOptions {
   attributify: boolean;
   strict: boolean;
 }
+export interface DeMorganOptions {}
 export interface OptionsConfig {
   stylistic: boolean | StylisticOptions;
   javascript: boolean | JavascriptOptions;
@@ -178,6 +128,7 @@ export interface OptionsConfig {
   react: boolean | ReactOptions;
   vitest: boolean | VitestOptions;
   unocss: boolean | UnocssOptions;
+  deMorgan: boolean | DeMorganOptions;
   overrides: Linter.Config[];
 }
 ```
