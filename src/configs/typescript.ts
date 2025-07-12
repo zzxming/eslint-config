@@ -1,4 +1,5 @@
 import type { TypedFlatConfigItem, TypescriptOptions } from '../types';
+import process from 'node:process';
 import { GLOB_TS, GLOB_TSX } from '../contants';
 import { interopDefault, renameRules } from '../utils';
 
