@@ -1,6 +1,6 @@
 import type { OptionsConfig, TailwindcssOptions, TypedFlatConfigItem } from './types';
 import { isPackageExists } from 'local-pkg';
-import { deMorgan, formatters, ignore, imports, javascript, jsdoc, jsonc, jsx, markdown, perfectionist, react, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, unocss, vitest, vue, yaml } from './configs';
+import { deMorgan, formatters, ignore, imports, javascript, jsdoc, jsonc, jsx, markdown, node, perfectionist, react, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, unocss, vitest, vue, yaml } from './configs';
 import { ReactPackages, StylisticConfigDefaults, VuePackages } from './contants';
 import { ensurePackages, getOptions, getSubOptions } from './utils';
 
@@ -47,6 +47,7 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
     }),
     perfectionist(),
     jsdoc(),
+    node(),
   );
 
   if (enableVue) {
