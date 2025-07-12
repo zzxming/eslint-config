@@ -1,6 +1,6 @@
 import type { OptionsConfig, TailwindcssOptions, TypedFlatConfigItem } from './types';
 import { isPackageExists } from 'local-pkg';
-import { formatters, ignore, imports, javascript, jsonc, jsx, markdown, perfectionist, react, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, unocss, vitest, vue, yaml } from './configs';
+import { deMorgan, formatters, ignore, imports, javascript, jsonc, jsx, markdown, perfectionist, react, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, unocss, vitest, vue, yaml } from './configs';
 import { ReactPackages, StylisticConfigDefaults, VuePackages } from './contants';
 import { ensurePackages, getOptions, getSubOptions } from './utils';
 
@@ -18,6 +18,7 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
     yaml: enableYaml = true,
     tailwindcss: enableTailwindcss = false,
     unocss: enableUnocss = false,
+    deMorgan: enableDeMorgan = true,
     overrides = [],
   } = options;
 
@@ -115,6 +116,13 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
     rules.push(
       unocss({
         ...getSubOptions(options, 'unocss'),
+      }),
+    );
+  }
+  if (enableDeMorgan) {
+    rules.push(
+      deMorgan({
+        ...getSubOptions(options, 'deMorgan'),
       }),
     );
   }

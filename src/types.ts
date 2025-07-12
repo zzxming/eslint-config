@@ -55,6 +55,7 @@ export interface UnocssOptions {
   attributify: boolean;
   strict: boolean;
 }
+export interface DeMorganOptions {}
 export interface OptionsConfig {
   stylistic: boolean | StylisticOptions;
   javascript: boolean | JavascriptOptions;
@@ -71,5 +72,6 @@ export interface OptionsConfig {
   react: boolean | ReactOptions;
   vitest: boolean | VitestOptions;
   unocss: boolean | UnocssOptions;
+  deMorgan: boolean | DeMorganOptions;
   overrides: Linter.Config[];
 }
