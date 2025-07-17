@@ -27,6 +27,7 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
   const stylisticOptions = getOptions(options.stylistic, StylisticConfigDefaults);
 
   await ensurePackages([
+    'format',
     ...enableVue ? ['vue'] : [],
     ...enableVitest ? ['vitest'] : [],
     ...enableReact ? ['react'] : [],
