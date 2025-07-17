@@ -1,17 +1,16 @@
 import type { FormmatterOptions, TypedFlatConfigItem } from '../types';
 import pluginFormat from 'eslint-plugin-format';
-import { isPackageExists } from 'local-pkg';
 import { GLOB_CSS, GLOB_HTML, GLOB_LESS, GLOB_MARKDOWN, GLOB_POSTCSS, GLOB_SCSS, GLOB_SVG, GLOB_XML, StylisticConfigDefaults } from '../contants';
-import { parserPlain } from '../utils';
+import { interopDefault, parserPlain } from '../utils';
 
-export function formatters(options: Partial<FormmatterOptions> = {}): TypedFlatConfigItem[] {
-  const isPrettierPluginXml = isPackageExists('@prettier/plugin-xml');
+export async function formatters(options: Partial<FormmatterOptions> = {}): Promise<TypedFlatConfigItem[]> {
+  const prettierPluginXml = await interopDefault(import('@prettier/plugin-xml'));
   const {
     css = true,
     html = true,
     markdown = true,
-    xml = isPrettierPluginXml,
-    svg = isPrettierPluginXml,
+    xml = !!prettierPluginXml,
+    svg = !!prettierPluginXml,
     stylistic = {},
   } = options;
 
