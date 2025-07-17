@@ -4,6 +4,7 @@ import prompts from 'prompts';
 
 export async function ensurePackages(pkgs: string[]) {
   const requiredPkgs: Record<string, string[]> = {
+    format: ['@prettier/plugin-xml'],
     react: [
       '@eslint-react/eslint-plugin',
       'eslint-plugin-react-hooks',
