@@ -3361,7 +3361,7 @@
         "parser": "parser-plain"
       },
       "name": "markdown/parser",
-      "processor": "merged-processor:eslint-plugin-markdown/markdown+pass-through",
+      "processor": "merged-processor:@eslint/markdown/markdown+pass-through",
       "index": 36
     },
     {
@@ -18839,6 +18839,237 @@
       "name": "vue/valid-v-text",
       "plugin": "vue"
     },
+    "markdown/fenced-code-language": {
+      "type": "problem",
+      "docs": {
+        "recommended": true,
+        "description": "Require languages for fenced code blocks",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/fenced-code-language.md"
+      },
+      "defaultOptions": [
+        {
+          "required": []
+        }
+      ],
+      "name": "markdown/fenced-code-language",
+      "plugin": "markdown"
+    },
+    "markdown/heading-increment": {
+      "type": "problem",
+      "docs": {
+        "recommended": true,
+        "description": "Enforce heading levels increment by one",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/heading-increment.md"
+      },
+      "name": "markdown/heading-increment",
+      "plugin": "markdown"
+    },
+    "markdown/no-bare-urls": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow bare URLs",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/no-bare-urls.md"
+      },
+      "fixable": "code",
+      "name": "markdown/no-bare-urls",
+      "plugin": "markdown"
+    },
+    "markdown/no-duplicate-definitions": {
+      "type": "problem",
+      "docs": {
+        "recommended": true,
+        "description": "Disallow duplicate definitions",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/no-duplicate-definitions.md"
+      },
+      "defaultOptions": [
+        {
+          "allowDefinitions": [
+            "//"
+          ],
+          "allowFootnoteDefinitions": []
+        }
+      ],
+      "name": "markdown/no-duplicate-definitions",
+      "plugin": "markdown"
+    },
+    "markdown/no-duplicate-headings": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow duplicate headings in the same document",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/no-duplicate-headings.md"
+      },
+      "defaultOptions": [
+        {
+          "checkSiblingsOnly": false
+        }
+      ],
+      "name": "markdown/no-duplicate-headings",
+      "plugin": "markdown"
+    },
+    "markdown/no-empty-definitions": {
+      "type": "problem",
+      "docs": {
+        "recommended": true,
+        "description": "Disallow empty definitions",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/no-empty-definitions.md"
+      },
+      "defaultOptions": [
+        {
+          "allowDefinitions": [
+            "//"
+          ],
+          "allowFootnoteDefinitions": [],
+          "checkFootnoteDefinitions": true
+        }
+      ],
+      "name": "markdown/no-empty-definitions",
+      "plugin": "markdown"
+    },
+    "markdown/no-empty-images": {
+      "type": "problem",
+      "docs": {
+        "recommended": true,
+        "description": "Disallow empty images",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/no-empty-images.md"
+      },
+      "name": "markdown/no-empty-images",
+      "plugin": "markdown"
+    },
+    "markdown/no-empty-links": {
+      "type": "problem",
+      "docs": {
+        "recommended": true,
+        "description": "Disallow empty links",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/no-empty-links.md"
+      },
+      "name": "markdown/no-empty-links",
+      "plugin": "markdown"
+    },
+    "markdown/no-html": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow HTML tags",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/no-html.md"
+      },
+      "defaultOptions": [
+        {
+          "allowed": []
+        }
+      ],
+      "name": "markdown/no-html",
+      "plugin": "markdown"
+    },
+    "markdown/no-invalid-label-refs": {
+      "type": "problem",
+      "docs": {
+        "recommended": true,
+        "description": "Disallow invalid label references",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/no-invalid-label-refs.md"
+      },
+      "name": "markdown/no-invalid-label-refs",
+      "plugin": "markdown"
+    },
+    "markdown/no-missing-atx-heading-space": {
+      "type": "problem",
+      "docs": {
+        "recommended": true,
+        "description": "Disallow headings without a space after the hash characters",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/no-missing-atx-heading-space.md"
+      },
+      "fixable": "whitespace",
+      "name": "markdown/no-missing-atx-heading-space",
+      "plugin": "markdown"
+    },
+    "markdown/no-missing-label-refs": {
+      "type": "problem",
+      "docs": {
+        "recommended": true,
+        "description": "Disallow missing label references",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/no-missing-label-refs.md"
+      },
+      "name": "markdown/no-missing-label-refs",
+      "plugin": "markdown"
+    },
+    "markdown/no-missing-link-fragments": {
+      "type": "problem",
+      "docs": {
+        "recommended": true,
+        "description": "Disallow link fragments that do not reference valid headings",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/no-missing-link-fragments.md"
+      },
+      "defaultOptions": [
+        {
+          "ignoreCase": true,
+          "allowPattern": ""
+        }
+      ],
+      "name": "markdown/no-missing-link-fragments",
+      "plugin": "markdown"
+    },
+    "markdown/no-multiple-h1": {
+      "type": "problem",
+      "docs": {
+        "recommended": true,
+        "description": "Disallow multiple H1 headings in the same document",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/no-multiple-h1.md"
+      },
+      "defaultOptions": [
+        {
+          "frontmatterTitle": "^(?!\\s*['\"]title[:=]['\"])\\s*\\{?\\s*['\"]?title['\"]?\\s*[:=]"
+        }
+      ],
+      "name": "markdown/no-multiple-h1",
+      "plugin": "markdown"
+    },
+    "markdown/no-reversed-media-syntax": {
+      "type": "problem",
+      "docs": {
+        "recommended": true,
+        "description": "Disallow reversed link and image syntax",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/no-reversed-media-syntax.md"
+      },
+      "fixable": "code",
+      "name": "markdown/no-reversed-media-syntax",
+      "plugin": "markdown"
+    },
+    "markdown/no-unused-definitions": {
+      "type": "problem",
+      "docs": {
+        "recommended": true,
+        "description": "Disallow unused definitions",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/no-unused-definitions.md"
+      },
+      "defaultOptions": [
+        {
+          "allowDefinitions": [
+            "//"
+          ],
+          "allowFootnoteDefinitions": []
+        }
+      ],
+      "name": "markdown/no-unused-definitions",
+      "plugin": "markdown"
+    },
+    "markdown/require-alt-text": {
+      "type": "problem",
+      "docs": {
+        "recommended": true,
+        "description": "Require alternative text for images",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/require-alt-text.md"
+      },
+      "name": "markdown/require-alt-text",
+      "plugin": "markdown"
+    },
+    "markdown/table-column-count": {
+      "type": "problem",
+      "docs": {
+        "recommended": true,
+        "description": "Disallow data rows in a GitHub Flavored Markdown table from having more cells than the header row",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/table-column-count.md"
+      },
+      "name": "markdown/table-column-count",
+      "plugin": "markdown"
+    },
     "yaml/block-mapping-colon-indicator-newline": {
       "docs": {
         "description": "enforce consistent line breaks after `:` indicator",
@@ -19723,17 +19954,6 @@
       ]
     },
     {
-      "filepath": "src/plugins.ts",
-      "globs": [
-        "**/*.?([cm])ts"
-      ],
-      "configs": [
-        28,
-        30,
-        31
-      ]
-    },
-    {
       "filepath": "src/types.ts",
       "globs": [
         "**/*.?([cm])ts"
@@ -19768,7 +19988,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1752331445913,
+    "lastUpdate": 1752759094626,
     "basePath": "",
     "configPath": ""
   }
