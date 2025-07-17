@@ -1,7 +1,7 @@
 import type { MarkdownOptions, TypedFlatConfigItem } from '../types';
+import pluginMarkdown from '@eslint/markdown';
 import { mergeProcessors, processorPassThrough } from 'eslint-merge-processors';
 import { GLOB_MARKDOWN, GLOB_MARKDOWN_CODE } from '../contants';
-import { pluginMarkdown } from '../plugins';
 import { parserPlain } from '../utils';
 
 export function markdown(options: Partial<MarkdownOptions> = {}): TypedFlatConfigItem[] {
