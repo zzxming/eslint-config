@@ -3404,11 +3404,67 @@
       "index": 37
     },
     {
+      "name": "markdown/preferences/setup",
+      "plugins": {
+        "markdown-preferences": {}
+      },
+      "index": 38
+    },
+    {
+      "name": "markdown/preferences/rules",
+      "rules": {
+        "markdown-preferences/canonical-code-block-language": "error",
+        "markdown-preferences/emoji-notation": [
+          "error",
+          {
+            "prefer": "unicode"
+          }
+        ],
+        "markdown-preferences/heading-casing": [
+          "error",
+          {
+            "style": "Title Case"
+          }
+        ],
+        "markdown-preferences/ordered-list-marker-start": [
+          "error",
+          {
+            "start": 1
+          }
+        ],
+        "markdown-preferences/table-header-casing": [
+          "error",
+          {
+            "style": "Title Case"
+          }
+        ],
+        "markdown-preferences/atx-headings-closing-sequence": [
+          "error",
+          {
+            "closingSequence": "never"
+          }
+        ],
+        "markdown-preferences/blockquote-marker-alignment": "error",
+        "markdown-preferences/hard-linebreak-style": [
+          "error",
+          {
+            "style": "backslash"
+          }
+        ],
+        "markdown-preferences/no-text-backslash-linebreak": "off",
+        "markdown-preferences/list-marker-alignment": "error",
+        "markdown-preferences/no-laziness-blockquotes": "error",
+        "markdown-preferences/no-trailing-spaces": "error",
+        "markdown-preferences/ordered-list-marker-sequence": "error"
+      },
+      "index": 39
+    },
+    {
       "name": "yaml/setup",
       "plugins": {
         "yaml": {}
       },
-      "index": 38
+      "index": 40
     },
     {
       "files": [
@@ -3448,7 +3504,7 @@
         ],
         "yaml/spaced-comment": "error"
       },
-      "index": 39
+      "index": 41
     },
     {
       "name": "de-morgan/rules",
@@ -3459,7 +3515,7 @@
         "de-morgan/no-negated-conjunction": "off",
         "de-morgan/no-negated-disjunction": "off"
       },
-      "index": 40
+      "index": 42
     }
   ],
   "rules": {
@@ -19070,6 +19126,347 @@
       "name": "markdown/table-column-count",
       "plugin": "markdown"
     },
+    "markdown-preferences/atx-headings-closing-sequence-length": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce consistent length for the closing sequence (trailing #s) in ATX headings.",
+        "categories": [],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/atx-headings-closing-sequence-length.html",
+        "ruleId": "markdown-preferences/atx-headings-closing-sequence-length",
+        "ruleName": "atx-headings-closing-sequence-length"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/atx-headings-closing-sequence-length",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/atx-headings-closing-sequence": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce consistent use of closing sequence in ATX headings.",
+        "categories": [],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/atx-headings-closing-sequence.html",
+        "ruleId": "markdown-preferences/atx-headings-closing-sequence",
+        "ruleName": "atx-headings-closing-sequence"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/atx-headings-closing-sequence",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/blockquote-marker-alignment": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce consistent alignment of blockquote markers",
+        "categories": [
+          "recommended"
+        ],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/blockquote-marker-alignment.html",
+        "ruleId": "markdown-preferences/blockquote-marker-alignment",
+        "ruleName": "blockquote-marker-alignment"
+      },
+      "fixable": "whitespace",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/blockquote-marker-alignment",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/canonical-code-block-language": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce canonical language names in code blocks",
+        "categories": [],
+        "listCategory": "Preference",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/canonical-code-block-language.html",
+        "ruleId": "markdown-preferences/canonical-code-block-language",
+        "ruleName": "canonical-code-block-language"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/canonical-code-block-language",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/definitions-last": {
+      "type": "layout",
+      "docs": {
+        "description": "require link definitions and footnote definitions to be placed at the end of the document",
+        "categories": [],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/definitions-last.html",
+        "ruleId": "markdown-preferences/definitions-last",
+        "ruleName": "definitions-last"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/definitions-last",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/emoji-notation": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce consistent emoji notation style in Markdown files.",
+        "categories": [],
+        "listCategory": "Preference",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/emoji-notation.html",
+        "ruleId": "markdown-preferences/emoji-notation",
+        "ruleName": "emoji-notation"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/emoji-notation",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/hard-linebreak-style": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce consistent hard linebreak style.",
+        "categories": [
+          "recommended"
+        ],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/hard-linebreak-style.html",
+        "ruleId": "markdown-preferences/hard-linebreak-style",
+        "ruleName": "hard-linebreak-style"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/hard-linebreak-style",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/heading-casing": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce consistent casing in headings.",
+        "categories": [],
+        "listCategory": "Preference",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/heading-casing.html",
+        "ruleId": "markdown-preferences/heading-casing",
+        "ruleName": "heading-casing"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/heading-casing",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/list-marker-alignment": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce consistent alignment of list markers",
+        "categories": [
+          "recommended"
+        ],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/list-marker-alignment.html",
+        "ruleId": "markdown-preferences/list-marker-alignment",
+        "ruleName": "list-marker-alignment"
+      },
+      "fixable": "whitespace",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/list-marker-alignment",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/no-laziness-blockquotes": {
+      "type": "problem",
+      "docs": {
+        "description": "disallow laziness in blockquotes",
+        "categories": [
+          "recommended"
+        ],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/no-laziness-blockquotes.html",
+        "ruleId": "markdown-preferences/no-laziness-blockquotes",
+        "ruleName": "no-laziness-blockquotes"
+      },
+      "hasSuggestions": true,
+      "name": "markdown-preferences/no-laziness-blockquotes",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/no-multiple-empty-lines": {
+      "type": "layout",
+      "docs": {
+        "description": "disallow multiple empty lines in Markdown files.",
+        "categories": null,
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/no-multiple-empty-lines.html",
+        "ruleId": "markdown-preferences/no-multiple-empty-lines",
+        "ruleName": "no-multiple-empty-lines"
+      },
+      "fixable": "whitespace",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/no-multiple-empty-lines",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/no-text-backslash-linebreak": {
+      "type": "layout",
+      "docs": {
+        "description": "disallow text backslash at the end of a line.",
+        "categories": [
+          "recommended"
+        ],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/no-text-backslash-linebreak.html",
+        "ruleId": "markdown-preferences/no-text-backslash-linebreak",
+        "ruleName": "no-text-backslash-linebreak"
+      },
+      "hasSuggestions": true,
+      "name": "markdown-preferences/no-text-backslash-linebreak",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/no-trailing-spaces": {
+      "type": "layout",
+      "docs": {
+        "description": "disallow trailing whitespace at the end of lines in Markdown files.",
+        "categories": [],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/no-trailing-spaces.html",
+        "ruleId": "markdown-preferences/no-trailing-spaces",
+        "ruleName": "no-trailing-spaces"
+      },
+      "fixable": "whitespace",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/no-trailing-spaces",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/ordered-list-marker-sequence": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce that ordered list markers use sequential numbers",
+        "categories": [],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/ordered-list-marker-sequence.html",
+        "ruleId": "markdown-preferences/ordered-list-marker-sequence",
+        "ruleName": "ordered-list-marker-sequence"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "markdown-preferences/ordered-list-marker-sequence",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/ordered-list-marker-start": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce that ordered list markers start with 1 or 0",
+        "categories": [],
+        "listCategory": "Preference",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/ordered-list-marker-start.html",
+        "ruleId": "markdown-preferences/ordered-list-marker-start",
+        "ruleName": "ordered-list-marker-start"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "markdown-preferences/ordered-list-marker-start",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/prefer-autolinks": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce the use of autolinks for URLs",
+        "categories": [
+          "recommended"
+        ],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/prefer-autolinks.html",
+        "ruleId": "markdown-preferences/prefer-autolinks",
+        "ruleName": "prefer-autolinks"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/prefer-autolinks",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/prefer-fenced-code-blocks": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce the use of fenced code blocks over indented code blocks",
+        "categories": [
+          "recommended"
+        ],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/prefer-fenced-code-blocks.html",
+        "ruleId": "markdown-preferences/prefer-fenced-code-blocks",
+        "ruleName": "prefer-fenced-code-blocks"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/prefer-fenced-code-blocks",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/prefer-inline-code-words": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce the use of inline code for specific words.",
+        "categories": [],
+        "listCategory": "Preference",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/prefer-inline-code-words.html",
+        "ruleId": "markdown-preferences/prefer-inline-code-words",
+        "ruleName": "prefer-inline-code-words"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/prefer-inline-code-words",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/prefer-link-reference-definitions": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce using link reference definitions instead of inline links",
+        "categories": [],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/prefer-link-reference-definitions.html",
+        "ruleId": "markdown-preferences/prefer-link-reference-definitions",
+        "ruleName": "prefer-link-reference-definitions"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/prefer-link-reference-definitions",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/prefer-linked-words": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce the specified word to be a link.",
+        "categories": [],
+        "listCategory": "Preference",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/prefer-linked-words.html",
+        "ruleId": "markdown-preferences/prefer-linked-words",
+        "ruleName": "prefer-linked-words"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/prefer-linked-words",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/sort-definitions": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce a specific order for link definitions and footnote definitions",
+        "categories": [],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/sort-definitions.html",
+        "ruleId": "markdown-preferences/sort-definitions",
+        "ruleName": "sort-definitions"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/sort-definitions",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/table-header-casing": {
+      "type": "suggestion",
+      "fixable": "code",
+      "docs": {
+        "description": "enforce consistent casing in table header cells.",
+        "categories": [],
+        "listCategory": "Preference",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/table-header-casing.html",
+        "ruleId": "markdown-preferences/table-header-casing",
+        "ruleName": "table-header-casing"
+      },
+      "name": "markdown-preferences/table-header-casing",
+      "plugin": "markdown-preferences"
+    },
     "yaml/block-mapping-colon-indicator-newline": {
       "docs": {
         "description": "enforce consistent line breaks after `:` indicator",
@@ -19559,7 +19956,7 @@
         "**/*.y?(a)ml"
       ],
       "configs": [
-        39
+        41
       ]
     },
     {
@@ -19568,7 +19965,7 @@
         "**/*.y?(a)ml"
       ],
       "configs": [
-        39
+        41
       ]
     },
     {
@@ -19577,7 +19974,7 @@
         "**/*.y?(a)ml"
       ],
       "configs": [
-        39
+        41
       ]
     },
     {
@@ -19988,7 +20385,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1752760272762,
+    "lastUpdate": 1755960517120,
     "basePath": "",
     "configPath": ""
   }
