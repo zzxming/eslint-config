@@ -1814,7 +1814,7 @@
           "error",
           "single",
           {
-            "allowTemplateLiterals": true,
+            "allowTemplateLiterals": "always",
             "avoidEscape": false
           }
         ],
@@ -3004,10 +3004,10 @@
             ".vue"
           ],
           "parser": {
-            "version": "8.35.1",
+            "version": "8.40.0",
             "meta": {
               "name": "typescript-eslint/parser",
-              "version": "8.35.1"
+              "version": "8.40.0"
             }
           },
           "sourceType": "module"
@@ -3312,7 +3312,7 @@
         "vue/object-property-newline": [
           "error",
           {
-            "allowMultiplePropertiesPerLine": true
+            "allowAllPropertiesOnSameLine": true
           }
         ],
         "vue/operator-linebreak": [
@@ -14989,6 +14989,7 @@
       "type": "suggestion",
       "docs": {
         "description": "Disallow conversion idioms when they do not change the type or value of the expression",
+        "recommended": "strict",
         "requiresTypeChecking": true,
         "url": "https://typescript-eslint.io/rules/no-unnecessary-type-conversion"
       },
@@ -17136,6 +17137,33 @@
       "name": "vue/no-mutating-props",
       "plugin": "vue"
     },
+    "vue/no-negated-condition": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow negated conditions in `<template>`",
+        "recommended": false,
+        "frozen": true,
+        "url": "https://eslint.vuejs.org/rules/no-negated-condition.html",
+        "category": null,
+        "extensionSource": {
+          "url": "https://eslint.org/docs/latest/rules/no-negated-condition",
+          "name": "ESLint core"
+        }
+      },
+      "name": "vue/no-negated-condition",
+      "plugin": "vue"
+    },
+    "vue/no-negated-v-if-condition": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow negated conditions in v-if/v-else",
+        "url": "https://eslint.vuejs.org/rules/no-negated-v-if-condition.html"
+      },
+      "fixable": null,
+      "hasSuggestions": true,
+      "name": "vue/no-negated-v-if-condition",
+      "plugin": "vue"
+    },
     "vue/no-parsing-error": {
       "type": "problem",
       "docs": {
@@ -18917,6 +18945,11 @@
         "description": "Enforce heading levels increment by one",
         "url": "https://github.com/eslint/markdown/blob/main/docs/rules/heading-increment.md"
       },
+      "defaultOptions": [
+        {
+          "frontmatterTitle": "^(?!\\s*['\"]title[:=]['\"])\\s*\\{?\\s*['\"]?title['\"]?\\s*[:=]"
+        }
+      ],
       "name": "markdown/heading-increment",
       "plugin": "markdown"
     },
@@ -19009,7 +19042,8 @@
       },
       "defaultOptions": [
         {
-          "allowed": []
+          "allowed": [],
+          "allowedIgnoreCase": false
         }
       ],
       "name": "markdown/no-html",
@@ -19033,6 +19067,11 @@
         "url": "https://github.com/eslint/markdown/blob/main/docs/rules/no-missing-atx-heading-space.md"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "checkClosedHeadings": false
+        }
+      ],
       "name": "markdown/no-missing-atx-heading-space",
       "plugin": "markdown"
     },
@@ -19088,6 +19127,22 @@
       "name": "markdown/no-reversed-media-syntax",
       "plugin": "markdown"
     },
+    "markdown/no-space-in-emphasis": {
+      "type": "problem",
+      "docs": {
+        "recommended": true,
+        "description": "Disallow spaces around emphasis markers",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/no-space-in-emphasis.md"
+      },
+      "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "checkStrikethrough": false
+        }
+      ],
+      "name": "markdown/no-space-in-emphasis",
+      "plugin": "markdown"
+    },
     "markdown/no-unused-definitions": {
       "type": "problem",
       "docs": {
@@ -19123,6 +19178,11 @@
         "description": "Disallow data rows in a GitHub Flavored Markdown table from having more cells than the header row",
         "url": "https://github.com/eslint/markdown/blob/main/docs/rules/table-column-count.md"
       },
+      "defaultOptions": [
+        {
+          "checkMissingCells": false
+        }
+      ],
       "name": "markdown/table-column-count",
       "plugin": "markdown"
     },
@@ -20373,6 +20433,16 @@
       ]
     },
     {
+      "filepath": "todo.md",
+      "globs": [
+        "**/*.md"
+      ],
+      "configs": [
+        18,
+        36
+      ]
+    },
+    {
       "filepath": "tsconfig.json",
       "globs": [
         "**/*.json",
@@ -20385,7 +20455,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1755960517120,
+    "lastUpdate": 1755962275487,
     "basePath": "",
     "configPath": ""
   }
