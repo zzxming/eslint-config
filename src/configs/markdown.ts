@@ -1,6 +1,7 @@
 import type { MarkdownOptions, TypedFlatConfigItem } from '../types';
 import pluginMarkdown from '@eslint/markdown';
 import { mergeProcessors, processorPassThrough } from 'eslint-merge-processors';
+import pluginMarkdownPreferences from 'eslint-plugin-markdown-preferences';
 import { GLOB_MARKDOWN, GLOB_MARKDOWN_CODE } from '../contants';
 import { parserPlain } from '../utils';
 
@@ -64,6 +65,30 @@ export function markdown(options: Partial<MarkdownOptions> = {}): TypedFlatConfi
         'ts/no-var-requires': 'off',
         'unused-imports/no-unused-imports': 'off',
         'unused-imports/no-unused-vars': 'off',
+      },
+    },
+    {
+      name: 'markdown/preferences/setup',
+      plugins: {
+        'markdown-preferences': pluginMarkdownPreferences,
+      },
+    },
+    {
+      name: 'markdown/preferences/rules',
+      rules: {
+        'markdown-preferences/canonical-code-block-language': 'error',
+        'markdown-preferences/emoji-notation': ['error', { prefer: 'unicode' }],
+        'markdown-preferences/heading-casing': ['error', { style: 'Title Case' }],
+        'markdown-preferences/ordered-list-marker-start': ['error', { start: 1 }],
+        'markdown-preferences/table-header-casing': ['error', { style: 'Title Case' }],
+        'markdown-preferences/atx-headings-closing-sequence': ['error', { closingSequence: 'never' }],
+        'markdown-preferences/blockquote-marker-alignment': 'error',
+        'markdown-preferences/hard-linebreak-style': ['error', { style: 'backslash' }],
+        'markdown-preferences/no-text-backslash-linebreak': 'off',
+        'markdown-preferences/list-marker-alignment': 'error',
+        'markdown-preferences/no-laziness-blockquotes': 'error',
+        'markdown-preferences/no-trailing-spaces': 'error',
+        'markdown-preferences/ordered-list-marker-sequence': 'error',
       },
     },
   ];

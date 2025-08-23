@@ -124,6 +124,7 @@
     "@types/node": "^22.16.0",
     "@types/prompts": "^2.4.9",
     "eslint": "9.24.0",
+    "eslint-plugin-markdown-preferences": "^0.15.0",
     "eslint-typegen": "^2.2.1",
     "globals": "^16.3.0",
     "lint-staged": "^16.1.2",

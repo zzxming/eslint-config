@@ -38,20 +38,21 @@
 
 ## Other rules
 
-| plugin name                 | rename        | link                                                           |
-| --------------------------- | ------------- | -------------------------------------------------------------- |
-| `eslint-plugin-antfu`       | `antfu`       | [doc](https://github.com/antfu/eslint-plugin-antfu)            |
-| `@stylistic/eslint-plugin`  | `style`       | [doc](https://github.com/eslint-stylistic/eslint-stylistic)    |
-| `eslint-plugin-format`      | `format`      | [doc](https://github.com/antfu/eslint-plugin-format)           |
-| `eslint-plugin-jsonc`       | `jsonc`       | [doc](https://www.npmjs.com/package/eslint-plugin-jsonc)       |
-| `eslint-plugin-jsdoc`       | `jsdoc`       | [doc](https://github.com/gajus/eslint-plugin-jsdoc)            |
-| `eslint-plugin-de-morgan`   | `de-morgan`   | [doc](https://github.com/azat-io/eslint-plugin-de-morgan)      |
-| `eslint-plugin-n`           | `node`        | [doc](https://github.com/eslint-community/eslint-plugin-n)     |
-| `eslint-plugin-markdown`    | `markdown`    | [doc](https://www.npmjs.com/package/eslint-plugin-markdown)    |
-| `eslint-plugin-tailwindcss` | `tailwindcss` | [doc](https://www.npmjs.com/package/eslint-plugin-tailwindcss) |
-| `eslint-plugin-yml`         | `yaml`        | [doc](https://www.npmjs.com/package/eslint-plugin-yml)         |
-| `@vitest/eslint-plugin`     | `vitest`      | [doc](https://github.com/vitest-dev/eslint-plugin-vitest)      |
-| `@unocss/eslint-config`     | `unocss`      | [doc](https://unocss.dev/integrations/eslin)                   |
+| plugin name                          | rename                 | link                                                                   |
+| ------------------------------------ | ---------------------- | ---------------------------------------------------------------------- |
+| `eslint-plugin-antfu`                | `antfu`                | [doc](https://github.com/antfu/eslint-plugin-antfu)                    |
+| `@stylistic/eslint-plugin`           | `style`                | [doc](https://github.com/eslint-stylistic/eslint-stylistic)            |
+| `eslint-plugin-format`               | `format`               | [doc](https://github.com/antfu/eslint-plugin-format)                   |
+| `eslint-plugin-jsonc`                | `jsonc`                | [doc](https://www.npmjs.com/package/eslint-plugin-jsonc)               |
+| `eslint-plugin-jsdoc`                | `jsdoc`                | [doc](https://github.com/gajus/eslint-plugin-jsdoc)                    |
+| `eslint-plugin-de-morgan`            | `de-morgan`            | [doc](https://github.com/azat-io/eslint-plugin-de-morgan)              |
+| `eslint-plugin-n`                    | `node`                 | [doc](https://github.com/eslint-community/eslint-plugin-n)             |
+| `eslint-plugin-markdown`             | `markdown`             | [doc](https://www.npmjs.com/package/eslint-plugin-markdown)            |
+| `eslint-plugin-markdown-preferences` | `markdown-preferences` | [doc](https://ota-meshi.github.io/eslint-plugin-markdown-preferences/) |
+| `eslint-plugin-tailwindcss`          | `tailwindcss`          | [doc](https://www.npmjs.com/package/eslint-plugin-tailwindcss)         |
+| `eslint-plugin-yml`                  | `yaml`                 | [doc](https://www.npmjs.com/package/eslint-plugin-yml)                 |
+| `@vitest/eslint-plugin`              | `vitest`               | [doc](https://github.com/vitest-dev/eslint-plugin-vitest)              |
+| `@unocss/eslint-config`              | `unocss`               | [doc](https://unocss.dev/integrations/eslin)                           |
 
 ## factory Arguments
 

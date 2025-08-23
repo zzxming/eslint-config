@@ -120,6 +120,9 @@ importers:
       eslint:
         specifier: 9.24.0
         version: 9.24.0(jiti@2.4.2)
+      eslint-plugin-markdown-preferences:
+        specifier: ^0.15.0
+        version: 0.15.0(@eslint/markdown@7.0.0)(eslint@9.24.0(jiti@2.4.2))
       eslint-typegen:
         specifier: ^2.2.1
         version: 2.2.1(eslint@9.24.0(jiti@2.4.2))
@@ -1667,6 +1670,10 @@ packages:
   electron-to-chromium@1.5.145:
     resolution: {integrity: sha512-pZ5EcTWRq/055MvSBgoFEyKf2i4apwfoqJbK/ak2jnFq8oHjZ+vzc3AhRcz37Xn+ZJfL58R666FLJx0YOK9yTw==}
 
+  emoji-regex-xs@2.0.1:
+    resolution: {integrity: sha512-1QFuh8l7LqUcKe24LsPUNzjrzJQ7pgRwp1QMcZ5MX6mFplk2zQ08NVCM84++1cveaUUYtcCYHmeFEuNg16sU4g==}
+    engines: {node: '>=10.0.0'}
+
   emoji-regex@10.4.0:
     resolution: {integrity: sha512-EC+0oUMY1Rqm4O6LLrgjtYDvcVYTy7chDnM4Q7030tP4Kwj3u/pR6gP9ygnp2CJMK5Gq+9Q2oqmrFJAz01DXjw==}
 
@@ -1824,6 +1831,13 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=6.0.0'
+
+  eslint-plugin-markdown-preferences@0.15.0:
+    resolution: {integrity: sha512-x6ZOorUAduRWCVRcXwbOTqoiIrK4Lf041+ylfOjavJ8wraZ+bEhyNPJJPUCt8LRA3YMoOmrMO0N8qI01W82t3Q==}
+    engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0}
+    peerDependencies:
+      '@eslint/markdown': ^7.1.0
+      eslint: '>=9.0.0'
 
   eslint-plugin-n@17.21.0:
     resolution: {integrity: sha512-1+iZ8We4ZlwVMtb/DcHG3y5/bZOdazIpa/4TySo22MLKdwrLcfrX0hbadnCvykSQCCmkAnWmIP8jZVb2AAq29A==}
@@ -4760,6 +4774,8 @@ snapshots:
 
   electron-to-chromium@1.5.145: {}
 
+  emoji-regex-xs@2.0.1: {}
+
   emoji-regex@10.4.0: {}
 
   emoji-regex@8.0.0: {}
@@ -4993,6 +5009,13 @@ snapshots:
       synckit: 0.6.2
     transitivePeerDependencies:
       - '@eslint/json'
+
+  eslint-plugin-markdown-preferences@0.15.0(@eslint/markdown@7.0.0)(eslint@9.24.0(jiti@2.4.2)):
+    dependencies:
+      '@eslint/markdown': 7.0.0
+      emoji-regex-xs: 2.0.1
+      eslint: 9.24.0(jiti@2.4.2)
+      string-width: 7.2.0
 
   eslint-plugin-n@17.21.0(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3):
     dependencies:
