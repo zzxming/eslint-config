@@ -181,7 +181,7 @@ export async function vue(options: Partial<VueOptions> = {}): Promise<TypedFlatC
         'vue/keyword-spacing': ['error', { after: true, before: true }],
         'vue/object-curly-newline': ['error', { consistent: true, multiline: true }],
         'vue/object-curly-spacing': ['error', 'always'],
-        'vue/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
+        'vue/object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
         'vue/operator-linebreak': ['error', 'before'],
         'vue/padding-line-between-blocks': ['error', 'always'],
         'vue/quote-props': ['error', 'consistent-as-needed'],
