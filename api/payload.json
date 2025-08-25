@@ -20433,16 +20433,6 @@
       ]
     },
     {
-      "filepath": "todo.md",
-      "globs": [
-        "**/*.md"
-      ],
-      "configs": [
-        18,
-        36
-      ]
-    },
-    {
       "filepath": "tsconfig.json",
       "globs": [
         "**/*.json",
@@ -20455,7 +20445,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1755962275487,
+    "lastUpdate": 1756088126588,
     "basePath": "",
     "configPath": ""
   }
