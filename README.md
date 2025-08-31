@@ -4,30 +4,30 @@
 
 > After install and config. Please run once `eslint .` to install required config rules.
 
-## Javascript rules
+## JavaScript Rules
 
-| plugin name                    | rename           | link                                                              |
+| Plugin Name                    | Rename           | Link                                                              |
 | ------------------------------ | ---------------- | ----------------------------------------------------------------- |
 | `eslint-plugin-unused-imports` | `unused-imports` | [doc](https://www.npmjs.com/package/eslint-plugin-unused-imports) |
 | `eslint-plugin-import-x`       | `import`         | [doc](https://github.com/un-ts/eslint-plugin-import-x)            |
 | `eslint-plugin-perfectionist`  | `perfectionist`  | [doc](https://github.com/azat-io/eslint-plugin-perfectionist)     |
 | `eslint-plugin-unicorn`        | `unicorn`        | [doc](https://www.npmjs.com/package/eslint-plugin-unicorn)        |
 
-## Typescript rules
+## TypeScript Rules
 
-| plugin name                        | rename | link                                 |
+| Plugin Name                        | Rename | Link                                 |
 | ---------------------------------- | ------ | ------------------------------------ |
 | `@typescript-eslint/eslint-plugin` | `ts`   | [doc](https://typescript-eslint.io/) |
 
-## Vue rules
+## Vue Rules
 
-| plugin name         | rename | link                             |
+| Plugin Name         | Rename | Link                             |
 | ------------------- | ------ | -------------------------------- |
 | `eslint-plugin-vue` | `vue`  | [doc](https://eslint.vuejs.org/) |
 
-## React rules
+## React Rules
 
-| plugin name                       | rename                    | link                                                              |
+| Plugin Name                       | Rename                    | Link                                                              |
 | --------------------------------- | ------------------------- | ----------------------------------------------------------------- |
 | `@eslint-react`                   | `react`                   | [doc](https://eslint-react.xyz/docs/rules/overview)               |
 | `@eslint-react/dom`               | `react-dom`               |
@@ -36,9 +36,9 @@
 | `eslint-plugin-react-hooks`       | `react-hooks`             | [doc](https://www.npmjs.com/package/eslint-plugin-react-hooks)    |
 | `eslint-plugin-react-refresh`     | `react-refresh`           | [doc](https://github.com/ArnaudBarre/eslint-plugin-react-refresh) |
 
-## Other rules
+## Other Rules
 
-| plugin name                          | rename                 | link                                                                   |
+| Plugin Name                          | Rename                 | Link                                                                   |
 | ------------------------------------ | ---------------------- | ---------------------------------------------------------------------- |
 | `eslint-plugin-antfu`                | `antfu`                | [doc](https://github.com/antfu/eslint-plugin-antfu)                    |
 | `@stylistic/eslint-plugin`           | `style`                | [doc](https://github.com/eslint-stylistic/eslint-stylistic)            |
@@ -54,9 +54,9 @@
 | `@vitest/eslint-plugin`              | `vitest`               | [doc](https://github.com/vitest-dev/eslint-plugin-vitest)              |
 | `@unocss/eslint-config`              | `unocss`               | [doc](https://unocss.dev/integrations/eslin)                           |
 
-## factory Arguments
+## Factory Arguments
 
-| args   | type            | require |
+| Args   | Type            | Require |
 | ------ | --------------- | ------- |
 | option | `OptionsConfig` | `false` |
 
