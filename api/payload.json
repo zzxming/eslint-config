@@ -1302,6 +1302,9 @@
       "linterOptions": {
         "reportUnusedDisableDirectives": true
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 5
     },
     {
@@ -1574,17 +1577,23 @@
         ],
         "sort-imports": "off"
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 6
     },
     {
       "files": [
         "scripts/**/*.?([cm])[jt]s?(x)",
-        "cli.?([cm])[jt]s?(x)"
+        "cli.([cm])[jt]s?(x)"
       ],
       "name": "javascript/disables/cli",
       "rules": {
         "no-console": "off"
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 7
     },
     {
@@ -1668,16 +1677,21 @@
             "flatTernaryExpressions": false,
             "FunctionDeclaration": {
               "body": 1,
-              "parameters": 1
+              "parameters": 1,
+              "returnType": 1
             },
             "FunctionExpression": {
               "body": 1,
-              "parameters": 1
+              "parameters": 1,
+              "returnType": 1
             },
             "ignoreComments": false,
             "ignoredNodes": [
               "TSUnionType",
-              "TSIntersectionType"
+              "TSIntersectionType",
+              "TSTypeParameterInstantiation",
+              "FunctionExpression > .params[decorators.length > 0]",
+              "FunctionExpression > .params > :matches(Decorator, :not(:first-child))"
             ],
             "ImportDeclaration": 1,
             "MemberExpression": 1,
@@ -1978,14 +1992,15 @@
             "consistent": true
           }
         ],
-        "antfu/indent-unindent": "off",
         "antfu/consistent-list-newline": "error",
         "antfu/curly": "error",
-        "antfu/if-newline": "off",
         "antfu/top-level-function": "error",
         "antfu/no-ts-export-equal": "error",
         "antfu/consistent-chaining": "error"
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 8
     },
     {
@@ -2010,18 +2025,24 @@
           }
         ]
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 9
     },
     {
       "files": [
         "**/bin/**/*",
-        "**/bin.?([cm])[jt]s?(x)"
+        "**/bin.([cm])[jt]s?(x)"
       ],
       "name": "imports/disables/bin",
       "rules": {
         "antfu/no-import-dist": "off",
         "antfu/no-import-node-modules-by-path": "off"
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 10
     },
     {
@@ -2163,6 +2184,9 @@
         "unicorn/text-encoding-identifier-case": "error",
         "unicorn/throw-new-error": "error"
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 11
     },
     {
@@ -2179,6 +2203,9 @@
           }
         ]
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 12
     },
     {
@@ -2186,6 +2213,9 @@
       "plugins": {
         "format": {}
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 13
     },
     {
@@ -2213,6 +2243,9 @@
           }
         ]
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 14
     },
     {
@@ -2239,6 +2272,9 @@
           }
         ]
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 15
     },
     {
@@ -2265,6 +2301,9 @@
           }
         ]
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 16
     },
     {
@@ -2291,6 +2330,9 @@
           }
         ]
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 17
     },
     {
@@ -2318,6 +2360,9 @@
           }
         ]
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 18
     },
     {
@@ -2350,6 +2395,9 @@
           }
         ]
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 19
     },
     {
@@ -2382,6 +2430,9 @@
           }
         ]
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 20
     },
     {
@@ -2442,6 +2493,9 @@
           }
         ]
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 21
     },
     {
@@ -2468,6 +2522,9 @@
         "jsdoc/check-alignment": "warn",
         "jsdoc/multiline-blocks": "warn"
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 22
     },
     {
@@ -2494,6 +2551,9 @@
         ],
         "node/process-exit-as-throw": "error"
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 23
     },
     {
@@ -2501,6 +2561,9 @@
       "plugins": {
         "jsonc": {}
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 24
     },
     {
@@ -2583,6 +2646,9 @@
         "jsonc/quote-props": "error",
         "jsonc/quotes": "error"
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 25
     },
     {
@@ -2689,6 +2755,9 @@
           }
         ]
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 26
     },
     {
@@ -2806,6 +2875,9 @@
           }
         ]
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 27
     },
     {
@@ -2821,6 +2893,9 @@
           }
         }
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 28
     },
     {
@@ -2828,6 +2903,9 @@
       "plugins": {
         "ts": {}
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 29
     },
     {
@@ -2847,6 +2925,9 @@
           "tsconfigRootDir": "/home/runner/work/eslint-config/eslint-config"
         }
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 30
     },
     {
@@ -2963,6 +3044,9 @@
           }
         ]
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 31
     },
     {
@@ -2988,6 +3072,9 @@
           "watchEffect": "readonly"
         }
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 32
     },
     {
@@ -3333,6 +3420,9 @@
         ],
         "vue/template-curly-spacing": "error"
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 33
     },
     {
@@ -3344,12 +3434,16 @@
         "no-console": "off",
         "vue/one-component-per-file": "off"
       },
+      "ignores": [
+        "**/*.md"
+      ],
       "index": 34
     },
     {
       "name": "markdown/setup",
       "plugins": {
-        "markdown": {}
+        "markdown": {},
+        "markdown-preferences": {}
       },
       "index": 35
     },
@@ -3376,7 +3470,7 @@
           }
         }
       },
-      "name": "markdown/rules",
+      "name": "markdown/code/disables/rules",
       "rules": {
         "no-alert": "off",
         "no-console": "off",
@@ -3404,26 +3498,27 @@
       "index": 37
     },
     {
-      "name": "markdown/preferences/setup",
-      "plugins": {
-        "markdown-preferences": {}
-      },
-      "index": 38
-    },
-    {
-      "name": "markdown/preferences/rules",
+      "files": [
+        "**/*.md"
+      ],
+      "name": "markdown/rules",
+      "language": "markdown/gfm",
       "rules": {
+        "markdown-preferences/heading-casing": [
+          "error",
+          {
+            "style": "Title Case",
+            "ignorePatterns": [
+              "zzxming"
+            ]
+          }
+        ],
+        "markdown-preferences/prefer-linked-words": "error",
         "markdown-preferences/canonical-code-block-language": "error",
         "markdown-preferences/emoji-notation": [
           "error",
           {
             "prefer": "unicode"
-          }
-        ],
-        "markdown-preferences/heading-casing": [
-          "error",
-          {
-            "style": "Title Case"
           }
         ],
         "markdown-preferences/ordered-list-marker-start": [
@@ -3457,14 +3552,17 @@
         "markdown-preferences/no-trailing-spaces": "error",
         "markdown-preferences/ordered-list-marker-sequence": "error"
       },
-      "index": 39
+      "index": 38
     },
     {
       "name": "yaml/setup",
       "plugins": {
         "yaml": {}
       },
-      "index": 40
+      "ignores": [
+        "**/*.md"
+      ],
+      "index": 39
     },
     {
       "files": [
@@ -3504,7 +3602,10 @@
         ],
         "yaml/spaced-comment": "error"
       },
-      "index": 41
+      "ignores": [
+        "**/*.md"
+      ],
+      "index": 40
     },
     {
       "name": "de-morgan/rules",
@@ -3515,7 +3616,10 @@
         "de-morgan/no-negated-conjunction": "off",
         "de-morgan/no-negated-disjunction": "off"
       },
-      "index": 42
+      "ignores": [
+        "**/*.md"
+      ],
+      "index": 41
     }
   ],
   "rules": {
@@ -20016,7 +20120,7 @@
         "**/*.y?(a)ml"
       ],
       "configs": [
-        41
+        40
       ]
     },
     {
@@ -20025,7 +20129,7 @@
         "**/*.y?(a)ml"
       ],
       "configs": [
-        41
+        40
       ]
     },
     {
@@ -20034,7 +20138,7 @@
         "**/*.y?(a)ml"
       ],
       "configs": [
-        41
+        40
       ]
     },
     {
@@ -20052,8 +20156,8 @@
         "**/*.md"
       ],
       "configs": [
-        18,
-        36
+        36,
+        38
       ]
     },
     {
@@ -20445,7 +20549,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1756088126588,
+    "lastUpdate": 1756620085053,
     "basePath": "",
     "configPath": ""
   }
