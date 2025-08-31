@@ -1,7 +1,7 @@
 import type { OptionsConfig, TailwindcssOptions, TypedFlatConfigItem } from './types';
 import { isPackageExists } from 'local-pkg';
 import { deMorgan, formatters, ignore, imports, javascript, jsdoc, jsonc, jsx, markdown, node, perfectionist, react, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, unocss, vitest, vue, yaml } from './configs';
-import { ReactPackages, StylisticConfigDefaults, VuePackages } from './contants';
+import { GLOB_MARKDOWN, ReactPackages, StylisticConfigDefaults, VuePackages } from './contants';
 import { ensurePackages, getOptions, getSubOptions } from './utils';
 
 export async function factory(options: Partial<OptionsConfig> = {}): Promise<TypedFlatConfigItem[]> {
@@ -134,5 +134,11 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
 
   rules.push(...overrides);
   const configs = await Promise.all(rules);
-  return configs.flat();
+  return configs.flat().map((config) => {
+    if (!config.name.startsWith('markdown/') && config.name !== 'ignores') {
+      if (!config.ignores) config.ignores = [];
+      config.ignores.push(GLOB_MARKDOWN);
+    }
+    return config;
+  });
 }

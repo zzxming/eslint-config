@@ -15,7 +15,8 @@ export function markdown(options: Partial<MarkdownOptions> = {}): TypedFlatConfi
     {
       name: 'markdown/setup',
       plugins: {
-        markdown: pluginMarkdown,
+        'markdown': pluginMarkdown,
+        'markdown-preferences': pluginMarkdownPreferences,
       },
     },
     {
@@ -41,7 +42,7 @@ export function markdown(options: Partial<MarkdownOptions> = {}): TypedFlatConfi
           },
         },
       },
-      name: 'markdown/rules',
+      name: 'markdown/code/disables/rules',
       rules: {
         'no-alert': 'off',
         'no-console': 'off',
@@ -68,17 +69,20 @@ export function markdown(options: Partial<MarkdownOptions> = {}): TypedFlatConfi
       },
     },
     {
-      name: 'markdown/preferences/setup',
-      plugins: {
-        'markdown-preferences': pluginMarkdownPreferences,
-      },
-    },
-    {
-      name: 'markdown/preferences/rules',
+      files,
+      name: 'markdown/rules',
+      language: 'markdown/gfm',
       rules: {
+        'markdown-preferences/heading-casing': [
+          'error',
+          {
+            style: 'Title Case',
+            ignorePatterns: ['zzxming'],
+          },
+        ],
+        'markdown-preferences/prefer-linked-words': 'error',
         'markdown-preferences/canonical-code-block-language': 'error',
         'markdown-preferences/emoji-notation': ['error', { prefer: 'unicode' }],
-        'markdown-preferences/heading-casing': ['error', { style: 'Title Case' }],
         'markdown-preferences/ordered-list-marker-start': ['error', { start: 1 }],
         'markdown-preferences/table-header-casing': ['error', { style: 'Title Case' }],
         'markdown-preferences/atx-headings-closing-sequence': ['error', { closingSequence: 'never' }],
