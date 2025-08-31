@@ -93,6 +93,8 @@ export function markdown(options: Partial<MarkdownOptions> = {}): TypedFlatConfi
         'markdown-preferences/no-laziness-blockquotes': 'error',
         'markdown-preferences/no-trailing-spaces': 'error',
         'markdown-preferences/ordered-list-marker-sequence': 'error',
+        'markdown-preferences/padding-line-between-blocks': ['error', { prev: '*', next: '*', blankLine: 'always' }],
+        'markdown-preferences/setext-heading-underline-length': 'error',
       },
     },
   ];
