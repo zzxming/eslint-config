@@ -3550,7 +3550,16 @@
         "markdown-preferences/list-marker-alignment": "error",
         "markdown-preferences/no-laziness-blockquotes": "error",
         "markdown-preferences/no-trailing-spaces": "error",
-        "markdown-preferences/ordered-list-marker-sequence": "error"
+        "markdown-preferences/ordered-list-marker-sequence": "error",
+        "markdown-preferences/padding-line-between-blocks": [
+          "error",
+          {
+            "prev": "*",
+            "next": "*",
+            "blankLine": "always"
+          }
+        ],
+        "markdown-preferences/setext-heading-underline-length": "error"
       },
       "index": 38
     },
@@ -19523,6 +19532,23 @@
       "name": "markdown-preferences/ordered-list-marker-start",
       "plugin": "markdown-preferences"
     },
+    "markdown-preferences/padding-line-between-blocks": {
+      "type": "layout",
+      "docs": {
+        "description": "require or disallow padding lines between blocks",
+        "categories": [
+          "recommended"
+        ],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/padding-line-between-blocks.html",
+        "ruleId": "markdown-preferences/padding-line-between-blocks",
+        "ruleName": "padding-line-between-blocks"
+      },
+      "fixable": "whitespace",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/padding-line-between-blocks",
+      "plugin": "markdown-preferences"
+    },
     "markdown-preferences/prefer-autolinks": {
       "type": "layout",
       "docs": {
@@ -19602,6 +19628,20 @@
       "name": "markdown-preferences/prefer-linked-words",
       "plugin": "markdown-preferences"
     },
+    "markdown-preferences/setext-heading-underline-length": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce setext heading underline length",
+        "categories": [],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/setext-heading-underline-length.html",
+        "ruleId": "markdown-preferences/setext-heading-underline-length",
+        "ruleName": "setext-heading-underline-length"
+      },
+      "fixable": "whitespace",
+      "name": "markdown-preferences/setext-heading-underline-length",
+      "plugin": "markdown-preferences"
+    },
     "markdown-preferences/sort-definitions": {
       "type": "layout",
       "docs": {
@@ -19629,6 +19669,51 @@
         "ruleName": "table-header-casing"
       },
       "name": "markdown-preferences/table-header-casing",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/thematic-break-character-style": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce consistent character style for thematic breaks (horizontal rules) in Markdown.",
+        "categories": [],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/thematic-break-character-style.html",
+        "ruleId": "markdown-preferences/thematic-break-character-style",
+        "ruleName": "thematic-break-character-style"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/thematic-break-character-style",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/thematic-break-length": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce consistent length for thematic breaks (horizontal rules) in Markdown.",
+        "categories": [],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/thematic-break-length.html",
+        "ruleId": "markdown-preferences/thematic-break-length",
+        "ruleName": "thematic-break-length"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/thematic-break-length",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/thematic-break-sequence-pattern": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce consistent repeating patterns for thematic breaks (horizontal rules) in Markdown.",
+        "categories": [],
+        "listCategory": "Stylistic",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/thematic-break-sequence-pattern.html",
+        "ruleId": "markdown-preferences/thematic-break-sequence-pattern",
+        "ruleName": "thematic-break-sequence-pattern"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/thematic-break-sequence-pattern",
       "plugin": "markdown-preferences"
     },
     "yaml/block-mapping-colon-indicator-newline": {
@@ -20549,7 +20634,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1756620085053,
+    "lastUpdate": 1756642960704,
     "basePath": "",
     "configPath": ""
   }
