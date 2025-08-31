@@ -135,7 +135,7 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
   rules.push(...overrides);
   const configs = await Promise.all(rules);
   return configs.flat().map((config) => {
-    if (!config.name.startsWith('markdown/') && config.name !== 'ignores') {
+    if (config.name && !config.name.startsWith('markdown/') && config.name !== 'ignores') {
       if (!config.ignores) config.ignores = [];
       config.ignores.push(GLOB_MARKDOWN);
     }
