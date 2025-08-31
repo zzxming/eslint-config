@@ -1,5 +1,5 @@
 import type { TypedFlatConfigItem, VitestOptions } from '../types';
-import { GLOB_TEST } from '../contants';
+import { GLOB_SRC_EXT, GLOB_TEST } from '../contants';
 import { interopDefault } from '../utils';
 
 export async function vitest(options: Partial<VitestOptions> = {}): Promise<TypedFlatConfigItem[]> {
@@ -31,7 +31,7 @@ export async function vitest(options: Partial<VitestOptions> = {}): Promise<Type
     },
     {
       name: 'vitest/dts-tests/rules',
-      files: ['**/__tests__/*.{test,spec}-d.?([cm])[jt]s?(x)'],
+      files: [`**/__tests__/*.{test,spec}-d.?${GLOB_SRC_EXT}`],
       rules: {
         'ts/no-empty-object-type': 'off',
         'vitest/expect-expect': 'off',
