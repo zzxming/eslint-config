@@ -73,19 +73,15 @@ export function markdown(options: Partial<MarkdownOptions> = {}): TypedFlatConfi
       name: 'markdown/rules',
       language: 'markdown/gfm',
       rules: {
-        'markdown-preferences/heading-casing': [
-          'error',
-          {
-            style: 'Title Case',
-            ignorePatterns: ['zzxming'],
-          },
-        ],
         'markdown-preferences/prefer-linked-words': 'error',
+        'markdown-preferences/prefer-fenced-code-blocks': 'error',
         'markdown-preferences/canonical-code-block-language': 'error',
         'markdown-preferences/emoji-notation': ['error', { prefer: 'unicode' }],
+        'markdown-preferences/heading-casing': ['error', { style: 'Title Case', ignorePatterns: ['zzxming'] }],
         'markdown-preferences/ordered-list-marker-start': ['error', { start: 1 }],
+
         'markdown-preferences/table-header-casing': ['error', { style: 'Title Case' }],
-        'markdown-preferences/atx-headings-closing-sequence': ['error', { closingSequence: 'never' }],
+        'markdown-preferences/atx-heading-closing-sequence': ['error', { closingSequence: 'never' }],
         'markdown-preferences/blockquote-marker-alignment': 'error',
         'markdown-preferences/hard-linebreak-style': ['error', { style: 'backslash' }],
         'markdown-preferences/no-text-backslash-linebreak': 'off',
@@ -95,6 +91,10 @@ export function markdown(options: Partial<MarkdownOptions> = {}): TypedFlatConfi
         'markdown-preferences/ordered-list-marker-sequence': 'error',
         'markdown-preferences/padding-line-between-blocks': ['error', { prev: '*', next: '*', blankLine: 'always' }],
         'markdown-preferences/setext-heading-underline-length': 'error',
+        'markdown-preferences/no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0, maxBOF: 0 }],
+        'markdown-preferences/strikethrough-delimiters-style': ['error', { delimiter: '~~' }],
+        'markdown-preferences/thematic-break-length': ['error', { length: 3 }],
+        'markdown-preferences/thematic-break-character-style': ['error', { style: '-' }],
       },
     },
   ];
