@@ -57,21 +57,21 @@ export interface UnocssOptions {
 }
 export interface DeMorganOptions {}
 export interface OptionsConfig {
-  stylistic: boolean | StylisticOptions;
-  javascript: boolean | JavascriptOptions;
+  stylistic: boolean | Partial<StylisticOptions>;
+  javascript: boolean | Partial<JavascriptOptions>;
   gitignore: boolean;
   jsx: boolean;
-  typescript: boolean | TypescriptOptions;
-  vue: boolean | VueOptions;
-  tailwindcss: boolean | TailwindcssOptions;
-  jsonc: boolean | JsoncOptions;
-  markdown: boolean | JsoncOptions;
-  formatters: boolean | FormmatterOptions;
-  yaml: boolean | YamlOptions;
-  unicorn: UnicornOptions;
-  react: boolean | ReactOptions;
-  vitest: boolean | VitestOptions;
-  unocss: boolean | UnocssOptions;
-  deMorgan: boolean | DeMorganOptions;
+  typescript: boolean | Partial<TypescriptOptions>;
+  vue: boolean | Partial<VueOptions>;
+  tailwindcss: boolean | Partial<TailwindcssOptions>;
+  jsonc: boolean | Partial<JsoncOptions>;
+  markdown: boolean | Partial<JsoncOptions>;
+  formatters: boolean | Partial<FormmatterOptions>;
+  yaml: boolean | Partial<YamlOptions>;
+  unicorn: Partial<UnicornOptions>;
+  react: boolean | Partial<ReactOptions>;
+  vitest: boolean | Partial<VitestOptions>;
+  unocss: boolean | Partial<UnocssOptions>;
+  deMorgan: boolean | Partial<DeMorganOptions>;
   overrides: Linter.Config[];
 }
