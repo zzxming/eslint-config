@@ -8,6 +8,9 @@ export async function typescript(options: Partial<TypescriptOptions> = {}): Prom
     parserOptions = {},
     componentExts = [],
   } = options;
+
+  const tsconfigPath = options?.tsconfigPath;
+  const isTypeAware = !!tsconfigPath;
   const files = [
     GLOB_TS,
     GLOB_TSX,
@@ -37,7 +40,15 @@ export async function typescript(options: Partial<TypescriptOptions> = {}): Prom
         parserOptions: {
           extraFileExtensions: componentExts.map(ext => `.${ext}`),
           sourceType: 'module',
-          tsconfigRootDir: process.cwd(),
+          ...isTypeAware
+            ? {
+                projectService: {
+                  allowDefaultProject: ['./*.js'],
+                  defaultProject: tsconfigPath,
+                },
+                tsconfigRootDir: process.cwd(),
+              }
+            : {},
           ...parserOptions,
         },
       },
@@ -54,10 +65,17 @@ export async function typescript(options: Partial<TypescriptOptions> = {}): Prom
           pluginTs.configs.strict.rules!,
           { '@typescript-eslint': 'ts' },
         ),
-        'no-dupe-class-members': 'off',
-        'no-redeclare': 'off',
-        'no-use-before-define': 'off',
+
         'no-useless-constructor': 'off',
+        'ts/no-dynamic-delete': 'off',
+        'ts/no-explicit-any': 'off',
+        'ts/no-extraneous-class': 'off',
+        'ts/no-invalid-void-type': 'off',
+        'ts/no-non-null-assertion': 'off',
+        'ts/no-unused-vars': 'off',
+        'ts/triple-slash-reference': 'off',
+        'ts/unified-signatures': 'off',
+
         'ts/ban-ts-comment': ['error', { 'ts-expect-error': 'allow-with-description' }],
         'ts/consistent-type-definitions': ['error', 'interface'],
         'ts/consistent-type-imports': [
@@ -68,16 +86,12 @@ export async function typescript(options: Partial<TypescriptOptions> = {}): Prom
             prefer: 'type-imports',
           },
         ],
-
         'ts/method-signature-style': ['error', 'property'],
+        'no-dupe-class-members': 'off',
         'ts/no-dupe-class-members': 'error',
-        'ts/no-dynamic-delete': 'off',
         'ts/no-empty-object-type': ['error', { allowInterfaces: 'always' }],
-        'ts/no-explicit-any': 'off',
-        'ts/no-extraneous-class': 'off',
         'ts/no-import-type-side-effects': 'error',
-        'ts/no-invalid-void-type': 'off',
-        'ts/no-non-null-assertion': 'off',
+        'no-redeclare': 'off',
         'ts/no-redeclare': ['error', { builtinGlobals: false }],
         'ts/no-require-imports': 'error',
         'ts/no-unused-expressions': [
@@ -88,12 +102,20 @@ export async function typescript(options: Partial<TypescriptOptions> = {}): Prom
             allowTernary: true,
           },
         ],
-        'ts/no-unused-vars': 'off',
+        'no-use-before-define': 'off',
         'ts/no-use-before-define': ['error', { classes: false, functions: false, variables: true }],
-        'ts/no-useless-constructor': 'off',
         'ts/no-wrapper-object-types': 'error',
-        'ts/triple-slash-reference': 'off',
-        'ts/unified-signatures': 'off',
+        'ts/prefer-for-of': 'error',
+        'ts/prefer-function-type': 'error',
+        ...isTypeAware
+          ? {
+              'require-await': 'off',
+              'ts/require-await': 'error',
+              'ts/prefer-includes': 'error',
+              'ts/prefer-optional-chain': 'error',
+              'ts/return-await': ['error', 'in-try-catch'],
+            }
+          : {},
       },
     },
   ];
