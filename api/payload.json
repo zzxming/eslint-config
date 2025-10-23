@@ -3669,6 +3669,12 @@
         "**/*.md"
       ],
       "index": 41
+    },
+    {
+      "ignores": [
+        "fixtures"
+      ],
+      "index": 42
     }
   ],
   "rules": {
@@ -20647,6 +20653,15 @@
       ]
     },
     {
+      "filepath": ".github/workflows/test.yml",
+      "globs": [
+        "**/*.y?(a)ml"
+      ],
+      "configs": [
+        40
+      ]
+    },
+    {
       "filepath": ".vscode/settings.json",
       "globs": [
         "**/*.json"
@@ -21042,6 +21057,19 @@
       ]
     },
     {
+      "filepath": "test/fixture.test.ts",
+      "globs": [
+        "**/*.{test,spec}.[jt]s?(x)",
+        "**/*.?([cm])ts"
+      ],
+      "configs": [
+        12,
+        28,
+        30,
+        31
+      ]
+    },
+    {
       "filepath": "tsconfig.json",
       "globs": [
         "**/*.json",
@@ -21054,7 +21082,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1757515050890,
+    "lastUpdate": 1761225395071,
     "basePath": "",
     "configPath": ""
   }
