@@ -3104,10 +3104,10 @@
             ".vue"
           ],
           "parser": {
-            "version": "8.43.0",
+            "version": "8.46.2",
             "meta": {
               "name": "typescript-eslint/parser",
-              "version": "8.43.0"
+              "version": "8.46.2"
             }
           },
           "sourceType": "module"
@@ -9335,6 +9335,12 @@
         "url": "https://eslint.style/rules/generator-star-spacing"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "before": true,
+          "after": false
+        }
+      ],
       "name": "style/generator-star-spacing",
       "plugin": "style"
     },
@@ -9657,6 +9663,17 @@
       },
       "fixable": "whitespace",
       "name": "style/lines-between-class-members",
+      "plugin": "style"
+    },
+    "style/exp-list-style": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce consistent spacing and line break styles inside brackets.",
+        "experimental": true,
+        "url": "https://eslint.style/rules/list-style"
+      },
+      "fixable": "whitespace",
+      "name": "style/exp-list-style",
       "plugin": "style"
     },
     "style/max-len": {
@@ -12624,7 +12641,7 @@
     },
     "jsdoc/check-examples": {
       "docs": {
-        "description": "Ensures that (JavaScript) examples within JSDoc adhere to ESLint rules.",
+        "description": "@deprecated - Use `getJsdocProcessorPlugin` processor; ensures that (JavaScript) samples within `@example` tags adhere to ESLint rules.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/check-examples.md#repos-sticky-header"
       },
       "type": "suggestion",
@@ -12652,7 +12669,7 @@
     },
     "jsdoc/check-param-names": {
       "docs": {
-        "description": "Ensures that parameter names in JSDoc match those in the function declaration.",
+        "description": "Checks for dupe `@param` names, that nested param names have roots, and that parameter names in function declarations match JSDoc param names.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/check-param-names.md#repos-sticky-header"
       },
       "fixable": "code",
@@ -12700,7 +12717,7 @@
     },
     "jsdoc/check-types": {
       "docs": {
-        "description": "Reports invalid types.",
+        "description": "Reports types deemed invalid (customizable and with defaults, for preventing and/or recommending replacements).",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/check-types.md#repos-sticky-header"
       },
       "fixable": "code",
@@ -12729,7 +12746,7 @@
     },
     "jsdoc/empty-tags": {
       "docs": {
-        "description": "Expects specific tags to be empty of any content.",
+        "description": "Checks tags that are expected to be empty (e.g., `@abstract` or `@async`), reporting if they have content",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/empty-tags.md#repos-sticky-header"
       },
       "fixable": "code",
@@ -12737,9 +12754,19 @@
       "name": "jsdoc/empty-tags",
       "plugin": "jsdoc"
     },
+    "jsdoc/escape-inline-tags": {
+      "docs": {
+        "description": "Reports use of JSDoc tags in non-tag positions (in the default \"typescript\" mode).",
+        "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/escape-inline-tags.md#repos-sticky-header"
+      },
+      "fixable": "code",
+      "type": "suggestion",
+      "name": "jsdoc/escape-inline-tags",
+      "plugin": "jsdoc"
+    },
     "jsdoc/implements-on-classes": {
       "docs": {
-        "description": "Reports an issue with any non-constructor function using `@implements`.",
+        "description": "Prohibits use of `@implements` on non-constructor functions (to enforce the tag only being used on classes/constructors).",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/implements-on-classes.md#repos-sticky-header"
       },
       "type": "suggestion",
@@ -12795,7 +12822,7 @@
     },
     "jsdoc/multiline-blocks": {
       "docs": {
-        "description": "Controls how and whether jsdoc blocks can be expressed as single or multiple line blocks.",
+        "description": "Controls how and whether JSDoc blocks can be expressed as single or multiple line blocks.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/multiline-blocks.md#repos-sticky-header"
       },
       "fixable": "code",
@@ -12805,7 +12832,7 @@
     },
     "jsdoc/no-bad-blocks": {
       "docs": {
-        "description": "This rule checks for multi-line-style comments which fail to meet the criteria of a jsdoc block.",
+        "description": "This rule checks for multi-line-style comments which fail to meet the criteria of a JSDoc block.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/no-bad-blocks.md#repos-sticky-header"
       },
       "fixable": "code",
@@ -12815,7 +12842,7 @@
     },
     "jsdoc/no-blank-block-descriptions": {
       "docs": {
-        "description": "Detects and removes extra lines of a blank block description",
+        "description": "If tags are present, this rule will prevent empty lines in the block description. If no tags are present, this rule will prevent extra empty lines in the block description.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/no-blank-block-descriptions.md#repos-sticky-header"
       },
       "fixable": "whitespace",
@@ -12848,7 +12875,6 @@
         "description": "Reports when certain comment structures are always expected.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/no-missing-syntax.md#repos-sticky-header"
       },
-      "fixable": "code",
       "type": "suggestion",
       "name": "jsdoc/no-missing-syntax",
       "plugin": "jsdoc"
@@ -12868,14 +12894,13 @@
         "description": "Reports when certain comment structures are present.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/no-restricted-syntax.md#repos-sticky-header"
       },
-      "fixable": "code",
       "type": "suggestion",
       "name": "jsdoc/no-restricted-syntax",
       "plugin": "jsdoc"
     },
     "jsdoc/no-types": {
       "docs": {
-        "description": "This rule reports types being used on `@param` or `@returns`.",
+        "description": "This rule reports types being used on `@param` or `@returns` (redundant with TypeScript).",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/no-types.md#repos-sticky-header"
       },
       "fixable": "code",
@@ -12885,11 +12910,39 @@
     },
     "jsdoc/no-undefined-types": {
       "docs": {
-        "description": "Checks that types in jsdoc comments are defined.",
+        "description": "Besides some expected built-in types, prohibits any types not specified as globals or within `@typedef`.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/no-undefined-types.md#repos-sticky-header"
       },
       "type": "suggestion",
       "name": "jsdoc/no-undefined-types",
+      "plugin": "jsdoc"
+    },
+    "jsdoc/prefer-import-tag": {
+      "docs": {
+        "description": "Prefer `@import` tags to inline `import()` statements.",
+        "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/prefer-import-tag.md#repos-sticky-header"
+      },
+      "fixable": "code",
+      "type": "suggestion",
+      "name": "jsdoc/prefer-import-tag",
+      "plugin": "jsdoc"
+    },
+    "jsdoc/reject-any-type": {
+      "docs": {
+        "description": "Reports use of `any` or `*` type",
+        "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/reject-any-type.md#repos-sticky-header"
+      },
+      "type": "suggestion",
+      "name": "jsdoc/reject-any-type",
+      "plugin": "jsdoc"
+    },
+    "jsdoc/reject-function-type": {
+      "docs": {
+        "description": "Reports use of `Function` type",
+        "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/reject-function-type.md#repos-sticky-header"
+      },
+      "type": "suggestion",
+      "name": "jsdoc/reject-function-type",
       "plugin": "jsdoc"
     },
     "jsdoc/require-asterisk-prefix": {
@@ -12904,7 +12957,7 @@
     },
     "jsdoc/require-description": {
       "docs": {
-        "description": "Requires that all functions have a description.",
+        "description": "Requires that all functions (and potentially other contexts) have a description.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-description.md#repos-sticky-header"
       },
       "type": "suggestion",
@@ -12923,7 +12976,7 @@
     },
     "jsdoc/require-example": {
       "docs": {
-        "description": "Requires that all functions have examples.",
+        "description": "Requires that all functions (and potentially other contexts) have examples.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-example.md#repos-sticky-header"
       },
       "fixable": "code",
@@ -12942,7 +12995,7 @@
     },
     "jsdoc/require-hyphen-before-param-description": {
       "docs": {
-        "description": "Requires a hyphen before the `@param` description.",
+        "description": "Requires a hyphen before the `@param` description (and optionally before `@property` descriptions).",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-hyphen-before-param-description.md#repos-sticky-header"
       },
       "fixable": "code",
@@ -12953,7 +13006,7 @@
     "jsdoc/require-jsdoc": {
       "docs": {
         "category": "Stylistic Issues",
-        "description": "Require JSDoc comments",
+        "description": "Checks for presence of JSDoc comments, on functions and potentially other contexts (optionally limited to exports).",
         "recommended": true,
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-jsdoc.md#repos-sticky-header"
       },
@@ -12962,9 +13015,27 @@
       "name": "jsdoc/require-jsdoc",
       "plugin": "jsdoc"
     },
+    "jsdoc/require-next-description": {
+      "docs": {
+        "description": "Requires a description for `@next` tags",
+        "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-next-description.md#repos-sticky-header"
+      },
+      "type": "suggestion",
+      "name": "jsdoc/require-next-description",
+      "plugin": "jsdoc"
+    },
+    "jsdoc/require-next-type": {
+      "docs": {
+        "description": "Requires a type for `@next` tags",
+        "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-next-type.md#repos-sticky-header"
+      },
+      "type": "suggestion",
+      "name": "jsdoc/require-next-type",
+      "plugin": "jsdoc"
+    },
     "jsdoc/require-param": {
       "docs": {
-        "description": "Requires that all function parameters are documented.",
+        "description": "Requires that all function parameters are documented with a `@param` tag.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-param.md#repos-sticky-header"
       },
       "fixable": "code",
@@ -12984,7 +13055,7 @@
     },
     "jsdoc/require-param-name": {
       "docs": {
-        "description": "Requires that all function parameters have names.",
+        "description": "Requires that all `@param` tags have names.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-param-name.md#repos-sticky-header"
       },
       "type": "suggestion",
@@ -12993,7 +13064,7 @@
     },
     "jsdoc/require-param-type": {
       "docs": {
-        "description": "Requires that each `@param` tag has a `type` value.",
+        "description": "Requires that each `@param` tag has a type value (in curly brackets).",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-param-type.md#repos-sticky-header"
       },
       "fixable": "code",
@@ -13022,7 +13093,7 @@
     },
     "jsdoc/require-property-name": {
       "docs": {
-        "description": "Requires that all function `@property` tags have names.",
+        "description": "Requires that all `@property` tags have names.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-property-name.md#repos-sticky-header"
       },
       "type": "suggestion",
@@ -13031,7 +13102,7 @@
     },
     "jsdoc/require-property-type": {
       "docs": {
-        "description": "Requires that each `@property` tag has a `type` value.",
+        "description": "Requires that each `@property` tag has a type value (in curly brackets).",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-property-type.md#repos-sticky-header"
       },
       "type": "suggestion",
@@ -13040,7 +13111,7 @@
     },
     "jsdoc/require-returns": {
       "docs": {
-        "description": "Requires that returns are documented.",
+        "description": "Requires that returns are documented with `@returns`.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-returns.md#repos-sticky-header"
       },
       "fixable": "code",
@@ -13050,7 +13121,7 @@
     },
     "jsdoc/require-returns-check": {
       "docs": {
-        "description": "Requires a return statement in function body if a `@returns` tag is specified in jsdoc comment.",
+        "description": "Requires a return statement in function body if a `@returns` tag is specified in JSDoc comment(and reports if multiple `@returns` tags are present).",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-returns-check.md#repos-sticky-header"
       },
       "type": "suggestion",
@@ -13059,7 +13130,7 @@
     },
     "jsdoc/require-returns-description": {
       "docs": {
-        "description": "Requires that the `@returns` tag has a `description` value.",
+        "description": "Requires that the `@returns` tag has a `description` value (not including `void`/`undefined` type returns).",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-returns-description.md#repos-sticky-header"
       },
       "type": "suggestion",
@@ -13068,34 +13139,70 @@
     },
     "jsdoc/require-returns-type": {
       "docs": {
-        "description": "Requires that `@returns` tag has `type` value.",
+        "description": "Requires that `@returns` tag has type value (in curly brackets).",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-returns-type.md#repos-sticky-header"
       },
       "type": "suggestion",
       "name": "jsdoc/require-returns-type",
       "plugin": "jsdoc"
     },
+    "jsdoc/require-tags": {
+      "docs": {
+        "description": "Requires tags be present, optionally for specific contexts",
+        "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-tags.md#repos-sticky-header"
+      },
+      "type": "suggestion",
+      "name": "jsdoc/require-tags",
+      "plugin": "jsdoc"
+    },
     "jsdoc/require-template": {
       "docs": {
-        "description": "Requires template tags for each generic type parameter",
+        "description": "Requires `@template` tags be present when type parameters are used.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-template.md#repos-sticky-header"
       },
       "type": "suggestion",
       "name": "jsdoc/require-template",
       "plugin": "jsdoc"
     },
+    "jsdoc/require-template-description": {
+      "docs": {
+        "description": "Requires a description for `@template` tags",
+        "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-template-description.md#repos-sticky-header"
+      },
+      "type": "suggestion",
+      "name": "jsdoc/require-template-description",
+      "plugin": "jsdoc"
+    },
     "jsdoc/require-throws": {
       "docs": {
-        "description": "Requires that throw statements are documented.",
+        "description": "Requires that throw statements are documented with `@throws` tags.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-throws.md#repos-sticky-header"
       },
       "type": "suggestion",
       "name": "jsdoc/require-throws",
       "plugin": "jsdoc"
     },
+    "jsdoc/require-throws-description": {
+      "docs": {
+        "description": "Requires a description for `@throws` tags",
+        "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-throws-description.md#repos-sticky-header"
+      },
+      "type": "suggestion",
+      "name": "jsdoc/require-throws-description",
+      "plugin": "jsdoc"
+    },
+    "jsdoc/require-throws-type": {
+      "docs": {
+        "description": "Requires a type for `@throws` tags",
+        "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-throws-type.md#repos-sticky-header"
+      },
+      "type": "suggestion",
+      "name": "jsdoc/require-throws-type",
+      "plugin": "jsdoc"
+    },
     "jsdoc/require-yields": {
       "docs": {
-        "description": "Requires yields are documented.",
+        "description": "Requires yields are documented with `@yields` tags.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-yields.md#repos-sticky-header"
       },
       "type": "suggestion",
@@ -13104,16 +13211,34 @@
     },
     "jsdoc/require-yields-check": {
       "docs": {
-        "description": "Requires a yield statement in function body if a `@yields` tag is specified in jsdoc comment.",
+        "description": "Ensures that if a `@yields` is present that a `yield` (or `yield` with a value) is present in the function body (or that if a `@next` is present that there is a yield with a return value present).",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-yields-check.md#repos-sticky-header"
       },
       "type": "suggestion",
       "name": "jsdoc/require-yields-check",
       "plugin": "jsdoc"
     },
+    "jsdoc/require-yields-description": {
+      "docs": {
+        "description": "Requires a description for `@yields` tags",
+        "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-yields-description.md#repos-sticky-header"
+      },
+      "type": "suggestion",
+      "name": "jsdoc/require-yields-description",
+      "plugin": "jsdoc"
+    },
+    "jsdoc/require-yields-type": {
+      "docs": {
+        "description": "Requires a type for `@yields` tags",
+        "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-yields-type.md#repos-sticky-header"
+      },
+      "type": "suggestion",
+      "name": "jsdoc/require-yields-type",
+      "plugin": "jsdoc"
+    },
     "jsdoc/sort-tags": {
       "docs": {
-        "description": "Sorts tags by a specified sequence according to tag name.",
+        "description": "Sorts tags by a specified sequence according to tag name, optionally adding line breaks between tag groups.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/sort-tags.md#repos-sticky-header"
       },
       "fixable": "code",
@@ -13123,7 +13248,7 @@
     },
     "jsdoc/tag-lines": {
       "docs": {
-        "description": "Enforces lines (or no lines) between tags.",
+        "description": "Enforces lines (or no lines) before, after, or between tags.",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/tag-lines.md#repos-sticky-header"
       },
       "fixable": "code",
@@ -13141,9 +13266,58 @@
       "name": "jsdoc/text-escaping",
       "plugin": "jsdoc"
     },
+    "jsdoc/ts-method-signature-style": {
+      "docs": {
+        "description": "Prefers either function properties or method signatures",
+        "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/ts-method-signature-style.md#repos-sticky-header"
+      },
+      "fixable": "code",
+      "type": "suggestion",
+      "name": "jsdoc/ts-method-signature-style",
+      "plugin": "jsdoc"
+    },
+    "jsdoc/ts-no-empty-object-type": {
+      "docs": {
+        "description": "Warns against use of the empty object type",
+        "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/ts-no-empty-object-type.md#repos-sticky-header"
+      },
+      "type": "suggestion",
+      "name": "jsdoc/ts-no-empty-object-type",
+      "plugin": "jsdoc"
+    },
+    "jsdoc/ts-no-unnecessary-template-expression": {
+      "docs": {
+        "description": "Catches unnecessary template expressions such as string expressions within a template literal.",
+        "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/ts-no-unnecessary-template-expression.md#repos-sticky-header"
+      },
+      "fixable": "code",
+      "type": "suggestion",
+      "name": "jsdoc/ts-no-unnecessary-template-expression",
+      "plugin": "jsdoc"
+    },
+    "jsdoc/ts-prefer-function-type": {
+      "docs": {
+        "description": "Prefers function types over call signatures when there are no other properties.",
+        "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/ts-prefer-function-type.md#repos-sticky-header"
+      },
+      "fixable": "code",
+      "type": "suggestion",
+      "name": "jsdoc/ts-prefer-function-type",
+      "plugin": "jsdoc"
+    },
+    "jsdoc/type-formatting": {
+      "docs": {
+        "description": "Formats JSDoc type values.",
+        "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/type-formatting.md#repos-sticky-header"
+      },
+      "fixable": "code",
+      "type": "suggestion",
+      "name": "jsdoc/type-formatting",
+      "plugin": "jsdoc"
+    },
     "jsdoc/valid-types": {
       "docs": {
-        "description": "Requires all types to be valid JSDoc or Closure compiler types without syntax errors.",
+        "description": "Requires all types/namepaths to be valid JSDoc, Closure compiler, or TypeScript types (configurable in settings).",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/valid-types.md#repos-sticky-header"
       },
       "type": "suggestion",
@@ -13262,7 +13436,7 @@
     },
     "node/no-missing-import": {
       "docs": {
-        "description": "disallow `import` declarations which import non-existence modules",
+        "description": "disallow `import` declarations which import missing modules",
         "recommended": true,
         "url": "https://github.com/eslint-community/eslint-plugin-n/blob/HEAD/docs/rules/no-missing-import.md"
       },
@@ -13273,7 +13447,7 @@
     },
     "node/no-missing-require": {
       "docs": {
-        "description": "disallow `require()` expressions which import non-existence modules",
+        "description": "disallow `require()` expressions which import missing modules",
         "recommended": true,
         "url": "https://github.com/eslint-community/eslint-plugin-n/blob/HEAD/docs/rules/no-missing-require.md"
       },
@@ -19371,6 +19545,11 @@
         "description": "Disallow missing label references",
         "url": "https://github.com/eslint/markdown/blob/main/docs/rules/no-missing-label-refs.md"
       },
+      "defaultOptions": [
+        {
+          "allowLabels": []
+        }
+      ],
       "name": "markdown/no-missing-label-refs",
       "plugin": "markdown"
     },
@@ -19403,6 +19582,17 @@
         }
       ],
       "name": "markdown/no-multiple-h1",
+      "plugin": "markdown"
+    },
+    "markdown/no-reference-like-urls": {
+      "type": "problem",
+      "docs": {
+        "recommended": true,
+        "description": "Disallow URLs that match defined reference identifiers",
+        "url": "https://github.com/eslint/markdown/blob/main/docs/rules/no-reference-like-urls.md"
+      },
+      "fixable": "code",
+      "name": "markdown/no-reference-like-urls",
       "plugin": "markdown"
     },
     "markdown/no-reversed-media-syntax": {
@@ -19482,7 +19672,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Decorative",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/atx-heading-closing-sequence-length.html",
         "ruleId": "markdown-preferences/atx-heading-closing-sequence-length",
         "ruleName": "atx-heading-closing-sequence-length"
@@ -19499,7 +19689,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Decorative",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/atx-heading-closing-sequence.html",
         "ruleId": "markdown-preferences/atx-heading-closing-sequence",
         "ruleName": "atx-heading-closing-sequence"
@@ -19517,7 +19707,7 @@
           "recommended",
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Whitespace",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/blockquote-marker-alignment.html",
         "ruleId": "markdown-preferences/blockquote-marker-alignment",
         "ruleName": "blockquote-marker-alignment"
@@ -19534,7 +19724,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Notation",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/bullet-list-marker-style.html",
         "ruleId": "markdown-preferences/bullet-list-marker-style",
         "ruleName": "bullet-list-marker-style"
@@ -19566,7 +19756,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Decorative",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/code-fence-length.html",
         "ruleId": "markdown-preferences/code-fence-length",
         "ruleName": "code-fence-length"
@@ -19576,6 +19766,23 @@
       "name": "markdown-preferences/code-fence-length",
       "plugin": "markdown-preferences"
     },
+    "markdown-preferences/code-fence-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "require or disallow spacing between opening code fence and language identifier",
+        "categories": [
+          "standard"
+        ],
+        "listCategory": "Whitespace",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/code-fence-spacing.html",
+        "ruleId": "markdown-preferences/code-fence-spacing",
+        "ruleName": "code-fence-spacing"
+      },
+      "fixable": "whitespace",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/code-fence-spacing",
+      "plugin": "markdown-preferences"
+    },
     "markdown-preferences/code-fence-style": {
       "type": "layout",
       "docs": {
@@ -19583,7 +19790,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Notation",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/code-fence-style.html",
         "ruleId": "markdown-preferences/code-fence-style",
         "ruleName": "code-fence-style"
@@ -19593,12 +19800,29 @@
       "name": "markdown-preferences/code-fence-style",
       "plugin": "markdown-preferences"
     },
+    "markdown-preferences/custom-container-marker-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "require or disallow spacing between opening custom container marker and info",
+        "categories": [
+          "standard"
+        ],
+        "listCategory": "Whitespace",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/custom-container-marker-spacing.html",
+        "ruleId": "markdown-preferences/custom-container-marker-spacing",
+        "ruleName": "custom-container-marker-spacing"
+      },
+      "fixable": "whitespace",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/custom-container-marker-spacing",
+      "plugin": "markdown-preferences"
+    },
     "markdown-preferences/definitions-last": {
       "type": "layout",
       "docs": {
         "description": "require link definitions and footnote definitions to be placed at the end of the document",
         "categories": [],
-        "listCategory": "Stylistic",
+        "listCategory": "Notation",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/definitions-last.html",
         "ruleId": "markdown-preferences/definitions-last",
         "ruleName": "definitions-last"
@@ -19630,7 +19854,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Notation",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/emphasis-delimiters-style.html",
         "ruleId": "markdown-preferences/emphasis-delimiters-style",
         "ruleName": "emphasis-delimiters-style"
@@ -19648,7 +19872,7 @@
           "recommended",
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Notation",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/hard-linebreak-style.html",
         "ruleId": "markdown-preferences/hard-linebreak-style",
         "ruleName": "hard-linebreak-style"
@@ -19673,6 +19897,23 @@
       "name": "markdown-preferences/heading-casing",
       "plugin": "markdown-preferences"
     },
+    "markdown-preferences/indent": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce consistent indentation in Markdown files",
+        "categories": [
+          "standard"
+        ],
+        "listCategory": "Whitespace",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/indent.html",
+        "ruleId": "markdown-preferences/indent",
+        "ruleName": "indent"
+      },
+      "fixable": "whitespace",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/indent",
+      "plugin": "markdown-preferences"
+    },
     "markdown-preferences/level1-heading-style": {
       "type": "layout",
       "docs": {
@@ -19680,7 +19921,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Notation",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/level1-heading-style.html",
         "ruleId": "markdown-preferences/level1-heading-style",
         "ruleName": "level1-heading-style"
@@ -19697,7 +19938,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Notation",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/level2-heading-style.html",
         "ruleId": "markdown-preferences/level2-heading-style",
         "ruleName": "level2-heading-style"
@@ -19714,7 +19955,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Whitespace",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/link-bracket-newline.html",
         "ruleId": "markdown-preferences/link-bracket-newline",
         "ruleName": "link-bracket-newline"
@@ -19731,7 +19972,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Whitespace",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/link-bracket-spacing.html",
         "ruleId": "markdown-preferences/link-bracket-spacing",
         "ruleName": "link-bracket-spacing"
@@ -19748,7 +19989,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Notation",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/link-destination-style.html",
         "ruleId": "markdown-preferences/link-destination-style",
         "ruleName": "link-destination-style"
@@ -19758,6 +19999,40 @@
       "name": "markdown-preferences/link-destination-style",
       "plugin": "markdown-preferences"
     },
+    "markdown-preferences/link-paren-newline": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce linebreaks after opening and before closing link parentheses",
+        "categories": [
+          "standard"
+        ],
+        "listCategory": "Whitespace",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/link-paren-newline.html",
+        "ruleId": "markdown-preferences/link-paren-newline",
+        "ruleName": "link-paren-newline"
+      },
+      "fixable": "whitespace",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/link-paren-newline",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/link-paren-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce consistent spacing inside link parentheses",
+        "categories": [
+          "standard"
+        ],
+        "listCategory": "Whitespace",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/link-paren-spacing.html",
+        "ruleId": "markdown-preferences/link-paren-spacing",
+        "ruleName": "link-paren-spacing"
+      },
+      "fixable": "whitespace",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/link-paren-spacing",
+      "plugin": "markdown-preferences"
+    },
     "markdown-preferences/link-title-style": {
       "type": "layout",
       "docs": {
@@ -19765,7 +20040,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Notation",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/link-title-style.html",
         "ruleId": "markdown-preferences/link-title-style",
         "ruleName": "link-title-style"
@@ -19783,7 +20058,7 @@
           "recommended",
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Whitespace",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/list-marker-alignment.html",
         "ruleId": "markdown-preferences/list-marker-alignment",
         "ruleName": "list-marker-alignment"
@@ -19791,6 +20066,24 @@
       "fixable": "whitespace",
       "hasSuggestions": false,
       "name": "markdown-preferences/list-marker-alignment",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/no-implicit-block-closing": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow implicit block closing for fenced code blocks, math blocks, and custom containers",
+        "categories": [
+          "recommended",
+          "standard"
+        ],
+        "listCategory": "Notation",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/no-implicit-block-closing.html",
+        "ruleId": "markdown-preferences/no-implicit-block-closing",
+        "ruleName": "no-implicit-block-closing"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/no-implicit-block-closing",
       "plugin": "markdown-preferences"
     },
     "markdown-preferences/no-laziness-blockquotes": {
@@ -19801,7 +20094,7 @@
           "recommended",
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Decorative",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/no-laziness-blockquotes.html",
         "ruleId": "markdown-preferences/no-laziness-blockquotes",
         "ruleName": "no-laziness-blockquotes"
@@ -19817,7 +20110,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Whitespace",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/no-multi-spaces.html",
         "ruleId": "markdown-preferences/no-multi-spaces",
         "ruleName": "no-multi-spaces"
@@ -19834,7 +20127,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Whitespace",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/no-multiple-empty-lines.html",
         "ruleId": "markdown-preferences/no-multiple-empty-lines",
         "ruleName": "no-multiple-empty-lines"
@@ -19852,7 +20145,7 @@
           "recommended",
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Notation",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/no-text-backslash-linebreak.html",
         "ruleId": "markdown-preferences/no-text-backslash-linebreak",
         "ruleName": "no-text-backslash-linebreak"
@@ -19868,7 +20161,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Whitespace",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/no-trailing-spaces.html",
         "ruleId": "markdown-preferences/no-trailing-spaces",
         "ruleName": "no-trailing-spaces"
@@ -19885,7 +20178,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Decorative",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/ordered-list-marker-sequence.html",
         "ruleId": "markdown-preferences/ordered-list-marker-sequence",
         "ruleName": "ordered-list-marker-sequence"
@@ -19919,7 +20212,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Notation",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/ordered-list-marker-style.html",
         "ruleId": "markdown-preferences/ordered-list-marker-style",
         "ruleName": "ordered-list-marker-style"
@@ -19929,6 +20222,23 @@
       "name": "markdown-preferences/ordered-list-marker-style",
       "plugin": "markdown-preferences"
     },
+    "markdown-preferences/padded-custom-containers": {
+      "type": "layout",
+      "docs": {
+        "description": "disallow or require padding inside custom containers",
+        "categories": [
+          "standard"
+        ],
+        "listCategory": "Whitespace",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/padded-custom-containers.html",
+        "ruleId": "markdown-preferences/padded-custom-containers",
+        "ruleName": "padded-custom-containers"
+      },
+      "fixable": "whitespace",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/padded-custom-containers",
+      "plugin": "markdown-preferences"
+    },
     "markdown-preferences/padding-line-between-blocks": {
       "type": "layout",
       "docs": {
@@ -19936,7 +20246,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Whitespace",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/padding-line-between-blocks.html",
         "ruleId": "markdown-preferences/padding-line-between-blocks",
         "ruleName": "padding-line-between-blocks"
@@ -19954,7 +20264,7 @@
           "recommended",
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Notation",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/prefer-autolinks.html",
         "ruleId": "markdown-preferences/prefer-autolinks",
         "ruleName": "prefer-autolinks"
@@ -19972,7 +20282,7 @@
           "recommended",
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Notation",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/prefer-fenced-code-blocks.html",
         "ruleId": "markdown-preferences/prefer-fenced-code-blocks",
         "ruleName": "prefer-fenced-code-blocks"
@@ -20002,7 +20312,7 @@
       "docs": {
         "description": "enforce using link reference definitions instead of inline links",
         "categories": [],
-        "listCategory": "Stylistic",
+        "listCategory": "Notation",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/prefer-link-reference-definitions.html",
         "ruleId": "markdown-preferences/prefer-link-reference-definitions",
         "ruleName": "prefer-link-reference-definitions"
@@ -20034,12 +20344,12 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Decorative",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/setext-heading-underline-length.html",
         "ruleId": "markdown-preferences/setext-heading-underline-length",
         "ruleName": "setext-heading-underline-length"
       },
-      "fixable": "whitespace",
+      "fixable": "code",
       "name": "markdown-preferences/setext-heading-underline-length",
       "plugin": "markdown-preferences"
     },
@@ -20050,7 +20360,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Decorative",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/sort-definitions.html",
         "ruleId": "markdown-preferences/sort-definitions",
         "ruleName": "sort-definitions"
@@ -20067,7 +20377,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Notation",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/strikethrough-delimiters-style.html",
         "ruleId": "markdown-preferences/strikethrough-delimiters-style",
         "ruleName": "strikethrough-delimiters-style"
@@ -20091,6 +20401,57 @@
       "name": "markdown-preferences/table-header-casing",
       "plugin": "markdown-preferences"
     },
+    "markdown-preferences/table-leading-trailing-pipes": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce consistent use of leading and trailing pipes in tables.",
+        "categories": [
+          "standard"
+        ],
+        "listCategory": "Decorative",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/table-leading-trailing-pipes.html",
+        "ruleId": "markdown-preferences/table-leading-trailing-pipes",
+        "ruleName": "table-leading-trailing-pipes"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/table-leading-trailing-pipes",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/table-pipe-alignment": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce consistent alignment of table pipes",
+        "categories": [
+          "standard"
+        ],
+        "listCategory": "Decorative",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/table-pipe-alignment.html",
+        "ruleId": "markdown-preferences/table-pipe-alignment",
+        "ruleName": "table-pipe-alignment"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/table-pipe-alignment",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/table-pipe-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce consistent spacing around table pipes",
+        "categories": [
+          "standard"
+        ],
+        "listCategory": "Whitespace",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/table-pipe-spacing.html",
+        "ruleId": "markdown-preferences/table-pipe-spacing",
+        "ruleName": "table-pipe-spacing"
+      },
+      "fixable": "whitespace",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/table-pipe-spacing",
+      "plugin": "markdown-preferences"
+    },
     "markdown-preferences/thematic-break-character-style": {
       "type": "layout",
       "docs": {
@@ -20098,7 +20459,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Notation",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/thematic-break-character-style.html",
         "ruleId": "markdown-preferences/thematic-break-character-style",
         "ruleName": "thematic-break-character-style"
@@ -20115,7 +20476,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Decorative",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/thematic-break-length.html",
         "ruleId": "markdown-preferences/thematic-break-length",
         "ruleName": "thematic-break-length"
@@ -20132,7 +20493,7 @@
         "categories": [
           "standard"
         ],
-        "listCategory": "Stylistic",
+        "listCategory": "Decorative",
         "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/thematic-break-sequence-pattern.html",
         "ruleId": "markdown-preferences/thematic-break-sequence-pattern",
         "ruleName": "thematic-break-sequence-pattern"
@@ -21079,10 +21440,21 @@
         25,
         27
       ]
+    },
+    {
+      "filepath": "tsdown.config.ts",
+      "globs": [
+        "**/*.?([cm])ts"
+      ],
+      "configs": [
+        28,
+        30,
+        31
+      ]
     }
   ],
   "meta": {
-    "lastUpdate": 1761225674199,
+    "lastUpdate": 1761228875200,
     "basePath": "",
     "configPath": ""
   }
