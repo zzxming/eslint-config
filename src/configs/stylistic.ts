@@ -31,16 +31,9 @@ export function stylistic(options: Partial<StylisticOptions> = {}): TypedFlatCon
       },
       rules: {
         ...config.rules,
-        'style/array-bracket-newline': [
-          'warn',
-          {
-            multiline: true,
-          },
-        ],
         'style/no-extra-semi': 'error',
-        'style/object-curly-newline': ['error', { consistent: true }],
+        'style/exp-list-style': 'error',
 
-        'antfu/consistent-list-newline': 'error',
         'antfu/curly': 'error',
         'antfu/top-level-function': 'error',
         'antfu/no-ts-export-equal': 'error',

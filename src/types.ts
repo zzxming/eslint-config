@@ -22,6 +22,7 @@ export interface StylisticOverrides {
 export interface StylisticOptions extends StylisticConfigOptions {}
 export interface JavascriptOptions {}
 export interface TypescriptOptions {
+  tsconfigPath: string;
   parserOptions: ESLint.Environment['parserOptions'];
   componentExts: string[];
 }
