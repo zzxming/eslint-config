@@ -17,7 +17,8 @@ sayHello() {
 
 // consistent-list-newline
 const people = [
-  new Person('John', 30), new Person('Jane', 28)
+  new Person('John', 30),
+  new Person('Jane', 28)
 ]
 
 // perfer for of
