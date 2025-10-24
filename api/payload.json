@@ -21042,17 +21042,6 @@
       ]
     },
     {
-      "filepath": "bin/update-vscode-settings.js",
-      "globs": [
-        "**/*.js",
-        "**/bin/**/*"
-      ],
-      "configs": [
-        2,
-        10
-      ]
-    },
-    {
       "filepath": "build.config.ts",
       "globs": [
         "**/*.?([cm])ts"
@@ -21418,7 +21407,7 @@
       ]
     },
     {
-      "filepath": "test/fixture.test.ts",
+      "filepath": "test/fixtures.test.ts",
       "globs": [
         "**/*.{test,spec}.[jt]s?(x)",
         "**/*.?([cm])ts"
@@ -21451,10 +21440,21 @@
         30,
         31
       ]
+    },
+    {
+      "filepath": "vitest.config.ts",
+      "globs": [
+        "**/*.?([cm])ts"
+      ],
+      "configs": [
+        28,
+        30,
+        31
+      ]
     }
   ],
   "meta": {
-    "lastUpdate": 1761228875200,
+    "lastUpdate": 1761297752374,
     "basePath": "",
     "configPath": ""
   }
