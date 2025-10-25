@@ -3750,7 +3750,8 @@
     },
     {
       "ignores": [
-        "fixtures"
+        "fixtures",
+        "_fixtures"
       ],
       "index": 44
     }
@@ -21589,7 +21590,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1761366734978,
+    "lastUpdate": 1761372043158,
     "basePath": "",
     "configPath": ""
   }
