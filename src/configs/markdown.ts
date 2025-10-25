@@ -95,6 +95,27 @@ export function markdown(options: Partial<MarkdownOptions> = {}): TypedFlatConfi
         'markdown-preferences/strikethrough-delimiters-style': ['error', { delimiter: '~~' }],
         'markdown-preferences/thematic-break-length': ['error', { length: 3 }],
         'markdown-preferences/thematic-break-character-style': ['error', { style: '-' }],
+        'markdown-preferences/link-paren-newline': ['error', { newline: 'never', multiline: false }],
+        'markdown-preferences/link-paren-spacing': ['error', { space: 'never' }],
+        'markdown-preferences/indent': [
+          'error',
+          {
+            listItems: {
+              first: 1,
+              other: 'first',
+              relativeTo: 'taskListMarkerEnd',
+            },
+          },
+        ],
+        'markdown-preferences/no-multi-spaces': 'error',
+        'markdown-preferences/table-pipe-alignment': [
+          'error',
+          {
+            column: 'minimum',
+            delimiterMinLength: 3,
+          },
+        ],
+        'markdown-preferences/table-leading-trailing-pipes': ['error', 'always'],
       },
     },
   ];
