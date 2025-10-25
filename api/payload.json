@@ -1984,20 +1984,8 @@
             "return": "parens-new-line"
           }
         ],
-        "style/array-bracket-newline": [
-          "warn",
-          {
-            "multiline": true
-          }
-        ],
         "style/no-extra-semi": "error",
-        "style/object-curly-newline": [
-          "error",
-          {
-            "consistent": true
-          }
-        ],
-        "antfu/consistent-list-newline": "error",
+        "style/exp-list-style": "error",
         "antfu/curly": "error",
         "antfu/top-level-function": "error",
         "antfu/no-ts-export-equal": "error",
@@ -2928,6 +2916,32 @@
         "**/*.?([cm])tsx",
         "**/*.vue"
       ],
+      "ignores": [
+        "**/*.md"
+      ],
+      "languageOptions": {
+        "parser": "typescript-eslint/parser",
+        "parserOptions": {
+          "extraFileExtensions": [
+            ".vue"
+          ],
+          "sourceType": "module"
+        }
+      },
+      "index": 30
+    },
+    {
+      "name": "typescript/parser-type-aware",
+      "files": [
+        "**/*.?([cm])ts",
+        "**/*.?([cm])tsx",
+        "**/*.vue"
+      ],
+      "ignores": [
+        "**/*.md/**",
+        "**/*.md",
+        "**/*.md"
+      ],
       "languageOptions": {
         "parser": "typescript-eslint/parser",
         "parserOptions": {
@@ -2935,13 +2949,16 @@
             ".vue"
           ],
           "sourceType": "module",
+          "projectService": {
+            "allowDefaultProject": [
+              "./*.js"
+            ],
+            "defaultProject": "./tsconfig.json"
+          },
           "tsconfigRootDir": "/home/runner/work/eslint-config/eslint-config"
         }
       },
-      "ignores": [
-        "**/*.md"
-      ],
-      "index": 30
+      "index": 31
     },
     {
       "files": [
@@ -3016,14 +3033,13 @@
         "no-unused-vars": "off",
         "ts/no-unused-vars": "off",
         "no-useless-constructor": "off",
-        "ts/no-useless-constructor": "off",
+        "ts/no-useless-constructor": "error",
         "ts/no-wrapper-object-types": "error",
         "ts/prefer-as-const": "error",
         "ts/prefer-literal-enum-member": "error",
         "ts/prefer-namespace-keyword": "error",
         "ts/triple-slash-reference": "off",
         "ts/unified-signatures": "off",
-        "no-use-before-define": "off",
         "ts/consistent-type-definitions": [
           "error",
           "interface"
@@ -3048,6 +3064,7 @@
             "builtinGlobals": false
           }
         ],
+        "no-use-before-define": "off",
         "ts/no-use-before-define": [
           "error",
           {
@@ -3055,12 +3072,38 @@
             "functions": false,
             "variables": true
           }
-        ]
+        ],
+        "ts/prefer-for-of": "error",
+        "ts/prefer-function-type": "error"
       },
       "ignores": [
         "**/*.md"
       ],
-      "index": 31
+      "index": 32
+    },
+    {
+      "name": "typscript/rules-type-aware",
+      "files": [
+        "**/*.?([cm])ts",
+        "**/*.?([cm])tsx",
+        "**/*.vue"
+      ],
+      "ignores": [
+        "**/*.md/**",
+        "**/*.md",
+        "**/*.md"
+      ],
+      "rules": {
+        "require-await": "off",
+        "ts/require-await": "error",
+        "ts/prefer-includes": "error",
+        "ts/prefer-optional-chain": "error",
+        "ts/return-await": [
+          "error",
+          "in-try-catch"
+        ]
+      },
+      "index": 33
     },
     {
       "name": "vue/setup",
@@ -3088,7 +3131,7 @@
       "ignores": [
         "**/*.md"
       ],
-      "index": 32
+      "index": 34
     },
     {
       "files": [
@@ -3436,7 +3479,7 @@
       "ignores": [
         "**/*.md"
       ],
-      "index": 33
+      "index": 35
     },
     {
       "name": "vue/disables/test",
@@ -3450,7 +3493,7 @@
       "ignores": [
         "**/*.md"
       ],
-      "index": 34
+      "index": 36
     },
     {
       "name": "markdown/setup",
@@ -3458,7 +3501,7 @@
         "markdown": {},
         "markdown-preferences": {}
       },
-      "index": 35
+      "index": 37
     },
     {
       "files": [
@@ -3469,7 +3512,7 @@
       },
       "name": "markdown/parser",
       "processor": "merged-processor:@eslint/markdown/markdown+pass-through",
-      "index": 36
+      "index": 38
     },
     {
       "files": [
@@ -3508,7 +3551,7 @@
         "unused-imports/no-unused-imports": "off",
         "unused-imports/no-unused-vars": "off"
       },
-      "index": 37
+      "index": 39
     },
     {
       "files": [
@@ -3599,9 +3642,44 @@
           {
             "style": "-"
           }
+        ],
+        "markdown-preferences/link-paren-newline": [
+          "error",
+          {
+            "newline": "never",
+            "multiline": false
+          }
+        ],
+        "markdown-preferences/link-paren-spacing": [
+          "error",
+          {
+            "space": "never"
+          }
+        ],
+        "markdown-preferences/indent": [
+          "error",
+          {
+            "listItems": {
+              "first": 1,
+              "other": "first",
+              "relativeTo": "taskListMarkerEnd"
+            }
+          }
+        ],
+        "markdown-preferences/no-multi-spaces": "error",
+        "markdown-preferences/table-pipe-alignment": [
+          "error",
+          {
+            "column": "minimum",
+            "delimiterMinLength": 3
+          }
+        ],
+        "markdown-preferences/table-leading-trailing-pipes": [
+          "error",
+          "always"
         ]
       },
-      "index": 38
+      "index": 40
     },
     {
       "name": "yaml/setup",
@@ -3611,7 +3689,7 @@
       "ignores": [
         "**/*.md"
       ],
-      "index": 39
+      "index": 41
     },
     {
       "files": [
@@ -3654,7 +3732,7 @@
       "ignores": [
         "**/*.md"
       ],
-      "index": 40
+      "index": 42
     },
     {
       "name": "de-morgan/rules",
@@ -3668,13 +3746,13 @@
       "ignores": [
         "**/*.md"
       ],
-      "index": 41
+      "index": 43
     },
     {
       "ignores": [
         "fixtures"
       ],
-      "index": 42
+      "index": 44
     }
   ],
   "rules": {
@@ -20992,7 +21070,7 @@
         "**/*.y?(a)ml"
       ],
       "configs": [
-        40
+        42
       ]
     },
     {
@@ -21001,7 +21079,7 @@
         "**/*.y?(a)ml"
       ],
       "configs": [
-        40
+        42
       ]
     },
     {
@@ -21010,7 +21088,7 @@
         "**/*.y?(a)ml"
       ],
       "configs": [
-        40
+        42
       ]
     },
     {
@@ -21019,7 +21097,7 @@
         "**/*.y?(a)ml"
       ],
       "configs": [
-        40
+        42
       ]
     },
     {
@@ -21037,19 +21115,8 @@
         "**/*.md"
       ],
       "configs": [
-        36,
-        38
-      ]
-    },
-    {
-      "filepath": "build.config.ts",
-      "globs": [
-        "**/*.?([cm])ts"
-      ],
-      "configs": [
-        28,
-        30,
-        31
+        38,
+        40
       ]
     },
     {
@@ -21060,7 +21127,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21084,7 +21153,9 @@
         7,
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21095,7 +21166,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21106,7 +21179,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21117,7 +21192,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21128,7 +21205,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21139,7 +21218,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21150,7 +21231,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21161,7 +21244,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21172,7 +21257,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21183,7 +21270,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21194,7 +21283,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21205,7 +21296,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21216,7 +21309,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21227,7 +21322,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21238,7 +21335,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21249,7 +21348,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21260,7 +21361,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21271,7 +21374,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21282,7 +21387,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21293,7 +21400,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21304,7 +21413,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21315,7 +21426,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21326,7 +21439,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21337,7 +21452,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21348,7 +21465,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21359,7 +21478,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21370,7 +21491,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21381,7 +21504,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21392,7 +21517,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21403,7 +21530,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21416,7 +21545,9 @@
         12,
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21438,7 +21569,9 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     },
     {
@@ -21449,12 +21582,14 @@
       "configs": [
         28,
         30,
-        31
+        31,
+        32,
+        33
       ]
     }
   ],
   "meta": {
-    "lastUpdate": 1761297752374,
+    "lastUpdate": 1761366734978,
     "basePath": "",
     "configPath": ""
   }
