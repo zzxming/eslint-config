@@ -1,3 +1,4 @@
+// no-var
 var log = console.log
 
 // Define a class using ES6 class syntax
@@ -13,50 +14,32 @@ sayHello() {
 }
 }
 
-// Create an array of objects
-const people = [
-  new Person('Alice', 30),
-  new Person('Bob', 25),
-  new Person('Charlie', 35)
-];
 
-// Use the forEach method to iterate over the array
+// consistent-list-newline
+const people = [
+  new Person('John', 30),
+  new Person('Jane', 28)
+]
+
+// perfer for of
 people.forEach(person => {
   person.sayHello();
 });
 
 // Use a template literal to create a multiline string
-const multilineString = `
+const _multilineString = `
   This is a multiline string
   that spans multiple lines.
 `;
 
-// Use destructuring assignment to extract values from an object
-const { name, age } = people[0];
-log(`First person in the array is ${name} and they are ${age} years old.`, multilineString);
-
-// Use the spread operator to create a new array
-const numbers = [1, 2, 3];
-const newNumbers = [...numbers, 4, 5];
-log(newNumbers);
-
-// Use a try-catch block for error handling
 try {
-  // Attempt to parse an invalid JSON string
   JSON.parse('invalid JSON');
-} catch (error) {
-  console.error('Error parsing JSON:', error.message);
+  // catch-error-name
+}
+catch (e) {
+  console.error('Error parsing JSON:', e.message);
 }
 
-// Use a ternary conditional operator
-const isEven = num => num % 2 === 0;
-const number = 7;
-log(`${number} is ${isEven(number) ? 'even' : 'odd'}.`);
-
-// Use a callback function with setTimeout for asynchronous code
-setTimeout(() => {
-  log('This code runs after a delay of 2 seconds.');
-}, 2000);
 
 let a, b, c,   d,   foo
 

@@ -7,7 +7,7 @@ export default factory({
   },
   overrides: [
     {
-      ignores: ['fixtures'],
+      ignores: ['fixtures', '_fixtures'],
     },
   ],
 });

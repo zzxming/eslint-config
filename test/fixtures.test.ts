@@ -28,7 +28,7 @@ import { factory } from '@zzxming/eslint-config'
 export default factory(
   ${JSON.stringify(configs)},
 )
-  `);
+`);
 
     await execa('npx', ['eslint', '.', '--fix'], {
       cwd: target,
