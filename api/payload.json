@@ -2531,7 +2531,7 @@
         "jsdoc/check-alignment": [
           "warn",
           {
-            "innerIndent": 0
+            "innerIndent": 1
           }
         ],
         "jsdoc/multiline-blocks": "warn"
@@ -21783,7 +21783,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1763199229167,
+    "lastUpdate": 1763200294478,
     "basePath": "",
     "configPath": ""
   }
