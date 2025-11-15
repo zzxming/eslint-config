@@ -42,7 +42,7 @@ catch (e) {
 
 /**
  * this is a function
-
+ *
  * @returns number
  */
         function foo() {

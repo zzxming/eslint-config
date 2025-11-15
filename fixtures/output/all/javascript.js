@@ -41,7 +41,7 @@ catch (error) {
 
 /**
  * this is a function
- 
+ *
  * @returns number
  */
 function foo() {
