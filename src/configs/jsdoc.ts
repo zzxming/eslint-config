@@ -24,7 +24,7 @@ export function jsdoc(): TypedFlatConfigItem[] {
         'jsdoc/require-returns-check': 'warn',
         'jsdoc/require-returns-description': 'warn',
         'jsdoc/require-yields-check': 'warn',
-        'jsdoc/check-alignment': ['warn', { innerIndent: 0 }],
+        'jsdoc/check-alignment': ['warn', { innerIndent: 1 }],
         'jsdoc/multiline-blocks': 'warn',
       },
     },

@@ -40,10 +40,10 @@ catch (error) {
 }
 
 /**
-* this is a function
-
-* @returns number
-*/
+ * this is a function
+ 
+ * @returns number
+ */
 function foo() {
   return 1;
 }
