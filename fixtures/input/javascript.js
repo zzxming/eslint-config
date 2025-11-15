@@ -40,8 +40,16 @@ catch (e) {
   console.error('Error parsing JSON:', e.message);
 }
 
+/**
+ * this is a function
 
-let a, b, c,   d,   foo
+ * @returns number
+ */
+        function foo() {
+          return 1
+        }
+
+let a, b, c,   d
 
 if (a 
   || b 

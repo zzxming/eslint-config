@@ -39,7 +39,16 @@ catch (error) {
   console.error('Error parsing JSON:', error.message);
 }
 
-let a, b, c, d, foo;
+/**
+* this is a function
+
+* @returns number
+*/
+function foo() {
+  return 1;
+}
+
+let a, b, c, d;
 
 if (a
   || b
