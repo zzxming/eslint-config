@@ -18,7 +18,7 @@ export async function react(options: Partial<ReactOptions> = {}): Promise<TypedF
     interopDefault(import('eslint-plugin-react-refresh')),
     interopDefault(import('@typescript-eslint/parser')),
   ]);
-  const plugins = pluginReact.configs.all.plugins;
+  const plugins = (pluginReact.configs.all as any).plugins;
 
   return [
     {

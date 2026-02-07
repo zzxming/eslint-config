@@ -1,6 +1,6 @@
 import type { TypedFlatConfigItem, YamlOptions } from '../types';
 import pluginYaml from 'eslint-plugin-yml';
-import parserYaml from 'yaml-eslint-parser';
+import * as parserYaml from 'yaml-eslint-parser';
 import { GLOB_YAML } from '../contants';
 
 export function yaml(options: Partial<YamlOptions> = {}): TypedFlatConfigItem[] {
