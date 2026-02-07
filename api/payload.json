@@ -1,6 +1,7 @@
 {
   "configs": [
     {
+      "index": 0,
       "name": "eslint/defaults/languages",
       "languageOptions": {
         "sourceType": "module",
@@ -9,26 +10,26 @@
       },
       "linterOptions": {
         "reportUnusedDisableDirectives": 1
-      },
-      "index": 0
+      }
     },
     {
+      "index": 1,
       "name": "eslint/defaults/ignores",
       "ignores": [
         "**/node_modules/",
         ".git/"
-      ],
-      "index": 1
+      ]
     },
     {
+      "index": 2,
       "name": "eslint/defaults/files",
       "files": [
         "**/*.js",
         "**/*.mjs"
-      ],
-      "index": 2
+      ]
     },
     {
+      "index": 3,
       "name": "eslint/defaults/files-cjs",
       "files": [
         "**/*.cjs"
@@ -36,8 +37,7 @@
       "languageOptions": {
         "sourceType": "commonjs",
         "ecmaVersion": "latest"
-      },
-      "index": 3
+      }
     },
     {
       "name": "ignores",
@@ -100,9 +100,7 @@
           "AudioScheduledSourceNode": false,
           "AudioSinkInfo": false,
           "AudioWorklet": false,
-          "AudioWorkletGlobalScope": false,
           "AudioWorkletNode": false,
-          "AudioWorkletProcessor": false,
           "AuthenticatorAssertionResponse": false,
           "AuthenticatorAttestationResponse": false,
           "AuthenticatorResponse": false,
@@ -236,6 +234,7 @@
           "CSSSkewY": false,
           "CSSStartingStyleRule": false,
           "CSSStyleDeclaration": false,
+          "CSSStyleProperties": false,
           "CSSStyleRule": false,
           "CSSStyleSheet": false,
           "CSSStyleValue": false,
@@ -248,8 +247,6 @@
           "CSSUnparsedValue": false,
           "CSSVariableReferenceValue": false,
           "CSSViewTransitionRule": false,
-          "currentFrame": false,
-          "currentTime": false,
           "CustomElementRegistry": false,
           "customElements": false,
           "CustomEvent": false,
@@ -435,6 +432,7 @@
           "HTMLFormElement": false,
           "HTMLFrameElement": false,
           "HTMLFrameSetElement": false,
+          "HTMLGeolocationElement": false,
           "HTMLHeadElement": false,
           "HTMLHeadingElement": false,
           "HTMLHRElement": false,
@@ -846,7 +844,6 @@
           "ReadableStreamBYOBRequest": false,
           "ReadableStreamDefaultController": false,
           "ReadableStreamDefaultReader": false,
-          "registerProcessor": false,
           "RelativeOrientationSensor": false,
           "RemotePlayback": false,
           "removeEventListener": false,
@@ -886,7 +883,6 @@
           "RTCSessionDescription": false,
           "RTCStatsReport": false,
           "RTCTrackEvent": false,
-          "sampleRate": false,
           "scheduler": false,
           "Scheduler": false,
           "Scheduling": false,
@@ -1071,6 +1067,7 @@
           "TaskController": false,
           "TaskPriorityChangeEvent": false,
           "TaskSignal": false,
+          "Temporal": false,
           "TEMPORARY": false,
           "Text": false,
           "TextDecoder": false,
@@ -1182,7 +1179,6 @@
           "WindowControlsOverlayGeometryChangeEvent": false,
           "Worker": false,
           "Worklet": false,
-          "WorkletGlobalScope": false,
           "WritableStream": false,
           "WritableStreamDefaultController": false,
           "WritableStreamDefaultWriter": false,
@@ -1229,6 +1225,7 @@
           "XRView": false,
           "XRViewerPose": false,
           "XRViewport": false,
+          "XRVisibilityMaskChangeEvent": false,
           "XRWebGLBinding": false,
           "XRWebGLDepthInformation": false,
           "XRWebGLLayer": false,
@@ -2461,28 +2458,27 @@
           "error",
           {
             "groups": [
-              "type",
+              "type-import",
               [
-                "parent-type",
-                "sibling-type",
-                "index-type"
+                "type-parent",
+                "type-sibling",
+                "type-index",
+                "type-internal"
               ],
-              "builtin",
-              "external",
+              "value-builtin",
+              "value-external",
+              "value-internal",
               [
-                "internal",
-                "internal-type"
-              ],
-              [
-                "parent",
-                "sibling",
-                "index"
+                "value-parent",
+                "value-sibling",
+                "value-index"
               ],
               "side-effect",
-              "object",
+              "ts-equals-import",
               "unknown"
             ],
             "newlinesBetween": "ignore",
+            "newlinesInside": "ignore",
             "order": "asc",
             "type": "natural"
           }
@@ -3160,10 +3156,10 @@
             ".vue"
           ],
           "parser": {
-            "version": "8.46.4",
+            "version": "8.54.0",
             "meta": {
               "name": "typescript-eslint/parser",
-              "version": "8.46.4"
+              "version": "8.54.0"
             }
           },
           "sourceType": "module"
@@ -7300,7 +7296,7 @@
       "type": "suggestion",
       "defaultOptions": [
         {
-          "reportGlobalThis": false
+          "reportGlobalThis": true
         }
       ],
       "docs": {
@@ -7492,7 +7488,7 @@
       "language": "javascript",
       "docs": {
         "description": "Disallow `let` or `var` variables that are read but never assigned",
-        "recommended": false,
+        "recommended": true,
         "url": "https://eslint.org/docs/latest/rules/no-unassigned-vars"
       },
       "name": "no-unassigned-vars",
@@ -7751,7 +7747,7 @@
       "type": "problem",
       "docs": {
         "description": "Disallow variable assignments when the value is not used",
-        "recommended": false,
+        "recommended": true,
         "url": "https://eslint.org/docs/latest/rules/no-useless-assignment"
       },
       "name": "no-useless-assignment",
@@ -8458,7 +8454,7 @@
       ],
       "docs": {
         "description": "Disallow losing originally caught error when re-throwing custom errors",
-        "recommended": false,
+        "recommended": true,
         "url": "https://eslint.org/docs/latest/rules/preserve-caught-error"
       },
       "hasSuggestions": true,
@@ -8529,11 +8525,8 @@
     },
     "radix": {
       "type": "suggestion",
-      "defaultOptions": [
-        "always"
-      ],
       "docs": {
-        "description": "Enforce the consistent use of the radix argument when using `parseInt()`",
+        "description": "Enforce the use of the radix argument when using `parseInt()`",
         "recommended": false,
         "url": "https://eslint.org/docs/latest/rules/radix"
       },
@@ -9263,6 +9256,7 @@
         "url": "https://github.com/sweepline/eslint-plugin-unused-imports/blob/master/docs/rules/no-unused-vars.md"
       },
       "fixable": "code",
+      "hasSuggestions": true,
       "name": "unused-imports/no-unused-vars",
       "plugin": "unused-imports"
     },
@@ -9275,6 +9269,7 @@
         "url": "https://github.com/sweepline/eslint-plugin-unused-imports/blob/master/docs/rules/no-unused-imports.md"
       },
       "fixable": "code",
+      "hasSuggestions": true,
       "name": "unused-imports/no-unused-imports",
       "plugin": "unused-imports"
     },
@@ -9391,6 +9386,7 @@
         "url": "https://eslint.style/rules/array-bracket-newline"
       },
       "fixable": "whitespace",
+      "defaultOptions": [],
       "name": "style/array-bracket-newline",
       "plugin": "style"
     },
@@ -9401,6 +9397,9 @@
         "url": "https://eslint.style/rules/array-bracket-spacing"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "never"
+      ],
       "name": "style/array-bracket-spacing",
       "plugin": "style"
     },
@@ -9411,6 +9410,7 @@
         "url": "https://eslint.style/rules/array-element-newline"
       },
       "fixable": "whitespace",
+      "defaultOptions": [],
       "name": "style/array-element-newline",
       "plugin": "style"
     },
@@ -9421,6 +9421,9 @@
         "url": "https://eslint.style/rules/arrow-parens"
       },
       "fixable": "code",
+      "defaultOptions": [
+        "always"
+      ],
       "name": "style/arrow-parens",
       "plugin": "style"
     },
@@ -9431,6 +9434,12 @@
         "url": "https://eslint.style/rules/arrow-spacing"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "before": true,
+          "after": true
+        }
+      ],
       "name": "style/arrow-spacing",
       "plugin": "style"
     },
@@ -9441,6 +9450,9 @@
         "url": "https://eslint.style/rules/block-spacing"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "always"
+      ],
       "name": "style/block-spacing",
       "plugin": "style"
     },
@@ -9451,6 +9463,12 @@
         "url": "https://eslint.style/rules/brace-style"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "1tbs",
+        {
+          "allowSingleLine": false
+        }
+      ],
       "name": "style/brace-style",
       "plugin": "style"
     },
@@ -9461,6 +9479,9 @@
         "url": "https://eslint.style/rules/comma-dangle"
       },
       "fixable": "code",
+      "defaultOptions": [
+        "never"
+      ],
       "name": "style/comma-dangle",
       "plugin": "style"
     },
@@ -9471,6 +9492,12 @@
         "url": "https://eslint.style/rules/comma-spacing"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "before": false,
+          "after": true
+        }
+      ],
       "name": "style/comma-spacing",
       "plugin": "style"
     },
@@ -9481,6 +9508,9 @@
         "url": "https://eslint.style/rules/comma-style"
       },
       "fixable": "code",
+      "defaultOptions": [
+        "last"
+      ],
       "name": "style/comma-style",
       "plugin": "style"
     },
@@ -9491,6 +9521,12 @@
         "url": "https://eslint.style/rules/computed-property-spacing"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "never",
+        {
+          "enforceForClassMembers": true
+        }
+      ],
       "name": "style/computed-property-spacing",
       "plugin": "style"
     },
@@ -9501,6 +9537,7 @@
         "url": "https://eslint.style/rules/curly-newline"
       },
       "fixable": "whitespace",
+      "defaultOptions": [],
       "name": "style/curly-newline",
       "plugin": "style"
     },
@@ -9511,6 +9548,9 @@
         "url": "https://eslint.style/rules/dot-location"
       },
       "fixable": "code",
+      "defaultOptions": [
+        "object"
+      ],
       "name": "style/dot-location",
       "plugin": "style"
     },
@@ -9521,6 +9561,9 @@
         "url": "https://eslint.style/rules/eol-last"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "always"
+      ],
       "name": "style/eol-last",
       "plugin": "style"
     },
@@ -9531,6 +9574,9 @@
         "url": "https://eslint.style/rules/function-call-argument-newline"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "always"
+      ],
       "name": "style/function-call-argument-newline",
       "plugin": "style"
     },
@@ -9541,6 +9587,9 @@
         "url": "https://eslint.style/rules/function-call-spacing"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "never"
+      ],
       "name": "style/function-call-spacing",
       "plugin": "style"
     },
@@ -9551,6 +9600,9 @@
         "url": "https://eslint.style/rules/function-paren-newline"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "multiline"
+      ],
       "name": "style/function-paren-newline",
       "plugin": "style"
     },
@@ -9577,6 +9629,9 @@
         "url": "https://eslint.style/rules/implicit-arrow-linebreak"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "beside"
+      ],
       "name": "style/implicit-arrow-linebreak",
       "plugin": "style"
     },
@@ -9587,6 +9642,14 @@
         "url": "https://eslint.style/rules/indent"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        4,
+        {
+          "SwitchCase": 1,
+          "flatTernaryExpressions": false,
+          "ignoredNodes": []
+        }
+      ],
       "name": "style/indent",
       "plugin": "style"
     },
@@ -9597,6 +9660,9 @@
         "url": "https://eslint.style/rules/indent-binary-ops"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        2
+      ],
       "name": "style/indent-binary-ops",
       "plugin": "style"
     },
@@ -9616,6 +9682,9 @@
         "url": "https://eslint.style/rules/jsx-closing-bracket-location"
       },
       "fixable": "code",
+      "defaultOptions": [
+        "tag-aligned"
+      ],
       "name": "style/jsx-closing-bracket-location",
       "plugin": "style"
     },
@@ -9626,6 +9695,9 @@
         "url": "https://eslint.style/rules/jsx-closing-tag-location"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "tag-aligned"
+      ],
       "name": "style/jsx-closing-tag-location",
       "plugin": "style"
     },
@@ -9636,6 +9708,13 @@
         "url": "https://eslint.style/rules/jsx-curly-brace-presence"
       },
       "fixable": "code",
+      "defaultOptions": [
+        {
+          "props": "never",
+          "children": "never",
+          "propElementValues": "ignore"
+        }
+      ],
       "name": "style/jsx-curly-brace-presence",
       "plugin": "style"
     },
@@ -9646,6 +9725,9 @@
         "url": "https://eslint.style/rules/jsx-curly-newline"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "consistent"
+      ],
       "name": "style/jsx-curly-newline",
       "plugin": "style"
     },
@@ -9656,6 +9738,12 @@
         "url": "https://eslint.style/rules/jsx-curly-spacing"
       },
       "fixable": "code",
+      "defaultOptions": [
+        {
+          "when": "never",
+          "allowMultiline": true
+        }
+      ],
       "name": "style/jsx-curly-spacing",
       "plugin": "style"
     },
@@ -9666,6 +9754,9 @@
         "url": "https://eslint.style/rules/jsx-equals-spacing"
       },
       "fixable": "code",
+      "defaultOptions": [
+        "never"
+      ],
       "name": "style/jsx-equals-spacing",
       "plugin": "style"
     },
@@ -9676,6 +9767,9 @@
         "url": "https://eslint.style/rules/jsx-first-prop-new-line"
       },
       "fixable": "code",
+      "defaultOptions": [
+        "multiline-multiprop"
+      ],
       "name": "style/jsx-first-prop-new-line",
       "plugin": "style"
     },
@@ -9686,6 +9780,9 @@
         "url": "https://eslint.style/rules/jsx-function-call-newline"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "multiline"
+      ],
       "name": "style/jsx-function-call-newline",
       "plugin": "style"
     },
@@ -9695,6 +9792,7 @@
         "description": "Enforce JSX indentation. Deprecated, use `indent` rule instead.",
         "url": "https://eslint.style/rules/jsx-indent"
       },
+      "fixable": "whitespace",
       "deprecated": {
         "message": "The rule was replaced with a more general rule.",
         "deprecatedSince": "5.0.0",
@@ -9707,7 +9805,9 @@
           }
         ]
       },
-      "fixable": "whitespace",
+      "defaultOptions": [
+        4
+      ],
       "name": "style/jsx-indent",
       "plugin": "style"
     },
@@ -9718,6 +9818,9 @@
         "url": "https://eslint.style/rules/jsx-indent-props"
       },
       "fixable": "code",
+      "defaultOptions": [
+        4
+      ],
       "name": "style/jsx-indent-props",
       "plugin": "style"
     },
@@ -9728,6 +9831,11 @@
         "url": "https://eslint.style/rules/jsx-max-props-per-line"
       },
       "fixable": "code",
+      "defaultOptions": [
+        {
+          "maximum": 1
+        }
+      ],
       "name": "style/jsx-max-props-per-line",
       "plugin": "style"
     },
@@ -9738,6 +9846,12 @@
         "url": "https://eslint.style/rules/jsx-newline"
       },
       "fixable": "code",
+      "defaultOptions": [
+        {
+          "prevent": false,
+          "allowMultilines": false
+        }
+      ],
       "name": "style/jsx-newline",
       "plugin": "style"
     },
@@ -9748,6 +9862,11 @@
         "url": "https://eslint.style/rules/jsx-one-expression-per-line"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "allow": "none"
+        }
+      ],
       "name": "style/jsx-one-expression-per-line",
       "plugin": "style"
     },
@@ -9757,6 +9876,13 @@
         "description": "Enforce PascalCase for user-defined JSX components",
         "url": "https://eslint.style/rules/jsx-pascal-case"
       },
+      "defaultOptions": [
+        {
+          "allowAllCaps": false,
+          "allowLeadingUnderscore": false,
+          "allowNamespace": false
+        }
+      ],
       "name": "style/jsx-pascal-case",
       "plugin": "style"
     },
@@ -9766,6 +9892,7 @@
         "description": "Disallow multiple spaces between inline JSX props. Deprecated, use `no-multi-spaces` rule instead.",
         "url": "https://eslint.style/rules/jsx-props-no-multi-spaces"
       },
+      "fixable": "code",
       "deprecated": {
         "message": "The rule was replaced with a more general rule.",
         "deprecatedSince": "5.0.0",
@@ -9778,7 +9905,6 @@
           }
         ]
       },
-      "fixable": "code",
       "name": "style/jsx-props-no-multi-spaces",
       "plugin": "style"
     },
@@ -9789,6 +9915,9 @@
         "url": "https://eslint.style/rules/jsx-quotes"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "prefer-double"
+      ],
       "name": "style/jsx-quotes",
       "plugin": "style"
     },
@@ -9799,6 +9928,12 @@
         "url": "https://eslint.style/rules/jsx-self-closing-comp"
       },
       "fixable": "code",
+      "defaultOptions": [
+        {
+          "component": true,
+          "html": true
+        }
+      ],
       "name": "style/jsx-self-closing-comp",
       "plugin": "style"
     },
@@ -9809,6 +9944,35 @@
         "url": "https://eslint.style/rules/jsx-sort-props"
       },
       "fixable": "code",
+      "deprecated": {
+        "message": "We recommend using the `eslint-plugin-perfectionist` plugin instead.",
+        "deprecatedSince": "5.7.0",
+        "replacedBy": [
+          {
+            "plugin": {
+              "name": "eslint-plugin-perfectionist",
+              "url": "https://perfectionist.dev"
+            },
+            "rule": {
+              "name": "sort-jsx-props",
+              "url": "https://perfectionist.dev/rules/sort-jsx-props"
+            }
+          }
+        ]
+      },
+      "defaultOptions": [
+        {
+          "ignoreCase": false,
+          "callbacksLast": false,
+          "shorthandFirst": false,
+          "shorthandLast": false,
+          "multiline": "ignore",
+          "noSortAlphabetically": false,
+          "reservedFirst": false,
+          "reservedLast": [],
+          "locale": "auto"
+        }
+      ],
       "name": "style/jsx-sort-props",
       "plugin": "style"
     },
@@ -9819,6 +9983,14 @@
         "url": "https://eslint.style/rules/jsx-tag-spacing"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "closingSlash": "never",
+          "beforeSelfClosing": "always",
+          "afterOpening": "never",
+          "beforeClosing": "allow"
+        }
+      ],
       "name": "style/jsx-tag-spacing",
       "plugin": "style"
     },
@@ -9829,6 +10001,18 @@
         "url": "https://eslint.style/rules/jsx-wrap-multilines"
       },
       "fixable": "code",
+      "defaultOptions": [
+        {
+          "declaration": "parens",
+          "assignment": "parens",
+          "return": "parens",
+          "arrow": "parens",
+          "condition": "ignore",
+          "logical": "ignore",
+          "prop": "ignore",
+          "propertyValue": "ignore"
+        }
+      ],
       "name": "style/jsx-wrap-multilines",
       "plugin": "style"
     },
@@ -9839,6 +10023,9 @@
         "url": "https://eslint.style/rules/key-spacing"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {}
+      ],
       "name": "style/key-spacing",
       "plugin": "style"
     },
@@ -9849,6 +10036,13 @@
         "url": "https://eslint.style/rules/keyword-spacing"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "before": true,
+          "after": true,
+          "overrides": {}
+        }
+      ],
       "name": "style/keyword-spacing",
       "plugin": "style"
     },
@@ -9858,6 +10052,9 @@
         "description": "Enforce position of line comments",
         "url": "https://eslint.style/rules/line-comment-position"
       },
+      "defaultOptions": [
+        "above"
+      ],
       "name": "style/line-comment-position",
       "plugin": "style"
     },
@@ -9868,6 +10065,9 @@
         "url": "https://eslint.style/rules/linebreak-style"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "unix"
+      ],
       "name": "style/linebreak-style",
       "plugin": "style"
     },
@@ -9878,6 +10078,11 @@
         "url": "https://eslint.style/rules/lines-around-comment"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "beforeBlockComment": true
+        }
+      ],
       "name": "style/lines-around-comment",
       "plugin": "style"
     },
@@ -9888,6 +10093,13 @@
         "url": "https://eslint.style/rules/lines-between-class-members"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "always",
+        {
+          "exceptAfterOverload": true,
+          "exceptAfterSingleLine": false
+        }
+      ],
       "name": "style/lines-between-class-members",
       "plugin": "style"
     },
@@ -9899,6 +10111,24 @@
         "url": "https://eslint.style/rules/list-style"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "singleLine": {
+            "spacing": "never",
+            "maxItems": null
+          },
+          "multiLine": {
+            "minItems": 0
+          },
+          "overrides": {
+            "{}": {
+              "singleLine": {
+                "spacing": "always"
+              }
+            }
+          }
+        }
+      ],
       "name": "style/exp-list-style",
       "plugin": "style"
     },
@@ -9908,6 +10138,12 @@
         "description": "Enforce a maximum line length",
         "url": "https://eslint.style/rules/max-len"
       },
+      "defaultOptions": [
+        {
+          "code": 80,
+          "tabWidth": 4
+        }
+      ],
       "name": "style/max-len",
       "plugin": "style"
     },
@@ -9917,6 +10153,11 @@
         "description": "Enforce a maximum number of statements allowed per line",
         "url": "https://eslint.style/rules/max-statements-per-line"
       },
+      "defaultOptions": [
+        {
+          "max": 1
+        }
+      ],
       "name": "style/max-statements-per-line",
       "plugin": "style"
     },
@@ -9927,6 +10168,19 @@
         "url": "https://eslint.style/rules/member-delimiter-style"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "multiline": {
+            "delimiter": "semi",
+            "requireLast": true
+          },
+          "singleline": {
+            "delimiter": "semi",
+            "requireLast": false
+          },
+          "multilineDetection": "brackets"
+        }
+      ],
       "name": "style/member-delimiter-style",
       "plugin": "style"
     },
@@ -9937,6 +10191,9 @@
         "url": "https://eslint.style/rules/multiline-comment-style"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "starred-block"
+      ],
       "name": "style/multiline-comment-style",
       "plugin": "style"
     },
@@ -9947,6 +10204,9 @@
         "url": "https://eslint.style/rules/multiline-ternary"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "always"
+      ],
       "name": "style/multiline-ternary",
       "plugin": "style"
     },
@@ -9957,6 +10217,9 @@
         "url": "https://eslint.style/rules/new-parens"
       },
       "fixable": "code",
+      "defaultOptions": [
+        "always"
+      ],
       "name": "style/new-parens",
       "plugin": "style"
     },
@@ -9967,6 +10230,11 @@
         "url": "https://eslint.style/rules/newline-per-chained-call"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "ignoreChainWithDepth": 2
+        }
+      ],
       "name": "style/newline-per-chained-call",
       "plugin": "style"
     },
@@ -9977,6 +10245,12 @@
         "url": "https://eslint.style/rules/no-confusing-arrow"
       },
       "fixable": "code",
+      "defaultOptions": [
+        {
+          "allowParens": true,
+          "onlyOneSimpleParam": false
+        }
+      ],
       "name": "style/no-confusing-arrow",
       "plugin": "style"
     },
@@ -9987,6 +10261,9 @@
         "url": "https://eslint.style/rules/no-extra-parens"
       },
       "fixable": "code",
+      "defaultOptions": [
+        "all"
+      ],
       "name": "style/no-extra-parens",
       "plugin": "style"
     },
@@ -10016,6 +10293,48 @@
         "description": "Disallow mixed binary operators",
         "url": "https://eslint.style/rules/no-mixed-operators"
       },
+      "defaultOptions": [
+        {
+          "groups": [
+            [
+              "+",
+              "-",
+              "*",
+              "/",
+              "%",
+              "**"
+            ],
+            [
+              "&",
+              "|",
+              "^",
+              "~",
+              "<<",
+              ">>",
+              ">>>"
+            ],
+            [
+              "==",
+              "!=",
+              "===",
+              "!==",
+              ">",
+              ">=",
+              "<",
+              "<="
+            ],
+            [
+              "&&",
+              "||"
+            ],
+            [
+              "in",
+              "instanceof"
+            ]
+          ],
+          "allowSamePrecedence": true
+        }
+      ],
       "name": "style/no-mixed-operators",
       "plugin": "style"
     },
@@ -10025,6 +10344,9 @@
         "description": "Disallow mixed spaces and tabs for indentation",
         "url": "https://eslint.style/rules/no-mixed-spaces-and-tabs"
       },
+      "defaultOptions": [
+        false
+      ],
       "name": "style/no-mixed-spaces-and-tabs",
       "plugin": "style"
     },
@@ -10035,6 +10357,16 @@
         "url": "https://eslint.style/rules/no-multi-spaces"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "exceptions": {
+            "Property": true,
+            "ImportAttribute": true
+          },
+          "ignoreEOLComments": false,
+          "includeTabs": true
+        }
+      ],
       "name": "style/no-multi-spaces",
       "plugin": "style"
     },
@@ -10045,6 +10377,11 @@
         "url": "https://eslint.style/rules/no-multiple-empty-lines"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "max": 2
+        }
+      ],
       "name": "style/no-multiple-empty-lines",
       "plugin": "style"
     },
@@ -10054,6 +10391,11 @@
         "description": "Disallow all tabs",
         "url": "https://eslint.style/rules/no-tabs"
       },
+      "defaultOptions": [
+        {
+          "allowIndentationTabs": false
+        }
+      ],
       "name": "style/no-tabs",
       "plugin": "style"
     },
@@ -10064,6 +10406,12 @@
         "url": "https://eslint.style/rules/no-trailing-spaces"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "skipBlankLines": false,
+          "ignoreComments": false
+        }
+      ],
       "name": "style/no-trailing-spaces",
       "plugin": "style"
     },
@@ -10084,6 +10432,9 @@
         "url": "https://eslint.style/rules/nonblock-statement-body-position"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "beside"
+      ],
       "name": "style/nonblock-statement-body-position",
       "plugin": "style"
     },
@@ -10094,6 +10445,7 @@
         "url": "https://eslint.style/rules/object-curly-newline"
       },
       "fixable": "whitespace",
+      "defaultOptions": [],
       "name": "style/object-curly-newline",
       "plugin": "style"
     },
@@ -10104,6 +10456,9 @@
         "url": "https://eslint.style/rules/object-curly-spacing"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "never"
+      ],
       "name": "style/object-curly-spacing",
       "plugin": "style"
     },
@@ -10114,6 +10469,11 @@
         "url": "https://eslint.style/rules/object-property-newline"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "allowAllPropertiesOnSameLine": false
+        }
+      ],
       "name": "style/object-property-newline",
       "plugin": "style"
     },
@@ -10124,6 +10484,9 @@
         "url": "https://eslint.style/rules/one-var-declaration-per-line"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "initializations"
+      ],
       "name": "style/one-var-declaration-per-line",
       "plugin": "style"
     },
@@ -10134,6 +10497,7 @@
         "url": "https://eslint.style/rules/operator-linebreak"
       },
       "fixable": "code",
+      "defaultOptions": [],
       "name": "style/operator-linebreak",
       "plugin": "style"
     },
@@ -10144,6 +10508,12 @@
         "url": "https://eslint.style/rules/padded-blocks"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "always",
+        {
+          "allowSingleLineBlocks": false
+        }
+      ],
       "name": "style/padded-blocks",
       "plugin": "style"
     },
@@ -10155,6 +10525,7 @@
       },
       "fixable": "whitespace",
       "hasSuggestions": false,
+      "defaultOptions": [],
       "name": "style/padding-line-between-statements",
       "plugin": "style"
     },
@@ -10165,6 +10536,9 @@
         "url": "https://eslint.style/rules/quote-props"
       },
       "fixable": "code",
+      "defaultOptions": [
+        "always"
+      ],
       "name": "style/quote-props",
       "plugin": "style"
     },
@@ -10175,6 +10549,14 @@
         "url": "https://eslint.style/rules/quotes"
       },
       "fixable": "code",
+      "defaultOptions": [
+        "double",
+        {
+          "allowTemplateLiterals": "never",
+          "avoidEscape": false,
+          "ignoreStringLiterals": false
+        }
+      ],
       "name": "style/quotes",
       "plugin": "style"
     },
@@ -10185,6 +10567,9 @@
         "url": "https://eslint.style/rules/rest-spread-spacing"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "never"
+      ],
       "name": "style/rest-spread-spacing",
       "plugin": "style"
     },
@@ -10195,6 +10580,9 @@
         "url": "https://eslint.style/rules/semi"
       },
       "fixable": "code",
+      "defaultOptions": [
+        "always"
+      ],
       "name": "style/semi",
       "plugin": "style"
     },
@@ -10205,6 +10593,12 @@
         "url": "https://eslint.style/rules/semi-spacing"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "before": false,
+          "after": true
+        }
+      ],
       "name": "style/semi-spacing",
       "plugin": "style"
     },
@@ -10215,6 +10609,9 @@
         "url": "https://eslint.style/rules/semi-style"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "last"
+      ],
       "name": "style/semi-style",
       "plugin": "style"
     },
@@ -10225,6 +10622,9 @@
         "url": "https://eslint.style/rules/space-before-blocks"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "always"
+      ],
       "name": "style/space-before-blocks",
       "plugin": "style"
     },
@@ -10235,6 +10635,9 @@
         "url": "https://eslint.style/rules/space-before-function-paren"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "always"
+      ],
       "name": "style/space-before-function-paren",
       "plugin": "style"
     },
@@ -10245,6 +10648,9 @@
         "url": "https://eslint.style/rules/space-in-parens"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "never"
+      ],
       "name": "style/space-in-parens",
       "plugin": "style"
     },
@@ -10255,6 +10661,12 @@
         "url": "https://eslint.style/rules/space-infix-ops"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "int32Hint": false,
+          "ignoreTypes": false
+        }
+      ],
       "name": "style/space-infix-ops",
       "plugin": "style"
     },
@@ -10265,6 +10677,12 @@
         "url": "https://eslint.style/rules/space-unary-ops"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "words": true,
+          "nonwords": false
+        }
+      ],
       "name": "style/space-unary-ops",
       "plugin": "style"
     },
@@ -10275,6 +10693,9 @@
         "url": "https://eslint.style/rules/spaced-comment"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "always"
+      ],
       "name": "style/spaced-comment",
       "plugin": "style"
     },
@@ -10285,6 +10706,12 @@
         "url": "https://eslint.style/rules/switch-colon-spacing"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "before": false,
+          "after": true
+        }
+      ],
       "name": "style/switch-colon-spacing",
       "plugin": "style"
     },
@@ -10295,6 +10722,9 @@
         "url": "https://eslint.style/rules/template-curly-spacing"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "never"
+      ],
       "name": "style/template-curly-spacing",
       "plugin": "style"
     },
@@ -10305,6 +10735,9 @@
         "url": "https://eslint.style/rules/template-tag-spacing"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "never"
+      ],
       "name": "style/template-tag-spacing",
       "plugin": "style"
     },
@@ -10315,6 +10748,9 @@
         "url": "https://eslint.style/rules/type-annotation-spacing"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {}
+      ],
       "name": "style/type-annotation-spacing",
       "plugin": "style"
     },
@@ -10345,6 +10781,12 @@
         "url": "https://eslint.style/rules/wrap-iife"
       },
       "fixable": "code",
+      "defaultOptions": [
+        "outside",
+        {
+          "functionPrototypeMethods": false
+        }
+      ],
       "name": "style/wrap-iife",
       "plugin": "style"
     },
@@ -10365,6 +10807,9 @@
         "url": "https://eslint.style/rules/yield-star-spacing"
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "after"
+      ],
       "name": "style/yield-star-spacing",
       "plugin": "style"
     },
@@ -12687,6 +13132,28 @@
       "name": "perfectionist/sort-intersection-types",
       "plugin": "perfectionist"
     },
+    "perfectionist/sort-import-attributes": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-import-attributes",
+        "description": "Enforce sorted import attributes.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-import-attributes",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-export-attributes": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-export-attributes",
+        "description": "Enforce sorted export attributes.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-export-attributes",
+      "plugin": "perfectionist"
+    },
     "perfectionist/sort-heritage-clauses": {
       "docs": {
         "url": "https://perfectionist.dev/rules/sort-heritage-clauses",
@@ -13372,6 +13839,15 @@
       },
       "type": "suggestion",
       "name": "jsdoc/require-property-type",
+      "plugin": "jsdoc"
+    },
+    "jsdoc/require-rejects": {
+      "docs": {
+        "description": "Requires that Promise rejections are documented with `@rejects` tags.",
+        "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-rejects.md#repos-sticky-header"
+      },
+      "type": "suggestion",
+      "name": "jsdoc/require-rejects",
       "plugin": "jsdoc"
     },
     "jsdoc/require-returns": {
@@ -15219,7 +15695,6 @@
         "recommended": "strict",
         "url": "https://typescript-eslint.io/rules/no-dynamic-delete"
       },
-      "fixable": "code",
       "name": "ts/no-dynamic-delete",
       "plugin": "ts"
     },
@@ -15869,6 +16344,17 @@
       "name": "ts/no-unused-expressions",
       "plugin": "ts"
     },
+    "ts/no-unused-private-class-members": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow unused private class members",
+        "extendsBaseRule": true,
+        "requiresTypeChecking": false,
+        "url": "https://typescript-eslint.io/rules/no-unused-private-class-members"
+      },
+      "name": "ts/no-unused-private-class-members",
+      "plugin": "ts"
+    },
     "ts/no-unused-vars": {
       "type": "problem",
       "docs": {
@@ -15877,6 +16363,8 @@
         "recommended": "recommended",
         "url": "https://typescript-eslint.io/rules/no-unused-vars"
       },
+      "fixable": "code",
+      "hasSuggestions": true,
       "name": "ts/no-unused-vars",
       "plugin": "ts"
     },
@@ -15900,6 +16388,18 @@
       },
       "hasSuggestions": true,
       "name": "ts/no-useless-constructor",
+      "plugin": "ts"
+    },
+    "ts/no-useless-default-assignment": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow default values that will never be used",
+        "recommended": "strict",
+        "requiresTypeChecking": true,
+        "url": "https://typescript-eslint.io/rules/no-useless-default-assignment"
+      },
+      "fixable": "code",
+      "name": "ts/no-useless-default-assignment",
       "plugin": "ts"
     },
     "ts/no-useless-empty-export": {
@@ -16373,6 +16873,16 @@
       "name": "ts/strict-boolean-expressions",
       "plugin": "ts"
     },
+    "ts/strict-void-return": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow passing a value-returning function in a position accepting a void function",
+        "requiresTypeChecking": true,
+        "url": "https://typescript-eslint.io/rules/strict-void-return"
+      },
+      "name": "ts/strict-void-return",
+      "plugin": "ts"
+    },
     "ts/switch-exhaustiveness-check": {
       "type": "suggestion",
       "docs": {
@@ -16452,6 +16962,7 @@
         }
       },
       "fixable": "whitespace",
+      "defaultOptions": [],
       "name": "vue/array-bracket-newline",
       "plugin": "vue"
     },
@@ -16467,6 +16978,9 @@
         }
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "never"
+      ],
       "name": "vue/array-bracket-spacing",
       "plugin": "vue"
     },
@@ -16482,6 +16996,7 @@
         }
       },
       "fixable": "whitespace",
+      "defaultOptions": [],
       "name": "vue/array-element-newline",
       "plugin": "vue"
     },
@@ -16497,6 +17012,12 @@
         }
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "before": true,
+          "after": true
+        }
+      ],
       "name": "vue/arrow-spacing",
       "plugin": "vue"
     },
@@ -16563,6 +17084,9 @@
         }
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "always"
+      ],
       "name": "vue/block-spacing",
       "plugin": "vue"
     },
@@ -16588,6 +17112,12 @@
         }
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "1tbs",
+        {
+          "allowSingleLine": false
+        }
+      ],
       "name": "vue/brace-style",
       "plugin": "vue"
     },
@@ -16628,6 +17158,9 @@
         }
       },
       "fixable": "code",
+      "defaultOptions": [
+        "never"
+      ],
       "name": "vue/comma-dangle",
       "plugin": "vue"
     },
@@ -16643,6 +17176,12 @@
         }
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "before": false,
+          "after": true
+        }
+      ],
       "name": "vue/comma-spacing",
       "plugin": "vue"
     },
@@ -16658,6 +17197,9 @@
         }
       },
       "fixable": "code",
+      "defaultOptions": [
+        "last"
+      ],
       "name": "vue/comma-style",
       "plugin": "vue"
     },
@@ -16781,6 +17323,9 @@
         }
       },
       "fixable": "code",
+      "defaultOptions": [
+        "object"
+      ],
       "name": "vue/dot-location",
       "plugin": "vue"
     },
@@ -16860,6 +17405,9 @@
         }
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "never"
+      ],
       "name": "vue/func-call-spacing",
       "plugin": "vue"
     },
@@ -17012,6 +17560,9 @@
         }
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {}
+      ],
       "name": "vue/key-spacing",
       "plugin": "vue"
     },
@@ -17027,6 +17578,13 @@
         }
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "before": true,
+          "after": true,
+          "overrides": {}
+        }
+      ],
       "name": "vue/keyword-spacing",
       "plugin": "vue"
     },
@@ -17147,6 +17705,9 @@
         }
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "always"
+      ],
       "name": "vue/multiline-ternary",
       "plugin": "vue"
     },
@@ -17638,6 +18199,16 @@
       "name": "vue/no-duplicate-attributes",
       "plugin": "vue"
     },
+    "vue/no-duplicate-class-names": {
+      "type": "suggestion",
+      "docs": {
+        "url": "https://eslint.vuejs.org/rules/no-duplicate-class-names.html",
+        "description": "disallow duplication of class names in class attributes"
+      },
+      "fixable": "code",
+      "name": "vue/no-duplicate-class-names",
+      "plugin": "vue"
+    },
     "vue/no-empty-component-block": {
       "type": "suggestion",
       "docs": {
@@ -17707,6 +18278,9 @@
         }
       },
       "fixable": "code",
+      "defaultOptions": [
+        "all"
+      ],
       "name": "vue/no-extra-parens",
       "plugin": "vue"
     },
@@ -17771,6 +18345,16 @@
       },
       "fixable": null,
       "name": "vue/no-lifecycle-after-await",
+      "plugin": "vue"
+    },
+    "vue/no-literals-in-template": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow object, array, and function literals in template",
+        "url": "https://eslint.vuejs.org/rules/no-literals-in-template.html"
+      },
+      "fixable": null,
+      "name": "vue/no-literals-in-template",
       "plugin": "vue"
     },
     "vue/no-lone-template": {
@@ -17894,8 +18478,7 @@
         "description": "disallow negated conditions in v-if/v-else",
         "url": "https://eslint.vuejs.org/rules/no-negated-v-if-condition.html"
       },
-      "fixable": null,
-      "hasSuggestions": true,
+      "fixable": "code",
       "name": "vue/no-negated-v-if-condition",
       "plugin": "vue"
     },
@@ -18300,6 +18883,16 @@
       "name": "vue/no-undef-components",
       "plugin": "vue"
     },
+    "vue/no-undef-directives": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow use of undefined custom directives",
+        "url": "https://eslint.vuejs.org/rules/no-undef-directives.html"
+      },
+      "fixable": null,
+      "name": "vue/no-undef-directives",
+      "plugin": "vue"
+    },
     "vue/no-undef-properties": {
       "type": "suggestion",
       "docs": {
@@ -18572,6 +19165,7 @@
         }
       },
       "fixable": "whitespace",
+      "defaultOptions": [],
       "name": "vue/object-curly-newline",
       "plugin": "vue"
     },
@@ -18587,6 +19181,9 @@
         }
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "never"
+      ],
       "name": "vue/object-curly-spacing",
       "plugin": "vue"
     },
@@ -18602,6 +19199,11 @@
         }
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "allowAllPropertiesOnSameLine": false
+        }
+      ],
       "name": "vue/object-property-newline",
       "plugin": "vue"
     },
@@ -18648,6 +19250,7 @@
         }
       },
       "fixable": "code",
+      "defaultOptions": [],
       "name": "vue/operator-linebreak",
       "plugin": "vue"
     },
@@ -18803,6 +19406,9 @@
         }
       },
       "fixable": "code",
+      "defaultOptions": [
+        "always"
+      ],
       "name": "vue/quote-props",
       "plugin": "vue"
     },
@@ -19144,6 +19750,9 @@
         }
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "never"
+      ],
       "name": "vue/space-in-parens",
       "plugin": "vue"
     },
@@ -19159,6 +19768,12 @@
         }
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "int32Hint": false,
+          "ignoreTypes": false
+        }
+      ],
       "name": "vue/space-infix-ops",
       "plugin": "vue"
     },
@@ -19174,6 +19789,12 @@
         }
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        {
+          "words": true,
+          "nonwords": false
+        }
+      ],
       "name": "vue/space-unary-ops",
       "plugin": "vue"
     },
@@ -19199,6 +19820,9 @@
         }
       },
       "fixable": "whitespace",
+      "defaultOptions": [
+        "never"
+      ],
       "name": "vue/template-curly-spacing",
       "plugin": "vue"
     },
@@ -20340,6 +20964,34 @@
       "name": "markdown-preferences/list-marker-alignment",
       "plugin": "markdown-preferences"
     },
+    "markdown-preferences/max-len": {
+      "type": "layout",
+      "docs": {
+        "description": "enforce maximum length for various Markdown entities",
+        "categories": [],
+        "listCategory": "Decorative",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/max-len.html",
+        "ruleId": "markdown-preferences/max-len",
+        "ruleName": "max-len"
+      },
+      "hasSuggestions": false,
+      "name": "markdown-preferences/max-len",
+      "plugin": "markdown-preferences"
+    },
+    "markdown-preferences/no-heading-trailing-punctuation": {
+      "type": "suggestion",
+      "docs": {
+        "description": "disallow trailing punctuation in headings.",
+        "categories": [],
+        "listCategory": "Preference",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/no-heading-trailing-punctuation.html",
+        "ruleId": "markdown-preferences/no-heading-trailing-punctuation",
+        "ruleName": "no-heading-trailing-punctuation"
+      },
+      "hasSuggestions": true,
+      "name": "markdown-preferences/no-heading-trailing-punctuation",
+      "plugin": "markdown-preferences"
+    },
     "markdown-preferences/no-implicit-block-closing": {
       "type": "suggestion",
       "docs": {
@@ -20409,6 +21061,23 @@
       "name": "markdown-preferences/no-multiple-empty-lines",
       "plugin": "markdown-preferences"
     },
+    "markdown-preferences/no-tabs": {
+      "type": "layout",
+      "docs": {
+        "description": "disallow tab characters in Markdown files.",
+        "categories": [
+          "standard"
+        ],
+        "listCategory": "Whitespace",
+        "url": "https://ota-meshi.github.io/eslint-plugin-markdown-preferences/rules/no-tabs.html",
+        "ruleId": "markdown-preferences/no-tabs",
+        "ruleName": "no-tabs"
+      },
+      "fixable": "whitespace",
+      "hasSuggestions": false,
+      "name": "markdown-preferences/no-tabs",
+      "plugin": "markdown-preferences"
+    },
     "markdown-preferences/no-text-backslash-linebreak": {
       "type": "layout",
       "docs": {
@@ -20446,7 +21115,7 @@
     "markdown-preferences/ordered-list-marker-sequence": {
       "type": "layout",
       "docs": {
-        "description": "enforce that ordered list markers use sequential numbers",
+        "description": "enforce consistent ordered list marker numbering (sequential or flat)",
         "categories": [
           "standard"
         ],
@@ -20778,7 +21447,9 @@
     "yaml/block-mapping-colon-indicator-newline": {
       "docs": {
         "description": "enforce consistent line breaks after `:` indicator",
-        "categories": [],
+        "categories": [
+          "standard"
+        ],
         "extensionRule": false,
         "layout": true,
         "url": "https://ota-meshi.github.io/eslint-plugin-yml/rules/block-mapping-colon-indicator-newline.html",
@@ -21076,7 +21747,9 @@
     "yaml/no-multiple-empty-lines": {
       "docs": {
         "description": "disallow multiple empty lines",
-        "categories": null,
+        "categories": [
+          "standard"
+        ],
         "extensionRule": "no-multiple-empty-lines",
         "layout": true,
         "url": "https://ota-meshi.github.io/eslint-plugin-yml/rules/no-multiple-empty-lines.html",
@@ -21108,7 +21781,9 @@
     "yaml/no-trailing-zeros": {
       "docs": {
         "description": "disallow trailing zeros for floats",
-        "categories": null,
+        "categories": [
+          "standard"
+        ],
         "extensionRule": false,
         "layout": true,
         "url": "https://ota-meshi.github.io/eslint-plugin-yml/rules/no-trailing-zeros.html",
@@ -21783,7 +22458,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1763200762613,
+    "lastUpdate": 1770449540455,
     "basePath": "",
     "configPath": ""
   }
