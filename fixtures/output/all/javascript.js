@@ -50,10 +50,18 @@ function foo() {
 
 let a, b, c, d;
 
-if (a
+if (
+  a
   || b
   || c || d
   || (d && b)
 ) {
+  foo();
+}
+
+if (a
+  || b
+  || c || d
+  || (d && b)) {
   foo();
 }

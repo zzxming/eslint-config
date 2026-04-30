@@ -51,6 +51,16 @@ catch (e) {
 
 let a, b, c,   d
 
+if (
+a 
+  || b 
+      || c || d
+        || (d && b)
+        ) {
+          foo()
+        }
+
+
 if (a 
   || b 
       || c || d
