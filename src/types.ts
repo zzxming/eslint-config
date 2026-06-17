@@ -46,9 +46,7 @@ export interface FormmatterOptions extends StylisticOverrides {
 export interface YamlOptions extends FilesOverrides, StylisticOverrides {}
 export interface UnicornOptions {}
 export interface TailwindcssOptions {}
-export interface ReactOptions {
-  files: string[];
-}
+
 export interface VitestOptions {
   files: string[];
 }
@@ -70,7 +68,6 @@ export interface OptionsConfig {
   formatters: boolean | Partial<FormmatterOptions>;
   yaml: boolean | Partial<YamlOptions>;
   unicorn: Partial<UnicornOptions>;
-  react: boolean | Partial<ReactOptions>;
   vitest: boolean | Partial<VitestOptions>;
   unocss: boolean | Partial<UnocssOptions>;
   deMorgan: boolean | Partial<DeMorganOptions>;

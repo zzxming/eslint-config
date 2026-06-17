@@ -1,7 +1,7 @@
 import type { OptionsConfig, TailwindcssOptions, TypedFlatConfigItem } from './types';
 import { isPackageExists } from 'local-pkg';
-import { deMorgan, formatters, ignore, imports, javascript, jsdoc, jsonc, jsx, markdown, node, perfectionist, react, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, unocss, vitest, vue, yaml } from './configs';
-import { GLOB_MARKDOWN, ReactPackages, StylisticConfigDefaults, VuePackages } from './contants';
+import { deMorgan, formatters, ignore, imports, javascript, jsdoc, jsonc, jsx, markdown, node, perfectionist, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, unocss, vitest, vue, yaml } from './configs';
+import { GLOB_MARKDOWN, StylisticConfigDefaults, VuePackages } from './contants';
 import { ensurePackages, getOptions, getSubOptions } from './utils';
 
 export async function factory(options: Partial<OptionsConfig> = {}): Promise<TypedFlatConfigItem[]> {
@@ -9,7 +9,6 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
     unicorn: unicornOptions = {},
     jsx: enableJsx = true,
     typescript: enableTypeScript = isPackageExists('typescript'),
-    react: enableReact = ReactPackages.some(i => isPackageExists(i)),
     vue: enableVue = VuePackages.some(i => isPackageExists(i)),
     vitest: enableVitest = false,
     gitignore: enableGitignore = true,
@@ -30,7 +29,6 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
     'format',
     ...enableVue ? ['vue'] : [],
     ...enableVitest ? ['vitest'] : [],
-    ...enableReact ? ['react'] : [],
     ...enableTypeScript ? ['typescript'] : [],
     ...enableUnocss ? ['unocss'] : [],
     ...enableTailwindcss ? ['tailwindcss'] : [],
@@ -100,13 +98,6 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
       yaml({
         stylistic: stylisticOptions,
         ...getSubOptions(options, 'yaml'),
-      }),
-    );
-  }
-  if (enableReact) {
-    rules.push(
-      react({
-        ...getSubOptions(options, 'react'),
       }),
     );
   }

@@ -33,8 +33,7 @@
   "peerDependencies": {
     "@prettier/plugin-xml": "^3.4.1",
     "@unocss/eslint-plugin": "^66.0.0",
-    "eslint": "^9.10.0 || ^10.0.0",
-    "eslint-plugin-react-refresh": "^0.4.20"
+    "eslint": "^9.10.0 || ^10.0.0"
   },
   "peerDependenciesMeta": {
     "@prettier/plugin-xml": {
@@ -42,14 +41,10 @@
     },
     "@unocss/eslint-plugin": {
       "optional": true
-    },
-    "eslint-plugin-react-refresh": {
-      "optional": true
     }
   },
   "dependencies": {
     "@antfu/install-pkg": "^1.1.0",
-    "@eslint-react/eslint-plugin": "^2.11.2",
     "@eslint/markdown": "^8.0.1",
     "@prettier/plugin-xml": "^3.4.2",
     "@stylistic/eslint-plugin": "^5.10.0",
@@ -68,8 +63,6 @@
     "eslint-plugin-jsonc": "^3.1.2",
     "eslint-plugin-n": "^17.24.0",
     "eslint-plugin-perfectionist": "^5.9.0",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.5.0",
     "eslint-plugin-tailwindcss": "^3.18.3",
     "eslint-plugin-unicorn": "^64.0.0",
     "eslint-plugin-unused-imports": "^4.4.1",
