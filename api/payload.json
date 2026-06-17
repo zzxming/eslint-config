@@ -22665,19 +22665,6 @@
       ]
     },
     {
-      "filepath": "src/configs/react.ts",
-      "globs": [
-        "**/*.?([cm])ts"
-      ],
-      "configs": [
-        28,
-        30,
-        31,
-        32,
-        33
-      ]
-    },
-    {
       "filepath": "src/configs/sort.ts",
       "globs": [
         "**/*.?([cm])ts"
@@ -22913,7 +22900,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1781686122365,
+    "lastUpdate": 1781686267489,
     "basePath": "",
     "configPath": ""
   }
