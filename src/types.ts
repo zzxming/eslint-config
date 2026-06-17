@@ -55,6 +55,11 @@ export interface UnocssOptions {
   strict: boolean;
 }
 export interface DeMorganOptions {}
+export interface PnpmOptions {
+  catalogs: boolean;
+  json: boolean;
+  yaml: boolean;
+}
 export interface OptionsConfig {
   stylistic: boolean | Partial<StylisticOptions>;
   javascript: boolean | Partial<JavascriptOptions>;
@@ -71,5 +76,6 @@ export interface OptionsConfig {
   vitest: boolean | Partial<VitestOptions>;
   unocss: boolean | Partial<UnocssOptions>;
   deMorgan: boolean | Partial<DeMorganOptions>;
+  pnpm: boolean | Partial<PnpmOptions>;
   overrides: Linter.Config[];
 }
