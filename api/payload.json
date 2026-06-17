@@ -22665,7 +22665,7 @@
       ]
     },
     {
-      "filepath": "src/configs/react.ts",
+      "filepath": "src/configs/pnpm.ts",
       "globs": [
         "**/*.?([cm])ts"
       ],
@@ -22913,7 +22913,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1781685446080,
+    "lastUpdate": 1781685629762,
     "basePath": "",
     "configPath": ""
   }
