@@ -9,7 +9,6 @@ export * from './jsx';
 export * from './markdown';
 export * from './node';
 export * from './perfectionist';
-export * from './react';
 export * from './sort';
 export * from './stylistic';
 export * from './tailwindcss';

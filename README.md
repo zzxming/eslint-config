@@ -25,17 +25,6 @@
 | ------------------- | ------ | -------------------------------- |
 | `eslint-plugin-vue` | `vue`  | [doc](https://eslint.vuejs.org/) |
 
-## React Rules
-
-| Plugin Name                       | Rename                    | Link                                                              |
-| --------------------------------- | ------------------------- | ----------------------------------------------------------------- |
-| `@eslint-react`                   | `react`                   | [doc](https://eslint-react.xyz/docs/rules/overview)               |
-| `@eslint-react/dom`               | `react-dom`               |
-| `@eslint-react/hooks-extra`       | `react-hooks-extra`       |
-| `@eslint-react/naming-convention` | `react-naming-convention` |
-| `eslint-plugin-react-hooks`       | `react-hooks`             | [doc](https://www.npmjs.com/package/eslint-plugin-react-hooks)    |
-| `eslint-plugin-react-refresh`     | `react-refresh`           | [doc](https://github.com/ArnaudBarre/eslint-plugin-react-refresh) |
-
 ## Other Rules
 
 | Plugin Name                          | Rename                 | Link                                                                   |
@@ -102,9 +91,6 @@ export interface FormmatterOptions extends StylisticOverrides {
 export interface YamlOptions extends FilesOverrides, StylisticOverrides {}
 export interface UnicornOptions {}
 export interface TailwindcssOptions {}
-export interface ReactOptions {
-  files: string[];
-}
 export interface VitestOptions {
   files: string[];
 }
@@ -126,7 +112,6 @@ export interface OptionsConfig {
   formatters: boolean | FormmatterOptions;
   yaml: boolean | YamlOptions;
   unicorn: UnicornOptions;
-  react: boolean | ReactOptions;
   vitest: boolean | VitestOptions;
   unocss: boolean | UnocssOptions;
   deMorgan: boolean | DeMorganOptions;
