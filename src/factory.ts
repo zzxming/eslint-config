@@ -1,6 +1,8 @@
 import type { OptionsConfig, TailwindcssOptions, TypedFlatConfigItem } from './types';
+import { findUpSync } from 'find-up-simple';
 import { isPackageExists } from 'local-pkg';
 import { deMorgan, formatters, ignore, imports, javascript, jsdoc, jsonc, jsx, markdown, node, perfectionist, sortPackageJson, sortTsconfig, stylistic, tailwindcss, typescript, unicorn, unocss, vitest, vue, yaml } from './configs';
+import { pnpm } from './configs/pnpm';
 import { GLOB_MARKDOWN, StylisticConfigDefaults, VuePackages } from './contants';
 import { ensurePackages, getOptions, getSubOptions } from './utils';
 
@@ -18,6 +20,7 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
     tailwindcss: enableTailwindcss = false,
     unocss: enableUnocss = false,
     deMorgan: enableDeMorgan = true,
+    pnpm: enablePnpm = !!findUpSync('pnpm-workspace.yaml'),
     overrides = [],
   } = options;
 
@@ -119,6 +122,16 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
     rules.push(
       deMorgan({
         ...getSubOptions(options, 'deMorgan'),
+      }),
+    );
+  }
+  if (enablePnpm) {
+    const optionsPnpm = getSubOptions(options, 'pnpm');
+    rules.push(
+      pnpm({
+        json: options.jsonc !== false,
+        yaml: options.yaml !== false,
+        ...optionsPnpm,
       }),
     );
   }
