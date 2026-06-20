@@ -3772,11 +3772,78 @@
       "index": 43
     },
     {
+      "files": [
+        "package.json",
+        "**/package.json"
+      ],
+      "language": "jsonc/x",
+      "name": "antfu/pnpm/package-json",
+      "plugins": {
+        "pnpm": {}
+      },
+      "rules": {
+        "pnpm/json-enforce-catalog": [
+          "error",
+          {
+            "autofix": true,
+            "ignores": [
+              "@types/vscode"
+            ]
+          }
+        ],
+        "pnpm/json-prefer-workspace-settings": [
+          "error",
+          {
+            "autofix": true
+          }
+        ],
+        "pnpm/json-valid-catalog": [
+          "error",
+          {
+            "autofix": true
+          }
+        ]
+      },
+      "ignores": [
+        "**/*.md"
+      ],
+      "index": 44
+    },
+    {
+      "files": [
+        "pnpm-workspace.yaml"
+      ],
+      "languageOptions": {
+        "parser": "yaml-eslint-parser"
+      },
+      "name": "antfu/pnpm/pnpm-workspace-yaml",
+      "plugins": {
+        "pnpm": {}
+      },
+      "rules": {
+        "pnpm/yaml-enforce-settings": [
+          "error",
+          {
+            "settings": {
+              "shellEmulator": true,
+              "trustPolicy": "no-downgrade"
+            }
+          }
+        ],
+        "pnpm/yaml-no-duplicate-catalog-item": "error",
+        "pnpm/yaml-no-unused-catalog-item": "error"
+      },
+      "ignores": [
+        "**/*.md"
+      ],
+      "index": 45
+    },
+    {
       "ignores": [
         "fixtures",
         "_fixtures"
       ],
-      "index": 44
+      "index": 46
     }
   ],
   "rules": {
@@ -22385,6 +22452,75 @@
       "fixable": "code",
       "name": "de-morgan/no-negated-disjunction",
       "plugin": "de-morgan"
+    },
+    "pnpm/json-enforce-catalog": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce using \"catalog:\" in `package.json`",
+        "url": "https://github.com/antfu/pnpm-workspace-utils/tree/main/packages/eslint-plugin-pnpm/src/rules/json/json-enforce-catalog.test.ts"
+      },
+      "fixable": "code",
+      "name": "pnpm/json-enforce-catalog",
+      "plugin": "pnpm"
+    },
+    "pnpm/json-valid-catalog": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce using valid catalog in `package.json`",
+        "url": "https://github.com/antfu/pnpm-workspace-utils/tree/main/packages/eslint-plugin-pnpm/src/rules/json/json-valid-catalog.test.ts"
+      },
+      "fixable": "code",
+      "name": "pnpm/json-valid-catalog",
+      "plugin": "pnpm"
+    },
+    "pnpm/json-prefer-workspace-settings": {
+      "type": "layout",
+      "docs": {
+        "description": "Prefer having pnpm settings in `pnpm-workspace.yaml` instead of `package.json`. This requires pnpm v10.6+, see https://github.com/orgs/pnpm/discussions/9037.",
+        "url": "https://github.com/antfu/pnpm-workspace-utils/tree/main/packages/eslint-plugin-pnpm/src/rules/json/json-prefer-workspace-settings.test.ts"
+      },
+      "fixable": "code",
+      "name": "pnpm/json-prefer-workspace-settings",
+      "plugin": "pnpm"
+    },
+    "pnpm/yaml-no-unused-catalog-item": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow unused catalogs in `pnpm-workspace.yaml`",
+        "url": "https://github.com/antfu/pnpm-workspace-utils/tree/main/packages/eslint-plugin-pnpm/src/rules/yaml/yaml-no-unused-catalog-item.test.ts"
+      },
+      "fixable": "code",
+      "name": "pnpm/yaml-no-unused-catalog-item",
+      "plugin": "pnpm"
+    },
+    "pnpm/yaml-no-duplicate-catalog-item": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow duplicate catalog items in `pnpm-workspace.yaml`",
+        "url": "https://github.com/antfu/pnpm-workspace-utils/tree/main/packages/eslint-plugin-pnpm/src/rules/yaml/yaml-no-duplicate-catalog-item.test.ts"
+      },
+      "fixable": "code",
+      "name": "pnpm/yaml-no-duplicate-catalog-item",
+      "plugin": "pnpm"
+    },
+    "pnpm/yaml-valid-packages": {
+      "type": "problem",
+      "docs": {
+        "description": "Ensure all package patterns in `pnpm-workspace.yaml` match at least one directory",
+        "url": "https://github.com/antfu/pnpm-workspace-utils/tree/main/packages/eslint-plugin-pnpm/src/rules/yaml/yaml-valid-packages.test.ts"
+      },
+      "name": "pnpm/yaml-valid-packages",
+      "plugin": "pnpm"
+    },
+    "pnpm/yaml-enforce-settings": {
+      "type": "problem",
+      "fixable": "code",
+      "docs": {
+        "description": "Enforce settings in `pnpm-workspace.yaml`",
+        "url": "https://github.com/antfu/pnpm-workspace-utils/tree/main/packages/eslint-plugin-pnpm/src/rules/yaml/yaml-enforce-settings.test.ts"
+      },
+      "name": "pnpm/yaml-enforce-settings",
+      "plugin": "pnpm"
     }
   },
   "files": [
@@ -22460,11 +22596,24 @@
       "filepath": "package.json",
       "globs": [
         "**/*.json",
-        "**/package.json"
+        "**/package.json",
+        "package.json"
       ],
       "configs": [
         25,
-        26
+        26,
+        44
+      ]
+    },
+    {
+      "filepath": "pnpm-workspace.yaml",
+      "globs": [
+        "**/*.y?(a)ml",
+        "pnpm-workspace.yaml"
+      ],
+      "configs": [
+        42,
+        45
       ]
     },
     {
@@ -22653,6 +22802,19 @@
     },
     {
       "filepath": "src/configs/perfectionist.ts",
+      "globs": [
+        "**/*.?([cm])ts"
+      ],
+      "configs": [
+        28,
+        30,
+        31,
+        32,
+        33
+      ]
+    },
+    {
+      "filepath": "src/configs/pnpm.ts",
       "globs": [
         "**/*.?([cm])ts"
       ],
@@ -22900,7 +23062,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1781686267489,
+    "lastUpdate": 1781934767960,
     "basePath": "",
     "configPath": ""
   }
