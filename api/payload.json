@@ -3777,7 +3777,7 @@
         "**/package.json"
       ],
       "language": "jsonc/x",
-      "name": "antfu/pnpm/package-json",
+      "name": "pnpm/package-json",
       "plugins": {
         "pnpm": {}
       },
@@ -3816,7 +3816,7 @@
       "languageOptions": {
         "parser": "yaml-eslint-parser"
       },
-      "name": "antfu/pnpm/pnpm-workspace-yaml",
+      "name": "pnpm/pnpm-workspace-yaml",
       "plugins": {
         "pnpm": {}
       },
@@ -23062,7 +23062,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1781934767960,
+    "lastUpdate": 1781936045756,
     "basePath": "",
     "configPath": ""
   }
