@@ -20,16 +20,12 @@ export async function unocss(options: Partial<UnocssOptions> = {}): Promise<Type
       name: 'unocss/rules',
       rules: {
         'unocss/order': 'warn',
-        ...attributify
-          ? {
-              'unocss/order-attributify': 'warn',
-            }
-          : {},
-        ...strict
-          ? {
-              'unocss/blocklist': 'error',
-            }
-          : {},
+        ...attributify && {
+          'unocss/order-attributify': 'warn',
+        },
+        ...strict && {
+          'unocss/blocklist': 'error',
+        },
       },
     },
   ];

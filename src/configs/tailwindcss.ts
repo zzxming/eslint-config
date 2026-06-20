@@ -1,3 +1,4 @@
+import type { Linter } from 'eslint';
 import type { TailwindcssOptions, TypedFlatConfigItem } from '../types';
 import { interopDefault } from '../utils';
 
@@ -23,7 +24,7 @@ export async function tailwindcss(_options: Partial<TailwindcssOptions> = {}): P
         tailwindcss: pluginTailwind,
       },
       rules: {
-        ...pluginTailwind.configs['flat/recommended'][1].rules,
+        ...(pluginTailwind.configs.recommended as Linter.Config).rules,
         'tailwindcss/no-custom-classname': 'off',
         'tailwindcss/enforces-negative-arbitrary-values': 'off',
         'tailwindcss/no-unnecessary-arbitrary-value': 'error',

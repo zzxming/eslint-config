@@ -19,7 +19,7 @@ export async function ensurePackages(pkgs: string[]) {
       '@typescript-eslint/parser',
     ],
   };
-  const ensurePkgs = pkgs.flatMap(pkg => requiredPkgs[pkg] || []);
+  const ensurePkgs = pkgs.flatMap(package_ => requiredPkgs[package_] || []);
   await ensurePackageExists(ensurePkgs);
 }
 export function getSubOptions(options: Record<string, any>, key: string) {
@@ -70,7 +70,7 @@ export async function interopDefault<T>(m: Promise<T> | T): Promise<T extends { 
 }
 
 export async function ensurePackageExists(packages: string[]) {
-  const nonExistingPackages = Array.from(new Set(packages)).filter(i => i && !isPackageExists(i));
+  const nonExistingPackages = Array.from(new Set(packages)).filter(index => index && !isPackageExists(index));
   if (nonExistingPackages.length > 0) {
     const result = await prompts({
       type: 'confirm',

@@ -2,7 +2,7 @@ import type { TypedFlatConfigItem } from '../types';
 import fs from 'node:fs';
 import ignoreGitignore from 'eslint-config-flat-gitignore';
 
-export function ignore(enableGitignore = true): TypedFlatConfigItem[] {
+export function ignore(canEnableGitignore = true): TypedFlatConfigItem[] {
   const ignores = [
     '**/.nuxt',
     '**/.next',
@@ -11,15 +11,15 @@ export function ignore(enableGitignore = true): TypedFlatConfigItem[] {
     '**/dist',
     '**/.vitepress/cache',
     '**/LICENSE*',
-    // '**/auto-import?(s).d.ts',
+    // '**/auto-import?(s).d.ts',S
     // '**/components.d.ts',
     '**/package-lock.json',
     '**/pnpm-lock.yaml',
   ];
 
-  if (enableGitignore) {
-    if (typeof enableGitignore !== 'boolean') {
-      ignores.push(...ignoreGitignore(enableGitignore).ignores);
+  if (canEnableGitignore) {
+    if (typeof canEnableGitignore !== 'boolean') {
+      ignores.push(...ignoreGitignore(canEnableGitignore).ignores);
     }
     else {
       if (fs.existsSync('.gitignore')) {

@@ -2,9 +2,9 @@
 // Define reactive data and props
 import { ref } from '@vue/reactivity';
 
-const greeting = ref(`Hello, Vue 3!${1}`);
 const counter = ref(0);
 const doubled = computed(() => counter.value * 2);
+const greeting = computed(() => `Hello, Vue 3!${doubled.value}`);
 
 // Define a function
 function incrementCounter() {

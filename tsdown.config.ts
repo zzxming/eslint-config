@@ -7,5 +7,7 @@ export default defineConfig({
   ],
   shims: true,
   format: ['esm'],
-  inlineOnly: false,
+  deps: {
+    onlyBundle: false,
+  },
 });

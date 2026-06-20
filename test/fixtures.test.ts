@@ -17,8 +17,8 @@ function runWithConfig(name: string, configs: Partial<OptionsConfig>) {
 
     await fs.cp(from, target, {
       recursive: true,
-      filter: (src) => {
-        return !src.includes('node_modules');
+      filter: (source) => {
+        return !source.includes('node_modules');
       },
     });
     await fs.writeFile(join(target, 'eslint.config.js'), `
