@@ -42,6 +42,7 @@ export function unicorn(_options: Partial<UnicornOptions> = {}): TypedFlatConfig
         'unicorn/no-this-assignment': 'off',
         'unicorn/prefer-global-this': 'off',
         'unicorn/prefer-await': 'off',
+        'unicorn/no-top-level-side-effects': 'off',
       },
     },
     {
