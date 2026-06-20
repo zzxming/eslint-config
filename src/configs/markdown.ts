@@ -7,7 +7,7 @@ import { parserPlain } from '../utils';
 
 export function markdown(options: Partial<MarkdownOptions> = {}): TypedFlatConfigItem[] {
   const {
-    componentExts = [],
+    componentExts: componentExtensions = [],
     files = [GLOB_MARKDOWN],
   } = options;
 
@@ -33,7 +33,7 @@ export function markdown(options: Partial<MarkdownOptions> = {}): TypedFlatConfi
     {
       files: [
         GLOB_MARKDOWN_CODE,
-        ...componentExts.map(ext => `${GLOB_MARKDOWN}/**/*.${ext}`),
+        ...componentExtensions.map(extension => `${GLOB_MARKDOWN}/**/*.${extension}`),
       ],
       languageOptions: {
         parserOptions: {

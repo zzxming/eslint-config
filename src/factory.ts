@@ -11,7 +11,7 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
     unicorn: unicornOptions = {},
     jsx: enableJsx = true,
     typescript: enableTypeScript = isPackageExists('typescript'),
-    vue: enableVue = VuePackages.some(i => isPackageExists(i)),
+    vue: enableVue = VuePackages.some(index => isPackageExists(index)),
     vitest: enableVitest = false,
     gitignore: enableGitignore = true,
     jsonc: enableJsonc = true,
@@ -24,7 +24,7 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
     overrides = [],
   } = options;
 
-  const componentExts = [];
+  const componentExtensions = [];
   const rules: any[] = [];
   const stylisticOptions = getOptions(options.stylistic, StylisticConfigDefaults);
 
@@ -53,7 +53,7 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
   );
 
   if (enableVue) {
-    componentExts.push('vue');
+    componentExtensions.push('vue');
   }
   if (enableJsonc) {
     rules.push(
@@ -75,7 +75,7 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
     rules.push(
       typescript({
         ...getSubOptions(options, 'typescript'),
-        componentExts,
+        componentExts: componentExtensions,
       }),
     );
   }
@@ -92,7 +92,7 @@ export async function factory(options: Partial<OptionsConfig> = {}): Promise<Typ
     rules.push(
       markdown({
         ...getSubOptions(options, 'markdown'),
-        componentExts,
+        componentExts: componentExtensions,
       }),
     );
   }

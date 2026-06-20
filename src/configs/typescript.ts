@@ -6,7 +6,7 @@ import { interopDefault, renameRules } from '../utils';
 export async function typescript(options: Partial<TypescriptOptions> = {}): Promise<TypedFlatConfigItem[]> {
   const {
     parserOptions = {},
-    componentExts = [],
+    componentExts: componentExtensions = [],
   } = options;
 
   const tsconfigPath = options?.tsconfigPath;
@@ -14,7 +14,7 @@ export async function typescript(options: Partial<TypescriptOptions> = {}): Prom
   const files = [
     GLOB_TS,
     GLOB_TSX,
-    ...componentExts.map(ext => `**/*.${ext}`),
+    ...componentExtensions.map(extension => `**/*.${extension}`),
   ];
   const ignoresTypeAware = [`${GLOB_MARKDOWN}/**`];
 
@@ -24,28 +24,25 @@ export async function typescript(options: Partial<TypescriptOptions> = {}): Prom
   ] = await Promise.all([
     '@typescript-eslint/eslint-plugin',
     '@typescript-eslint/parser',
-  ].map(str => interopDefault(import(str))));
+  ].map(string_ => interopDefault(import(string_))));
 
-  function makeParser(typeAware: boolean, files: string[]): TypedFlatConfigItem {
+  function makeParser(hasTypeAware: boolean, files: string[]): TypedFlatConfigItem {
     return {
-      name: `typescript/parser${typeAware ? '-type-aware' : ''}`,
+      name: `typescript/parser${hasTypeAware ? '-type-aware' : ''}`,
       files,
-      ignores: typeAware ? ignoresTypeAware : [],
+      ignores: hasTypeAware ? ignoresTypeAware : [],
       languageOptions: {
         parser: parserTs,
         parserOptions: {
-          extraFileExtensions: componentExts.map(ext => `.${ext}`),
+          extraFileExtensions: componentExtensions.map(extension => `.${extension}`),
           sourceType: 'module',
-          ...typeAware
-            ? {
-
-                projectService: {
-                  allowDefaultProject: ['./*.js'],
-                  defaultProject: tsconfigPath,
-                },
-                tsconfigRootDir: process.cwd(),
-              }
-            : {},
+          ...hasTypeAware && {
+            projectService: {
+              allowDefaultProject: ['./*.js'],
+              defaultProject: tsconfigPath,
+            },
+            tsconfigRootDir: process.cwd(),
+          },
           ...parserOptions,
         },
       },
@@ -121,15 +118,13 @@ export async function typescript(options: Partial<TypescriptOptions> = {}): Prom
       files,
       ignores: ignoresTypeAware,
       rules: {
-        ...isTypeAware
-          ? {
-              'require-await': 'off',
-              'ts/require-await': 'error',
-              'ts/prefer-includes': 'error',
-              'ts/prefer-optional-chain': 'error',
-              'ts/return-await': ['error', 'in-try-catch'],
-            }
-          : {},
+        ...isTypeAware && {
+          'require-await': 'off',
+          'ts/require-await': 'error',
+          'ts/prefer-includes': 'error',
+          'ts/prefer-optional-chain': 'error',
+          'ts/return-await': ['error', 'in-try-catch'],
+        },
       },
     },
   ];
