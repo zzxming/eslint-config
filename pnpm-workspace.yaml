@@ -1,3 +1,57 @@
 trustPolicy: no-downgrade
 
 shellEmulator: true
+catalogs:
+  prod:
+    '@antfu/install-pkg': ^1.1.0
+    '@eslint/markdown': ^8.0.1
+    '@stylistic/eslint-plugin': ^5.10.0
+    '@typescript-eslint/eslint-plugin': ^8.59.1
+    '@typescript-eslint/parser': ^8.59.1
+    '@vitest/eslint-plugin': ^1.6.16
+    consola: ^3.4.2
+    eslint-config-flat-gitignore: ^2.3.0
+    eslint-merge-processors: ^2.0.0
+    eslint-plugin-antfu: ^3.2.2
+    eslint-plugin-de-morgan: ^2.1.1
+    eslint-plugin-format: ^2.0.1
+    eslint-plugin-import-x: ^4.16.2
+    eslint-plugin-jsdoc: ^62.9.0
+    eslint-plugin-jsonc: ^3.1.2
+    eslint-plugin-n: ^17.24.0
+    eslint-plugin-perfectionist: ^5.9.0
+    eslint-plugin-pnpm: ^1.6.1
+    eslint-plugin-tailwindcss: ^3.18.3
+    eslint-plugin-unicorn: ^64.0.0
+    eslint-plugin-unused-imports: ^4.4.1
+    eslint-plugin-vue: ^10.9.0
+    eslint-plugin-yml: ^3.3.2
+    eslint-processor-vue-blocks: ^2.0.0
+    jsonc-eslint-parser: ^3.1.0
+    prompts: ^2.4.2
+    vue-eslint-parser: ^10.4.0
+    yaml-eslint-parser: ^2.0.0
+  dev:
+    '@eslint/config-inspector': ^2.0.0
+    '@types/eslint-plugin-tailwindcss': ^3.17.0
+    '@types/node': ^25.6.0
+    '@types/prompts': ^2.4.9
+    eslint-plugin-markdown-preferences: ^0.41.1
+    eslint-typegen: ^2.3.1
+    execa: ^9.6.1
+    globals: ^17.5.0
+    lint-staged: ^16.4.0
+    local-pkg: ^1.1.2
+    simple-git-hooks: ^2.13.1
+    tinyglobby: ^0.2.16
+    tsdown: ^0.21.10
+    tsx: ^4.21.0
+    typescript: ~6.0.3
+    vitest: ^4.1.5
+    vue: ^3.5.33
+  peer:
+    '@prettier/plugin-xml': ^3.4.2
+    '@unocss/eslint-plugin': ^66.6.8
+    eslint: ^10.2.1
+  inline:
+    find-up-simple: ^1.0.1
