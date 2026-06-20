@@ -1,16 +1,18 @@
 import type { TypedFlatConfigItem, UnicornOptions } from '../types';
 import pluginUnicorn from 'eslint-plugin-unicorn';
+import { GLOB_SRC, GLOB_VUE } from '../contants';
 
 export function unicorn(_options: Partial<UnicornOptions> = {}): TypedFlatConfigItem[] {
   return [
     {
+      files: [GLOB_SRC, GLOB_VUE],
       name: 'unicorn/rules',
       plugins: {
         unicorn: pluginUnicorn,
       },
       rules: {
         ...pluginUnicorn.configs.recommended.rules,
-        'unicorn/prevent-abbreviations': 'off',
+        'unicorn/name-replacements': 'off',
         'unicorn/no-new-array': 'off',
         'unicorn/no-new-buffer': 'off',
         'unicorn/no-negated-condition': 'off',
@@ -39,6 +41,7 @@ export function unicorn(_options: Partial<UnicornOptions> = {}): TypedFlatConfig
         'unicorn/empty-brace-spaces': 'off',
         'unicorn/no-this-assignment': 'off',
         'unicorn/prefer-global-this': 'off',
+        'unicorn/prefer-await': 'off',
       },
     },
     {
