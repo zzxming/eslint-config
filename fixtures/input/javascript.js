@@ -68,3 +68,7 @@ if (a
         ) {
           foo()
         }
+
+const _answer = true ?
+  42 :
+  foo;
