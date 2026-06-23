@@ -31,6 +31,11 @@ export function stylistic(options: Partial<StylisticOptions> = {}): TypedFlatCon
       },
       rules: {
         ...config.rules,
+        'style/operator-linebreak': [
+          'error',
+          'before',
+          { overrides: { '=': 'after' } },
+        ],
         'style/no-extra-semi': 'error',
         'style/exp-list-style': 'error',
 

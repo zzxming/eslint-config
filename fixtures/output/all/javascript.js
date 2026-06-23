@@ -65,3 +65,7 @@ if (a
   || (d && b)) {
   foo();
 }
+
+const _answer = true
+  ? 42
+  : foo;

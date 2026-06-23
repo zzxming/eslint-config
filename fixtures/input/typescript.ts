@@ -88,3 +88,7 @@ export function* generator1() {
 export function * generator2() {
   yield* generator1()
 }
+
+type _Events =
+| { type: 'click'; x: number; y: number }
+    | { type: 'keypress'; key: string };
